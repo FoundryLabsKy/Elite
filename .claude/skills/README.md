@@ -12,7 +12,7 @@ own skill.
 
 | Skill | What it's for |
 |-------|---------------|
-| **single-file-site** | *(this repo's own skill)* Build or modify one of this repo's single-file client marketing sites — house architecture, honesty rules for client facts, QA checklist, and GitHub Pages deployment. |
+| **website-build** | *(this repo's own skill)* `/website-build [client or task]` — build or modify one of this repo's single-file client marketing sites: house architecture, honesty rules for client facts, QA checklist, and GitHub Pages deployment. |
 | **frontend-design** | Distinctive, intentional visual design when building new UI or reshaping existing UI — aesthetic direction, typography, avoiding templated defaults. |
 | **web-artifacts-builder** | Building elaborate multi-component web UIs with React, Tailwind CSS, and shadcn/ui (state, routing, real components). |
 | **theme-factory** | Styling pages/artifacts with a theme — 10 preset color/font themes for landing pages, HTML, docs, slides, or generate a custom theme on the fly. |
