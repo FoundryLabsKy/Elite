@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kirk Home Centre — Hardware, Home &amp; Building Supplies, Grand Cayman</title>
 <meta name="description" content="Kirk Home Centre, 257 Eastern Avenue, George Town. A Kirkconnell family business since 1974. Hardware, lumber, kitchen and bath, paint, garden, bicycles, and Cayman's exclusive SIW &amp; CWS impact-rated windows and doors. Open Mon–Sat from 7am.">
-<meta name="theme-color" content="#122B3D">
+<meta name="theme-color" content="#0B2C4D">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kirk Home Centre">
@@ -78,39 +78,44 @@
    the aisle-sign index tabs. All pairs checked for WCAG AA.
    ============================================================== */
 :root{
-  /* navy scale (maritime heritage) */
-  --navy-900:#0C1F2D;
-  --navy-800:#122B3D;   /* dark surfaces: header, footer, boards */
-  --navy-700:#1B3A50;   /* raised panels on dark */
-  --navy-600:#25506C;   /* hover on dark controls */
-  --navy-500:#33648A;
-  --navy-100:#DCE7EE;   /* pale navy tint for chips on light */
+  /* Brand palette per the Kirk Home Centre brand research:
+     Heritage Navy #0B2C4D · Signal Red #C8102E · Warm White #F7F5F0
+     Charcoal #2B2B2B · Garden Green #3E7C3A (semantic only).
+     Provisional until validated against a storefront/logo photo. */
+
+  /* heritage navy scale */
+  --navy-900:#07203B;
+  --navy-800:#0B2C4D;   /* Kirk Heritage Navy: header, footer, boards */
+  --navy-700:#14406B;   /* raised panels on dark */
+  --navy-600:#1E4E7D;   /* hover on dark controls, links on light */
+  --navy-500:#2E6394;
+  --navy-100:#D9E4EF;   /* pale navy tint for chips on light */
 
   /* the one accent */
-  --red:#C8102E;        /* CTAs + aisle tabs only. 5.9:1 with white */
+  --red:#C8102E;        /* Signal Red: CTAs + aisle tabs only. 5.9:1 with white */
   --red-hi:#A50D26;     /* hover/active */
 
-  /* neutrals (warm-tinted, never pure gray) */
-  --paper:#FAF7F2;
-  --sand:#EFE7D8;       /* alternating bands */
-  --sand-line:#E1D6C2;
+  /* neutrals (warm white base, charcoal text) */
+  --paper:#F7F5F0;      /* Warm White */
+  --sand:#EDE7D9;       /* alternating bands */
+  --sand-line:#DFD5C2;
   --card:#FFFFFF;
-  --text:#1E2A33;
-  --muted:#52626E;      /* 5.6:1 on paper */
-  --line:#DFD9CE;
+  --text:#2B2B2B;       /* Charcoal */
+  --muted:#556372;      /* 5.4:1 on warm white */
+  --line:#DED8CC;
 
   /* on dark */
-  --on-dark:#F6F2E9;
-  --on-dark-2:#B9C8D2;  /* secondary text on navy-800, 7.5:1 */
-  --on-dark-label:#8FB6CE;
+  --on-dark:#F7F5F0;
+  --on-dark-2:#B7C6D8;  /* secondary text on heritage navy, 7.4:1 */
+  --on-dark-label:#8FB8DA;
 
   /* semantic */
-  --ok:#2E6B37;
+  --ok:#3E7C3A;         /* Garden Green */
 
   /* elevation: one light source, top. Navy-tinted, layered. */
-  --sh-1:0 1px 2px rgba(18,43,61,.10), 0 2px 8px rgba(18,43,61,.06);
-  --sh-2:0 2px 4px rgba(18,43,61,.12), 0 10px 24px -8px rgba(18,43,61,.14);
-  --sh-3:0 3px 6px rgba(18,43,61,.14), 0 22px 48px -16px rgba(18,43,61,.26);
+  --sh-1:0 1px 2px rgba(11,44,77,.10), 0 2px 8px rgba(11,44,77,.06);
+  --sh-2:0 2px 4px rgba(11,44,77,.12), 0 10px 24px -8px rgba(11,44,77,.14);
+  --sh-3:0 3px 6px rgba(11,44,77,.14), 0 22px 48px -16px rgba(11,44,77,.26);
 
   /* radius scale: workmanlike, small */
   --r-1:4px;   /* tags, tabs */
@@ -443,7 +448,7 @@ form.quote-form{max-width:560px}
 }
 .field textarea{min-height:120px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{
-  outline:none;border-color:var(--navy-600);box-shadow:0 0 0 3px rgba(37,80,108,.18);
+  outline:none;border-color:var(--navy-600);box-shadow:0 0 0 3px rgba(30,78,125,.18);
 }
 .field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--red)}
 .field .err{display:none;color:var(--red);font-size:.86rem;font-weight:700;margin-top:5px}

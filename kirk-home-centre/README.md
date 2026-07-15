@@ -17,9 +17,13 @@ Delivery & Installation, Our Story, Visit Us. Routes are hash-based:
 
 ## Design
 
-- **Palette:** warm paper white, harbour navy (the Kirkconnell maritime
-  heritage), and a single signal-red accent used only on CTAs and the
-  aisle tabs. All colour pairs pass WCAG AA (verified with axe).
+- **Palette:** the company palette from the brand research brief — Kirk
+  Heritage Navy `#0B2C4D`, Signal Red `#C8102E` (the single accent, used only
+  on CTAs and aisle tabs), Warm White `#F7F5F0`, Charcoal `#2B2B2B` body text,
+  and Garden Green `#3E7C3A` for success states. All colour pairs pass WCAG AA
+  (verified with axe). The palette is provisional per the research caveat —
+  re-validate against a real storefront/logo photo, then adjust the token
+  block at the top of the stylesheet if needed (all colours are CSS variables).
 - **Type:** Bricolage Grotesque (display) + Karla (body), loaded async from
   Google Fonts with clean system-font fallbacks; a slow font CDN can never
   block first paint.
