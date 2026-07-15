@@ -1,11 +1,11 @@
 ---
-name: website-build
-description: Build or modify one of this repo's single-file client marketing websites (Elite Marble & Granite, Larry's Hardware, Cayman Craft Market, or a new client). Invoke with /website-build [client or task], or use whenever the task is to create a new client site, add a page or feature to an existing site, or prepare a site for launch/deployment. Encodes the house architecture (self-contained hash-routed index.html, no build step), the honesty rules for client facts, and the QA + GitHub Pages deployment checklist.
+name: websitebuild
+description: Build or modify one of this repo's single-file client marketing websites (Elite Marble & Granite, Larry's Hardware, Cayman Craft Market, or a new client). Invoke with /websitebuild [client or task], or use whenever the task is to create a new client site, add a page or feature to an existing site, or prepare a site for launch/deployment. Encodes the house architecture (self-contained hash-routed index.html, no build step), the honesty rules for client facts, and the QA + GitHub Pages deployment checklist.
 ---
 
 # Website Build — Single-File Client Sites
 
-Invoked as `/website-build [client or task]`. If the argument names a new
+Invoked as `/websitebuild [client or task]`. If the argument names a new
 business, build a new site for it in its own folder (research the client's
 real details first). If it names an existing site or a change ("add a
 storm-prep page to larrys-hardware"), modify that site. With no argument,
