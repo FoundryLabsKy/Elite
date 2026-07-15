@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cayman Craft Market — Handmade in Cayman, sold by the sea | George Town, Grand Cayman</title>
+<meta name="description" content="The Cayman Craft Market is George Town's open-air market for authentic Caymanian craft — Silver Thatch weaving, Caymanite and black coral jewellery, local food and art — under one big tent behind Parliament, five minutes from the cruise landing. Open Monday to Friday, 8:30am–3:00pm.">
+<link rel="canonical" href="https://craftmarket.ky/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cayman Craft Market — Handmade in Cayman, sold by the sea">
+<meta property="og:description" content="Authentic Caymanian craft on the George Town waterfront: thatch work, Caymanite, black coral, local food and art, sold by the people who make it. Mon–Fri 8:30am–3:00pm, five minutes from the cruise landing.">
+<meta property="og:url" content="https://craftmarket.ky/">
+<meta property="og:locale" content="en_KY">
+<meta name="theme-color" content="#0B4053">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B4053'/%3E%3Crect x='6' y='7' width='20' height='4' rx='2' fill='%23C9A66B'/%3E%3Crect x='6' y='14' width='20' height='4' rx='2' fill='%23A6553B'/%3E%3Crect x='6' y='21' width='20' height='4' rx='2' fill='%23E5D6B0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "Cayman Craft Market",
+  "alternateName": "Grand Cayman's Official Crafts and Souvenirs Market",
+  "description": "Open-air market for authentic Caymanian craft — Silver Thatch weaving, Caymanite and black coral jewellery, local food and art — administered by the Cayman Islands National Attractions Authority.",
+  "url": "https://craftmarket.ky/",
+  "telephone": "+1-345-949-6999",
+  "email": "info@craftmarket.ky",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Under the big tent behind Parliament, off Seafarers Way / North Church Street",
+    "addressLocality": "George Town",
+    "addressRegion": "Grand Cayman",
+    "addressCountry": "KY"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:30",
+    "closes": "15:00"
+  }],
+  "isAccessibleForFree": true,
+  "publicAccess": true,
+  "sameAs": [
+    "https://www.facebook.com/caymancraftmarket",
+    "https://www.instagram.com/craftmarket.ky"
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   TOKENS — every colour and size on the site is drawn from here
+   ============================================================ */
+:root{
+  /* Colour: harbour, sand, thatch, Caymanite. One CTA accent. */
+  --sea-deep:   #0B4053;  /* harbour at dusk — structural dark   */
+  --sea-deeper: #082F3E;  /* footer / pressed                    */
+  --sea:        #0E6470;  /* links, secondary interactive        */
+  --sea-soft:   #DDEAE8;  /* pale sea wash for alt sections      */
+  --sand:       #F7F1E4;  /* page base — dried thatch, not cream-trend */
+  --sand-deep:  #EFE5CF;  /* card wells on sand                  */
+  --straw:      #C9A66B;  /* Silver Thatch straw                 */
+  --straw-lt:   #E5D6B0;
+  --stone-rust: #A6553B;  /* Caymanite strata */
+  --stone-brown:#7A4A2B;
+  --stone-grey: #6E645C;
+  --accent:     #B4431D;  /* burnt coral — CTAs ONLY (4.9:1 on white) */
+  --accent-dn:  #93361A;
+  --ink:        #21313A;  /* darkest text — sea-tinted, never #000 */
+  --ink-soft:   #4A5A60;  /* secondary text on sand (7:1+)        */
+  --line:       #D9CCB0;  /* hairlines on sand                    */
+  --ok:         #1E6B45;  /* open-now green                       */
+  --ok-bg:      #DDEED9;
+  --closed:     #8C3B23;  /* closed-now rust                      */
+  --closed-bg:  #F2DDD2;
+
+  /* Type */
+  --disp:"Bricolage Grotesque","Trebuchet MS","Gill Sans",system-ui,sans-serif;
+  --body:"Karla","Segoe UI",system-ui,-apple-system,sans-serif;
+  --fs-0:0.8125rem; --fs-1:0.9375rem; --fs-2:1.0625rem; --fs-3:1.25rem;
+  --fs-4:1.5625rem; --fs-5:clamp(1.7rem,1.2rem + 2vw,2.3rem);
+  --fs-6:clamp(2.1rem,1.4rem + 3.4vw,3.4rem);
+  --fs-hero:clamp(2.4rem,1.5rem + 4.6vw,4.4rem);
+
+  /* Space — 8px base */
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px; --s7:96px;
+
+  /* Radius — friendly, consistent */
+  --r-s:6px; --r-m:14px; --r-pill:999px;
+
+  /* Elevation — one light source, layered */
+  --sh-1:0 1px 2px rgba(11,48,64,.14), 0 3px 10px rgba(11,48,64,.07);
+  --sh-2:0 1px 3px rgba(11,48,64,.16), 0 10px 28px rgba(11,48,64,.12);
+  --sh-3:0 2px 4px rgba(11,48,64,.18), 0 18px 44px rgba(11,48,64,.16);
+
+  --wrap:1120px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+  margin:0;background:var(--sand);color:var(--ink);
+  font-family:var(--body);font-size:var(--fs-2);line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--disp);line-height:1.12;margin:0 0 var(--s2);font-weight:800;letter-spacing:-.015em}
+h1{font-size:var(--fs-hero)}
+h2{font-size:var(--fs-6)}
+h3{font-size:var(--fs-4)}
+h4{font-size:var(--fs-3);letter-spacing:0}
+p{margin:0 0 var(--s2);max-width:66ch}
+a{color:var(--sea);text-decoration-thickness:1.5px;text-underline-offset:3px}
+a:hover{color:var(--sea-deep)}
+:focus-visible{outline:3px solid var(--sea);outline-offset:2px;border-radius:2px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--sea-deep);color:#fff;padding:12px 20px;z-index:200;border-radius:0 0 var(--r-s) 0}
+.skip:focus{left:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--s3)}
+.eyebrow{
+  font-family:var(--body);font-weight:700;font-size:var(--fs-0);
+  text-transform:uppercase;letter-spacing:.14em;color:var(--stone-rust);
+  display:block;margin-bottom:var(--s2);
+}
+.lead{font-size:var(--fs-3);color:var(--ink-soft);line-height:1.55}
+.muted{color:var(--ink-soft)}
+.small{font-size:var(--fs-1)}
+
+/* ============ Buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--body);font-weight:700;font-size:var(--fs-2);
+  padding:14px 26px;min-height:48px;border-radius:var(--r-pill);
+  border:2px solid transparent;cursor:pointer;text-decoration:none;
+  transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out,transform .18s ease-out;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dn);color:#fff}
+.btn-ghost{background:transparent;color:var(--sea-deep);border-color:var(--sea-deep)}
+.btn-ghost:hover{background:var(--sea-deep);color:var(--sand)}
+.btn-ghost-light{background:transparent;color:var(--sand);border-color:var(--straw-lt)}
+.btn-ghost-light:hover{background:var(--straw-lt);color:var(--sea-deep)}
+.btn-link{background:none;border:none;padding:4px 2px;min-height:44px;color:var(--sea);font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font-size:var(--fs-2)}
+.btn-link:hover{color:var(--sea-deep)}
+
+/* ============ Header ============ */
+header.site{
+  background:var(--sea-deep);color:var(--sand);
+  position:sticky;top:0;z-index:100;box-shadow:var(--sh-1);
+}
+.bar{display:flex;align-items:center;gap:var(--s3);min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--sand);margin-right:auto}
+.brand:hover{color:#fff}
+.brand .mark{flex:none}
+.brand b{font-family:var(--disp);font-weight:800;font-size:1.15rem;letter-spacing:-.01em;line-height:1.1;display:block;white-space:nowrap}
+@media (max-width:400px){.brand b{white-space:normal}}
+.brand span.sub{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--straw)}
+nav.main{display:flex;gap:2px;align-items:center}
+nav.main a{
+  color:var(--sand);text-decoration:none;font-weight:700;font-size:var(--fs-1);
+  padding:12px 13px;border-radius:var(--r-s);min-height:44px;display:inline-flex;align-items:center;white-space:nowrap;
+}
+nav.main a:hover{background:rgba(255,255,255,.10);color:#fff}
+nav.main a[aria-current="page"]{background:rgba(201,166,107,.22);color:var(--straw-lt);box-shadow:inset 0 -3px 0 var(--straw)}
+.status-pill{
+  display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:var(--fs-0);
+  padding:8px 14px;border-radius:var(--r-pill);text-decoration:none;white-space:nowrap;min-height:36px;
+}
+.status-pill .dot{width:9px;height:9px;border-radius:50%;flex:none}
+.status-pill.is-open{background:var(--ok-bg);color:var(--ok)}
+.status-pill.is-open .dot{background:var(--ok)}
+.status-pill.is-closed{background:var(--closed-bg);color:var(--closed)}
+.status-pill.is-closed .dot{background:var(--closed)}
+.menu-btn{
+  display:none;background:none;border:2px solid var(--straw);color:var(--sand);
+  border-radius:var(--r-s);padding:9px 14px;font:700 var(--fs-1) var(--body);cursor:pointer;min-height:44px;
+}
+.menu-btn:hover{background:rgba(255,255,255,.1)}
+@media (max-width:920px){
+  nav.main{
+    display:none;position:absolute;top:100%;left:0;right:0;background:var(--sea-deeper);
+    flex-direction:column;align-items:stretch;padding:var(--s2) var(--s3) var(--s3);gap:4px;
+    box-shadow:var(--sh-2);
+  }
+  nav.main.open{display:flex}
+  nav.main a{padding:14px;font-size:var(--fs-2)}
+  .menu-btn{display:inline-flex;align-items:center}
+  .bar .status-pill{display:none}
+}
+
+/* ============ Caymanite strata divider — the signature motif ============ */
+.strata{display:block;width:100%;height:14px;border:0}
+.strata i{display:block;height:100%;background:
+  linear-gradient(to bottom,
+    var(--straw-lt) 0 22%, var(--stone-rust) 22% 46%,
+    var(--stone-brown) 46% 68%, var(--stone-grey) 68% 82%, var(--straw) 82% 100%)}
+
+/* ============ Hero ============ */
+.hero{
+  background:var(--sea-deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23C9A66B' stroke-opacity='.10' stroke-width='7'%3E%3Cpath d='M-7 14h28M35 14h28M-7 42h28M35 42h28'/%3E%3Cpath d='M14-7v28M14 35v28M42-7v28M42 35v28'/%3E%3C/g%3E%3C/svg%3E");
+  color:var(--sand);padding:var(--s6) 0 var(--s6);
+}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.9fr);gap:var(--s5);align-items:start}
+@media (max-width:840px){.hero-grid{grid-template-columns:1fr}}
+.hero .eyebrow{color:var(--straw)}
+.hero h1{color:#fff;margin-bottom:var(--s3)}
+.hero h1 em{font-style:normal;color:var(--straw)}
+.hero .lead{color:#D8E2E0;max-width:52ch}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+
+/* Today card */
+.today{
+  background:var(--sand);color:var(--ink);border-radius:var(--r-m);
+  box-shadow:var(--sh-3);overflow:hidden;
+}
+.today-head{padding:var(--s3) var(--s3) var(--s2)}
+.today-head .when{font-size:var(--fs-0);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px}
+.today-status{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:800;font-size:var(--fs-4);line-height:1.2}
+.today-status .dot{width:13px;height:13px;border-radius:50%;flex:none}
+.today-status.is-open{color:var(--ok)}.today-status.is-open .dot{background:var(--ok)}
+.today-status.is-closed{color:var(--closed)}.today-status.is-closed .dot{background:var(--closed)}
+.today-sub{margin:6px 0 0;color:var(--ink-soft);font-size:var(--fs-1)}
+.today-body{border-top:1.5px solid var(--line);padding:var(--s2) var(--s3);display:grid;gap:10px}
+.today-row{display:flex;gap:12px;align-items:flex-start;font-size:var(--fs-1)}
+.today-row svg{flex:none;margin-top:2px;color:var(--sea)}
+.today-row p{margin:0;max-width:none}
+.today-foot{padding:var(--s2) var(--s3) var(--s3)}
+.today-foot .btn{width:100%}
+
+/* ============ Sections ============ */
+section.band{padding:var(--s7) 0}
+section.band.tight{padding:var(--s6) 0}
+.band-sea{background:var(--sea-soft)}
+.band-deep{background:var(--sea-deep);color:var(--sand)}
+.band-deep h2,.band-deep h3{color:#fff}
+.band-deep .eyebrow{color:var(--straw)}
+.band-deep p{color:#D8E2E0}
+.band-deep a{color:var(--straw-lt)}
+.band-deep a:hover{color:#fff}
+.band-straw{background:var(--sand-deep)}
+.sec-head{max-width:62ch;margin-bottom:var(--s5)}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+/* Crafts list — two-column ledger, not a card grid */
+.craft-ledger{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s6);border-top:1.5px solid var(--line)}
+@media (max-width:760px){.craft-ledger{grid-template-columns:1fr}}
+.craft-item{display:flex;gap:var(--s3);padding:var(--s3) 0;border-bottom:1.5px solid var(--line);align-items:flex-start}
+.craft-item .ic{
+  flex:none;width:58px;height:58px;border-radius:var(--r-m);display:grid;place-items:center;
+  background:var(--sea-deep);color:var(--straw-lt);
+}
+.craft-item h3{font-size:var(--fs-3);margin-bottom:4px}
+.craft-item p{margin:0;font-size:var(--fs-1);color:var(--ink-soft);max-width:44ch}
+.craft-item .tag{display:inline-block;margin-top:8px;font-size:var(--fs-0);font-weight:700;color:var(--stone-rust);letter-spacing:.06em;text-transform:uppercase}
+
+/* Makers — alternating profile rows */
+.maker{display:grid;grid-template-columns:280px 1fr;gap:var(--s5);align-items:center;padding:var(--s5) 0;border-top:1.5px solid var(--line)}
+.maker:first-of-type{border-top:none}
+.maker.flip{grid-template-columns:1fr 280px}
+.maker.flip .maker-art{order:2}
+@media (max-width:760px){.maker,.maker.flip{grid-template-columns:1fr}.maker.flip .maker-art{order:0}}
+.maker-art{border-radius:var(--r-m);overflow:hidden;box-shadow:var(--sh-1)}
+.maker-art svg{width:100%;height:auto}
+.maker h3{margin-bottom:2px}
+.maker .craft-line{font-weight:700;color:var(--stone-rust);margin-bottom:var(--s2);font-size:var(--fs-1);letter-spacing:.04em;text-transform:uppercase}
+.maker blockquote{
+  margin:var(--s2) 0 0;padding:var(--s2) var(--s3);border-left:4px solid var(--straw);
+  background:var(--sand-deep);border-radius:0 var(--r-s) var(--r-s) 0;font-size:var(--fs-1);
+}
+.maker blockquote p{margin:0 0 4px;font-style:italic}
+.maker blockquote cite{font-style:normal;font-size:var(--fs-0);color:var(--ink-soft)}
+
+/* Quotes */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:var(--s3)}
+.quote{
+  background:var(--sand);border-radius:var(--r-m);padding:var(--s3);box-shadow:var(--sh-1);
+  display:flex;flex-direction:column;gap:var(--s2);border-top:6px solid var(--straw);
+}
+.quote p{font-style:italic;margin:0;font-size:var(--fs-1)}
+.quote cite{font-style:normal;font-weight:700;font-size:var(--fs-0);color:var(--ink-soft);margin-top:auto}
+
+/* Hours table */
+.hours{width:100%;border-collapse:collapse;max-width:560px;font-size:var(--fs-1)}
+.hours th,.hours td{text-align:left;padding:12px 14px;border-bottom:1.5px solid var(--line)}
+.hours th{font-family:var(--body);font-weight:700}
+.hours tr.now td,.hours tr.now th{background:var(--ok-bg)}
+.hours td b{color:var(--ok)}
+
+/* Map figure */
+.mapfig{background:var(--sand);border-radius:var(--r-m);box-shadow:var(--sh-2);overflow:hidden}
+.mapfig figcaption{padding:var(--s2) var(--s3);font-size:var(--fs-0);color:var(--ink-soft);border-top:1.5px solid var(--line)}
+.map-svg{width:100%;height:auto;display:block}
+
+/* Steps (directions, vendor process) */
+.steps{list-style:none;margin:0;padding:0;counter-reset:step;max-width:62ch}
+.steps li{
+  counter-increment:step;position:relative;padding:0 0 var(--s3) 56px;margin:0;
+}
+.steps li::before{
+  content:counter(step);position:absolute;left:0;top:-2px;width:38px;height:38px;
+  border-radius:50%;background:var(--sea-deep);color:var(--straw-lt);
+  font:700 1rem var(--disp);display:grid;place-items:center;
+}
+.steps li::after{
+  content:"";position:absolute;left:18px;top:40px;bottom:6px;width:2px;background:var(--line);
+}
+.steps li:last-child::after{display:none}
+.steps h4{margin-bottom:2px}
+.steps p{margin:0;font-size:var(--fs-1);color:var(--ink-soft)}
+
+/* Two-column split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:start}
+@media (max-width:840px){.split{grid-template-columns:1fr}}
+
+/* Fact list */
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.facts li{display:flex;gap:12px;align-items:flex-start;font-size:var(--fs-1)}
+.facts svg{flex:none;color:var(--sea);margin-top:3px}
+.facts b{display:block}
+
+/* Notice */
+.notice{
+  border:2px solid var(--straw);background:var(--sand-deep);border-radius:var(--r-m);
+  padding:var(--s3);max-width:66ch;
+}
+.notice p{margin:0;font-size:var(--fs-1)}
+.notice b{color:var(--stone-brown)}
+
+/* CTA band */
+.cta-band{background:var(--stone-rust);color:#fff}
+.cta-band h2{color:#fff}
+.cta-band p{color:#F6E4DB}
+.cta-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s3)}
+.cta-band .btn-primary{background:#fff;color:var(--stone-rust)}
+.cta-band .btn-primary:hover{background:var(--sand);color:var(--accent-dn)}
+
+/* Footer */
+footer.site{background:var(--sea-deeper);color:#B9CBCC;padding:var(--s6) 0 var(--s4);font-size:var(--fs-1)}
+footer.site h4{color:var(--straw);font-size:var(--fs-1);letter-spacing:.1em;text-transform:uppercase;margin-bottom:var(--s2);font-family:var(--body);font-weight:700}
+footer.site a{color:#DCE7E6}
+footer.site a:hover{color:#fff}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--s4);margin-bottom:var(--s5)}
+@media (max-width:840px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.foot-grid{grid-template-columns:1fr}}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot-legal{border-top:1px solid rgba(255,255,255,.15);padding-top:var(--s3);display:flex;flex-wrap:wrap;gap:var(--s2);justify-content:space-between;font-size:var(--fs-0)}
+.foot-legal p{margin:0;max-width:none}
+
+/* Page hero (inner pages) */
+.page-hero{background:var(--sea-deep);color:var(--sand);padding:var(--s6) 0}
+.page-hero h1{color:#fff;font-size:var(--fs-6);margin-bottom:var(--s2)}
+.page-hero .eyebrow{color:var(--straw)}
+.page-hero p{color:#D8E2E0;max-width:60ch;margin-bottom:0}
+
+/* Reveal on scroll — subtle, entrance only */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .3s ease-out,transform .3s ease-out}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#/home" aria-label="Cayman Craft Market — home">
+      <svg class="mark" width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+        <rect width="42" height="42" rx="9" fill="#082F3E"/>
+        <rect x="8" y="9"  width="26" height="5" rx="2.5" fill="#E5D6B0"/>
+        <rect x="8" y="18.5" width="26" height="5" rx="2.5" fill="#A6553B"/>
+        <rect x="8" y="28" width="26" height="5" rx="2.5" fill="#C9A66B"/>
+      </svg>
+      <span><b>Cayman Craft Market</b><span class="sub">George Town waterfront</span></span>
+    </a>
+    <a class="status-pill" id="pill" href="#/visit"><span class="dot"></span><span id="pill-text">Checking hours…</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav class="main" id="mainNav" aria-label="Main">
+      <a href="#/visit" data-nav="visit">Visit</a>
+      <a href="#/crafts" data-nav="crafts">Crafts</a>
+      <a href="#/artisans" data-nav="artisans">Artisans</a>
+      <a href="#/heritage" data-nav="heritage">Heritage</a>
+      <a href="#/vendors" data-nav="vendors">Vendors</a>
+      <a href="#/about" data-nav="about">About</a>
+      <a href="#/contact" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Cayman Craft Market</h4>
+        <p>Grand Cayman's official craft and souvenir market — Caymanian makers selling their own work by the sea in George Town, minutes from the cruise landing.</p>
+        <p class="small">Administered by the Cayman Islands National Attractions Authority (CINAA).</p>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <ul>
+          <li id="foot-loc">Under the big tent behind Parliament, off Seafarers Way, George Town</li>
+          <li><a href="#/visit">Directions from the cruise landing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Monday–Friday<br>8:30am – 3:00pm</li>
+          <li class="small">Or until the last ship's tender. Occasional Saturdays in high season.</li>
+          <li><a href="#/visit">Is it open today?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+13459496999">+1 (345) 949-6999</a></li>
+          <li><a href="mailto:info@craftmarket.ky">info@craftmarket.ky</a></li>
+          <li><a href="https://www.facebook.com/caymancraftmarket" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/craftmarket.ky" rel="noopener">Instagram — @craftmarket.ky</a></li>
+          <li><a href="#/vendors">Vendor licensing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>© 2026 Cayman Craft Market · Cayman Islands National Attractions Authority</p>
+      <p>Sister attractions: Pedro St. James · Queen Elizabeth II Botanic Park · Hell Geological Site</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   ONE-PLACE LOCATION MODULE
+   The market has moved before and may move again (Parliament expansion).
+   Every mention of the location on the site reads from this object —
+   if the market relocates, update it here and nowhere else.
+   ===================================================================== */
+const LOCATION = {
+  short: "Under the big tent behind Parliament, off Seafarers Way",
+  long:  "Under the big tent on the old Tower Building lot behind Parliament, off Seafarers Way / North Church Street, George Town — on the waterfront walking path, next to the big Cayman Craft Market sign.",
+  town:  "George Town, Grand Cayman",
+  walk:  "about a 5-minute walk north along the waterfront from the cruise tender landing",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Cayman+Craft+Market+George+Town+Grand+Cayman",
+  landmark: "Look for the big roadside sign that says Cayman Craft Market."
+};
+
+const PHONE = "+1 (345) 949-6999";
+const PHONE_HREF = "tel:+13459496999";
+const EMAIL = "info@craftmarket.ky";
+
+/* ============ Live open/closed status — America/Cayman (no DST) ============ */
+function caymanNow(){
+  const parts = new Intl.DateTimeFormat("en-US",{
+    timeZone:"America/Cayman", weekday:"long", month:"long", day:"numeric",
+    hour:"numeric", minute:"2-digit", hour12:false
+  }).formatToParts(new Date());
+  const get = t => (parts.find(p=>p.type===t)||{}).value;
+  return {
+    weekday:get("weekday"), month:get("month"), day:+get("day"),
+    hour:(+get("hour"))%24, minute:+get("minute")
+  };
+}
+const WEEKDAYS = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
+function marketStatus(){
+  const c = caymanNow();
+  const mins = c.hour*60 + c.minute;
+  const OPEN = 8*60+30, CLOSE = 15*60;
+  const isXmas = (c.month==="December" && c.day===25);
+  const dateLine = `${c.weekday} in George Town`;
+  if (isXmas) return {open:false, dateLine,
+    headline:"Closed today", sub:"The market is closed on Christmas Day. Back Monday to Friday, 8:30am–3:00pm."};
+  if (WEEKDAYS.includes(c.weekday)){
+    if (mins < OPEN) return {open:false, dateLine,
+      headline:"Opens today at 8:30am", sub:"Open until 3:00pm, or until the last ship's tender."};
+    if (mins < CLOSE) return {open:true, dateLine,
+      headline:"Open now", sub:"Until 3:00pm today — or until the last ship's tender leaves."};
+    const next = (c.weekday==="Friday") ? "Monday" : "tomorrow";
+    return {open:false, dateLine,
+      headline:"Closed for the day", sub:`Stalls pack up at 3:00pm. Opens ${next} at 8:30am.`};
+  }
+  if (c.weekday==="Saturday") return {open:false, dateLine,
+    headline:"Usually closed today", sub:"Some Saturdays open in high season or when ships are in port — call ahead. Regular hours Monday 8:30am."};
+  return {open:false, dateLine,
+    headline:"Closed today", sub:"Opens tomorrow (Monday) at 8:30am."};
+}
+function paintStatus(){
+  const s = marketStatus();
+  const pill = document.getElementById("pill");
+  if (pill){
+    pill.className = "status-pill " + (s.open ? "is-open" : "is-closed");
+    document.getElementById("pill-text").textContent = s.open ? "Open now" : "Closed now";
+  }
+  document.querySelectorAll("[data-status-card]").forEach(el=>{
+    el.querySelector(".today-status").className = "today-status " + (s.open?"is-open":"is-closed");
+    el.querySelector("[data-s-date]").textContent = s.dateLine;
+    el.querySelector("[data-s-head]").textContent = s.headline;
+    el.querySelector("[data-s-sub]").textContent = s.sub;
+  });
+}
+
+/* ============ Small SVG helpers ============ */
+const I = {
+  clock:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>',
+  pin:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>',
+  ship:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15l1.5-5h13L20 15"/><path d="M12 10V5h4l-1 3"/><path d="M2 19c1.5 1.2 3 1.2 4.5 0s3-1.2 4.5 0 3 1.2 4.5 0 3-1.2 4.5 0"/></svg>',
+  phone:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>',
+  check:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7"/></svg>',
+  sun:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5 5l2.1 2.1M16.9 16.9L19 19M19 5l-2.1 2.1M7.1 16.9L5 19"/></svg>'
+};
+/* Craft category pictograms — one drawn set, 2px stroke, 48px grid */
+function ico(d){return '<svg width="30" height="30" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+d+'</svg>'}
+const PICT = {
+  thatch: ico('<path d="M9 31h30"/><path d="M14 31c0-10 4.5-16 10-16s10 6 10 16"/><path d="M12 31c-2 2-3 4-3 6h30c0-2-1-4-3-6"/><path d="M17 24h14"/>'),
+  caymanite: ico('<path d="M24 8c6 6 10 12 10 19a10 10 0 0 1-20 0c0-7 4-13 10-19Z"/><path d="M15.5 24h17M14.5 31h19"/>'),
+  coral: ico('<path d="M24 42V22"/><path d="M24 30c-5-2-8-6.5-8-12"/><path d="M16 18v-5"/><path d="M24 26c5-1.5 8-6 8-11"/><path d="M32 15V9"/><path d="M20 21c-2-1-3-3-3-3"/>'),
+  seeds: ico('<path d="M8 34c9-9 23-9 32 0"/><circle cx="12" cy="30.5" r="3"/><circle cx="20" cy="26.8" r="3"/><circle cx="28" cy="26.8" r="3"/><circle cx="36" cy="30.5" r="3"/>'),
+  art: ico('<rect x="9" y="9" width="30" height="24" rx="2"/><path d="M9 27l8-8 7 7 6-6 9 9"/><circle cx="19" cy="16" r="2.4"/><path d="M18 33v6M30 33v6"/>'),
+  food: ico('<rect x="14" y="16" width="20" height="24" rx="4"/><path d="M14 24h20"/><rect x="16" y="9" width="16" height="7" rx="2"/><path d="M20 31h8"/>'),
+  wellness: ico('<path d="M24 9c6 7 9 12 9 17a9 9 0 0 1-18 0c0-5 3-10 9-17Z"/><path d="M24 21c2 2 3 4 3 6a3 3 0 0 1-6 0c0-2 1-4 3-6Z"/>'),
+  apparel: ico('<path d="M18 10l6 3 6-3 8 6-4 6-3-2v20H17V20l-3 2-4-6 8-6Z"/>'),
+  services: ico('<path d="M18 9c0 10-2 30 6 30M30 9c0 10 2 30-6 30M24 9c0 10 0 20 0 30" transform="rotate(8 24 24)"/><path d="M15 40h18"/>')
+};
+
+/* Caymanite strata divider */
+const STRATA = '<div class="strata" role="presentation"><i></i></div>';
+
+/* Status card (hero + visit page) */
+function todayCard(){
+  return `
+  <div class="today" data-status-card>
+    <div class="today-head">
+      <p class="when" data-s-date>Today in George Town</p>
+      <p class="today-status"><span class="dot"></span><span data-s-head>Checking…</span></p>
+      <p class="today-sub" data-s-sub></p>
+    </div>
+    <div class="today-body">
+      <div class="today-row">${I.clock}<p><b>Monday–Friday, 8:30am–3:00pm</b> — or until the last ship's tender. Occasional Saturdays in high season.</p></div>
+      <div class="today-row">${I.ship}<p>Vendors follow the ships: on cruise days every stall is out. On quiet days the market is smaller — and liveliest before noon.</p></div>
+      <div class="today-row">${I.pin}<p>${LOCATION.short}, ${LOCATION.town}. ${LOCATION.landmark}</p></div>
+      <div class="today-row">${I.phone}<p>Not sure? Call <a href="${PHONE_HREF}">${PHONE}</a>. Closed Christmas Day, Good Friday and in severe weather.</p></div>
+    </div>
+    <div class="today-foot"><a class="btn btn-primary" href="${LOCATION.mapsUrl}" rel="noopener">Open in Google Maps</a></div>
+  </div>`;
+}
+
+/* Authored walking map — schematic, not to scale */
+function walkingMap(){
+  return `
+  <figure class="mapfig">
+    <svg class="map-svg" viewBox="0 0 760 560" role="img" aria-labelledby="mapTitle mapDesc">
+      <title id="mapTitle">Walking map from the cruise tender landing to the Cayman Craft Market</title>
+      <desc id="mapDesc">A schematic map of the George Town waterfront. From the Royal Watler cruise terminal, walk north along the waterfront on Harbour Drive, which becomes North Church Street. The Cayman Craft Market is under the big tent behind the Parliament building, off Seafarers Way. About a five-minute walk, not to scale.</desc>
+      <!-- sea -->
+      <rect width="760" height="560" fill="#BFD9D6"/>
+      <path d="M0 0h760v560H0Z" fill="#9EC8C4"/>
+      <path d="M215 0 C 185 120, 200 260, 172 380 C 158 445, 168 520, 180 560 L 0 560 L 0 0 Z" fill="#7FB5B4"/>
+      <g stroke="#EAF4F2" stroke-width="2" opacity=".7" fill="none">
+        <path d="M60 120q14-8 28 0t28 0"/><path d="M40 300q14-8 28 0t28 0"/><path d="M78 470q14-8 28 0t28 0"/>
+      </g>
+      <text x="88" y="230" fill="#255E5F" font-family="Karla,sans-serif" font-size="17" font-weight="700" letter-spacing="3" transform="rotate(-78 88 230)">GEORGE TOWN HARBOUR</text>
+      <!-- land -->
+      <path d="M215 0 C 185 120, 200 260, 172 380 C 158 445, 168 520, 180 560 L 760 560 L 760 0 Z" fill="#F2EAD6"/>
+      <!-- shore road: Harbour Dr -> N Church St -->
+      <path d="M238 560 C 222 470, 214 420, 226 340 C 240 250, 232 120, 252 0" fill="none" stroke="#DCCFAF" stroke-width="26"/>
+      <path d="M238 560 C 222 470, 214 420, 226 340 C 240 250, 232 120, 252 0" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="10 12" opacity=".8"/>
+      <!-- Seafarers Way spur -->
+      <path d="M236 190 C 320 178, 420 176, 540 186" fill="none" stroke="#DCCFAF" stroke-width="20"/>
+      <text x="356" y="169" fill="#8A7B57" font-family="Karla,sans-serif" font-size="15" font-weight="700" letter-spacing="1">SEAFARERS WAY</text>
+      <text x="252" y="452" fill="#8A7B57" font-family="Karla,sans-serif" font-size="15" font-weight="700" letter-spacing="1" transform="rotate(-83 252 452)">HARBOUR DRIVE</text>
+      <text x="256" y="118" fill="#8A7B57" font-family="Karla,sans-serif" font-size="14" font-weight="700" letter-spacing="1" transform="rotate(-86 256 118)">N CHURCH ST</text>
+      <!-- Elmslie church landmark -->
+      <g transform="translate(270 300)">
+        <rect x="0" y="14" width="44" height="30" rx="3" fill="#E7DBC0" stroke="#B4A27A" stroke-width="2"/>
+        <path d="M22 -6v12M16 2h12" stroke="#B4A27A" stroke-width="2.6"/>
+        <path d="M8 14 22 4l14 10" fill="none" stroke="#B4A27A" stroke-width="2.6"/>
+        <text x="54" y="34" fill="#6E6046" font-family="Karla,sans-serif" font-size="14" font-weight="700">Elmslie Memorial Church</text>
+      </g>
+      <!-- Parliament -->
+      <g transform="translate(300 210)">
+        <rect x="0" y="0" width="90" height="58" rx="4" fill="#D9CBA8" stroke="#A8946A" stroke-width="2"/>
+        <path d="M12 0 V-14 H24 V0 M45 0 V-20 M45 -20 l14 6 -14 6" fill="none" stroke="#A8946A" stroke-width="2.4"/>
+        <text x="45" y="34" text-anchor="middle" fill="#6E6046" font-family="Karla,sans-serif" font-size="14" font-weight="700">Parliament</text>
+      </g>
+      <!-- THE TENT -->
+      <g transform="translate(430 232)">
+        <path d="M0 46 L36 8 L72 46 Z" fill="#C9A66B" stroke="#7A4A2B" stroke-width="3"/>
+        <path d="M36 8 L36 46" stroke="#7A4A2B" stroke-width="3"/>
+        <path d="M8 46h56" stroke="#7A4A2B" stroke-width="3"/>
+        <circle cx="36" cy="-16" r="15" fill="#B4431D"/>
+        <path d="M36 -24v16M28 -16h16" stroke="#fff" stroke-width="3.4"/>
+        <text x="86" y="28" fill="#7A3A20" font-family="'Bricolage Grotesque',Karla,sans-serif" font-size="19" font-weight="800">The Craft Market tent</text>
+        <text x="86" y="48" fill="#8A7B57" font-family="Karla,sans-serif" font-size="14">behind Parliament — look for the big sign</text>
+      </g>
+      <!-- Royal Watler terminal -->
+      <g transform="translate(150 430)">
+        <rect x="30" y="0" width="52" height="26" rx="3" fill="#D9CBA8" stroke="#A8946A" stroke-width="2"/>
+        <path d="M30 13 H-4" stroke="#A8946A" stroke-width="6"/>
+        <text x="90" y="12" fill="#6E6046" font-family="Karla,sans-serif" font-size="14" font-weight="700">Royal Watler Cruise Terminal</text>
+        <text x="90" y="30" fill="#8A7B57" font-family="Karla,sans-serif" font-size="13">tender landing</text>
+      </g>
+      <!-- ship -->
+      <g transform="translate(74 405)" fill="#255E5F">
+        <path d="M0 22 l6 12 h32 l6-12 Z"/><rect x="12" y="10" width="20" height="10" rx="2"/><rect x="17" y="2" width="10" height="7" rx="2"/>
+      </g>
+      <!-- walking route -->
+      <path id="route" d="M196 438 C 232 430, 236 400, 234 350 C 232 305, 230 250, 240 205 C 246 182, 300 176, 372 178 C 408 179, 438 190, 452 216"
+        fill="none" stroke="#B4431D" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 13"/>
+      <g transform="translate(452 216)"><path d="M-10 -14 L4 2 L-16 4 Z" fill="#B4431D"/></g>
+      <!-- compass + scale -->
+      <g transform="translate(690 60)" text-anchor="middle">
+        <circle r="24" fill="#F7F1E4" stroke="#A8946A" stroke-width="2"/>
+        <path d="M0 -14 L7 8 L0 3 L-7 8 Z" fill="#B4431D"/>
+        <text y="42" fill="#6E6046" font-family="Karla,sans-serif" font-size="14" font-weight="700">N</text>
+      </g>
+      <g transform="translate(560 520)">
+        <rect x="-16" y="-24" width="216" height="40" rx="8" fill="#F7F1E4" opacity=".92"/>
+        <text x="92" y="2" text-anchor="middle" fill="#4A5A60" font-family="Karla,sans-serif" font-size="15" font-weight="700">≈ 5-minute walk · not to scale</text>
+      </g>
+    </svg>
+    <figcaption>From the tender landing, keep the sea on your left and walk north along the waterfront — past Elmslie Memorial Church, then right at Seafarers Way. The tent is behind Parliament. ${LOCATION.landmark}</figcaption>
+  </figure>`;
+}
+
+/* Maker portrait art — authored craft-pattern panels (swap for real photos; keep alt text) */
+function makerArt(kind, label){
+  const P = {
+    weave:`<rect width="280" height="230" fill="#0B4053"/>
+      <g stroke="#C9A66B" stroke-width="16" stroke-linecap="round" opacity=".95">
+        <path d="M30 35h90M160 35h90M30 85h90M160 85h90M30 135h90M160 135h90M30 185h90M160 185h90" opacity=".55"/>
+        <path d="M55 10v90M55 130v90M125 10v90M125 130v90M195 10v90M195 130v90M255 10v90"/>
+      </g>`,
+    stone:`<rect width="280" height="230" fill="#F2EAD6"/>
+      <g>
+        <path d="M0 40 q70 -18 140 0 t140 0 V78 q-70 18 -140 0 t-140 0 Z" fill="#E5D6B0"/>
+        <path d="M0 78 q70 18 140 0 t140 0 V120 q-70 -14 -140 0 t-140 0 Z" fill="#A6553B"/>
+        <path d="M0 120 q70 -14 140 0 t140 0 V160 q-70 16 -140 0 t-140 0 Z" fill="#7A4A2B"/>
+        <path d="M0 160 q70 16 140 0 t140 0 V196 q-70 -12 -140 0 t-140 0 Z" fill="#6E645C"/>
+        <path d="M0 196 q70 -12 140 0 t140 0 V230 H0 Z" fill="#C9A66B"/>
+      </g>`,
+    coral:`<rect width="280" height="230" fill="#0E6470"/>
+      <g fill="none" stroke="#F7F1E4" stroke-width="7" stroke-linecap="round">
+        <path d="M140 215V95"/><path d="M140 150c-30-10-46-38-46-70"/><path d="M94 80V48"/>
+        <path d="M140 125c30-8 46-34 46-64"/><path d="M186 61V30"/><path d="M118 105c-12-6-18-18-18-18"/>
+        <path d="M162 95s12-8 14-22"/>
+      </g>`,
+    canvas:`<rect width="280" height="230" fill="#E5D6B0"/>
+      <path d="M0 150 q60 -50 120 -18 t160 -30 V230 H0 Z" fill="#0E6470"/>
+      <path d="M0 178 q80 -34 160 -6 t120 -18 V230 H0 Z" fill="#0B4053"/>
+      <circle cx="212" cy="58" r="26" fill="#B4431D"/>
+      <path d="M0 210 q70 -20 140 0 t140 0 V230 H0 Z" fill="#C9A66B"/>`,
+    drift:`<rect width="280" height="230" fill="#F2EAD6"/>
+      <g fill="none" stroke="#7A4A2B" stroke-width="9" stroke-linecap="round">
+        <path d="M30 190 C 90 150, 120 200, 180 165 S 250 130, 254 128"/>
+        <path d="M60 120 C 100 96, 150 130, 200 95"/>
+      </g>
+      <g fill="#0E6470"><circle cx="70" cy="60" r="9"/><circle cx="120" cy="48" r="6"/><circle cx="168" cy="62" r="7.5"/><circle cx="214" cy="42" r="5.5"/></g>`
+  };
+  return `<div class="maker-art"><svg viewBox="0 0 280 230" role="img" aria-label="${label}">${P[kind]}</svg></div>`;
+}
+
+/* ============ Content data ============ */
+const CRAFTS = [
+  {ic:"thatch", tag:"Heritage craft", name:"Silver Thatch weaving", copy:"Hats, bags, baskets, fans and rope plaited from the Silver Thatch palm — Cayman's national tree. Some makers weave right at their stall."},
+  {ic:"caymanite", tag:"Found only in Cayman", name:"Caymanite jewellery & carvings", copy:"Rings, pendants, turtles and crosses cut from Caymanite, the layered semi-precious stone found nowhere else on Earth."},
+  {ic:"coral", tag:"Heritage stock", name:"Black coral, conch & shell", copy:"Black coral pieces from long-held stock (harvest is now restricted), conch and whelk creations, sea glass and pink shell pendants."},
+  {ic:"seeds", tag:"Made from the island", name:"Seed & natural jewellery", copy:"Necklaces and bracelets from local seeds and beans, polished coconut shell, and recycled treasures given a second life."},
+  {ic:"art", tag:"Original work", name:"Paintings, prints & carvings", copy:"Hand carvings, original canvases, prints and photography of island life — some artists paint on-site."},
+  {ic:"food", tag:"Taste of Cayman", name:"Local food & condiments", copy:"Pepper jellies, jams, pickles, hot sauces, honey and spices — plus fresh coconuts and seasonal juices on market days."},
+  {ic:"wellness", tag:"Small-batch", name:"Wellness & home", copy:"Natural skincare, hand-poured soaps and candles made in small batches on-island."},
+  {ic:"apparel", tag:"Wearable", name:"Apparel & souvenirs", copy:"Caribbean-bright tees, beachwear, kids' clothing and dolls — honest souvenirs alongside the heritage work."},
+  {ic:"services", tag:"At the market", name:"Braiding & made-to-order", copy:"Hair braiding while you watch the harbour, custom jewellery commissions, and live thatch-weaving demonstrations."}
+];
+
+const MAKERS = [
+  {art:"stone", artLabel:"Layered bands of Caymanite stone in rust, brown, grey and straw",
+   name:"Rosemary", craft:"Caymanite necklaces · woven bracelets · island stories",
+   copy:"Rosemary is the storyteller of the tent. Her Caymanite necklaces and woven bracelets come with the history of the stone and the island, told first-hand while you browse.",
+   quote:{text:"I usually expect local vendors to be very aggressive and pushy… this place was completely different. Very laid back… Especially Rosemary.", by:"EvilPossum, Tripadvisor"}},
+  {art:"weave", artLabel:"Woven Silver Thatch pattern in straw on deep sea blue",
+   name:"Janet", craft:"Silver Thatch hats, woven at her stall",
+   copy:"Janet braids thatch on-site — arrive early and you can watch a hat take shape from strips of Silver Thatch palm, then wear it home. Weaving like hers is a centuries-old Caymanian skill now practised by only a handful of hands.",
+   quote:{text:"Janet braids thatch onsite and I purchased one of her beautiful hand made hats.", by:"ACoupleTravelers1, Tripadvisor"}},
+  {art:"coral", artLabel:"A branch of black coral drawn in cream on sea teal",
+   name:"Ruth Bodden", craft:"Caymanite & black coral jewellery, certified authentic",
+   copy:"A ninth-generation Caymanian, Ruth works genuine Caymanite and Cayman black coral into fine jewellery — and stands behind every piece with certification and a lifetime warranty.",
+   quote:{text:"If you get Caymanite from this market you are guaranteed that it is 100% true caymanite.", by:"Tripadvisor reviewer"}},
+  {art:"canvas", artLabel:"A painted island scene: sea bands, sun and sand",
+   name:"Franklin", craft:"Hand-painted canvases of island life",
+   copy:"Franklin's original canvases catch the harbour light you're standing in — painted by hand, sized to pack flat in a suitcase.", quote:null},
+  {art:"drift", artLabel:"Driftwood curves and sea-glass dots on sand",
+   name:"Josanny · Cayman Drift", craft:"Driftwood & repurposed-material art",
+   copy:"Cayman Drift turns what the sea returns — driftwood, sea glass, castaway materials — into one-of-a-kind pieces. Recycled treasure in the most literal sense.", quote:null}
+];
+
+const QUOTES = [
+  {text:"Stopped by early in the morning before the cruise ship crowd and met two wonderful vendors named Janet and Rosemary. Janet braids thatch onsite and I purchased one of her beautiful hand made hats.", by:"ACoupleTravelers1 · Tripadvisor"},
+  {text:"This is a wonderful place to get the feel of Caymanian's heritage and how they live… how they use the natural resources to make a living.", by:"lesleywr · Tripadvisor"},
+  {text:"I usually expect local vendors to be very aggressive and pushy… this place was completely different. Very laid back… Especially Rosemary.", by:"EvilPossum · Tripadvisor"},
+  {text:"It is all locals that sell stuff that is part of their culture, handcrafted, and traditional… if you get Caymanite from this market you are guaranteed that it is 100% true caymanite.", by:"Tripadvisor reviewer, on Ruth Bodden's stall"}
+];
+
+/* ============ Page templates ============ */
+function pageHero(eyebrow, title, sub){
+  return `<div class="page-hero"><div class="wrap">
+    <span class="eyebrow">${eyebrow}</span>
+    <h1>${title}</h1>
+    ${sub?`<p class="lead">${sub}</p>`:""}
+  </div></div>${STRATA}`;
+}
+
+const PAGES = {
+/* ---------------- HOME ---------------- */
+home:{
+  title:"Cayman Craft Market — Handmade in Cayman, sold by the sea | George Town, Grand Cayman",
+  html:()=>`
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">George Town waterfront · ${LOCATION.walk}</span>
+        <h1>Handmade in Cayman, <em>sold by the sea.</em></h1>
+        <p class="lead">One big tent behind Parliament. Inside it: Caymanian makers selling Silver Thatch hats, Caymanite jewellery, pepper jelly and paintings — and every one of them will tell you how it's made, because they made it.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#/visit">Plan your visit</a>
+          <a class="btn btn-ghost-light" href="#/artisans">Meet the makers</a>
+        </div>
+      </div>
+      ${todayCard()}
+    </div>
+  </div>
+  ${STRATA}
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">What's under the tent</span>
+        <h2>Nine kinds of Caymanian craft</h2>
+        <p class="lead">Everything below is made or grown in the Cayman Islands. The lineup changes with the day and the ships — that's the nature of a real market.</p>
+      </div>
+      <div class="craft-ledger">
+        ${CRAFTS.slice(0,6).map(c=>`
+        <div class="craft-item reveal">
+          <span class="ic">${PICT[c.ic]}</span>
+          <div><h3>${c.name}</h3><p>${c.copy}</p><span class="tag">${c.tag}</span></div>
+        </div>`).join("")}
+      </div>
+      <p style="margin-top:var(--s4)"><a class="btn btn-ghost" href="#/crafts">See all nine categories</a></p>
+    </div>
+  </section>
+
+  <section class="band band-deep">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Why it matters</span>
+        <h2>The stone is only found here. So is the skill.</h2>
+        <p>Caymanite forms in layered bands in the cliffs of the East End and Cayman Brac — and nowhere else on the planet. Silver Thatch weaving fed and roofed these islands for two centuries, and today only a handful of weavers still practise it.</p>
+        <p>When you buy at the Craft Market, you're not buying a souvenir of Cayman. You're buying a piece of it, from the person keeping the skill alive.</p>
+        <p style="margin-top:var(--s3)"><a class="btn btn-ghost-light" href="#/heritage">Read the heritage story</a></p>
+      </div>
+      <div class="reveal">
+        ${makerArt("stone","Illustration of Caymanite's natural layered strata")}
+        <p class="small" style="margin-top:10px;color:#9FB8BC">The bands of Caymanite — the motif you'll see across this site — as they occur in the stone itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Meet the makers</span>
+        <h2>Buy it from the hands that made it</h2>
+      </div>
+      ${MAKERS.slice(0,3).map((m,i)=>`
+      <article class="maker ${i%2?'flip':''} reveal">
+        ${makerArt(m.art,m.artLabel)}
+        <div>
+          <h3>${m.name}</h3>
+          <p class="craft-line">${m.craft}</p>
+          <p>${m.copy}</p>
+          ${m.quote?`<blockquote><p>“${m.quote.text}”</p><cite>— ${m.quote.by}</cite></blockquote>`:""}
+        </div>
+      </article>`).join("")}
+      <p><a class="btn btn-ghost" href="#/artisans">All the artisans</a></p>
+    </div>
+  </section>
+
+  <section class="band tight band-straw">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Know before you go</span>
+        <h2>Small on purpose</h2>
+        <p>This isn't a mall — it's a working market of a handful to a dozen-plus stalls, depending on the day and the ships in port. Come for twenty unhurried minutes, talk to the makers, and you'll leave with the most Caymanian thing sold on the island.</p>
+      </div>
+      <ul class="facts reveal">
+        <li>${I.check}<span><b>Busiest on cruise days</b> Every stall sets up when ships are in George Town. Quiet days are smaller but calmer.</span></li>
+        <li>${I.check}<span><b>Mornings are best</b> Vendors are set up by 8:30am and stay until 3:00pm — or the last tender.</span></li>
+        <li>${I.check}<span><b>Genuinely local</b> Every licensed vendor sells Caymanian-made work. Ask about the material — they'll tell you where it came from.</span></li>
+        <li>${I.check}<span><b>Five minutes from your ship</b> Flat, waterfront walk from the tender landing. Wheelchair accessible.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow">In visitors' words</span>
+        <h2>“Laid back” comes up a lot</h2>
+      </div>
+      <div class="quotes">
+        ${QUOTES.slice(0,3).map(q=>`<figure class="quote reveal"><p>“${q.text}”</p><cite>— ${q.by}</cite></figure>`).join("")}
+      </div>
+    </div>
+  </section>
+
+  <section class="band tight band-sea">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Finding the tent</span>
+        <h2>Behind Parliament, beside the sea</h2>
+        <p>${LOCATION.long}</p>
+        <p>From the tender landing it's ${LOCATION.walk} — keep the water on your left.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#/visit">Directions & walking map</a>
+          <a class="btn btn-ghost" href="${LOCATION.mapsUrl}" rel="noopener">Google Maps</a>
+        </div>
+      </div>
+      <div class="reveal">${walkingMap()}</div>
+    </div>
+  </section>
+
+  <section class="band tight cta-band">
+    <div class="wrap cta-inner">
+      <div>
+        <h2 style="margin-bottom:6px">Are you a Caymanian maker?</h2>
+        <p style="margin:0">The market licenses new vendors through CINAA. Bring your craft to the waterfront.</p>
+      </div>
+      <a class="btn btn-primary" href="#/vendors">How to become a vendor</a>
+    </div>
+  </section>`
+},
+
+/* ---------------- VISIT ---------------- */
+visit:{
+  title:"Visit — hours, directions & walking map | Cayman Craft Market",
+  html:()=>`
+  ${pageHero("Plan your visit","Is it open today?","Live status, real hours, and exactly how to find the tent — the two questions everyone asks, answered first.")}
+  <section class="band tight">
+    <div class="wrap split">
+      ${todayCard()}
+      <div>
+        <h2 style="font-size:var(--fs-5)">Hours</h2>
+        <table class="hours">
+          <tr><th scope="row">Monday – Friday</th><td><b>8:30am – 3:00pm</b> <span class="muted">(or until the last ship's tender)</span></td></tr>
+          <tr><th scope="row">Saturday</th><td>Occasionally, in high season or when ships are in port — call ahead</td></tr>
+          <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+          <tr><th scope="row">Holidays</th><td>Closed Christmas Day & Good Friday</td></tr>
+          <tr><th scope="row">Weather</th><td>Closed in severe weather</td></tr>
+        </table>
+        <div class="notice" style="margin-top:var(--s3)">
+          <p><b>The honest version:</b> vendors follow the ships. On cruise days the tent is full; on quiet days fewer stalls set up. If your day depends on it, call <a href="${PHONE_HREF}">${PHONE}</a> before you walk over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-sea">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Where we are</span>
+        <h2>Finding the tent</h2>
+        <p class="lead">${LOCATION.long}</p>
+      </div>
+      <div class="split">
+        ${walkingMap()}
+        <div>
+          <h3>From the cruise tender landing</h3>
+          <ol class="steps">
+            <li><h4>Step off at the terminal</h4><p>Tenders land at the Royal Watler and South terminals on Harbour Drive, in the heart of George Town.</p></li>
+            <li><h4>Walk north, sea on your left</h4><p>Follow the waterfront walkway along Harbour Drive as it becomes North Church Street — past Elmslie Memorial Church.</p></li>
+            <li><h4>Turn at Seafarers Way</h4><p>The big tent is on the old Tower Building lot behind the Parliament building.</p></li>
+            <li><h4>Look for the sign</h4><p>${LOCATION.landmark} Total walk: about five minutes, flat the whole way.</p></li>
+          </ol>
+          <a class="btn btn-primary" href="${LOCATION.mapsUrl}" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Good to know</span>
+        <h2>What to expect</h2>
+      </div>
+      <div class="split">
+        <ul class="facts">
+          <li>${I.check}<span><b>Size</b> A single open-air tent with a handful to a dozen-plus stalls, depending on the day. Twenty minutes is plenty; browsers are welcome to linger.</span></li>
+          <li>${I.check}<span><b>Accessibility</b> Flat, step-free waterfront site; wheelchair accessible.</span></li>
+          <li>${I.check}<span><b>Paying</b> Cash — Cayman or US dollars — is the surest way to pay; card acceptance varies stall to stall.</span></li>
+          <li>${I.check}<span><b>Shade & weather</b> The tent keeps the sun off; in severe weather the market closes.</span></li>
+        </ul>
+        <ul class="facts">
+          <li>${I.sun}<span><b>Best time</b> Mornings on cruise days: every stall out, thatch weaving and painting in progress, harbour breeze.</span></li>
+          <li>${I.check}<span><b>Ask about the material</b> Caymanite, Silver Thatch, black coral — every maker can tell you exactly where their material came from. That's the point of the place.</span></li>
+          <li>${I.check}<span><b>Getting here without a ship</b> In central George Town — short walk from downtown, buses and taxis stop nearby on North Church Street.</span></li>
+          <li>${I.phone}<span><b>Questions</b> <a href="${PHONE_HREF}">${PHONE}</a> · <a href="mailto:${EMAIL}">${EMAIL}</a></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tight cta-band">
+    <div class="wrap cta-inner">
+      <div><h2 style="margin-bottom:6px">While you're deciding…</h2><p style="margin:0">See what the makers are selling this season.</p></div>
+      <a class="btn btn-primary" href="#/crafts">Browse the crafts</a>
+    </div>
+  </section>`
+},
+
+/* ---------------- CRAFTS ---------------- */
+crafts:{
+  title:"The crafts — nine categories of Caymanian-made work | Cayman Craft Market",
+  html:()=>`
+  ${pageHero("What's sold here","Nine kinds of Caymanian craft","Every category below is made, grown or gathered in the Cayman Islands — and sold by the maker. Stock varies day to day; that's a market, not a shop.")}
+  <section class="band">
+    <div class="wrap">
+      <div class="craft-ledger">
+        ${CRAFTS.map(c=>`
+        <div class="craft-item reveal">
+          <span class="ic">${PICT[c.ic]}</span>
+          <div><h3>${c.name}</h3><p>${c.copy}</p><span class="tag">${c.tag}</span></div>
+        </div>`).join("")}
+      </div>
+    </div>
+  </section>
+  <section class="band tight band-straw">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">A word on authenticity</span>
+        <h2>How to know it's the real thing</h2>
+        <p>Genuine Caymanite shows natural layered bands — no two pieces alike — and comes only from the cliffs of the East End and Cayman Brac. Cayman black coral harvest is now restricted, so authentic pieces are worked from long-held stock; some makers, like ninth-generation Caymanian Ruth Bodden, certify every piece and back it with a lifetime warranty.</p>
+        <p>The simplest test at an open market: ask. A maker who cut the stone or plaited the thatch can tell you where it came from, and will.</p>
+      </div>
+      <div class="notice">
+        <p><b>Fair warning, kindly meant:</b> George Town's souvenir strip sells plenty of imported trinkets. Under this tent, licensed vendors sell Caymanian-made work — if you want the piece that could only have come from these islands, this is the place to find it.</p>
+      </div>
+    </div>
+  </section>
+  <section class="band tight cta-band">
+    <div class="wrap cta-inner">
+      <div><h2 style="margin-bottom:6px">The best pieces come with a story</h2><p style="margin:0">Meet the people who make all of this.</p></div>
+      <a class="btn btn-primary" href="#/artisans">Meet the artisans</a>
+    </div>
+  </section>`
+},
+
+/* ---------------- ARTISANS ---------------- */
+artisans:{
+  title:"The artisans — meet the makers | Cayman Craft Market",
+  html:()=>`
+  ${pageHero("The artisans","The people under the tent","The market exists so Caymanian makers can sell their own work, face to face. Here are a few of the regulars — the lineup shifts with the day and the season.")}
+  <section class="band">
+    <div class="wrap">
+      ${MAKERS.map((m,i)=>`
+      <article class="maker ${i%2?'flip':''} reveal">
+        ${makerArt(m.art,m.artLabel)}
+        <div>
+          <h3>${m.name}</h3>
+          <p class="craft-line">${m.craft}</p>
+          <p>${m.copy}</p>
+          ${m.quote?`<blockquote><p>“${m.quote.text}”</p><cite>— ${m.quote.by}</cite></blockquote>`:""}
+        </div>
+      </article>`).join("")}
+      <div class="notice" style="margin-top:var(--s4)">
+        <p><b>Every stall is someone's livelihood.</b> Vendors are licensed Caymanian artisans; who's trading on a given day follows the ships and the season. If you're coming to see a particular maker, call <a href="${PHONE_HREF}">${PHONE}</a> first.</p>
+      </div>
+    </div>
+  </section>
+  <section class="band tight cta-band">
+    <div class="wrap cta-inner">
+      <div><h2 style="margin-bottom:6px">Make things? Join them.</h2><p style="margin:0">CINAA licenses new vendors year-round.</p></div>
+      <a class="btn btn-primary" href="#/vendors">Become a vendor</a>
+    </div>
+  </section>`
+},
+
+/* ---------------- HERITAGE ---------------- */
+heritage:{
+  title:"Heritage — Silver Thatch, Caymanite & black coral | Cayman Craft Market",
+  html:()=>`
+  ${pageHero("Heritage","Craft that kept these islands alive","Before tourism, before banking, Caymanians lived by what they could weave, carve and catch. The crafts under the tent aren't souvenirs of that history — they're the continuation of it.")}
+  <section class="band">
+    <div class="wrap split">
+      <div class="reveal">
+        ${makerArt("weave","Woven Silver Thatch pattern")}
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">The national tree</span>
+        <h2>Silver Thatch</h2>
+        <p>The Silver Thatch palm (<i>Coccothrinax proctorii</i>) grows only in the Cayman Islands — and for two centuries it clothed, roofed and employed them. Caymanians plaited its silvery fronds into rope so salt-resistant it was traded across the Caribbean, and into the hats, baskets and fans their families needed.</p>
+        <p>Today the tree is Cayman's national tree, and the plaiting survives in the hands of a small number of weavers — several of whom sell, and demonstrate, at this market. When you watch Janet braid a hat at her stall, you're watching a skill passed down through generations, one strip at a time.</p>
+      </div>
+    </div>
+  </section>
+  <section class="band band-deep">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Found nowhere else</span>
+        <h2>Caymanite</h2>
+        <p>Caymanite is a semi-precious dolomite laid down in bands of rust, cream, brown and grey — millions of years of sediment, compressed into stripes. It occurs only in the cliffs of Cayman Brac and Grand Cayman's East End.</p>
+        <p>Cut and polished, no two pieces repeat. Market jewellers work it into rings, pendants, turtles and crosses — and because the stone exists nowhere else, a genuine piece is Cayman in your pocket. Its layers are the pattern you see running through this site.</p>
+      </div>
+      <div class="reveal">${makerArt("stone","Caymanite strata illustration")}</div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap split">
+      <div class="reveal">${makerArt("coral","Black coral branch illustration")}</div>
+      <div class="reveal">
+        <span class="eyebrow">From the deep walls</span>
+        <h2>Black coral & the sea</h2>
+        <p>Cayman's deep reef walls grow black coral — dark, dense, and long prized by island jewellers. Harvesting is now restricted to protect the reefs, which makes authentic Cayman black coral rarer with every year: today's pieces are worked from stock gathered long ago.</p>
+        <p>Alongside it, makers turn conch and whelk shells, sea glass and seeds into jewellery — the sea providing, as it always has here. Buy from a licensed market vendor and you can ask exactly where a piece began.</p>
+      </div>
+    </div>
+  </section>
+  <section class="band tight band-straw">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Why buy here</span>
+        <h2>A purchase that keeps a skill alive</h2>
+        <p class="lead">Every sale under the tent goes to the maker — and every maker is a working link in a chain of knowledge that is now only a few hands wide. That's a better story than anything in a duty-free bag.</p>
+      </div>
+      <a class="btn btn-primary" href="#/visit">Come see it made</a>
+    </div>
+  </section>`
+},
+
+/* ---------------- VENDORS ---------------- */
+vendors:{
+  title:"Become a vendor — CINAA licensing | Cayman Craft Market",
+  html:()=>`
+  ${pageHero("For makers","Bring your craft to the waterfront","The market licenses Caymanian artisans and food makers through the Cayman Islands National Attractions Authority (CINAA). Here's the whole process, start to stall.")}
+  <section class="band">
+    <div class="wrap split">
+      <div>
+        <ol class="steps">
+          <li><h4>Complete the application</h4><p>Fill in the Vendor Application Form — or the Food Court application if you'll be selling food — and include clear photos of your products.</p></li>
+          <li><h4>Market manager review</h4><p>The market manager reviews your application and products for fit with the market's Caymanian-made standard.</p></li>
+          <li><h4>Meet the CINAA Director</h4><p>You'll be invited to a meeting with the Director — bring samples of your work.</p></li>
+          <li><h4>Licence decision</h4><p>The Director decides on your licence application.</p></li>
+          <li><h4>Fees & agreement</h4><p>Approved vendors pay the licence fees and sign the licence agreement.</p></li>
+          <li><h4>Pick your start date</h4><p>Coordinate your first market day with the market manager — then set up your stall by the sea.</p></li>
+        </ol>
+      </div>
+      <div>
+        <div class="notice">
+          <p><b>Where to apply:</b> CINAA administrative offices at Pedro St. James, Pedro Castle Road, Savannah. Forms are available from the office — call or email to have one sent.</p>
+        </div>
+        <ul class="facts" style="margin-top:var(--s3)">
+          <li>${I.phone}<span><b>Phone</b> <a href="${PHONE_HREF}">${PHONE}</a></span></li>
+          <li>${I.check}<span><b>Email</b> <a href="mailto:${EMAIL}">${EMAIL}</a></span></li>
+          <li>${I.check}<span><b>What the market looks for</b> Work that is genuinely made in Cayman — heritage crafts, original art, local food — sold by the maker or their family.</span></li>
+          <li>${I.check}<span><b>Who runs the market</b> CINAA, the statutory authority that also runs Pedro St. James, the QEII Botanic Park and Hell. <a href="#/about">About CINAA</a></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="band tight cta-band">
+    <div class="wrap cta-inner">
+      <div><h2 style="margin-bottom:6px">Ready to apply?</h2><p style="margin:0">Call the market office and ask for the vendor application form.</p></div>
+      <a class="btn btn-primary" href="${PHONE_HREF}">Call ${PHONE}</a>
+    </div>
+  </section>`
+},
+
+/* ---------------- ABOUT ---------------- */
+about:{
+  title:"About the market & CINAA | Cayman Craft Market",
+  html:()=>`
+  ${pageHero("About","A market the islands built for their makers","Developed by the Cayman Islands Government as a home for local artists and artisans, the Craft Market has traded on the George Town waterfront for over two decades.")}
+  <section class="band">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">The story</span>
+        <h2>From stalls by the road to the tent by the sea</h2>
+        <p>The Cayman Craft Market was created to give Caymanian artisans a permanent place to sell indigenous art and craft to the world arriving at George Town harbour. For years it traded from painted stalls at South Church Street; after Covid it moved north along the waterfront to its current home — one big tent behind Parliament, off Seafarers Way.</p>
+        <p>Through every move, the idea hasn't changed: local makers, their own work, sold by the sea. Its long-running promise still holds — <i>the best local shopping by the sea.</i></p>
+      </div>
+      <div>
+        <span class="eyebrow">The stewards</span>
+        <h2>Run by CINAA</h2>
+        <p>Since 1 June 2023 the market has been administered by the <b>Cayman Islands National Attractions Authority</b> (CINAA), the statutory body that succeeded the Tourism Attraction Board. CINAA's mission is to "enhance and diversify Cayman's tourism product by offering high quality attractions that display Cayman's culture, history, geology, flora and fauna."</p>
+        <p>Its four attractions: the Craft Market, <b>Pedro St. James</b>, the <b>Queen Elizabeth II Botanic Park</b>, and the <b>Hell Geological Site</b>. As CINAA's director put it: "All Caymanians are owners and custodians of these attractions."</p>
+      </div>
+    </div>
+  </section>
+  <section class="band tight band-sea">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow">In visitors' words</span>
+        <h2>What people take home</h2>
+      </div>
+      <div class="quotes">
+        ${QUOTES.map(q=>`<figure class="quote"><p>“${q.text}”</p><cite>— ${q.by}</cite></figure>`).join("")}
+      </div>
+    </div>
+  </section>
+  <section class="band tight cta-band">
+    <div class="wrap cta-inner">
+      <div><h2 style="margin-bottom:6px">Come say hello</h2><p style="margin:0">Monday to Friday, 8:30am–3:00pm, ${LOCATION.walk}.</p></div>
+      <a class="btn btn-primary" href="#/visit">Plan your visit</a>
+    </div>
+  </section>`
+},
+
+/* ---------------- CONTACT ---------------- */
+contact:{
+  title:"Contact | Cayman Craft Market",
+  html:()=>`
+  ${pageHero("Contact","Talk to the market","One phone call answers most questions — including today's the only one that really matters: are the stalls out?")}
+  <section class="band">
+    <div class="wrap split">
+      <div>
+        <ul class="facts">
+          <li>${I.phone}<span><b>Phone</b> <a href="${PHONE_HREF}">${PHONE}</a><br><span class="muted small">The fastest way to check today's stalls and hours.</span></span></li>
+          <li>${I.check}<span><b>Email</b> <a href="mailto:${EMAIL}">${EMAIL}</a></span></li>
+          <li>${I.pin}<span><b>Find us</b> ${LOCATION.long}<br><a href="${LOCATION.mapsUrl}" rel="noopener">Open in Google Maps</a> · <a href="#/visit">Walking directions</a></span></li>
+          <li>${I.clock}<span><b>Hours</b> Monday–Friday 8:30am–3:00pm (or until the last ship's tender); occasional Saturdays in high season. Closed Christmas Day, Good Friday and in severe weather.</span></li>
+          <li>${I.check}<span><b>Social</b> <a href="https://www.facebook.com/caymancraftmarket" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/craftmarket.ky" rel="noopener">Instagram @craftmarket.ky</a></span></li>
+          <li>${I.check}<span><b>Vendor licensing</b> Through CINAA at Pedro St. James, Savannah — <a href="#/vendors">the full process</a>.</span></li>
+        </ul>
+      </div>
+      ${todayCard()}
+    </div>
+  </section>`
+}
+};
+
+/* ============ Router ============ */
+const routes = Object.keys(PAGES);
+function currentRoute(){
+  const h = location.hash.replace(/^#\/?/,"").split("?")[0];
+  return routes.includes(h) ? h : "home";
+}
+function render(){
+  const r = currentRoute();
+  const main = document.getElementById("main");
+  main.innerHTML = PAGES[r].html();
+  document.title = PAGES[r].title;
+  document.querySelectorAll("nav.main a").forEach(a=>{
+    if(a.dataset.nav===r) a.setAttribute("aria-current","page");
+    else a.removeAttribute("aria-current");
+  });
+  document.getElementById("mainNav").classList.remove("open");
+  document.getElementById("menuBtn").setAttribute("aria-expanded","false");
+  paintStatus();
+  window.scrollTo(0,0);
+  if (location.hash && r!=="home") main.focus({preventScroll:true});
+  // scroll reveals
+  const io = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} });
+  },{rootMargin:"0px 0px -8% 0px"});
+  main.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+}
+window.addEventListener("hashchange", render);
+
+/* Mobile menu */
+const menuBtn = document.getElementById("menuBtn");
+menuBtn.addEventListener("click", ()=>{
+  const nav = document.getElementById("mainNav");
+  const open = nav.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(open));
+});
+
+/* Footer location from the one-place module */
+document.getElementById("foot-loc").textContent = LOCATION.short + ", " + LOCATION.town;
+
+render();
+setInterval(paintStatus, 60000);
+</script>
+</body>
+</html>
