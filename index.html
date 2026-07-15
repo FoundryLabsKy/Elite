@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elite Marble and Granite, Grand Cayman</title>
+<meta name="description" content="Elite Marble and Granite fabricates and installs countertops, floors, and cladding in George Town, Grand Cayman. Quarry direct stone, cut on island, installed in about seven days.">
+<meta name="theme-color" content="#07333E">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elite Marble and Granite">
+<meta property="og:title" content="Stone cut in George Town. Installed in seven days.">
+<meta property="og:description" content="Quarry direct marble and granite, fabricated on island and installed by our own crew in Grand Cayman. Where perfection costs less.">
+<meta property="og:locale" content="en_KY">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elite Marble and Granite, Grand Cayman">
+<meta name="twitter:description" content="Quarry direct stone, fabricated on island, installed in about seven days.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+
+<!-- LocalBusiness structured data (real, verified company details) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Elite Marble and Granite Ltd.",
+  "slogan": "Where perfection costs less.",
+  "description": "Family owned marble and granite fabricator and installer in George Town, Grand Cayman. Countertops, floors, wall cladding, cabinets, restoration, and commercial projects.",
+  "telephone": "+1-345-945-9028",
+  "email": "Paul@Elite.ky",
+  "url": "https://elite.ky/",
+  "foundingDate": "2000",
+  "founder": { "@type": "Person", "name": "Mike Laurenson" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "The Industrial Park, Lincoln Drive (off Sparky Drive)",
+    "addressLocality": "George Town",
+    "addressRegion": "Grand Cayman",
+    "addressCountry": "KY"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "07:30", "closes": "16:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "07:30", "closes": "15:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00" }
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Countertop fabrication and installation" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Floor coverings" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wall cladding" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stone restoration and care" } }
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   DESIGN TOKENS  (swap this one block if brand colors differ)
+   Palette: ocean and white. All pairs verified for WCAG.
+   ============================================================ */
+:root{
+  --sea-ink:#07333E;      /* dark surfaces: header, footer, CTA */
+  --sea-ink-2:#052730;    /* near-variant for footer depth */
+  --sea:#0C4A58;          /* hover on dark buttons */
+  --aqua:#3FC9D9;         /* primary CTA surface (text on it is --sea-ink) */
+  --aqua-hi:#5FD6E3;      /* aqua hover */
+  --accent:#0B7285;       /* links and labels on light */
+  --paper:#FFFFFF;
+  --sand:#F3EEE3;         /* warm counterpoint sections */
+  --sand-line:#E9E1D0;
+  --text:#1C2B31;
+  --muted:#4E6167;
+  --line:#DCE4E6;
+  --line-dark:#17505E;
+  --on-dark:#FFFFFF;
+  --on-dark-2:#C6DADE;    /* secondary text on dark */
+  --on-dark-label:#8FD4DE;/* labels on dark */
+  --star:#A9770E;         /* review stars, verified 3.9:1 on white */
+
+  --shadow:0 18px 50px -20px rgba(7,51,62,.35);
+  --r-photo:12px;
+  --r-ctl:8px;
+  --wrap:1200px;
+  --pad:clamp(20px,5vw,64px);
+
+  --f-display:"Archivo","Archivo Black",Helvetica,Arial,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--f-body);
+  font-size:17.5px;
+  line-height:1.65;
+  color:var(--text);
+  background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--accent);text-underline-offset:3px}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;color:var(--text);margin:0}
+p{margin:0}
+
+/* Focus visibility (accessibility) */
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:2px}
+a.skip{
+  position:absolute;left:12px;top:-60px;z-index:1000;
+  background:var(--aqua);color:var(--sea-ink);
+  font-family:var(--f-display);font-weight:700;font-size:14px;
+  padding:12px 18px;border-radius:var(--r-ctl);text-decoration:none;
+  transition:top .15s ease;
+}
+a.skip:focus{top:12px}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.label{
+  font-family:var(--f-display);font-weight:700;font-size:13px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+  margin:0 0 14px;
+}
+.label--dark{color:var(--on-dark-label)}
+.lead{font-size:19px;color:var(--muted);max-width:62ch}
+.prose{max-width:66ch}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--f-display);font-weight:700;font-size:16px;
+  padding:15px 26px;border-radius:var(--r-ctl);
+  text-decoration:none;cursor:pointer;border:2px solid transparent;
+  transition:background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+  line-height:1.1;
+}
+.btn:active{transform:translateY(1px)}
+.btn--primary{background:var(--aqua);color:var(--sea-ink);border-color:var(--aqua)}
+.btn--primary:hover{background:var(--aqua-hi);border-color:var(--aqua-hi)}
+.btn--ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn--ghost-dark{background:transparent;color:var(--on-dark);border-color:rgba(255,255,255,.4)}
+.btn--ghost-dark:hover{border-color:var(--aqua);color:var(--aqua)}
+.btn--onDark{background:var(--aqua);color:var(--sea-ink);border-color:var(--aqua)}
+.btn--onDark:hover{background:var(--aqua-hi);border-color:var(--aqua-hi)}
+
+/* ---------- Photo frame + fallback (no gradients; flat stone color) ---------- */
+.ph{position:relative;overflow:hidden;border-radius:var(--r-photo);background:#cabfa9}
+.ph__fallback{
+  position:absolute;inset:0;display:flex;align-items:flex-end;
+  background:#cabfa9;color:#6c5f47;
+  font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.1em;
+  text-transform:uppercase;padding:14px;
+}
+.ph--dark{background:#123a44}
+.banner .ph{aspect-ratio:16/6.5;min-height:240px}
+@media (max-width:720px){ .banner .ph{aspect-ratio:3/2} }
+.ph--dark .ph__fallback{background:#123a44;color:#6f97a0}
+.ph__img{position:relative;width:100%;height:100%;object-fit:cover;z-index:1}
+figure{margin:0}
+figcaption{font-size:14.5px;color:var(--muted);margin-top:10px}
+figcaption b{color:var(--text);font-family:var(--f-body);font-weight:600}
+.tag{
+  display:inline-block;font-family:var(--f-display);font-weight:700;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+  border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin-top:10px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header.site{
+  position:sticky;top:0;z-index:100;background:var(--sea-ink);
+  border-bottom:1px solid var(--line-dark);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:74px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;flex:none}
+.brand b{font-family:var(--f-display);font-weight:800;font-size:23px;letter-spacing:-.01em;color:var(--on-dark)}
+.brand span{font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-label)}
+.nav__links{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
+.nav__links a{
+  font-family:var(--f-display);font-weight:600;font-size:15px;color:var(--on-dark-2);
+  text-decoration:none;padding:9px 12px;border-radius:6px;transition:color .15s ease, background-color .15s ease;
+}
+.nav__links a:hover{color:var(--on-dark)}
+.nav__links a[aria-current="page"]{color:var(--on-dark)}
+.nav__links a[aria-current="page"]::after{content:"";display:block;height:2px;background:var(--aqua);margin-top:5px;border-radius:2px}
+.nav__cta{margin-left:8px}
+.burger{display:none;background:transparent;border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:10px 12px;cursor:pointer}
+.burger span{display:block;width:22px;height:2px;background:var(--on-dark);margin:4px 0;transition:.2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ============================================================
+   HERO  (copy in 620px column; photo bleeds to right viewport edge)
+   ============================================================ */
+.hero{position:relative;background:var(--sea-ink);color:var(--on-dark);overflow:hidden}
+.hero__inner{
+  max-width:var(--wrap);margin:0 auto;padding:clamp(52px,6.5vw,96px) var(--pad);
+  display:grid;grid-template-columns:minmax(0,600px) 1fr;gap:clamp(28px,4vw,64px);
+  align-items:stretch;position:relative;z-index:2;
+}
+.hero__copy{max-width:600px;align-self:center}
+.hero h1{
+  color:var(--on-dark);font-size:clamp(42px,5.8vw,80px);line-height:1.04;
+  letter-spacing:-.03em;margin:0 0 22px;
+}
+.hero__sub{font-size:clamp(18px,2.2vw,21px);line-height:1.55;color:var(--on-dark-2);max-width:34ch;margin:0 0 32px}
+.hero__actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero__media{position:relative}
+.hero__photo{
+  /* right column bleeds flush to the viewport right edge; flat seam, no gradient */
+  height:100%;min-height:clamp(360px,42vw,520px);
+  margin-right:calc(-1 * (var(--pad) + max((100vw - var(--wrap))/2, 0px)));
+  overflow:hidden;background:#123a44;
+}
+.hero__photo .ph{height:100%;border-radius:0}
+.proof{
+  position:absolute;z-index:3;left:-22px;bottom:26px;
+  background:var(--paper);color:var(--text);border-radius:var(--r-photo);
+  box-shadow:var(--shadow);padding:18px 20px;max-width:316px;
+}
+.proof .stars{color:var(--star);font-size:16px;letter-spacing:2px}
+.proof p{font-size:16px;line-height:1.45;margin:8px 0 8px;font-weight:600;color:var(--text)}
+.proof cite{font-style:normal;font-size:13px;color:var(--muted);display:block}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section{padding:clamp(64px,8vw,104px) 0}
+.sec--sand{background:var(--sand);border-top:1px solid var(--sand-line);border-bottom:1px solid var(--sand-line)}
+.sec--dark{background:var(--sea-ink);color:var(--on-dark)}
+.sec--dark h2,.sec--dark h3{color:var(--on-dark)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.sec-head{max-width:66ch;margin-bottom:40px}
+.sec-head h1,.sec-head h2{font-size:clamp(32px,4.6vw,54px);line-height:1.08;letter-spacing:-.025em}
+.sec-head p{margin-top:16px}
+
+/* Fact band */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.fact b{display:block;font-family:var(--f-display);font-weight:800;font-size:clamp(34px,4vw,46px);letter-spacing:-.02em;color:var(--text);line-height:1}
+.fact span{display:block;margin-top:8px;font-size:15px;color:var(--muted)}
+.fact--flag b::after{content:"";}
+
+/* Why split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.split .ph{aspect-ratio:4/3}
+.benefits{list-style:none;margin:0;padding:0}
+.benefits li{padding:20px 0;border-top:1px solid var(--line)}
+.benefits li:last-child{border-bottom:1px solid var(--line)}
+.benefits b{font-family:var(--f-display);font-weight:700;font-size:19px;color:var(--text);display:block;margin-bottom:4px}
+.benefits span{color:var(--muted);font-size:16.5px}
+
+/* Process (numbered, dark) */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3vw,40px)}
+.step .num{
+  font-family:var(--f-display);font-weight:800;font-size:52px;line-height:1;
+  color:transparent;-webkit-text-stroke:1.5px var(--on-dark-label);text-stroke:1.5px var(--on-dark-label);
+  margin-bottom:16px;
+}
+.step h3{font-size:21px;margin-bottom:8px}
+.step p{color:var(--on-dark-2);font-size:16px}
+
+/* Materials strip / card grid */
+.cardgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.mcard{text-decoration:none;color:inherit;display:block}
+.mcard .ph{aspect-ratio:3/4;margin-bottom:12px}
+/* hover affordances only on the linked (anchor) cards, never the static slab articles */
+a.mcard .ph{transition:box-shadow .18s ease}
+a.mcard .ph__img{transition:transform .3s ease}
+a.mcard:hover .ph__img{transform:scale(1.045)}
+a.mcard:hover .ph{box-shadow:var(--shadow)}
+.mcard h3{font-size:19px;margin-bottom:2px}
+.mcard .origin{font-size:14px;color:var(--accent);font-family:var(--f-display);font-weight:600;letter-spacing:.02em}
+.mcard .desc{font-size:15px;color:var(--muted);margin-top:6px}
+
+/* Featured project band (full width, single permitted scrim) */
+.feature{position:relative;min-height:clamp(360px,52vw,560px);display:flex;align-items:flex-end;overflow:hidden;background:#0f333c}
+.feature .ph{position:absolute;inset:0;border-radius:0}
+.feature .ph__img{height:100%}
+.feature__scrim{position:absolute;inset:0;z-index:2;
+  background:linear-gradient(180deg, rgba(5,39,48,0) 0%, rgba(5,39,48,0) 18%, rgba(5,39,48,.82) 40%, rgba(5,39,48,.99) 100%);
+}
+.feature__body{position:relative;z-index:3;max-width:var(--wrap);margin:0 auto;width:100%;padding:0 var(--pad) clamp(36px,5vw,60px)}
+.feature__body .label{color:var(--aqua)}
+.feature__body h2{color:#fff;font-size:clamp(27px,3.6vw,42px);letter-spacing:-.02em;max-width:26ch;line-height:1.1}
+.feature__body p{color:#fff;margin-top:10px;max-width:50ch;font-size:16.5px}
+
+/* Testimonial */
+.quote{max-width:24ch}
+.quote .stars{color:var(--star);font-size:22px;letter-spacing:3px}
+.quote blockquote{margin:18px 0 16px;font-family:var(--f-display);font-weight:700;font-size:clamp(26px,3.4vw,40px);line-height:1.18;letter-spacing:-.02em;color:var(--text);max-width:20ch}
+.quote cite{font-style:normal;color:var(--muted);font-size:15px}
+
+/* CTA band */
+.cta{background:var(--sea-ink);color:var(--on-dark)}
+.cta__grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.cta h2{color:var(--on-dark);font-size:clamp(30px,4vw,48px);letter-spacing:-.025em;line-height:1.08}
+.cta p{color:var(--on-dark-2);margin-top:14px;max-width:46ch}
+.cta__actions{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.cta__actions .phone{font-family:var(--f-display);font-weight:700;font-size:20px;color:var(--on-dark);text-decoration:none}
+.cta__actions .phone:hover{color:var(--aqua)}
+.cta__actions .muted{color:var(--on-dark-2);font-size:14px}
+
+/* ============================================================
+   MATERIALS PAGE
+   ============================================================ */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 36px}
+.filters button{
+  font-family:var(--f-display);font-weight:700;font-size:14px;letter-spacing:.02em;
+  padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);
+  background:var(--paper);color:var(--muted);cursor:pointer;
+  transition:border-color .15s ease,color .15s ease,background-color .15s ease;
+}
+.filters button:hover{border-color:var(--accent);color:var(--accent)}
+.filters button[aria-pressed="true"]{background:var(--sea-ink);border-color:var(--sea-ink);color:var(--on-dark)}
+#slabgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.note{margin-top:36px;padding:18px 20px;border-left:3px solid var(--accent);background:var(--sand);color:var(--muted);font-size:15.5px;border-radius:0 var(--r-ctl) var(--r-ctl) 0}
+
+/* ============================================================
+   SERVICES PAGE  (numbered editorial rows)
+   ============================================================ */
+.srv{border-top:1px solid var(--line)}
+.srv__row{display:grid;grid-template-columns:96px 1fr;gap:24px;padding:34px 0;border-bottom:1px solid var(--line)}
+.srv__num{font-family:var(--f-display);font-weight:800;font-size:40px;color:transparent;-webkit-text-stroke:1.4px var(--accent);text-stroke:1.4px var(--accent);line-height:1}
+.srv__row h3{font-size:clamp(22px,2.6vw,30px);letter-spacing:-.02em;margin-bottom:10px}
+.srv__row p{color:var(--muted);max-width:66ch}
+.srv__inc{margin-top:12px;font-size:15px;color:var(--text)}
+.srv__inc b{font-family:var(--f-display);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:12px;color:var(--accent);margin-right:8px}
+
+/* ============================================================
+   PROJECTS PAGE
+   ============================================================ */
+.pfeature{position:relative;min-height:clamp(320px,44vw,480px);display:flex;align-items:flex-end;overflow:hidden;border-radius:var(--r-photo);background:#0f333c;margin-bottom:28px}
+.pfeature .ph{position:absolute;inset:0;border-radius:0}
+.pfeature .scrim{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(5,39,48,0) 22%,rgba(5,39,48,.82) 52%,rgba(5,39,48,.99) 100%)}
+.pfeature .body{position:relative;z-index:3;padding:clamp(24px,4vw,40px)}
+.pfeature .body .label{color:var(--aqua)}
+.pfeature .body h3{color:#fff;font-size:clamp(23px,2.9vw,34px);letter-spacing:-.02em;max-width:22ch;line-height:1.12}
+.pfeature .body p{color:#fff;margin-top:8px;max-width:50ch;font-size:16.5px}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.pcard .ph{aspect-ratio:16/10;margin-bottom:12px}
+.pcard h3{font-size:20px;margin-bottom:2px}
+.pcard .kind{font-family:var(--f-display);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.pcard p{color:var(--muted);font-size:15.5px;margin-top:4px}
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+.about-lede{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:start}
+.ftable{width:100%;border-collapse:collapse;margin-top:8px}
+.ftable th,.ftable td{text-align:left;padding:14px 0;border-bottom:1px solid var(--line);vertical-align:top;font-size:16px}
+.ftable th{font-family:var(--f-display);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);width:44%;white-space:nowrap}
+.ftable td{color:var(--text)}
+.community{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.community a{
+  font-family:var(--f-display);font-weight:600;font-size:15px;color:var(--on-dark);
+  text-decoration:none;border:1px solid var(--line-dark);border-radius:999px;padding:9px 16px;
+  transition:border-color .15s ease,color .15s ease;
+}
+.community a:hover{border-color:var(--aqua);color:var(--aqua)}
+
+/* ============================================================
+   CONTACT PAGE + FORM
+   ============================================================ */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,56px);align-items:start}
+.cinfo dl{margin:0}
+.cinfo dt{font-family:var(--f-display);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:22px}
+.cinfo dd{margin:6px 0 0;font-size:17px}
+.cinfo a{color:var(--text);text-decoration:none;font-weight:600}
+.cinfo a:hover{color:var(--accent)}
+.formcard{background:var(--sand);border:1px solid var(--sand-line);border-radius:var(--r-photo);padding:clamp(24px,3vw,36px)}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--text);margin-bottom:7px}
+.field .opt{color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.field input,.field select,.field textarea{
+  width:100%;font-family:var(--f-body);font-size:16.5px;color:var(--text);
+  background:var(--paper);border:1.5px solid var(--line);border-radius:var(--r-ctl);
+  padding:13px 14px;transition:border-color .15s ease,box-shadow .15s ease;
+}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px rgba(11,114,133,.18)}
+.field.invalid input,.field.invalid select{border-color:#B3261E}
+.field .err{color:#B3261E;font-size:14px;margin-top:6px;font-weight:600;display:none}
+.field.invalid .err{display:block}
+.formnote{font-size:13.5px;color:var(--muted);margin-top:4px}
+#formError{display:none;background:#FBEAE8;border:1px solid #E4B4AF;color:#7A1B14;padding:12px 14px;border-radius:var(--r-ctl);font-size:15px;margin-bottom:18px;font-weight:600}
+#formError.show{display:block}
+#formSuccess{display:none;background:#E4F4EC;border:1px solid #A9D8BF;color:#125533;padding:16px 18px;border-radius:var(--r-ctl);font-size:16px;font-weight:600}
+#formSuccess.show{display:block}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer.site{background:var(--sea-ink-2);color:var(--on-dark-2);padding:64px 0 30px;border-top:1px solid var(--line-dark)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:36px}
+.foot h2{font-family:var(--f-display);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-label);margin:0 0 14px}
+.foot a{color:var(--on-dark-2);text-decoration:none;display:block;padding:4px 0;font-size:15px}
+.foot a:hover{color:var(--on-dark)}
+.foot .brand b{color:var(--on-dark);font-size:20px}
+.foot .fine{color:var(--on-dark-2);font-size:14px;margin-top:8px;max-width:34ch}
+.foot .tagline{color:var(--aqua);font-family:var(--f-display);font-weight:600;font-size:15px;margin-top:14px}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:44px;padding-top:22px;border-top:1px solid var(--line-dark);font-size:13.5px;color:var(--on-dark-2)}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1024px){
+  .facts{grid-template-columns:repeat(2,1fr);gap:32px}
+  .steps{grid-template-columns:repeat(2,1fr);row-gap:36px}
+  .cardgrid{grid-template-columns:repeat(2,1fr)}
+  #slabgrid{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr 1fr;row-gap:32px}
+}
+@media (max-width:920px){
+  .nav__links{
+    position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;
+    gap:2px;background:var(--sea-ink);padding:12px var(--pad) 20px;border-bottom:1px solid var(--line-dark);
+    display:none;
+  }
+  header.site.open .nav__links{display:flex}
+  .nav__links a{padding:14px 8px;font-size:17px}
+  .nav__links a[aria-current="page"]::after{display:none}
+  .nav__cta{margin-left:0}
+  .nav__cta .btn{width:100%;justify-content:center;margin-top:8px}
+  .burger{display:block}
+  .hero__inner{grid-template-columns:1fr;gap:0;padding-bottom:0}
+  .hero__copy{max-width:100%;padding-bottom:34px;align-self:start}
+  .hero__media{margin:0 calc(-1 * var(--pad))}
+  .hero__photo{margin-right:0;min-height:0;height:280px}
+  .hero__photo .ph{border-radius:0}
+  .proof{position:static;max-width:100%;margin:0;border-radius:0;box-shadow:none;border-top:1px solid var(--line);padding:20px var(--pad)}
+  .hero{padding-bottom:0}
+}
+@media (max-width:720px){
+  .split{grid-template-columns:1fr;gap:28px}
+  .cardgrid{grid-template-columns:1fr 1fr}
+  .cta__grid{grid-template-columns:1fr;gap:24px}
+  .about-lede{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr}
+  .srv__row{grid-template-columns:56px 1fr;gap:16px}
+  .srv__num{font-size:30px}
+}
+@media (max-width:480px){
+  body{font-size:17px}
+  .facts{grid-template-columns:1fr 1fr;gap:24px}
+  .cardgrid{grid-template-columns:1fr}
+  #slabgrid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important}
+  a.mcard:hover .ph__img{transform:none}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="site" id="siteHeader">
+  <div class="wrap nav">
+    <a href="#/home" class="brand" aria-label="Elite Marble and Granite, home">
+      <b>Elite</b><span>Marble &amp; Granite</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#/home" data-route="home">Home</a></li>
+      <li><a href="#/materials" data-route="materials">Materials</a></li>
+      <li><a href="#/services" data-route="services">Services</a></li>
+      <li><a href="#/projects" data-route="projects">Projects</a></li>
+      <li><a href="#/about" data-route="about">About</a></li>
+      <li><a href="#/contact" data-route="contact">Contact</a></li>
+      <li class="nav__cta"><a href="#/contact" class="btn btn--primary">Get a free quote</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand"><b>Elite Marble and Granite</b></div>
+        <p class="fine">Family owned stone fabrication in George Town, Grand Cayman. Countertops, floors, cladding, and restoration, cut and installed on island.</p>
+        <p class="tagline">Where perfection costs less.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="#/materials">Materials</a>
+        <a href="#/services">Services</a>
+        <a href="#/projects">Projects</a>
+        <a href="#/about">About</a>
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <p class="fine">The Industrial Park, Lincoln Drive (off Sparky Drive), George Town, Grand Cayman.</p>
+        <a href="#/contact">Hours and directions</a>
+      </div>
+      <div>
+        <h2>Talk to us</h2>
+        <a href="tel:+13459459028">+1 (345) 945 9028</a>
+        <a href="mailto:Paul@Elite.ky">Paul@Elite.ky</a>
+        <a href="#/contact">Request a free quote</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Elite Marble and Granite Ltd. All rights reserved.</span>
+      <span>Photography via Wikimedia Commons contributors. Placeholder images for the client's own project photos.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   IMAGE HELPER
+   Wikimedia Commons Special:FilePath. Every <img> carries alt,
+   loading, and onerror that removes the img to reveal the flat
+   stone fallback layer beneath. Client photos swap 1:1 into src.
+   ============================================================ */
+var IMGBASE = "https://commons.wikimedia.org/wiki/Special:FilePath/";
+function img(file, w, alt, eager){
+  var src = IMGBASE + file + "?width=" + w;
+  var load = eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
+  return '<img class="ph__img" src="'+src+'" alt="'+alt.replace(/"/g,'&quot;')+'" '+load+' onerror="this.remove()">';
+}
+/* photo frame with flat fallback label */
+function photo(file, w, alt, eager, fallbackLabel, dark){
+  return '<div class="ph'+(dark?' ph--dark':'')+'">'
+    + '<div class="ph__fallback" aria-hidden="true">'+(fallbackLabel||'')+'</div>'
+    + img(file, w, alt, eager)
+    + '</div>';
+}
+
+/* ============================================================
+   SLAB LIBRARY DATA
+   NOTE: slab trade names and origins below are illustrative for
+   layout and should be confirmed against Elite's real inventory
+   before launch. Images are geologic reference photos from
+   Wikimedia; "Shown installed" marks in-context photography.
+   Counts: granite 6, marble 4, quartzite 2, travertine 3 = 15.
+   ============================================================ */
+var SLABS = [
+  // GRANITE (6)
+  {fam:"granite", name:"Black Marinace", origin:"Granite family, Brazil", file:"Black%20Marinace%20Gold%20Granite%20(metaconglomerate)%20(14790696786).jpg", desc:"Dramatic pebbled metaconglomerate with gold and cream inclusions.", installed:false},
+  {fam:"granite", name:"Tan Brown", origin:"Granite family, southern India", file:"%22Tan%20Brown%20Granite%22%20(porphyritic%20granite,%20Archean;%20Andhra%20Pradesh%20State,%20southern%20India)%20(14618910269).jpg", desc:"Deep brown and black with reddish flecks. A hard, forgiving worktop.", installed:false},
+  {fam:"granite", name:"Azul Platino", origin:"Granite family, Spain", file:"Granite%20Azul%20Platino%20-%20es.jpg", desc:"Soft grey with silver and blue movement. Quiet and contemporary.", installed:false},
+  {fam:"granite", name:"White Pearl", origin:"Granite family, Spain", file:"White%20Pearl%20Granite%20(La%20Cabrera%20Granite,%20Pennsylvanian%20to%20Early%20Permian,%20288%20to%20310%20Ma;%20near%20Bustarviejo,%20Castilla,%20Spain)%201%20(26932399077).jpg", desc:"Pale grey base with fine dark speckle. Bright without going stark.", installed:false},
+  {fam:"granite", name:"Dakota Mahogany", origin:"Granite family, South Dakota, USA", file:"%22Dakota%20Mahogany%20Granite%22%20(porphyritic%20granite,%20Milbank%20Granite,%202.6-2.7%20Ga,%20Neoarchean;%20east%20of%20Milbank,%20South%20Dakota,%20USA)%20(14618866119).jpg", desc:"Warm mahogany and black with a subtle sheen. A classic kitchen tone.", installed:false},
+  {fam:"granite", name:"Steel Grey", origin:"Granite family, India", file:"Grey%20speckled%20patchy%20granite%20rock%20seamless%20stone%20surface%20texture.jpg", desc:"Even mid grey with fine grain. Pairs with almost any cabinet.", installed:false},
+  // MARBLE (4)
+  {fam:"marble", name:"Bianco Carrara", origin:"Marble family, Tuscany, Italy", file:"Carrara%20marble.jpg", desc:"The classic white marble with soft grey veining. Timeless and bright.", installed:false},
+  {fam:"marble", name:"Statuario White", origin:"Marble family, Carrara, Italy", file:"White%20Carrara%20Marble%20(Apuan%20Marble%20Formation,%20Tertiary%20metamorphism%20of%20Jurassic%20limestones;%20Carbonera%20Quarry,%20Tuscany,%20Italy)%20(14618707748).jpg", desc:"Whiter ground with bolder grey veins. A statement for vanities and islands.", installed:false},
+  {fam:"marble", name:"Emperador Brown", origin:"Marble family, Spain", file:"Brown%20Marble.jpg", desc:"Rich brown with fine white veining. Warm and grounding underfoot.", installed:false},
+  {fam:"marble", name:"Crema Marfil", origin:"Marble family, Spain", file:"Cream%20spotted%20speckled%20clean%20marble%20seamless%20texture.jpg", desc:"Soft cream with gentle mottling. A warm neutral for floors and walls.", installed:false},
+  // QUARTZITE (2)  -- shown installed (in-context countertop photography)
+  {fam:"quartzite", name:"Quartzite, kitchen", origin:"Quartzite family, natural stone", file:"Quartzite%20(Natural%20Stone)%20for%20Countertops%2002.jpg", desc:"Marble looks with granite hardness. Heat and scratch resistant.", installed:true},
+  {fam:"quartzite", name:"Quartzite, island", origin:"Quartzite family, natural stone", file:"Quartzite%20(Natural%20Stone)%20for%20Countertops%2003.jpg", desc:"Bright, durable, and low maintenance. A favourite for busy kitchens.", installed:true},
+  // TRAVERTINE (3)
+  {fam:"travertine", name:"Noce Travertine", origin:"Travertine family, tile floor", file:"Verlegte%20quadratische%20Natursteinfliesen%20aus%20dunkelbraunem%20Travertin%20Noce%20im%20Kreuzverband.jpg", desc:"Warm walnut tones. Shown installed as a cross bond floor.", installed:true},
+  {fam:"travertine", name:"Silver Travertine", origin:"Travertine family, natural stone", file:"Grey%20speckled%20spotted%20discolored%20travertine%20seamless%20texture.jpg", desc:"Cool grey banding with natural pitting. Ideal for pool decks.", installed:false},
+  {fam:"travertine", name:"Classic Travertine", origin:"Travertine family, natural stone", file:"Cream%20tan%20rippled%20speckled%20travertine%20square%20cobblestone%20ground%20floor%20pattern%20tile%20texture.jpg", desc:"Cream and tan with a rippled grain. A soft, sun friendly surface.", installed:false}
+];
+
+/* ============================================================
+   REUSABLE BLOCKS
+   ============================================================ */
+function ctaBand(heading, sub){
+  return ''
+  + '<section class="cta"><div class="wrap"><div class="cta__grid">'
+  +   '<div><h2>'+heading+'</h2><p>'+sub+'</p></div>'
+  +   '<div class="cta__actions">'
+  +     '<a href="#/contact" class="btn btn--onDark">Request a free consultation</a>'
+  +     '<a class="phone" href="tel:+13459459028">Call +1 (345) 945 9028</a>'
+  +     '<span class="muted">Mon to Thu 7:30 to 4:30, Fri to 3:30, Sat 8 to 2.</span>'
+  +   '</div>'
+  + '</div></div></section>';
+}
+
+/* ============================================================
+   PAGES
+   ============================================================ */
+var PAGES = {
+  home: {
+    title: "Elite Marble and Granite, Grand Cayman",
+    render: function(){
+      return ''
+      /* HERO (sea-ink) */
+      + '<section class="hero" aria-label="Introduction">'
+      +   '<div class="hero__inner">'
+      +     '<div class="hero__copy">'
+      +       '<p class="label label--dark">George Town, Grand Cayman</p>'
+      +       '<h1>Stone cut in George Town. Installed in seven days.</h1>'
+      +       '<p class="hero__sub">We import slabs direct from quarries worldwide, fabricate them at our own workshop, and install with our own crew. Where perfection costs less.</p>'
+      +       '<div class="hero__actions">'
+      +         '<a href="#/contact" class="btn btn--primary">Request a free consultation</a>'
+      +         '<a href="#/projects" class="btn btn--ghost-dark">See recent projects</a>'
+      +       '</div>'
+      +     '</div>'
+      +     '<div class="hero__media">'
+      +       '<div class="hero__photo">'+photo("Quartzite%20(Natural%20Stone)%20for%20Countertops%2001.jpg",1200,"A finished quartzite kitchen countertop installed in a home",true,"Kitchen, shown installed")+'</div>'
+      +       '<aside class="proof" aria-label="Customer review">'
+      +         '<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'
+      +         '<p>Professional, proud of their work, delivered exactly what was promised.</p>'
+      +         '<cite>Kitchen client, Grand Cayman. Published review, Cayman.Directory.</cite>'
+      +       '</aside>'
+      +     '</div>'
+      +   '</div>'
+      + '</section>'
+
+      /* FACTS (sand) */
+      + '<section class="sec--sand"><div class="wrap"><div class="facts">'
+      +   '<div class="fact fact--flag"><b>7,000+</b><span>Countertops installed since 2000</span></div>'
+      +   '<div class="fact fact--flag"><b>7 days</b><span>Typical turnaround from template</span></div>'
+      +   '<div class="fact"><b>100%</b><span>Fabricated on island</span></div>'
+      +   '<div class="fact"><b>Since 2000</b><span>Family owned and operated</span></div>'
+      + '</div></div></section>'
+
+      /* WHY ELITE split (white) */
+      + '<section><div class="wrap"><div class="split">'
+      +   '<figure>'+photo("Kitchen%20with%20island,%20New%20Orleans%202007.jpg",900,"A fabricated and installed stone kitchen with a central island",false,"Kitchen, shown installed")
+      +     '<figcaption><b>A kitchen we fabricated and installed.</b> Grand Cayman. Shown installed.</figcaption></figure>'
+      +   '<div>'
+      +     '<p class="label">Why Elite</p>'
+      +     '<h2 style="font-size:clamp(30px,4vw,46px);letter-spacing:-.025em;line-height:1.08">One workshop, one crew, one price that stays low.</h2>'
+      +     '<ul class="benefits">'
+      +       '<li><b>Slabs from the source</b><span>We import direct from quarries worldwide and buy as a manufacturer, so the saving reaches your counter.</span></li>'
+      +       '<li><b>One team, start to finish</b><span>We template, fabricate, and install with our own crew. No subcontractors handing off your job.</span></li>'
+      +       '<li><b>Restoration included</b><span>We repair, seal, and polish stone, including stone we did not install.</span></li>'
+      +       '<li><b>Trusted by the trade</b><span>Counters, floors, cladding, and cabinets for homes and commercial fit outs across the island.</span></li>'
+      +     '</ul>'
+      +   '</div>'
+      + '</div></div></section>'
+
+      /* PROCESS (dark) */
+      + '<section class="sec--dark"><div class="wrap">'
+      +   '<div class="sec-head"><p class="label label--dark">How it works</p><h2>From your plans to a finished counter in four steps.</h2></div>'
+      +   '<div class="steps">'
+      +     '<div class="step"><div class="num" aria-hidden="true">01</div><h3>Consultation</h3><p>Visit the showroom or send your plans. We help you choose the stone and confirm scope.</p></div>'
+      +     '<div class="step"><div class="num" aria-hidden="true">02</div><h3>Template</h3><p>We measure on site and build an exact digital template of your counters.</p></div>'
+      +     '<div class="step"><div class="num" aria-hidden="true">03</div><h3>Fabrication</h3><p>We cut, shape, and finish your slabs at our George Town workshop.</p></div>'
+      +     '<div class="step"><div class="num" aria-hidden="true">04</div><h3>Installation</h3><p>Our crew sets, seals, and finishes. Typically seven days from template.</p></div>'
+      +   '</div>'
+      + '</div></section>'
+
+      /* MATERIALS strip (white, captions below, no overlays) */
+      + '<section><div class="wrap">'
+      +   '<div class="sec-head"><p class="label">Materials</p><h2>Granite, marble, quartzite, and travertine.</h2><p class="lead">A working slab library, plus engineered quartz and remnants at reduced prices in the showroom.</p></div>'
+      +   '<div class="cardgrid">'
+      +     '<a class="mcard" href="#/materials">'+photo("%22Tan%20Brown%20Granite%22%20(porphyritic%20granite,%20Archean;%20Andhra%20Pradesh%20State,%20southern%20India)%20(14618910269).jpg",600,"Tan Brown granite slab",false,"Granite")+'<h3>Granite</h3><p class="desc">Hard, forgiving, and endlessly varied.</p></a>'
+      +     '<a class="mcard" href="#/materials">'+photo("Carrara%20marble.jpg",600,"Carrara marble slab",false,"Marble")+'<h3>Marble</h3><p class="desc">Bright, classic, and full of movement.</p></a>'
+      +     '<a class="mcard" href="#/materials">'+photo("Quartzite%20(Natural%20Stone)%20for%20Countertops%2004.jpg",600,"Quartzite countertop shown installed",false,"Quartzite, shown installed")+'<h3>Quartzite</h3><p class="desc">Marble looks with granite hardness.</p></a>'
+      +     '<a class="mcard" href="#/materials">'+photo("Cream%20tan%20rippled%20speckled%20travertine%20square%20cobblestone%20ground%20floor%20pattern%20tile%20texture.jpg",600,"Travertine floor tile",false,"Travertine")+'<h3>Travertine</h3><p class="desc">Warm, natural, and sun friendly.</p></a>'
+      +   '</div>'
+      + '</div></section>'
+
+      /* FEATURED PROJECT band (full width, single permitted scrim) */
+      + '<section class="feature" aria-label="Featured project">'
+      +   photo("Quartzite%20(Natural%20Stone)%20for%20Countertops%2006.jpg",1600,"A completed quartzite kitchen with waterfall island",false,"","dark")
+      +   '<div class="feature__scrim" aria-hidden="true"></div>'
+      +   '<div class="feature__body">'
+      +     '<p class="label">Featured project</p>'
+      +     '<h2>A penthouse kitchen in quartzite.</h2>'
+      +     '<p>Templated, fabricated, and installed by our own crew in George Town.</p>'
+      +   '</div>'
+      + '</section>'
+
+      /* TESTIMONIAL (sand) */
+      + '<section class="sec--sand"><div class="wrap">'
+      +   '<div class="quote">'
+      +     '<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'
+      +     '<blockquote>Delivered exactly what was promised.</blockquote>'
+      +     '<cite>Kitchen client, Grand Cayman. Published review, Cayman.Directory.</cite>'
+      +   '</div>'
+      + '</div></section>'
+
+      + ctaBand("Ready for a counter that lasts?", "Send your plans or book a showroom visit and we will give you a free quote. No obligation.");
+    }
+  },
+
+  materials: {
+    title: "Materials, the slab library, Elite Marble and Granite",
+    render: function(){
+      return ''
+      + '<section><div class="wrap">'
+      +   '<div class="sec-head"><p class="label">Materials</p><h1>The slab library.</h1><p class="lead">Natural stone we import, cut, and finish on island. Filter by family, then come and see the full slabs in the showroom.</p></div>'
+      +   '<h2 class="sr-only">Browse the collection</h2>'
+      +   '<div class="filters" role="group" aria-label="Filter materials by family">'
+      +     '<button data-filter="all" aria-pressed="true">All</button>'
+      +     '<button data-filter="granite" aria-pressed="false">Granite</button>'
+      +     '<button data-filter="marble" aria-pressed="false">Marble</button>'
+      +     '<button data-filter="quartzite" aria-pressed="false">Quartzite</button>'
+      +     '<button data-filter="travertine" aria-pressed="false">Travertine</button>'
+      +   '</div>'
+      +   '<div id="slabgrid"></div>'
+      +   '<p class="note">Engineered quartz and remnants at reduced prices are available to view in the showroom. Slab availability changes as containers arrive, so the library is a guide, not a fixed catalogue.</p>'
+      + '</div></section>'
+      + ctaBand("Photos never do a slab justice.", "Book a showroom visit and see the full stone, in daylight, before you decide.");
+    },
+    mount: mountMaterials
+  },
+
+  services: {
+    title: "Services, Elite Marble and Granite, Grand Cayman",
+    render: function(){
+      var rows = [
+        ["Countertops","Kitchen, bathroom, bar, and outdoor counters, templated and cut to your exact layout, then installed and sealed by our crew.","Kitchens, vanities, bar tops, outdoor kitchens, waterfall edges."],
+        ["Floor coverings","Marble, travertine, porcelain, and ceramic floors and pool decks, set level and finished to last in the Cayman climate.","Interior floors, terraces, pool decks, entryways."],
+        ["Wall cladding","Stone on showers, fireplaces, and exterior walls, cut to fit and fixed cleanly around fittings and openings.","Showers, fireplaces, feature walls, exterior granite."],
+        ["Kitchen and bathroom cabinets","Cabinets supplied and fitted to work with your stone, so the counter and the units are handled by one team.","Kitchen units, vanities, storage, fitted joinery."],
+        ["Restoration and care","Repair, seal, and polish for tired or damaged stone, including stone we did not install, to bring the finish back.","Repair, resealing, polishing, honing, colour enhancement."],
+        ["Commercial projects","Fit outs for offices, restaurants, and hospitality, from elevator lobbies and restrooms to terraces and custom features.","Lobbies, restrooms, terraces, restaurant fit outs, custom stonework."]
+      ];
+      var srv = '<div class="srv">';
+      rows.forEach(function(r,i){
+        var n = (i+1); n = n<10 ? "0"+n : ""+n;
+        srv += '<div class="srv__row"><div class="srv__num" aria-hidden="true">'+n+'</div>'
+            + '<div><h3>'+r[0]+'</h3><p>'+r[1]+'</p><p class="srv__inc"><b>Includes</b>'+r[2]+'</p></div></div>';
+      });
+      srv += '</div>';
+      return ''
+      + '<section><div class="wrap">'
+      +   '<div class="sec-head"><p class="label">Services</p><h1>What we do, start to finish.</h1><p class="lead">One team handles the whole job, from choosing the stone to the final seal. Restoration is available even on stone we did not install.</p></div>'
+      +   '<h2 class="sr-only">Our services</h2>'
+      +   srv
+      + '</div></section>'
+      + ctaBand("Tell us about your project.", "Send your plans or a few photos and we will tell you what is possible and what it costs.");
+    }
+  },
+
+  projects: {
+    title: "Projects, Elite Marble and Granite, Grand Cayman",
+    render: function(){
+      /* NOTE: project captions below are illustrative examples for layout.
+         Replace with real Elite project details and photography before launch. */
+      var cards = [
+        ["Kitchen","Quartzite island kitchen","A full kitchen in quartzite with a seamless island and a low maintenance finish.","Quartzite%20(Natural%20Stone)%20for%20Countertops%2002.jpg","Kitchen, shown installed"],
+        ["Bathroom","Marble bathrooms","Vanities and wall cladding in bright marble across a family home.","Quartzite%20(Natural%20Stone)%20for%20Countertops%2003.jpg","Bathroom, shown installed"],
+        ["Renovation","Full home renovation","New counters, floors, and cladding fitted through an occupied home on schedule.","Kitchen%20with%20island,%20New%20Orleans%202007.jpg","Renovation, shown installed"],
+        ["Pool deck","Travertine pool deck","A cool underfoot travertine deck that stands up to sun, salt, and rain.","Verlegte%20quadratische%20Natursteinfliesen%20aus%20dunkelbraunem%20Travertin%20Noce%20im%20Kreuzverband.jpg","Pool deck, shown installed"]
+      ];
+      var grid = '<div class="pgrid">';
+      cards.forEach(function(c){
+        grid += '<article class="pcard"><figure>'+photo(c[3],700,c[2],false,c[4])+'</figure>'
+             + '<p class="kind">'+c[0]+'</p><h3>'+c[1]+'</h3><p>'+c[2]+'</p></article>';
+      });
+      grid += '</div>';
+      return ''
+      + '<section><div class="wrap">'
+      +   '<div class="sec-head"><p class="label">Projects</p><h1>The stone, on the counter.</h1><p class="lead">Real installations, not just slab textures. From penthouse kitchens to commercial fit outs and post Hurricane Ivan rebuilds.</p></div>'
+      +   '<h2 class="sr-only">Selected work</h2>'
+      +   '<div class="pfeature">'+photo("Quartzite%20(Natural%20Stone)%20for%20Countertops%2008.jpg",1600,"A large completed quartzite countertop installation",false,"","dark")
+      +     '<div class="scrim" aria-hidden="true"></div>'
+      +     '<div class="body"><p class="label">Signature work</p><h3>Custom and commercial stonework.</h3><p>From a stingray mosaic fountain and restaurant terraces to full rebuilds after Hurricane Ivan.</p></div>'
+      +   '</div>'
+      +   grid
+      + '</div></section>'
+      + ctaBand("Picture your own project here.", "Bring your plans or photos and we will show you what your stone will look like installed.");
+    }
+  },
+
+  about: {
+    title: "About, Elite Marble and Granite, Grand Cayman",
+    render: function(){
+      return ''
+      + '<section><div class="wrap">'
+      +   '<div class="about-lede">'
+      +     '<div><p class="label">About</p>'
+      +       '<h1 style="font-size:clamp(32px,4.4vw,52px);letter-spacing:-.025em;line-height:1.08">Family owned in George Town since about 2000.</h1>'
+      +       '<div class="prose" style="margin-top:20px;color:var(--muted)">'
+      +         '<p>Elite Marble and Granite was founded by Cayman entrepreneur Mike Laurenson, who also founded Thistle Construction. From a showroom and workshop at The Industrial Park, we import slabs direct from quarries worldwide, fabricate them on island, and install with our own crew.</p>'
+      +         '<p style="margin-top:16px">Buying as a manufacturer keeps the price low without cutting the quality. It is the whole idea behind our tagline: where perfection costs less.</p>'
+      +       '</div>'
+      +     '</div>'
+      +     '<div><table class="ftable"><tbody>'
+      +       '<tr><th>Founded by</th><td>Mike Laurenson</td></tr>'
+      +       '<tr><th>Ownership</th><td>Family owned and operated</td></tr>'
+      +       '<tr><th>Workshop</th><td>The Industrial Park, George Town</td></tr>'
+      +       '<tr><th>Fabrication</th><td>100% on island</td></tr>'
+      +       '<tr><th>Countertops installed</th><td>7,000 and counting</td></tr>'
+      +       '<tr><th>Typical turnaround</th><td>About 7 days from template</td></tr>'
+      +     '</tbody></table></div>'
+      +   '</div>'
+      + '</div></section>'
+
+      + '<section><div class="wrap">'
+      +   '<figure class="banner">'+photo("Marble%20quarry%20Thasos%20island.jpg",1400,"A marble quarry where slabs are sourced",false,"Quarry, sourced worldwide")
+      +     '<figcaption><b>Sourced at the quarry, finished in George Town.</b> We buy direct, so the slab you choose is the slab we cut.</figcaption></figure>'
+      + '</div></section>'
+
+      + '<section class="sec--dark"><div class="wrap">'
+      +   '<div class="sec-head"><p class="label label--dark">In the community</p><h2>Proud to support Cayman organisations.</h2></div>'
+      +   '<div class="community">'
+      +     '<a href="#/contact">National Trust</a>'
+      +     '<a href="#/contact">Inclusion Cayman</a>'
+      +     '<a href="#/contact">NCVO Children Services</a>'
+      +     '<a href="#/contact">Crisis Centre</a>'
+      +     '<a href="#/contact">Jasmine</a>'
+      +     '<a href="#/contact">ARK</a>'
+      +   '</div>'
+      + '</div></section>'
+      + ctaBand("Come and see the workshop behind the showroom.", "Visit us at The Industrial Park in George Town, or send your plans for a free quote.");
+    }
+  },
+
+  contact: {
+    title: "Contact, Elite Marble and Granite, Grand Cayman",
+    render: function(){
+      return ''
+      + '<section><div class="wrap">'
+      +   '<div class="sec-head"><p class="label">Contact</p><h1>Get a free quote.</h1><p class="lead">Send your plans or a few photos. We reply with what is possible and what it costs. You can also call or visit the showroom.</p></div>'
+      +   '<div class="contact-grid">'
+      +     '<div class="cinfo"><dl>'
+      +       '<dt>Showroom and workshop</dt><dd>The Industrial Park, Lincoln Drive (off Sparky Drive), George Town, Grand Cayman.</dd>'
+      +       '<dt>Phone</dt><dd><a href="tel:+13459459028">+1 (345) 945 9028</a></dd>'
+      +       '<dt>Sales</dt><dd><a href="mailto:Paul@Elite.ky">Paul@Elite.ky</a></dd>'
+      +       '<dt>Owner</dt><dd><a href="mailto:Mike@Elite.ky">Mike@Elite.ky</a></dd>'
+      +       '<dt>Hours</dt><dd>Mon to Thu 7:30am to 4:30pm<br>Fri 7:30am to 3:30pm<br>Sat 8:00am to 2:00pm</dd>'
+      +     '</dl></div>'
+      +     '<div class="formcard">'
+      +       '<div id="formError" role="alert">Please fix the highlighted fields and try again.</div>'
+      +       '<div id="formSuccess" role="status">Thank you. Your email app should now be open with your request to Paul at Elite. If it did not open, email Paul@Elite.ky directly.</div>'
+      +       '<form id="quoteForm" novalidate>'
+      +         '<div class="field" id="f-name"><label for="q-name">Name</label><input id="q-name" name="name" type="text" autocomplete="name" required><p class="err" id="e-name">Please enter your name.</p></div>'
+      +         '<div class="field" id="f-email"><label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email" required><p class="err" id="e-email">Please enter a valid email address.</p></div>'
+      +         '<div class="field" id="f-phone"><label for="q-phone">Phone <span class="opt">Optional</span></label><input id="q-phone" name="phone" type="tel" autocomplete="tel"></div>'
+      +         '<div class="field" id="f-type"><label for="q-type">Project type</label><select id="q-type" name="type" required>'
+      +           '<option value="">Choose one</option>'
+      +           '<option>Countertops</option><option>Floor coverings</option><option>Wall cladding</option>'
+      +           '<option>Kitchen or bathroom cabinets</option><option>Restoration and care</option>'
+      +           '<option>Commercial project</option><option>Something else</option>'
+      +         '</select><p class="err" id="e-type">Please choose a project type.</p></div>'
+      +         '<div class="field" id="f-msg"><label for="q-msg">Message <span class="opt">Optional</span></label><textarea id="q-msg" name="message" placeholder="Rough sizes, the stone you like, and your timeline all help."></textarea></div>'
+      +         '<button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">Send quote request</button>'
+      +         '<p class="formnote">Submitting opens your own email app with the details filled in, addressed to Paul@Elite.ky. Nothing is sent until you press send.</p>'
+      +       '</form>'
+      +     '</div>'
+      +   '</div>'
+      + '</div></section>';
+    },
+    mount: mountForm
+  }
+};
+
+/* ============================================================
+   MATERIALS: render + filter
+   ============================================================ */
+function slabCard(s){
+  return '<article class="mcard" style="cursor:default">'
+    + photo(s.file,600,s.name+", "+s.origin,false,s.name)
+    + '<h3>'+s.name+'</h3>'
+    + '<p class="origin">'+s.origin+'</p>'
+    + '<p class="desc">'+s.desc+'</p>'
+    + (s.installed ? '<span class="tag">Shown installed</span>' : '')
+    + '</article>';
+}
+function renderSlabs(filter){
+  var grid = document.getElementById("slabgrid");
+  if(!grid) return;
+  var list = (filter==="all") ? SLABS : SLABS.filter(function(s){return s.fam===filter;});
+  grid.innerHTML = list.map(slabCard).join("");
+}
+function mountMaterials(){
+  renderSlabs("all");
+  var btns = document.querySelectorAll(".filters button");
+  btns.forEach(function(b){
+    b.addEventListener("click", function(){
+      btns.forEach(function(x){x.setAttribute("aria-pressed","false");});
+      b.setAttribute("aria-pressed","true");
+      renderSlabs(b.getAttribute("data-filter"));
+    });
+  });
+}
+
+/* ============================================================
+   CONTACT FORM: validate + mailto
+   ============================================================ */
+function mountForm(){
+  var form = document.getElementById("quoteForm");
+  if(!form) return;
+  var errBox = document.getElementById("formError");
+  var okBox = document.getElementById("formSuccess");
+
+  function setInvalid(id, bad){
+    document.getElementById(id).classList.toggle("invalid", bad);
+  }
+  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var type = form.type.value;
+    var phone = form.phone.value.trim();
+    var msg = form.message.value.trim();
+
+    var badName = !name, badEmail = !validEmail(email), badType = !type;
+    setInvalid("f-name", badName);
+    setInvalid("f-email", badEmail);
+    setInvalid("f-type", badType);
+
+    if(badName || badEmail || badType){
+      okBox.classList.remove("show");
+      errBox.classList.add("show");
+      var first = badName ? "q-name" : (badEmail ? "q-email" : "q-type");
+      document.getElementById(first).focus();
+      return;
+    }
+    errBox.classList.remove("show");
+
+    var subject = "Quote request: " + type + " (" + name + ")";
+    var lines = [
+      "Name: " + name,
+      "Email: " + email,
+      "Phone: " + (phone || "not given"),
+      "Project type: " + type,
+      "",
+      "Message:",
+      (msg || "not given")
+    ];
+    var href = "mailto:Paul@Elite.ky?subject=" + encodeURIComponent(subject)
+             + "&body=" + encodeURIComponent(lines.join("\n"));
+    okBox.classList.add("show");
+    okBox.setAttribute("tabindex","-1");
+    okBox.focus();
+    document.dispatchEvent(new CustomEvent("quote:compose",{detail:{href:href}}));
+    window.location.href = href;
+  });
+}
+
+/* ============================================================
+   ROUTER
+   ============================================================ */
+var ROUTES = ["home","materials","services","projects","about","contact"];
+var firstLoad = true;
+
+function currentRoute(){
+  var h = location.hash || "";
+  if(h.indexOf("#/") !== 0) return null;       /* ignore non #/ hashes (skip link safety) */
+  var name = h.slice(2).split("/")[0];
+  return ROUTES.indexOf(name) >= 0 ? name : "home";
+}
+
+function setActiveNav(route){
+  document.querySelectorAll('.nav__links a[data-route]').forEach(function(a){
+    if(a.getAttribute("data-route") === route){ a.setAttribute("aria-current","page"); }
+    else { a.removeAttribute("aria-current"); }
+  });
+}
+
+function closeMenu(){
+  var header = document.getElementById("siteHeader");
+  var burger = document.getElementById("burger");
+  header.classList.remove("open");
+  burger.setAttribute("aria-expanded","false");
+  burger.setAttribute("aria-label","Open menu");
+}
+
+function render(){
+  var route = currentRoute();
+  if(route === null) return;                   /* e.g. #main, do not hijack */
+  var page = PAGES[route] || PAGES.home;
+  var main = document.getElementById("main");
+  main.innerHTML = page.render();
+  document.title = page.title;
+  setActiveNav(route);
+  closeMenu();
+  if(page.mount) page.mount();
+  window.scrollTo(0,0);
+  if(!firstLoad){ main.focus(); }
+  firstLoad = false;
+}
+
+window.addEventListener("hashchange", render);
+window.addEventListener("DOMContentLoaded", function(){
+  /* normalise empty / bare hash to home without triggering a loop */
+  if(location.hash.indexOf("#/") !== 0 && location.hash !== "#main"){
+    history.replaceState(null,"","#/home");
+  }
+  render();
+
+  var burger = document.getElementById("burger");
+  var header = document.getElementById("siteHeader");
+  burger.addEventListener("click", function(){
+    var open = header.classList.toggle("open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+});
+</script>
+</body>
+</html>
