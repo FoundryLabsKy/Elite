@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forever Summer — Women's Fashion Boutique, Camana Bay, Grand Cayman</title>
+<meta name="description" content="Forever Summer is the women's lifestyle boutique on the Paseo at Camana Bay, Grand Cayman — trend-led, summer-inspired fashion you can afford, with new styles arriving weekly in strictly limited quantities. Next to Starbucks. Mon–Sat 10am–6pm. Call (345) 949-4142.">
+<meta name="theme-color" content="#274060">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Forever Summer">
+<meta property="og:title" content="That long-summer feeling, on a hanger.">
+<meta property="og:description" content="Trend-led women's fashion you can actually afford — new drops every week on the Paseo at Camana Bay, Grand Cayman.">
+<meta property="og:locale" content="en_KY">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Forever Summer — Camana Bay, Grand Cayman">
+<meta name="twitter:description" content="Summer-inspired fashion you can afford. New styles weekly, strictly limited quantities. The Paseo, next to Starbucks.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23FFFBF2'/%3E%3Cpath d='M16 18a9 9 0 0 1 18 0Z' transform='translate(-9 -2)' fill='%23E8890C'/%3E%3Cpath d='M16 21a6 6 0 0 1 12 0Z' transform='translate(-6 -2)' fill='%23C42B48'/%3E%3Cpath d='M16 24a3 3 0 0 1 6 0Z' transform='translate(-3 -2)' fill='%23274060'/%3E%3Crect x='4' y='23' width='24' height='2' rx='1' fill='%23274060'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;700&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Forever Summer",
+  "description": "Women's lifestyle boutique at Camana Bay, Grand Cayman — summer-inspired fashion you can afford, new styles weekly.",
+  "telephone": "+1-345-949-4142",
+  "email": "info@foreversummer.com",
+  "url": "https://www.foreversummer.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "45 Market Street, The Paseo, Camana Bay",
+    "addressLocality": "Grand Cayman",
+    "addressCountry": "KY"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "10:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/foreversummercayman/",
+    "https://www.facebook.com/foreversummercayman/"
+  ]
+}
+</script>
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  /* sun-bleached warm neutrals */
+  --cream-50:#FFFBF2; --cream-100:#FCF3E0; --cream-200:#F6E7C8; --cream-300:#EBD5A8;
+  /* warm ink */
+  --ink-900:#221709; --ink-700:#46351D; --ink-600:#5C4A31; --ink-500:#6E5C43;
+  /* golden-hour amber scale */
+  --amber-100:#FCE4BB; --amber-200:#F8CE8A; --amber-400:#EA9C2D; --amber-500:#E8890C;
+  --amber-700:#9A5804; --amber-800:#7A4503;
+  /* dusk blue (deep anchor) */
+  --dusk-700:#274060; --dusk-800:#1D3049; --dusk-900:#152337;
+  /* single accent: hibiscus, CTAs only */
+  --hib-600:#C42B48; --hib-700:#A62039;
+  /* semantic */
+  --ok:#2C6E49; --err:#A4361F;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Karla",system-ui,sans-serif;
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2rem; --s-5:3rem; --s-6:4rem; --s-7:6rem;
+  /* friendly rounded radii + pill CTAs */
+  --r-1:10px; --r-2:14px; --r-3:18px; --r-pill:999px;
+  --shadow-1:0 1px 2px rgba(34,23,9,.10),0 5px 16px rgba(34,23,9,.07);
+  --shadow-2:0 2px 5px rgba(34,23,9,.12),0 12px 30px rgba(34,23,9,.10);
+  --wrap:70rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:1rem;line-height:1.6;color:var(--ink-900);
+  background:var(--cream-50);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;margin:0 0 var(--s-3)}
+h1{font-size:clamp(2.7rem,7vw,4.8rem);letter-spacing:-.015em}
+h2{font-size:clamp(1.9rem,3.8vw,3rem)}
+h3{font-size:1.5rem}
+p{margin:0 0 var(--s-2);max-width:62ch}
+a{color:var(--dusk-700)}
+img,svg{max-width:100%;height:auto}
+h1[tabindex="-1"]:focus,h1[tabindex="-1"]:focus-visible{outline:none}
+:focus-visible{outline:3px solid var(--amber-500);outline-offset:2px;border-radius:6px}
+::selection{background:var(--amber-200)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+.skip{position:absolute;left:-999px;top:0;background:var(--dusk-900);color:var(--cream-50);
+  padding:var(--s-2) var(--s-3);z-index:99}
+.skip:focus{left:var(--s-2)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+.eyebrow{font-size:.8125rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--amber-700);margin:0 0 var(--s-2)}
+.on-dark .eyebrow{color:var(--amber-200)}
+.lede{font-size:1.25rem;color:var(--ink-600);max-width:54ch}
+.on-dark .lede{color:var(--cream-200)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;
+  padding:.75rem 1.7rem;border-radius:var(--r-pill);font:700 1rem var(--body);
+  text-decoration:none;cursor:pointer;border:2px solid transparent;
+  transition:background-color .2s ease-out,color .2s ease-out,border-color .2s ease-out,transform .15s ease-out}
+.btn-primary{background:var(--hib-600);color:#FFF7F0}
+.btn-primary:hover{background:var(--hib-700)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-secondary{background:transparent;color:var(--dusk-800);border-color:var(--dusk-700)}
+.btn-secondary:hover{background:var(--cream-100)}
+.on-dark .btn-secondary{color:var(--cream-50);border-color:var(--cream-200)}
+.on-dark .btn-secondary:hover{background:var(--dusk-700)}
+.btn-link{background:none;border:none;color:var(--dusk-700);font-weight:700;
+  text-decoration:underline;text-underline-offset:3px;padding:.5rem 0;min-height:44px;
+  display:inline-flex;align-items:center}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,251,242,.94);
+  border-bottom:1px solid var(--cream-200);backdrop-filter:blur(6px)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:var(--s-2);min-height:72px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink-900)}
+.logo b{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:.01em;text-transform:uppercase}
+.logo span{display:block;font-size:.6875rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--amber-700)}
+nav.primary ul{display:flex;gap:var(--s-1);list-style:none;margin:0;padding:0}
+nav.primary a{display:inline-flex;align-items:center;min-height:44px;padding:.4rem .8rem;
+  text-decoration:none;color:var(--ink-700);font-weight:500;border-radius:var(--r-pill)}
+nav.primary a:hover{color:var(--dusk-800);background:var(--cream-100)}
+nav.primary a[aria-current="page"]{color:var(--cream-50);background:var(--dusk-700);font-weight:700}
+.nav-cta{display:flex;align-items:center;gap:var(--s-2)}
+#menu-btn{display:none;background:none;border:2px solid var(--dusk-700);border-radius:var(--r-1);
+  min-width:48px;min-height:48px;cursor:pointer;color:var(--dusk-800);font-size:1.25rem}
+@media (max-width:63em){
+  nav.primary{position:fixed;inset:72px 0 auto 0;background:var(--cream-50);
+    border-bottom:1px solid var(--cream-200);box-shadow:var(--shadow-2);
+    padding:var(--s-2) clamp(1rem,4vw,2.5rem) var(--s-3);display:none}
+  nav.primary.open{display:block}
+  nav.primary ul{flex-direction:column;gap:2px}
+  nav.primary a{width:100%;padding:.8rem .8rem;font-size:1.1rem;border-radius:var(--r-1)}
+  #menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  .nav-cta .btn{display:none}
+}
+
+/* hero with striped sun arcs — the signature */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:6fr 5fr;gap:var(--s-5);align-items:center;
+  padding-top:var(--s-6);padding-bottom:var(--s-6)}
+.hero h1 .hl{font-style:italic;font-weight:500;color:var(--amber-700)}
+.hero-sun{position:relative;min-height:20rem;display:flex;align-items:flex-end;justify-content:center}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-3)}
+.hero-meta{margin-top:var(--s-3);color:var(--ink-500);font-size:.9375rem}
+@media (max-width:56em){.hero .wrap{grid-template-columns:1fr;padding-top:var(--s-5)}
+  .hero-sun{min-height:13rem}}
+
+/* marquee strip — honest drop phrases */
+.marquee{background:var(--dusk-800);color:var(--cream-100);overflow:hidden;
+  padding:.7rem 0;border-top:3px solid var(--amber-500);border-bottom:3px solid var(--amber-500)}
+.marquee .track{display:flex;gap:3rem;white-space:nowrap;width:max-content;
+  animation:slide 28s linear infinite;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.875rem}
+.marquee .track span::after{content:"☀";margin-left:3rem;color:var(--amber-400)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+
+section.band{padding:var(--s-7) 0}
+section.band.tight{padding:var(--s-6) 0}
+.band.cream{background:var(--cream-100)}
+.band.dusk{background:var(--dusk-800);color:var(--cream-50)}
+.band.dusk h2,.band.dusk h3{color:var(--cream-50)}
+.band.amber{background:linear-gradient(180deg,var(--amber-100),var(--cream-100))}
+.band.amber .eyebrow{color:var(--amber-800)}
+
+/* drop tickets */
+.tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-3);margin-top:var(--s-4)}
+.ticket{background:var(--cream-50);border:2px dashed var(--amber-400);border-radius:var(--r-3);
+  padding:var(--s-3);position:relative}
+.ticket .tag{display:inline-block;background:var(--dusk-700);color:var(--cream-50);
+  font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  border-radius:var(--r-pill);padding:.25rem .8rem;margin-bottom:var(--s-2)}
+.ticket h3{font-size:1.35rem;margin-bottom:var(--s-1)}
+.ticket p{font-size:.9375rem;color:var(--ink-600);margin:0}
+@media (max-width:56em){.tickets{grid-template-columns:1fr}}
+
+/* category tour — alternating rows, not a card grid */
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5);align-items:center;
+  padding:var(--s-4) 0}
+.row2.rev>.txt{order:2}
+.row2 h2{font-size:1.5rem;margin-bottom:var(--s-2)}
+.row2 .art{border-radius:var(--r-3);min-height:16rem;box-shadow:var(--shadow-1);
+  position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.row2 .art figcaption{position:relative;margin:var(--s-2);padding:.3rem .7rem;
+  background:rgba(34,23,9,.78);color:var(--cream-100);font-size:.75rem;
+  letter-spacing:.06em;text-transform:uppercase;border-radius:var(--r-pill)}
+@media (max-width:56em){.row2{grid-template-columns:1fr;gap:var(--s-3)}.row2.rev>.txt{order:0}
+  .row2 h2{font-size:1.5rem;margin-bottom:var(--s-2)}
+.row2 .art{min-height:12rem}}
+
+/* pull quote */
+.pull{max-width:52rem;margin:0 auto;text-align:center;padding:0 var(--s-2)}
+.pull blockquote{margin:0;font-family:var(--display);font-style:italic;font-weight:500;
+  font-size:clamp(1.5rem,3.2vw,2.2rem);line-height:1.3}
+.pull cite{display:block;margin-top:var(--s-3);font-style:normal;font-size:.9375rem;
+  color:var(--ink-600);font-family:var(--body)}
+.band.dusk .pull cite{color:var(--cream-300)}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:3fr 2fr;gap:var(--s-6);align-items:start}
+.visit-card{background:var(--cream-50);border:1px solid var(--cream-300);border-radius:var(--r-3);
+  padding:var(--s-4);box-shadow:var(--shadow-1)}
+.visit-card dt{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--amber-700);margin-top:var(--s-3)}
+.visit-card dt:first-child{margin-top:0}
+.visit-card dl{margin:0}
+.visit-card dd{margin:0;font-size:1.25rem}
+.visit-card dd.small{font-size:.9375rem;color:var(--ink-600)}
+.actions{display:flex;flex-direction:column;gap:var(--s-2);margin-top:var(--s-4)}
+@media (max-width:56em){.visit-grid{grid-template-columns:1fr;gap:var(--s-4)}}
+
+/* form */
+form.signup{display:grid;gap:var(--s-3);max-width:32rem}
+.field label{display:block;font-weight:700;font-size:.9375rem;margin-bottom:.35rem}
+.field .hint{font-weight:400;color:var(--ink-500);font-size:.8125rem;display:block}
+.field input,.field select,.field textarea{width:100%;font:400 1rem var(--body);
+  color:var(--ink-900);background:#fff;border:1.5px solid #8C7147;
+  border-radius:var(--r-1);padding:.7rem .9rem;min-height:48px}
+.field textarea{min-height:7rem;resize:vertical}
+.field.err input,.field.err select,.field.err textarea{border-color:var(--err)}
+.field .msg{display:none;color:var(--err);font-size:.875rem;margin-top:.3rem}
+.field.err .msg{display:block}
+.form-note{font-size:.875rem;color:var(--ink-500);max-width:46ch}
+.form-ok{display:none;background:#EEF6EF;border:1px solid #BBD8C2;border-radius:var(--r-1);
+  padding:var(--s-2) var(--s-3);color:#1E4A2E}
+.form-ok.show{display:block}
+
+/* footer */
+footer.site{background:var(--dusk-900);color:var(--cream-200);padding:var(--s-6) 0 var(--s-5)}
+footer.site .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--s-5)}
+footer.site h3{color:var(--cream-50);font-size:1.25rem}
+footer.site a{color:var(--cream-100)}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{margin-bottom:var(--s-1)}
+footer.site li a{display:inline-flex;min-height:32px;align-items:center}
+.fine{margin-top:var(--s-5);padding-top:var(--s-3);border-top:1px solid var(--dusk-700);
+  font-size:.8125rem;color:var(--cream-300)}
+@media (max-width:56em){footer.site .cols{grid-template-columns:1fr;gap:var(--s-3)}}
+
+main [data-route]{display:none}
+main [data-route].active{display:block}
+.page-head{padding:var(--s-6) 0 var(--s-2)}
+/* scroll-reveal is opt-in: html.anim is set by JS only when motion is allowed,
+   so content stays visible with JS off, in print, and with reduced motion */
+.anim .reveal{opacity:0;transform:translateY(14px);transition:opacity .3s ease-out,transform .3s ease-out}
+.anim .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="logo" href="#/home" aria-label="Forever Summer — home">
+      <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#FCF3E0"/><path d="M7 23a9 9 0 0 1 18 0Z" fill="#E8890C"/><path d="M10 23a6 6 0 0 1 12 0Z" fill="#C42B48"/><path d="M13 23a3 3 0 0 1 6 0Z" fill="#274060"/><rect x="4" y="23" width="24" height="2.4" rx="1.2" fill="#274060"/></svg>
+      <span><b>Forever Summer</b><span>The Paseo · Camana Bay</span></span>
+    </a>
+    <nav class="primary" id="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/new">New this week</a></li>
+        <li><a href="#/shop">In the shop</a></li>
+        <li><a href="#/fs-girls">FS Girls</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/visit">Visit</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#/new">See this week's drop</a>
+      <button id="menu-btn" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HOME ================= -->
+<section data-route="home" aria-labelledby="h-home">
+  <div class="hero">
+    <div class="wrap">
+      <div class="txt">
+        <p class="eyebrow">Women's lifestyle boutique · Camana Bay, Grand Cayman</p>
+        <h1 id="h-home">That long-summer feeling, <span class="hl">on a hanger.</span></h1>
+        <p class="lede">Trend-led fashion you can actually afford — new styles land every
+        week, in strictly limited numbers, on the Paseo next to Starbucks.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#/new">See this week's drop</a>
+          <a class="btn btn-secondary" href="#/visit">Find the shop</a>
+        </div>
+        <p class="hero-meta">Open Mon–Sat, 10am–6pm · <a href="tel:+13459494142">(345) 949-4142</a></p>
+      </div>
+      <div class="hero-sun" role="img" aria-label="Retro striped sunset illustration: layered amber, hibiscus and dusk-blue arcs over a horizon line.">
+        <svg viewBox="0 0 360 220" aria-hidden="true">
+          <path d="M20 200a160 160 0 0 1 320 0Z" fill="#F8CE8A"/>
+          <path d="M50 200a130 130 0 0 1 260 0Z" fill="#EA9C2D"/>
+          <path d="M80 200a100 100 0 0 1 200 0Z" fill="#E8890C"/>
+          <path d="M110 200a70 70 0 0 1 140 0Z" fill="#C42B48"/>
+          <path d="M140 200a40 40 0 0 1 80 0Z" fill="#274060"/>
+          <rect x="8" y="198" width="344" height="5" rx="2.5" fill="#274060"/>
+          <rect x="30" y="211" width="300" height="3" rx="1.5" fill="#EA9C2D" opacity=".65"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track" id="marquee-track">
+      <span>New styles every week</span><span>Strictly limited quantities</span>
+      <span>When it's gone, it's gone</span><span>The Paseo · next to Starbucks</span>
+      <span>Summer never closes</span>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap">
+      <p class="eyebrow">How the shop works</p>
+      <h2>Small drops. Big Fridays.</h2>
+      <p class="lede">We buy in strictly limited quantities on purpose — so the dress you
+      pick up isn't the one everyone's wearing at the same brunch.</p>
+      <div class="tickets reveal">
+        <div class="ticket"><span class="tag">Weekly</span><h3>New styles land</h3>
+          <p>Fresh arrivals hit the rails every week — apparel, accessories, beauty and gifts.</p></div>
+        <div class="ticket"><span class="tag">Limited</span><h3>A few of each</h3>
+          <p>Strictly limited quantities per style. That's not marketing — it's how we buy.</p></div>
+        <div class="ticket"><span class="tag">Gone</span><h3>Then it's gone</h3>
+          <p>Miss a piece and it probably won't be back. Follow the drop on Instagram.</p></div>
+      </div>
+      <p style="margin-top:var(--s-4)"><a class="btn btn-primary" href="#/new">What landed this week</a></p>
+    </div>
+  </div>
+
+  <div class="band cream tight">
+    <div class="wrap row2 reveal">
+      <div class="txt">
+        <p class="eyebrow">The idea</p>
+        <h2>Built on a feeling everyone remembers.</h2>
+        <p>Owner Catherine Dawson-James opened Forever Summer in 2019 to capture, in her
+        words, “that nostalgic feeling of long summer days and nights filled with fun and
+        freedom.” In Grand Cayman, that feeling never has to end — so neither does the
+        wardrobe.</p>
+        <p><a class="btn-link" href="#/about">Read the story</a></p>
+      </div>
+      <figure class="art" style="background:linear-gradient(160deg,var(--amber-200),var(--amber-400))">
+        <figcaption>Placeholder — shop interior photo</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="band dusk on-dark tight">
+    <div class="pull">
+      <blockquote>“…a special shout out to Gabby who went above and beyond to create an
+      awesome shopping experience.”</blockquote>
+      <cite>Google review of Forever Summer, Camana Bay</cite>
+    </div>
+  </div>
+
+  <div class="band amber tight">
+    <div class="wrap row2 rev reveal">
+      <div class="txt">
+        <p class="eyebrow">Find us</p>
+        <h2>On the Paseo, next to Starbucks.</h2>
+        <p>45 Market Street, Camana Bay — grab the coffee, then come say hi. Ten minutes
+        from anywhere on Seven Mile Beach.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#/visit">Hours &amp; directions</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/foreversummercayman/" rel="noopener">@foreversummercayman</a>
+        </div>
+      </div>
+      <figure class="art" style="background:linear-gradient(160deg,var(--cream-200),var(--amber-200))">
+        <figcaption>Placeholder — storefront photo, the Paseo</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEW THIS WEEK ================= -->
+<section data-route="new" aria-labelledby="h-new">
+  <div class="wrap page-head">
+    <p class="eyebrow">The drop</p>
+    <h1 id="h-new">Here Friday. <span style="font-style:italic;font-weight:500;color:var(--amber-700)">Gone Sunday.</span></h1>
+    <p class="lede">New styles arrive every week in strictly limited quantities. This page
+    is the honest version of a countdown timer: when a piece sells through, it's gone.</p>
+  </div>
+  <div class="band tight">
+    <div class="wrap">
+      <h2>In this week's drop</h2>
+      <div class="tickets">
+        <div class="ticket"><span class="tag">This week</span><h3>Dresses &amp; sets</h3>
+          <p>Placeholder — the owner drops this week's arrival photos here (or we pull the
+          latest posts from Instagram).</p></div>
+        <div class="ticket"><span class="tag">This week</span><h3>Accessories</h3>
+          <p>Placeholder — new accessories from the current drop.</p></div>
+        <div class="ticket"><span class="tag">This week</span><h3>Beauty &amp; gifts</h3>
+          <p>Placeholder — beauty picks and gift finds from the current drop.</p></div>
+      </div>
+      <p class="form-note" style="margin-top:var(--s-3)">Live drop photos are posted first
+      on Instagram — the shop's real-time channel.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://www.instagram.com/foreversummercayman/" rel="noopener">See the live drop on Instagram</a>
+        <a class="btn btn-secondary" href="#/visit">Ask us to hold a piece</a>
+      </div>
+    </div>
+  </div>
+  <div class="band cream tight">
+    <div class="wrap">
+      <h2>Want first look?</h2>
+      <p class="lede">Leave your email and we'll add you to the first-look list for weekly
+      drop news. No spam — it's one boutique, not a mailing machine.</p>
+      <form class="signup" id="firstlook" novalidate style="margin-top:var(--s-3)">
+        <div class="field" id="f-fl-email">
+          <label for="fl-email">Email <span class="hint">We reply from the shop's own inbox</span></label>
+          <input id="fl-email" type="email" autocomplete="email" required aria-describedby="fl-email-err">
+          <p class="msg" id="fl-email-err">That email doesn't look complete — check for a typo like a missing “@”.</p>
+        </div>
+        <div>
+          <button class="btn btn-primary" type="submit">Join the first-look list</button>
+          <p class="form-note" style="margin-top:var(--s-2)">This opens your email app with
+          a pre-written signup note to info@foreversummer.com — nothing sends until you
+          press send.</p>
+        </div>
+        <p class="form-ok" id="fl-ok" role="status">Your email app should now be open with
+        the note ready. If it didn't open, email
+        <a href="mailto:info@foreversummer.com">info@foreversummer.com</a> with the subject
+        “First look”.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SHOP ================= -->
+<section data-route="shop" aria-labelledby="h-shop">
+  <div class="wrap page-head">
+    <p class="eyebrow">In the shop</p>
+    <h1 id="h-shop">A full summer wardrobe, minus the sting.</h1>
+    <p class="lede">Everything is bought for Cayman life and priced to be worn now — not
+    saved for a someday occasion.</p>
+  </div>
+  <div class="band tight">
+    <div class="wrap">
+      <div class="row2">
+        <div class="txt">
+          <h2>Dresses &amp; apparel</h2>
+          <p>Sundresses, sets, tops and bottoms — trend-led pieces that go from the school
+          run to a Paseo dinner. New shapes land weekly.</p>
+        </div>
+        <figure class="art" style="background:linear-gradient(160deg,var(--amber-100),var(--amber-200))">
+          <figcaption>Placeholder — apparel photo</figcaption>
+        </figure>
+      </div>
+      <div class="row2 rev">
+        <div class="txt">
+          <h2>Accessories</h2>
+          <p>The finishing layer: jewellery, bags, hair pieces and sunny extras that turn
+          one dress into three outfits.</p>
+        </div>
+        <figure class="art" style="background:linear-gradient(160deg,var(--cream-200),var(--amber-100))">
+          <figcaption>Placeholder — accessories photo</figcaption>
+        </figure>
+      </div>
+      <div class="row2">
+        <div class="txt">
+          <h2>Beauty</h2>
+          <p>A tight edit of beauty picks that suit island humidity — chosen by people who
+          live in it.</p>
+        </div>
+        <figure class="art" style="background:linear-gradient(160deg,var(--amber-200),var(--amber-400))">
+          <figcaption>Placeholder — beauty photo</figcaption>
+        </figure>
+      </div>
+      <div class="row2 rev" style="padding-bottom:0">
+        <div class="txt">
+          <h2>Gifts</h2>
+          <p>Grab-and-go gifts that don't look last-minute — because sometimes they are.</p>
+        </div>
+        <figure class="art" style="background:linear-gradient(160deg,var(--cream-200),var(--amber-200))">
+          <figcaption>Placeholder — gifts photo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="band cream tight">
+    <div class="wrap">
+      <h2>Fitting rooms, the friendly kind.</h2>
+      <p class="lede">Try anything. Try it twice. Ask for another size out loud. Helping
+      you find the piece is the whole job — and the team loves doing it.</p>
+      <p style="margin-top:var(--s-3)"><a class="btn btn-primary" href="#/visit">Come try things on</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FS GIRLS ================= -->
+<section data-route="fs-girls" aria-labelledby="h-girls">
+  <div class="wrap page-head">
+    <p class="eyebrow">The younger crowd</p>
+    <h1 id="h-girls">FS Girls.</h1>
+    <p class="lede">Styles picked for teens and young adults — the same weekly-drop rhythm,
+    at pocket-money-friendlier prices.</p>
+  </div>
+  <div class="band tight">
+    <div class="wrap row2">
+      <div class="txt">
+        <h2>First-job budgets welcome.</h2>
+        <p>FS Girls is the corner of the shop where trends arrive fastest and price tags
+        stay kindest. It's where a Saturday allowance actually buys an outfit — and where
+        mums and daughters shop the same rail without anyone rolling their eyes.</p>
+        <p>New FS Girls pieces land in the weekly drop alongside everything else. Follow
+        the shop on Instagram to catch them first.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://www.instagram.com/foreversummercayman/" rel="noopener">Follow the drop</a>
+          <a class="btn btn-secondary" href="#/visit">Visit the shop</a>
+        </div>
+      </div>
+      <figure class="art" style="background:linear-gradient(160deg,var(--amber-100),var(--hib-600) 140%)">
+        <figcaption>Placeholder — FS Girls photo</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section data-route="about" aria-labelledby="h-about">
+  <div class="wrap page-head">
+    <p class="eyebrow">The story</p>
+    <h1 id="h-about">Some summers <span style="font-style:italic;font-weight:500;color:var(--amber-700)">shouldn't end.</span></h1>
+  </div>
+  <div class="band tight">
+    <div class="wrap row2">
+      <div class="txt">
+        <h2>Opened 2019, on the Paseo.</h2>
+        <p>Forever Summer opened at Camana Bay in March 2019, the fourth boutique from
+        Catherine and Ian Dawson-James — the family behind Sand Angels, Little Angels and
+        Activ Angels. Catherine has spent more than 25 years in Cayman retail fashion,
+        and this shop is her most personal idea:</p>
+        <p style="font-family:var(--display);font-style:italic;font-size:1.35rem;max-width:44ch">
+        “that nostalgic feeling of long summer days and nights filled with fun and
+        freedom”</p>
+        <p>— kept alive on a rail, at prices that let you say yes more than once.</p>
+      </div>
+      <figure class="art" style="background:linear-gradient(160deg,var(--amber-200),var(--amber-500))">
+        <figcaption>Placeholder — Catherine / team photo</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="band dusk on-dark tight">
+    <div class="wrap">
+      <p class="eyebrow">The family</p>
+      <h2>One family, five boutiques at Camana Bay</h2>
+      <p class="lede">Each shop has its own job. This one's job is everyday summer.</p>
+      <div class="tickets" style="margin-top:var(--s-4)">
+        <div class="ticket" style="background:var(--dusk-700);border-color:var(--amber-400)">
+          <h3 style="color:var(--cream-50)">Sand Angels</h3>
+          <p style="color:var(--cream-200)">Designer swim &amp; resort wear — the big sister boutique.</p></div>
+        <div class="ticket" style="background:var(--dusk-700);border-color:var(--amber-400)">
+          <h3 style="color:var(--cream-50)">Little Angels</h3>
+          <p style="color:var(--cream-200)">Kids' UPF50+ swim and jelly shoes.</p></div>
+        <div class="ticket" style="background:var(--dusk-700);border-color:var(--amber-400)">
+          <h3 style="color:var(--cream-50)">Activ Angels &amp; Riviera</h3>
+          <p style="color:var(--cream-200)">Active wear, and resort lifestyle next to Sand Angels.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISIT ================= -->
+<section data-route="visit" aria-labelledby="h-visit">
+  <div class="wrap page-head">
+    <p class="eyebrow">Visit</p>
+    <h1 id="h-visit">Come find your next favourite thing.</h1>
+    <p class="lede">We're on the Paseo at Camana Bay, next to Starbucks — easy parking,
+    easy browsing, zero pressure.</p>
+  </div>
+  <div class="band tight">
+    <div class="wrap visit-grid">
+      <div>
+        <h2>Ask us to hold a piece</h2>
+        <p>Saw something in the drop? Send a note and we'll do our best to set it aside —
+        limited quantities mean holds are short and first-come, but we'll always try.</p>
+        <form class="signup" id="hold" novalidate>
+          <div class="field" id="f-h-name">
+            <label for="h-name">Your name</label>
+            <input id="h-name" type="text" autocomplete="name" required aria-describedby="h-name-err">
+            <p class="msg" id="h-name-err">Please tell us your name so we know whose hold it is.</p>
+          </div>
+          <div class="field" id="f-h-email">
+            <label for="h-email">Email</label>
+            <input id="h-email" type="email" autocomplete="email" required aria-describedby="h-email-err">
+            <p class="msg" id="h-email-err">That email doesn't look complete — check for a typo like a missing “@”.</p>
+          </div>
+          <div class="field" id="f-h-msg">
+            <label for="h-msg">The piece <span class="hint">Describe it, or paste the Instagram post link</span></label>
+            <textarea id="h-msg" required aria-describedby="h-msg-err"></textarea>
+            <p class="msg" id="h-msg-err">Tell us which piece to look for — a description or an Instagram link both work.</p>
+          </div>
+          <div>
+            <button class="btn btn-primary" type="submit">Compose the email</button>
+            <p class="form-note" style="margin-top:var(--s-2)">This opens your own email app
+            with the note pre-written to info@foreversummer.com — nothing is sent until you
+            press send.</p>
+          </div>
+          <p class="form-ok" id="h-ok" role="status">Your email app should now be open with
+          the message ready. If it didn't open, email us at
+          <a href="mailto:info@foreversummer.com">info@foreversummer.com</a>.</p>
+        </form>
+      </div>
+      <aside class="visit-card" aria-label="Location and contact details">
+        <dl>
+          <dt>Shop</dt>
+          <dd>Forever Summer</dd>
+          <dt>Address</dt>
+          <dd class="small">45 Market Street, The Paseo<br>Camana Bay, Grand Cayman<br>Cayman Islands</dd>
+          <dt>Wayfinding</dt>
+          <dd class="small">On the Paseo, next to Starbucks</dd>
+          <dt>Hours</dt>
+          <dd class="small">Monday–Saturday, 10am–6pm<br>Closed Sundays</dd>
+          <dt>Phone</dt>
+          <dd class="small"><a href="tel:+13459494142">(345) 949-4142</a></dd>
+          <dt>Email</dt>
+          <dd class="small"><a href="mailto:info@foreversummer.com">info@foreversummer.com</a></dd>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Forever+Summer+Camana+Bay+Grand+Cayman" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/foreversummercayman/" rel="noopener">@foreversummercayman</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Forever Summer</h3>
+        <p style="color:var(--cream-300);max-width:38ch">A lifestyle boutique like no
+        other — summer-inspired fashion you can afford, on the Paseo at Camana Bay,
+        Grand Cayman.</p>
+        <p style="color:var(--cream-300)"><a href="tel:+13459494142">(345) 949-4142</a> ·
+        <a href="mailto:info@foreversummer.com">info@foreversummer.com</a></p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#/new">New this week</a></li>
+          <li><a href="#/shop">In the shop</a></li>
+          <li><a href="#/fs-girls">FS Girls</a></li>
+          <li><a href="#/about">Our story</a></li>
+          <li><a href="#/visit">Visit &amp; holds</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Elsewhere</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/foreversummercayman/" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/foreversummercayman/" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.camanabay.com/grand-cayman-shops-restaurants/forever-summer/" rel="noopener">Camana Bay directory</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">© 2026 Forever Summer, Camana Bay, Grand Cayman. Review quoted is from
+    a public Google review of the shop. Mon–Sat 10am–6pm.</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- hash router ---------- */
+const ROUTES = ["home","new","shop","fs-girls","about","visit"];
+const TITLES = {
+  home:"Forever Summer — Women's Fashion Boutique, Camana Bay, Grand Cayman",
+  "new":"New This Week — Forever Summer, Camana Bay",
+  shop:"In the Shop — Forever Summer, Camana Bay",
+  "fs-girls":"FS Girls — Forever Summer, Camana Bay",
+  about:"Our Story — Forever Summer, Camana Bay",
+  visit:"Visit & Holds — Forever Summer, Camana Bay"
+};
+function currentRoute(){
+  const h = location.hash.replace(/^#\/?/,"").split("?")[0];
+  return ROUTES.includes(h) ? h : "home";
+}
+function render(focusHeading){
+  const r = currentRoute();
+  document.querySelectorAll("main [data-route]").forEach(s=>{
+    s.classList.toggle("active", s.dataset.route===r);
+  });
+  document.querySelectorAll("nav.primary a").forEach(a=>{
+    const t = a.getAttribute("href").replace("#/","");
+    if(t===r) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+  });
+  document.title = TITLES[r];
+  closeMenu();
+  window.scrollTo(0,0);
+  if(focusHeading){
+    const h1 = document.querySelector(`[data-route="${r}"] h1`);
+    if(h1){ h1.setAttribute("tabindex","-1"); h1.focus({preventScroll:true}); }
+  }
+  requestAnimationFrame(observeReveals);
+}
+window.addEventListener("hashchange", ()=>render(true));
+
+/* ---------- mobile menu ---------- */
+const menuBtn = document.getElementById("menu-btn");
+const nav = document.getElementById("primary-nav");
+function closeMenu(){ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); menuBtn.setAttribute("aria-label","Open menu"); }
+menuBtn.addEventListener("click", ()=>{
+  const open = nav.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+});
+
+/* ---------- marquee: duplicate track content once for a seamless loop ---------- */
+const track = document.getElementById("marquee-track");
+track.innerHTML += track.innerHTML;
+
+/* ---------- reveals ---------- */
+let io = null;
+function observeReveals(){
+  if(io) io.disconnect();
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.documentElement.classList.add("anim");
+  io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll(".active .reveal:not(.in)").forEach(el=>io.observe(el));
+}
+
+/* ---------- forms (mailto compose, validated) ---------- */
+function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+function wireBlur(inputId, fieldId, check){
+  const el = document.getElementById(inputId);
+  const f = document.getElementById(fieldId);
+  el.addEventListener("blur", ()=>f.classList.toggle("err", !check(el.value)));
+  /* clear as soon as the field becomes valid, so the layout settles
+     before the user reaches the submit button */
+  ["input","change"].forEach(ev=>el.addEventListener(ev, ()=>{ if(check(el.value)) f.classList.remove("err"); }));
+}
+/* first-look signup */
+wireBlur("fl-email","f-fl-email",validEmail);
+document.getElementById("firstlook").addEventListener("submit", ev=>{
+  ev.preventDefault();
+  const email = document.getElementById("fl-email").value.trim();
+  const bad = !validEmail(email);
+  document.getElementById("f-fl-email").classList.toggle("err", bad);
+  if(bad){ document.getElementById("fl-email").focus(); return; }
+  const body = encodeURIComponent(`Hi Forever Summer,\n\nPlease add me to the first-look list for weekly drop news.\n\nEmail: ${email}\n\nSent from the Forever Summer website.`);
+  document.getElementById("fl-ok").classList.add("show");
+  setTimeout(()=>{ window.location.href = `mailto:info@foreversummer.com?subject=${encodeURIComponent("First look — drop list")}&body=${body}`; }, 60);
+});
+/* hold request */
+wireBlur("h-name","f-h-name",v=>v.trim().length>0);
+wireBlur("h-email","f-h-email",validEmail);
+wireBlur("h-msg","f-h-msg",v=>v.trim().length>0);
+document.getElementById("hold").addEventListener("submit", ev=>{
+  ev.preventDefault();
+  const name = document.getElementById("h-name").value.trim();
+  const email = document.getElementById("h-email").value.trim();
+  const msg = document.getElementById("h-msg").value.trim();
+  const bad = [];
+  document.getElementById("f-h-name").classList.toggle("err", !name); if(!name) bad.push("h-name");
+  document.getElementById("f-h-email").classList.toggle("err", !validEmail(email)); if(!validEmail(email)) bad.push("h-email");
+  document.getElementById("f-h-msg").classList.toggle("err", !msg); if(!msg) bad.push("h-msg");
+  if(bad.length){ document.getElementById(bad[0]).focus(); return; }
+  const body = encodeURIComponent(`Hi Forever Summer,\n\nCould you hold this piece for me?\n\nName: ${name}\nEmail: ${email}\nThe piece: ${msg}\n\nSent from the Forever Summer website.`);
+  document.getElementById("h-ok").classList.add("show");
+  setTimeout(()=>{ window.location.href = `mailto:info@foreversummer.com?subject=${encodeURIComponent("Hold request")}&body=${body}`; }, 60);
+});
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sand Angels — Designer Swim &amp; Resort Wear, Camana Bay, Grand Cayman</title>
+<meta name="description" content="Sand Angels is Grand Cayman's designer swimwear and resort wear boutique on the Paseo at Camana Bay. Melissa Odabash, Camilla, Eberjey and more — with bra-sized and plus-size fit expertise, kids' UPF50+ swim, and reserve-online-try-in-store. Mon–Sat 10am–6pm. Call (345) 945-SAND.">
+<meta name="theme-color" content="#0A414A">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sand Angels">
+<meta property="og:title" content="Swim worth crossing an ocean for.">
+<meta property="og:description" content="Designer swim, resort wear and accessories from around the world — fitted to you by the Angels at Camana Bay, Grand Cayman.">
+<meta property="og:locale" content="en_KY">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sand Angels — Camana Bay, Grand Cayman">
+<meta name="twitter:description" content="Designer swimwear &amp; resort wear boutique on the Paseo at Camana Bay. Bra-sized &amp; plus-size fit expertise, kids' UPF50+, reserve online and try in store.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230A414A'/%3E%3Cpath d='M4 21c3-5 6-7 8-6s1 4 4 4 4-4 8-5' fill='none' stroke='%23F4EDE0' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M4 26c3-4 6-6 8-5s1 3 4 3 4-3 8-4' fill='none' stroke='%23C8B98F' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Archivo:wght@400;500;600;700&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Sand Angels",
+  "description": "Designer swimwear, resort wear and accessories boutique at Camana Bay, Grand Cayman.",
+  "telephone": "+1-345-945-7263",
+  "email": "info@sandangels.com",
+  "url": "https://sandangels.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "64 Market Street, The Paseo, Camana Bay",
+    "addressLocality": "Grand Cayman",
+    "addressCountry": "KY"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "10:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/sand_angels/",
+    "https://www.facebook.com/SandAngelsCayman/"
+  ]
+}
+</script>
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  /* sand neutrals (warm-tinted, never pure gray) */
+  --sand-50:#FBF7F0; --sand-100:#F4EDE0; --sand-200:#EADFCB; --sand-300:#D9C9AA;
+  --sand-400:#C8B98F;
+  /* ink (warm near-black) */
+  --ink-900:#191510; --ink-700:#3A342B; --ink-600:#544C3F; --ink-500:#6B6152;
+  /* sea-glass teal scale */
+  --teal-50:#EDF6F7; --teal-100:#D3E9EB; --teal-200:#A8D3D8; --teal-400:#3D93A0;
+  --teal-600:#136271; --teal-700:#0E5560; --teal-800:#0A414A; --teal-900:#072F36;
+  /* single accent: sun-coral, CTAs only */
+  --coral-600:#AE3A12; --coral-700:#93300E;
+  /* semantic */
+  --ok:#2C6E49; --err:#A4361F;
+  /* type */
+  --display:"Cormorant Garamond",Georgia,serif;
+  --body:"Archivo",system-ui,sans-serif;
+  --fs-0:1rem; --fs-1:1.25rem; --fs-2:1.5625rem; --fs-3:1.953rem; --fs-4:2.441rem;
+  --fs-5:3.05rem; --fs-6:3.815rem;
+  /* space: 8px base */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2rem; --s-5:3rem; --s-6:4rem;
+  --s-7:6rem; --s-8:8rem;
+  /* near-sharp radii: gallery formality */
+  --r-1:2px; --r-2:4px; --r-3:6px;
+  /* layered shadows, warm, one top light */
+  --shadow-1:0 1px 2px rgba(25,21,16,.10),0 4px 14px rgba(25,21,16,.06);
+  --shadow-2:0 2px 4px rgba(25,21,16,.12),0 10px 28px rgba(25,21,16,.09);
+  --wrap:72rem;
+}
+/* ============ RESET / BASE ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:var(--fs-0);line-height:1.6;
+  color:var(--ink-900);background:var(--sand-50);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0 0 var(--s-3)}
+h1{font-size:clamp(2.6rem,6.4vw,4.6rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,3.6vw,var(--fs-5))}
+h3{font-size:var(--fs-2)}
+p{margin:0 0 var(--s-2);max-width:62ch}
+a{color:var(--teal-700)}
+img,svg{max-width:100%;height:auto}
+h1[tabindex="-1"]:focus,h1[tabindex="-1"]:focus-visible{outline:none}
+:focus-visible{outline:3px solid var(--teal-400);outline-offset:2px;border-radius:var(--r-1)}
+::selection{background:var(--teal-200)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink-900);color:var(--sand-50);
+  padding:var(--s-2) var(--s-3);z-index:99}
+.skip:focus{left:var(--s-2)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+.eyebrow{font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal-700);margin:0 0 var(--s-2)}
+.on-dark .eyebrow{color:var(--teal-200)}
+.lede{font-size:var(--fs-1);color:var(--ink-600);max-width:56ch}
+.on-dark .lede{color:var(--teal-100)}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  min-height:48px;padding:.75rem 1.5rem;border-radius:var(--r-2);
+  font:600 1rem var(--body);text-decoration:none;cursor:pointer;border:2px solid transparent;
+  transition:background-color .2s ease-out,color .2s ease-out,border-color .2s ease-out,transform .15s ease-out}
+.btn-primary{background:var(--coral-600);color:#FFF9F5}
+.btn-primary:hover{background:var(--coral-700)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-secondary{background:transparent;color:var(--teal-800);border-color:var(--teal-700)}
+.btn-secondary:hover{background:var(--teal-50)}
+.on-dark .btn-secondary{color:var(--sand-50);border-color:var(--teal-200)}
+.on-dark .btn-secondary:hover{background:var(--teal-700)}
+.btn-link{background:none;border:none;color:var(--teal-700);font-weight:600;
+  text-decoration:underline;text-underline-offset:3px;padding:.5rem 0;min-height:44px;
+  display:inline-flex;align-items:center}
+.btn-link:hover{color:var(--teal-900)}
+
+/* ============ HEADER ============ */
+header.site{position:sticky;top:0;z-index:50;background:rgba(251,247,240,.94);
+  border-bottom:1px solid var(--sand-200);backdrop-filter:blur(6px)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:var(--s-2);
+  min-height:72px}
+.logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--ink-900)}
+.logo svg{flex:none}
+.logo b{font-family:var(--display);font-weight:700;font-size:1.45rem;letter-spacing:.02em}
+.logo span{display:block;font-size:.6875rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--teal-700)}
+nav.primary ul{display:flex;gap:var(--s-2);list-style:none;margin:0;padding:0}
+nav.primary a{display:inline-flex;align-items:center;min-height:44px;padding:.4rem .75rem;
+  text-decoration:none;color:var(--ink-700);font-weight:500;border-radius:var(--r-1);
+  border-bottom:2px solid transparent}
+nav.primary a:hover{color:var(--teal-800);background:var(--sand-100)}
+nav.primary a[aria-current="page"]{color:var(--teal-800);border-bottom-color:var(--coral-600);font-weight:600}
+.nav-cta{display:flex;align-items:center;gap:var(--s-2)}
+#menu-btn{display:none;background:none;border:2px solid var(--teal-700);border-radius:var(--r-2);
+  min-width:48px;min-height:48px;cursor:pointer;color:var(--teal-800);font-size:1.25rem}
+@media (max-width:63em){
+  nav.primary{position:fixed;inset:72px 0 auto 0;background:var(--sand-50);
+    border-bottom:1px solid var(--sand-200);box-shadow:var(--shadow-2);
+    padding:var(--s-2) clamp(1rem,4vw,2.5rem) var(--s-3);display:none}
+  nav.primary.open{display:block}
+  nav.primary ul{flex-direction:column;gap:0}
+  nav.primary a{width:100%;padding:.8rem .5rem;font-size:1.1rem}
+  #menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  .nav-cta .btn{display:none}
+}
+
+/* ============ HERO ============ */
+.hero{position:relative;overflow:hidden;background:var(--sand-50)}
+.hero .wrap{display:grid;grid-template-columns:7fr 5fr;gap:var(--s-5);
+  align-items:center;padding-top:var(--s-7);padding-bottom:var(--s-7)}
+.hero h1 .hl{font-style:italic;font-weight:500;color:var(--teal-700)}
+.hero-art{position:relative;min-height:22rem;border-radius:var(--r-3);
+  background:linear-gradient(168deg,var(--teal-800) 0%,var(--teal-700) 55%,var(--teal-600) 100%);
+  box-shadow:var(--shadow-2);overflow:hidden}
+.hero-art svg{position:absolute;inset:auto 0 0 0}
+.hero-cred{position:absolute;top:var(--s-2);left:var(--s-2);right:var(--s-2);
+  color:var(--teal-100);font-size:.8125rem;line-height:1.45;max-width:26ch}
+.hero-cred b{display:block;color:#fff;font-size:.875rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-3)}
+.hero-meta{margin-top:var(--s-3);color:var(--ink-500);font-size:.9375rem}
+@media (max-width:56em){.hero .wrap{grid-template-columns:1fr;padding-top:var(--s-5);padding-bottom:var(--s-5)}
+  .hero-art{min-height:15rem}}
+
+/* wing-wave divider — the signature motif */
+.wingwave{display:block;width:100%;height:44px;color:var(--teal-700)}
+.wingwave.flip{transform:scaleY(-1)}
+.wingwave.on-sand{color:var(--sand-300)}
+
+/* ============ SECTIONS ============ */
+section.band{padding:var(--s-7) 0}
+section.band.tight{padding:var(--s-6) 0}
+.band.teal{background:var(--teal-800);color:var(--sand-50)}
+.band.teal h2,.band.teal h3{color:#fff}
+.band.sand{background:var(--sand-100)}
+.band.deep{background:var(--teal-900);color:var(--sand-50)}
+
+/* fact strip */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3);
+  border-top:1px solid var(--sand-300);padding-top:var(--s-4)}
+.facts div{border-left:2px solid var(--teal-200);padding-left:var(--s-2)}
+.facts b{display:block;font-family:var(--display);font-size:var(--fs-2);font-weight:600;
+  color:var(--teal-800);line-height:1.2;margin-bottom:.25rem}
+.facts span{color:var(--ink-600);font-size:.9375rem}
+@media (max-width:56em){.facts{grid-template-columns:repeat(2,1fr)}}
+
+/* editorial split rows */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-6);align-items:center}
+.split.rev>.txt{order:2}
+.split .art{border-radius:var(--r-3);min-height:20rem;box-shadow:var(--shadow-1);
+  position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.split .art figcaption{position:relative;margin:var(--s-2);padding:.35rem .7rem;
+  background:rgba(25,21,16,.78);color:var(--sand-100);font-size:.75rem;
+  letter-spacing:.06em;text-transform:uppercase;border-radius:var(--r-1)}
+@media (max-width:56em){.split{grid-template-columns:1fr;gap:var(--s-4)}
+  .split.rev>.txt{order:0}.split .art{min-height:14rem}}
+
+/* numbered process — a real sequence (reserve → try → take home) */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-4);counter-reset:step;margin-top:var(--s-4)}
+.steps li{list-style:none;counter-increment:step;position:relative;padding-top:var(--s-4)}
+.steps li::before{content:counter(step,decimal-leading-zero);position:absolute;top:0;left:0;
+  font-family:var(--display);font-style:italic;font-size:var(--fs-3);color:var(--teal-200);
+  font-weight:500;line-height:1}
+.steps h3{font-size:var(--fs-1);font-family:var(--body);font-weight:600;margin-bottom:var(--s-1)}
+.steps p{font-size:.9375rem;color:var(--teal-100);margin:0}
+.steps{padding-left:0;margin-left:0}
+@media (max-width:56em){.steps{grid-template-columns:1fr;gap:var(--s-3)}}
+
+/* brand index — typographic list, not cards */
+.brand-index{list-style:none;margin:var(--s-4) 0 0;padding:0;border-top:1px solid var(--sand-300)}
+.brand-index li{display:grid;grid-template-columns:minmax(11rem,16rem) 1fr auto;gap:var(--s-3);
+  align-items:baseline;padding:var(--s-2) 0;border-bottom:1px solid var(--sand-300)}
+.brand-index .bn{font-family:var(--display);font-size:var(--fs-2);font-weight:600;color:var(--ink-900)}
+.brand-index .bd{color:var(--ink-600);font-size:.9375rem;max-width:52ch}
+.brand-index .bt{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal-700);white-space:nowrap}
+@media (max-width:56em){.brand-index li{grid-template-columns:1fr;gap:.25rem}}
+
+/* pull quote */
+.pull{max-width:56rem;margin:0 auto;text-align:center;padding:0 var(--s-2)}
+.pull blockquote{margin:0;font-family:var(--display);font-style:italic;font-weight:500;
+  font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.3;color:var(--ink-900)}
+.band.teal .pull blockquote,.band.deep .pull blockquote{color:var(--sand-50)}
+.pull cite{display:block;margin-top:var(--s-3);font-style:normal;font-size:.9375rem;
+  color:var(--ink-600);font-family:var(--body)}
+.band.teal .pull cite,.band.deep .pull cite{color:var(--teal-200)}
+
+/* boutique family strip */
+.family{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3);margin-top:var(--s-4)}
+.family a{display:block;text-decoration:none;border:1px solid var(--sand-300);
+  border-radius:var(--r-3);padding:var(--s-3);background:var(--sand-50);color:var(--ink-900);
+  transition:border-color .2s ease-out,box-shadow .2s ease-out}
+.family a:hover{border-color:var(--teal-400);box-shadow:var(--shadow-1)}
+.family b{font-family:var(--display);font-size:var(--fs-1);font-weight:700;display:block}
+.family span{font-size:.875rem;color:var(--ink-600)}
+@media (max-width:56em){.family{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:34em){.family{grid-template-columns:1fr}}
+
+/* category tour rows (collections) */
+.cat{display:grid;grid-template-columns:1fr 2fr;gap:var(--s-4);padding:var(--s-4) 0;
+  border-bottom:1px solid var(--sand-300);align-items:baseline}
+.cat h2,.cat h3{font-size:var(--fs-2);font-family:var(--display);font-weight:600;margin:0}
+.cat p{margin:0 0 var(--s-1)}
+.cat .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:var(--s-1)}
+.cat .tags span{font-size:.8125rem;border:1px solid var(--sand-300);border-radius:var(--r-1);
+  padding:.15rem .6rem;color:var(--ink-600);background:var(--sand-50)}
+@media (max-width:56em){.cat{grid-template-columns:1fr;gap:var(--s-1)}}
+
+/* visit page */
+.visit-grid{display:grid;grid-template-columns:3fr 2fr;gap:var(--s-6);align-items:start}
+.visit-card{background:var(--sand-50);border:1px solid var(--sand-300);border-radius:var(--r-3);
+  padding:var(--s-4);box-shadow:var(--shadow-1)}
+.visit-card dl{margin:0}
+.visit-card dt{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--teal-700);margin-top:var(--s-3)}
+.visit-card dt:first-child{margin-top:0}
+.visit-card dd{margin:0;font-size:var(--fs-1)}
+.visit-card dd.small{font-size:.9375rem;color:var(--ink-600)}
+.actions{display:flex;flex-direction:column;gap:var(--s-2);margin-top:var(--s-4)}
+@media (max-width:56em){.visit-grid{grid-template-columns:1fr;gap:var(--s-4)}}
+
+/* form */
+form.enquiry{display:grid;gap:var(--s-3);max-width:34rem}
+.field label{display:block;font-weight:600;font-size:.9375rem;margin-bottom:.35rem}
+.field .hint{font-weight:400;color:var(--ink-500);font-size:.8125rem;display:block}
+.field input,.field select,.field textarea{width:100%;font:400 1rem var(--body);
+  color:var(--ink-900);background:#fff;border:1.5px solid #82755A;
+  border-radius:var(--r-2);padding:.7rem .8rem;min-height:48px}
+.field textarea{min-height:8rem;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid var(--teal-400);outline-offset:1px}
+.field.err input,.field.err select,.field.err textarea{border-color:var(--err)}
+.field .msg{display:none;color:var(--err);font-size:.875rem;margin-top:.3rem}
+.field.err .msg{display:block}
+.form-note{font-size:.875rem;color:var(--ink-500);max-width:48ch}
+.form-ok{display:none;background:var(--teal-50);border:1px solid var(--teal-200);
+  border-radius:var(--r-2);padding:var(--s-2) var(--s-3);color:var(--teal-900)}
+.form-ok.show{display:block}
+
+/* footer */
+footer.site{background:var(--ink-900);color:var(--sand-200);padding:var(--s-6) 0 var(--s-5)}
+footer.site .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--s-5)}
+footer.site h3{color:var(--sand-50);font-size:var(--fs-1)}
+footer.site a{color:var(--sand-100)}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{margin-bottom:var(--s-1)}
+footer.site li a{display:inline-flex;min-height:32px;align-items:center}
+.fine{margin-top:var(--s-5);padding-top:var(--s-3);border-top:1px solid var(--ink-700);
+  font-size:.8125rem;color:var(--sand-300)}
+@media (max-width:56em){footer.site .cols{grid-template-columns:1fr;gap:var(--s-3)}}
+
+/* route pages */
+main [data-route]{display:none}
+main [data-route].active{display:block}
+.page-head{padding:var(--s-6) 0 var(--s-2)}
+/* scroll-reveal is opt-in: html.anim is set by JS only when motion is allowed,
+   so content stays visible with JS off, in print, and with reduced motion */
+.anim .reveal{opacity:0;transform:translateY(14px);transition:opacity .3s ease-out,transform .3s ease-out}
+.anim .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="logo" href="#/home" aria-label="Sand Angels — home">
+      <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="4" fill="#0A414A"/><path d="M4 21c3-5 6-7 8-6s1 4 4 4 4-4 8-5" fill="none" stroke="#F4EDE0" stroke-width="2" stroke-linecap="round"/><path d="M4 26c3-4 6-6 8-5s1 3 4 3 4-3 8-4" fill="none" stroke="#C8B98F" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <span><b>Sand Angels</b><span>Camana Bay · Grand Cayman</span></span>
+    </a>
+    <nav class="primary" id="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/swim">Swim</a></li>
+        <li><a href="#/collections">Collections</a></li>
+        <li><a href="#/brands">Brands</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/visit">Visit</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#/visit">Visit the boutique</a>
+      <button id="menu-btn" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HOME ================= -->
+<section data-route="home" aria-labelledby="h-home">
+  <div class="hero">
+    <div class="wrap">
+      <div class="txt">
+        <p class="eyebrow">Designer swim &amp; resort wear · The Paseo, Camana Bay</p>
+        <h1 id="h-home">Swim worth crossing <span class="hl">an ocean</span> for.</h1>
+        <p class="lede">Heavenly swimwear, resort wear and accessories from around the world —
+        fitted to you by the Angels, minutes from Seven Mile Beach.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#/visit">Plan your visit</a>
+          <a class="btn btn-secondary" href="#/swim">Explore the swim edit</a>
+        </div>
+        <p class="hero-meta">Open Mon–Sat, 10am–6pm · <a href="tel:+13459457263">(345) 945-SAND</a></p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Placeholder art panel in sea-glass teal with the Sand Angels wing-wave motif. To be replaced with the boutique's own photography.">
+        <p class="hero-cred"><b>Your photo here</b>Placeholder — swap in Sand Angels' own storefront or campaign photography.</p>
+        <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+          <path d="M-10 150 C60 90 110 70 150 92 c30 17 18 48 60 48 s52 -44 90 -56 c40 -13 80 2 120 30" stroke="#A8D3D8" stroke-width="3" stroke-linecap="round"/>
+          <path d="M-10 180 C60 128 110 110 150 128 c30 14 18 40 60 40 s52 -36 90 -46 c40 -11 80 2 120 26" stroke="#D3E9EB" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+          <path d="M-10 205 C60 160 110 145 150 160 c30 11 18 32 60 32 s52 -29 90 -37 c40 -9 80 2 120 21" stroke="#C8B98F" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+          <circle cx="318" cy="52" r="26" stroke="#D3E9EB" stroke-width="2" opacity=".8"/>
+          <circle cx="318" cy="52" r="17" stroke="#A8D3D8" stroke-width="1.5" opacity=".6"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="band tight">
+    <div class="wrap">
+      <div class="facts reveal">
+        <div><b>12+ world labels</b><span>Melissa Odabash to Camilla, curated in one boutique</span></div>
+        <div><b>Fit for every body</b><span>Bra-sized and plus-size swim, fitted in person</span></div>
+        <div><b>UPF50+ for kids</b><span>Sun-protective swim from toddlers to teens</span></div>
+        <div><b>Reserve &amp; try</b><span>Choose online, try it on in store — no pressure</span></div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="wingwave on-sand" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 34 C 90 6 150 2 210 20 c40 12 26 20 70 20 s58 -30 120 -36 c80 -8 120 22 200 22 s120 -34 200 -34 c90 0 130 34 200 34 s140 -28 200 -20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+
+  <div class="band">
+    <div class="wrap split reveal">
+      <div class="txt">
+        <p class="eyebrow">The swim edit</p>
+        <h2>Swimwear that actually fits.</h2>
+        <p>Most swim racks stop at small, medium, large. Ours don't. Sand Angels carries
+        bra-sized and plus-size swimwear alongside the runway names, and the Angels fit it
+        to you in the boutique — quietly, honestly, until it's right.</p>
+        <p><a class="btn-link" href="#/swim">See how the fitting works</a></p>
+      </div>
+      <figure class="art" style="background:linear-gradient(155deg,var(--teal-100),var(--teal-200))">
+        <figcaption>Placeholder — swim collection photo</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="band teal on-dark">
+    <div class="wrap">
+      <p class="eyebrow">Reserve &amp; try</p>
+      <h2>Choose it online. Love it in person.</h2>
+      <p class="lede">A real service we already run — not a promise. Browse the current
+      collection, reserve your picks, and they'll be waiting in a fitting room.</p>
+      <ol class="steps">
+        <li><h3>Reserve your picks</h3><p>Choose pieces online or over the phone and we'll set them aside under your name.</p></li>
+        <li><h3>Try them with an Angel</h3><p>Your pieces are waiting in the boutique. Get fitted properly, with zero obligation.</p></li>
+        <li><h3>Take it home — or we deliver</h3><p>Free pickup, or free delivery from South Sound to West Bay on purchases over $200.</p></li>
+      </ol>
+      <p style="margin-top:var(--s-4)"><a class="btn btn-primary" href="#/visit">Start a reservation</a></p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="pull reveal">
+      <blockquote>“Stepping in through the Sand Angels doors is rather like stepping into
+      beach and swimwear heaven!”</blockquote>
+      <cite>Google review of Sand Angels, Camana Bay</cite>
+    </div>
+  </div>
+
+  <div class="band sand tight">
+    <div class="wrap">
+      <p class="eyebrow">One family, five boutiques</p>
+      <h2>The Angels family on the Paseo</h2>
+      <p class="lede">Catherine and Ian Dawson-James run five boutiques at Camana Bay —
+      each with its own job to do.</p>
+      <div class="family">
+        <a href="#/about"><b>Forever Summer</b><span>Trend-led women's fashion you can afford</span></a>
+        <a href="#/collections"><b>Little Angels</b><span>Kids' UPF50+ swim and jelly shoes</span></a>
+        <a href="#/collections"><b>Activ Angels</b><span>Active and yoga wear</span></a>
+        <a href="#/about"><b>Riviera</b><span>Resort-lifestyle boutique, next door</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap split rev reveal">
+      <div class="txt">
+        <p class="eyebrow">Find us</p>
+        <h2>On the Paseo, across from the Observation Tower.</h2>
+        <p>64 Market Street, Camana Bay — in the heart of Grand Cayman's town centre,
+        a few minutes from the hotels and condos of Seven Mile Beach.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#/visit">Hours &amp; directions</a>
+          <a class="btn btn-secondary" href="tel:+13459457263">Call (345) 945-SAND</a>
+        </div>
+      </div>
+      <figure class="art" style="background:linear-gradient(155deg,var(--sand-200),var(--sand-300))">
+        <figcaption>Placeholder — storefront photo, the Paseo</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SWIM ================= -->
+<section data-route="swim" aria-labelledby="h-swim">
+  <div class="wrap page-head">
+    <p class="eyebrow">The swim edit</p>
+    <h1 id="h-swim">Fit first. <span style="font-style:italic;font-weight:500;color:var(--teal-700)">Fashion always.</span></h1>
+    <p class="lede">World-class swimwear is only world-class when it fits. That belief
+    shapes everything on our rails.</p>
+  </div>
+
+  <div class="band tight">
+    <div class="wrap">
+      <div class="cat">
+        <h2>Bikini separates</h2>
+        <div><p>Tops and bottoms sold separately, because bodies don't come in matched
+        pairs. Mix sizes, cuts and prints across the designer roster.</p>
+        <div class="tags"><span>Melissa Odabash</span><span>ViX</span><span>Camilla</span></div></div>
+      </div>
+      <div class="cat">
+        <h2>One-pieces &amp; resort swim</h2>
+        <div><p>Sculpted one-pieces and swim dresses that go straight from the beach to
+        lunch on the Paseo.</p>
+        <div class="tags"><span>Tory Burch</span><span>Farm Rio</span><span>Lilly Pulitzer</span></div></div>
+      </div>
+      <div class="cat">
+        <h2>Bra-sized &amp; plus-size swim</h2>
+        <div><p>A genuine specialty, not a token rack: cup-sized tops and extended sizing,
+        fitted in person by the Angels so support and shape are actually right.</p>
+        <div class="tags"><span>Fitted in store</span><span>Cup-sized</span><span>Extended sizes</span></div></div>
+      </div>
+      <div class="cat">
+        <h2>Kids &amp; juniors — UPF50+</h2>
+        <div><p>Sun-protective swim apparel from toddlers to teens, rated UPF50+ for long
+        Cayman days in the water.</p>
+        <div class="tags"><span>Posh Peanut</span><span>Toddler to teen</span></div></div>
+      </div>
+      <div class="cat" style="border-bottom:none">
+        <h2>Men's swim</h2>
+        <div><p>A tight, well-chosen selection of men's swimwear — so nobody waits outside.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band teal on-dark tight">
+    <div class="pull">
+      <blockquote>“Very unique swimsuits — fun colors, patterns, styles and trends! The
+      prices are quite high, but the quality seems to match the prices.”</blockquote>
+      <cite>Google review of Sand Angels, Camana Bay</cite>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap split reveal">
+      <div class="txt">
+        <p class="eyebrow">Straight talk on price</p>
+        <h2>Designer quality, honestly priced for an island.</h2>
+        <p>Everything here is flown to Grand Cayman and duty is paid on it. We'd rather
+        carry fewer, better pieces — ones you'll still be wearing in five years — than
+        racks of throwaway swim. If a piece isn't right, an Angel will say so.</p>
+        <p><a class="btn-link" href="#/brands">Meet the labels we stand behind</a></p>
+      </div>
+      <figure class="art" style="background:linear-gradient(155deg,var(--teal-50),var(--teal-100))">
+        <figcaption>Placeholder — fitting room or detail photo</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="band sand tight">
+    <div class="wrap">
+      <h2>Reserve the pieces you like</h2>
+      <p class="lede">Tell us what caught your eye and we'll have it waiting in a fitting
+      room — free pickup, or free delivery South Sound to West Bay over $200.</p>
+      <p style="margin-top:var(--s-3)"><a class="btn btn-primary" href="#/visit">Start a reservation</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COLLECTIONS ================= -->
+<section data-route="collections" aria-labelledby="h-collections">
+  <div class="wrap page-head">
+    <p class="eyebrow">Beyond the water</p>
+    <h1 id="h-collections">Everything for the sun-lived life.</h1>
+    <p class="lede">Swim is the heart of the boutique — these are the collections around it.</p>
+  </div>
+  <div class="band tight">
+    <div class="wrap">
+      <div class="cat">
+        <h2>Resort wear</h2>
+        <div><p>Cover-ups, summer dresses and easy layers that work as hard at dinner as
+        they do at the beach.</p>
+        <div class="tags"><span>Z Supply</span><span>Rails</span><span>Love the Label</span><span>Farm Rio</span></div></div>
+      </div>
+      <div class="cat">
+        <h2>Accessories</h2>
+        <div><p>Sun hats, beach bags, sandals and gift sets — the finishing pieces,
+        chosen with the same eye as the swim.</p>
+        <div class="tags"><span>Natives</span><span>Sun hats</span><span>Beach bags</span></div></div>
+      </div>
+      <div class="cat">
+        <h2>Sleep &amp; lounge</h2>
+        <div><p>Soft pieces from Eberjey for the slowest hours of the holiday.</p>
+        <div class="tags"><span>Eberjey</span></div></div>
+      </div>
+      <div class="cat">
+        <h2>Active &amp; yoga</h2>
+        <div><p>Performance and yoga wear — explored in depth next door at our sister
+        boutique, Activ Angels.</p></div>
+      </div>
+      <div class="cat" style="border-bottom:none">
+        <h2>Gift cards</h2>
+        <div><p>When you know they'll love it and don't want to guess the size.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="band sand tight">
+    <div class="wrap">
+      <h2>Not sure where to start?</h2>
+      <p class="lede">Call the boutique and describe the trip — the Angels will pull a
+      rail for you before you arrive.</p>
+      <p style="margin-top:var(--s-3)"><a class="btn btn-primary" href="tel:+13459457263">Call (345) 945-SAND</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BRANDS ================= -->
+<section data-route="brands" aria-labelledby="h-brands">
+  <div class="wrap page-head">
+    <p class="eyebrow">The roster</p>
+    <h1 id="h-brands">Labels worth the shelf space.</h1>
+    <p class="lede">Curated from around the world, carried because each one earns its
+    place. Stock rotates with the seasons — call to check a specific piece.</p>
+  </div>
+  <div class="band tight">
+    <div class="wrap">
+      <ul class="brand-index">
+        <li><span class="bn">Melissa Odabash</span><span class="bd">London-designed resort swim — the glamour benchmark.</span><span class="bt">Swim</span></li>
+        <li><span class="bn">Camilla</span><span class="bd">Hand-finished Australian prints; kaftans that own a room.</span><span class="bt">Resort</span></li>
+        <li><span class="bn">Tory Burch</span><span class="bd">American polish, from swim to sandals.</span><span class="bt">Swim · Acc.</span></li>
+        <li><span class="bn">Farm Rio</span><span class="bd">Rio-born color and print, made for the tropics.</span><span class="bt">Resort</span></li>
+        <li><span class="bn">Lilly Pulitzer</span><span class="bd">Palm Beach prints with six decades of sunshine behind them.</span><span class="bt">Resort</span></li>
+        <li><span class="bn">Eberjey</span><span class="bd">The softest sleep and lounge you'll pack.</span><span class="bt">Lounge</span></li>
+        <li><span class="bn">ViX</span><span class="bd">Brazilian swim tailoring — sculpted, minimal, flattering.</span><span class="bt">Swim</span></li>
+        <li><span class="bn">Z Supply</span><span class="bd">Everyday soft basics for the days between beaches.</span><span class="bt">Casual</span></li>
+        <li><span class="bn">Rails</span><span class="bd">LA shirting and dresses with an easy drape.</span><span class="bt">Casual</span></li>
+        <li><span class="bn">Love the Label</span><span class="bd">Statement dresses with movement.</span><span class="bt">Resort</span></li>
+        <li><span class="bn">Posh Peanut</span><span class="bd">Buttery-soft prints for the smallest angels.</span><span class="bt">Kids</span></li>
+        <li><span class="bn">Natives</span><span class="bd">Wash-and-wear shoes that live happily in sand.</span><span class="bt">Shoes</span></li>
+      </ul>
+      <p class="form-note" style="margin-top:var(--s-3)">Brand roster changes with the
+      season — the list above reflects labels the boutique has carried and features.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section data-route="about" aria-labelledby="h-about">
+  <div class="wrap page-head">
+    <p class="eyebrow">The story</p>
+    <h1 id="h-about">Family-run, island-rooted, <span style="font-style:italic;font-weight:500;color:var(--teal-700)">world-dressed.</span></h1>
+  </div>
+  <div class="band tight">
+    <div class="wrap split">
+      <div class="txt">
+        <h2>The Dawson-James boutiques</h2>
+        <p>Sand Angels is owned and run by Catherine and Ian Dawson-James. Catherine has
+        spent more than 25 years in retail fashion in the Cayman Islands, and it shows in
+        the buying: a designer roster you'd expect in a much bigger city, edited down to
+        what actually works on an island.</p>
+        <p>The name isn't just a name. The stylists here are called the Angels, and the
+        family of boutiques grew around that idea — Little Angels for kids, Activ Angels
+        for movement, Forever Summer for everyday fashion, and Riviera next door for
+        resort living.</p>
+      </div>
+      <figure class="art" style="background:linear-gradient(155deg,var(--teal-200),var(--teal-400))">
+        <figcaption>Placeholder — Catherine &amp; Ian, or the team</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="band teal on-dark tight">
+    <div class="pull">
+      <blockquote>“The clothing is very stylish and modern. The owner was also very
+      helpful and clearly has fantastic taste as you can see by the merchandise.”</blockquote>
+      <cite>Google review of Sand Angels, Camana Bay</cite>
+    </div>
+  </div>
+  <div class="band tight">
+    <div class="wrap">
+      <p class="eyebrow">The family</p>
+      <h2>Five boutiques, one address book</h2>
+      <div class="family">
+        <a href="https://www.foreversummer.com/" rel="noopener"><b>Forever Summer</b><span>Trend-led fashion you can afford · The Paseo</span></a>
+        <a href="#/collections"><b>Little Angels</b><span>Kids' UPF50+ swim · Camana Bay</span></a>
+        <a href="#/collections"><b>Activ Angels</b><span>Active &amp; yoga wear · Camana Bay</span></a>
+        <a href="#/visit"><b>Riviera</b><span>Resort lifestyle, next door to Sand Angels</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISIT ================= -->
+<section data-route="visit" aria-labelledby="h-visit">
+  <div class="wrap page-head">
+    <p class="eyebrow">Visit &amp; reserve</p>
+    <h1 id="h-visit">The boutique is the best part.</h1>
+    <p class="lede">Come as you are — the fitting rooms, the Angels and a properly good
+    rail of swim are all waiting.</p>
+  </div>
+  <div class="band tight">
+    <div class="wrap visit-grid">
+      <div>
+        <h2>Reserve pieces or ask an Angel</h2>
+        <p>Send a note and we'll reply from the boutique. Reservations are free and
+        there's no obligation to buy.</p>
+        <form class="enquiry" id="enquiry" novalidate>
+          <div class="field" id="f-name">
+            <label for="in-name">Your name</label>
+            <input id="in-name" name="name" type="text" autocomplete="name" required>
+            <p class="msg" id="in-name-err">Please tell us your name so we know who the reservation is for.</p>
+          </div>
+          <div class="field" id="f-email">
+            <label for="in-email">Email <span class="hint">So we can confirm your reservation</span></label>
+            <input id="in-email" name="email" type="email" autocomplete="email" required aria-describedby="in-email-err">
+            <p class="msg" id="in-email-err">That email doesn't look complete — check for a typo like a missing “@”.</p>
+          </div>
+          <div class="field" id="f-topic">
+            <label for="in-topic">What are you looking for?</label>
+            <select id="in-topic" name="topic" required aria-describedby="in-topic-err">
+              <option value="">Choose one…</option>
+              <option>Women's swim — standard sizes</option>
+              <option>Bra-sized or plus-size swim fitting</option>
+              <option>Resort wear &amp; dresses</option>
+              <option>Kids' UPF50+ swim</option>
+              <option>Men's swim</option>
+              <option>Accessories or a gift</option>
+              <option>Something else</option>
+            </select>
+            <p class="msg" id="in-topic-err">Pick the closest match — it helps the right Angel pick up your note.</p>
+          </div>
+          <div class="field" id="f-msg">
+            <label for="in-msg">Your message <span class="hint">Optional — sizes, brands, dates, anything useful</span></label>
+            <textarea id="in-msg" name="message"></textarea>
+          </div>
+          <div>
+            <button class="btn btn-primary" type="submit">Compose the email</button>
+            <p class="form-note" style="margin-top:var(--s-2)">This opens your own email
+            app with the note pre-written to info@sandangels.com — nothing is sent until
+            you press send.</p>
+          </div>
+          <p class="form-ok" id="form-ok" role="status">Your email app should now be open
+          with the message ready. If it didn't open, email us directly at
+          <a href="mailto:info@sandangels.com">info@sandangels.com</a>.</p>
+        </form>
+      </div>
+      <aside class="visit-card" aria-label="Location and contact details">
+        <dl>
+          <dt>Boutique</dt>
+          <dd>Sand Angels</dd>
+          <dt>Address</dt>
+          <dd class="small">64 Market Street, The Paseo<br>Camana Bay, Grand Cayman<br>Cayman Islands</dd>
+          <dt>Wayfinding</dt>
+          <dd class="small">On the Paseo, across from the Observation Tower</dd>
+          <dt>Hours</dt>
+          <dd class="small">Monday–Saturday, 10am–6pm<br>Closed Sundays</dd>
+          <dt>Phone</dt>
+          <dd class="small"><a href="tel:+13459457263">(345) 945-SAND — 945-7263</a></dd>
+          <dt>Email</dt>
+          <dd class="small"><a href="mailto:info@sandangels.com">info@sandangels.com</a></dd>
+          <dt>Delivery</dt>
+          <dd class="small">Free pickup in store, or free delivery from South Sound to
+          West Bay on purchases over $200. No international shipping.</dd>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Sand+Angels+Camana+Bay+Grand+Cayman" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/sand_angels/" rel="noopener">See new arrivals on Instagram</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<svg class="wingwave" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sand-50);display:block;color:var(--ink-900)"><path d="M0 34 C 90 6 150 2 210 20 c40 12 26 20 70 20 s58 -30 120 -36 c80 -8 120 22 200 22 s120 -34 200 -34 c90 0 130 34 200 34 s140 -28 200 -20" fill="none" stroke="currentColor" stroke-width="2" opacity=".25"/></svg>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Sand Angels</h3>
+        <p style="color:var(--sand-300);max-width:38ch">Heavenly swim, resort wear and
+        accessories from around the world — on the Paseo at Camana Bay, Grand Cayman.</p>
+        <p style="color:var(--sand-300)"><a href="tel:+13459457263">(345) 945-SAND</a> ·
+        <a href="mailto:info@sandangels.com">info@sandangels.com</a></p>
+      </div>
+      <div>
+        <h3>Boutique</h3>
+        <ul>
+          <li><a href="#/swim">The swim edit</a></li>
+          <li><a href="#/collections">Collections</a></li>
+          <li><a href="#/brands">Brands</a></li>
+          <li><a href="#/about">About the family</a></li>
+          <li><a href="#/visit">Visit &amp; reserve</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Elsewhere</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/sand_angels/" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/SandAngelsCayman/" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.camanabay.com/grand-cayman-shops-restaurants/sand-angels/" rel="noopener">Camana Bay directory</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">© 2026 Sand Angels, Camana Bay, Grand Cayman. Reviews quoted are from
+    public Google reviews of the boutique. Mon–Sat 10am–6pm.</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- hash router ---------- */
+const ROUTES = ["home","swim","collections","brands","about","visit"];
+const TITLES = {
+  home:"Sand Angels — Designer Swim & Resort Wear, Camana Bay, Grand Cayman",
+  swim:"The Swim Edit — Sand Angels, Camana Bay",
+  collections:"Collections — Sand Angels, Camana Bay",
+  brands:"Brands — Sand Angels, Camana Bay",
+  about:"About the Dawson-James Boutiques — Sand Angels",
+  visit:"Visit & Reserve — Sand Angels, Camana Bay"
+};
+function currentRoute(){
+  const h = location.hash.replace(/^#\/?/,"").split("?")[0];
+  return ROUTES.includes(h) ? h : "home";
+}
+function render(focusHeading){
+  const r = currentRoute();
+  document.querySelectorAll("main [data-route]").forEach(s=>{
+    s.classList.toggle("active", s.dataset.route===r);
+  });
+  document.querySelectorAll("nav.primary a").forEach(a=>{
+    const target = a.getAttribute("href").replace("#/","");
+    if(target===r){ a.setAttribute("aria-current","page"); }
+    else{ a.removeAttribute("aria-current"); }
+  });
+  document.title = TITLES[r];
+  closeMenu();
+  window.scrollTo(0,0);
+  if(focusHeading){
+    const h1 = document.querySelector(`[data-route="${r}"] h1`);
+    if(h1){ h1.setAttribute("tabindex","-1"); h1.focus({preventScroll:true}); }
+  }
+  requestAnimationFrame(observeReveals);
+}
+window.addEventListener("hashchange", ()=>render(true));
+
+/* ---------- mobile menu ---------- */
+const menuBtn = document.getElementById("menu-btn");
+const nav = document.getElementById("primary-nav");
+function closeMenu(){ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); menuBtn.setAttribute("aria-label","Open menu"); }
+menuBtn.addEventListener("click", ()=>{
+  const open = nav.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+});
+
+/* ---------- scroll reveals (respects reduced motion) ---------- */
+let io = null;
+function observeReveals(){
+  if(io) io.disconnect();
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.documentElement.classList.add("anim");
+  io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll(".active .reveal:not(.in)").forEach(el=>io.observe(el));
+}
+
+/* ---------- enquiry form: validate, then compose a mailto ---------- */
+const form = document.getElementById("enquiry");
+function setErr(id, on){ document.getElementById(id).classList.toggle("err", on); }
+function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+["in-name","in-email","in-topic"].forEach(id=>{
+  const el = document.getElementById(id);
+  const field = "f-"+(id==="in-name"?"name":id==="in-email"?"email":"topic");
+  const check = ()=> id==="in-email" ? validEmail(el.value) : !!el.value.trim();
+  el.addEventListener("blur", ()=>setErr(field, !check()));
+  /* clear as soon as the field becomes valid, so the layout settles
+     before the user reaches the submit button */
+  ["input","change"].forEach(ev=>el.addEventListener(ev, ()=>{ if(check()) setErr(field,false); }));
+});
+form.addEventListener("submit", ev=>{
+  ev.preventDefault();
+  const name = document.getElementById("in-name").value.trim();
+  const email = document.getElementById("in-email").value.trim();
+  const topic = document.getElementById("in-topic").value;
+  const msg = document.getElementById("in-msg").value.trim();
+  const bad = [];
+  setErr("f-name", !name); if(!name) bad.push("in-name");
+  setErr("f-email", !validEmail(email)); if(!validEmail(email)) bad.push("in-email");
+  setErr("f-topic", !topic); if(!topic) bad.push("in-topic");
+  if(bad.length){ document.getElementById(bad[0]).focus(); return; }
+  const body = encodeURIComponent(
+`Hello Sand Angels,
+
+Name: ${name}
+Email: ${email}
+Looking for: ${topic}
+
+${msg || "(no extra details)"}
+
+Sent from the Sand Angels website.`);
+  const subject = encodeURIComponent(`Reservation enquiry — ${topic}`);
+  document.getElementById("form-ok").classList.add("show");
+  setTimeout(()=>{ window.location.href = `mailto:info@sandangels.com?subject=${subject}&body=${body}`; }, 60);
+});
+
+render();
+</script>
+</body>
+</html>
