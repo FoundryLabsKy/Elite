@@ -3,6 +3,7 @@ name: Deploy websites to GitHub Pages
 on:
   push:
     branches:
+      - claude/code-skills-ux-frontend-i6654s
       - claude/cayman-craft-market-site-c0opgt
   workflow_dispatch:
 
