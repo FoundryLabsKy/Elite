@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Larry's Hardware &amp; Home Centre — George Town, Grand Cayman</title>
+<meta name="description" content="Family-owned discount hardware and home store on Eastern Avenue, George Town, Grand Cayman, since 1986. Tools, building supplies, housewares, garden, storm prep — plus tyres changed while you shop. Mon–Sat 8am–5pm. Call (345) 945-1500.">
+<meta name="theme-color" content="#17273B">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Larry's Hardware &amp; Home Centre">
+<meta property="og:title" content="Everything for the home &amp; yard — priced for Cayman.">
+<meta property="og:description" content="One-stop family-owned hardware and home store in George Town since 1986. Get your tyres changed while you shop. Mon–Sat 8am–5pm.">
+<meta property="og:locale" content="en_KY">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Larry's Hardware &amp; Home Centre, Grand Cayman">
+<meta name="twitter:description" content="Affordable one-stop hardware &amp; home store on Eastern Avenue since 1986, with a tyre shop out back.">
+
+<!-- Favicon: a hang-tag mark (inline SVG, no external request) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2317273B'/%3E%3Cpath d='M14.5 7.5h9a1 1 0 0 1 1 1v9a1 1 0 0 1-.3.7l-8 8a1 1 0 0 1-1.4 0l-7-7a1 1 0 0 1 0-1.4l6.3-6.3a1 1 0 0 1 .4-1z' fill='%23C62B1E'/%3E%3Ccircle cx='20.5' cy='11.5' r='1.6' fill='%23F8F3E9'/%3E%3C/svg%3E">
+
+<!-- Barlow superfamily: Barlow Condensed (display/signage) + Barlow (body). One source, deliberate pairing. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@600;700&display=swap">
+
+<!-- LocalBusiness structured data. Details are real/researched; items flagged in Caveats are omitted, not invented. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HardwareStore",
+  "name": "Larry's Hardware & Home Centre",
+  "slogan": "Here, we do it best.",
+  "description": "Family-owned discount hardware and home-goods store in George Town, Grand Cayman, serving the community since 1986. A Do It Best cooperative member with an affiliated tyre and battery shop.",
+  "foundingDate": "1986",
+  "telephone": "+1-345-945-1500",
+  "email": "larryshardware@gmail.com",
+  "url": "https://www.larryshardware.ky/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Prestige Building, 386 Eastern Avenue",
+    "postOfficeBoxNumber": "P.O. Box 1570",
+    "addressLocality": "George Town",
+    "addressRegion": "Grand Cayman",
+    "postalCode": "KY1-1110",
+    "addressCountry": "KY"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "17:00" }
+  ],
+  "department": {
+    "@type": "AutoRepair",
+    "name": "Larry's Tyre & Battery",
+    "telephone": "+1-345-949-2685",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "325 Shedden Road",
+      "addressLocality": "George Town",
+      "addressRegion": "Grand Cayman",
+      "addressCountry": "KY"
+    }
+  }
+}
+</script>
+
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   Palette: warm sand paper + workshop navy + one hardware red.
+   Provisional per brief — validate the red against real storefront
+   signage before launch (Caveat: brand colours not directly viewable).
+   ============================================================ */
+:root{
+  --paper:#F8F3E9;        /* warm sand ground (island / kraft) */
+  --paper-2:#FDFAF3;      /* lifted cards on paper */
+  --sand-2:#EEE3CD;       /* alternating section tone */
+  --sand-line:#E3D6BB;    /* hairlines on paper */
+
+  --navy:#17273B;         /* dominant dark surface: header, footer, tyre band */
+  --navy-2:#111E2E;       /* deeper navy for footer / depth */
+  --navy-line:#2C3E53;    /* lines on navy */
+
+  --ink:#1E1A15;          /* warm near-black text (not pure black) */
+  --muted:#5C544A;        /* warm secondary text on paper (6.7:1) */
+
+  --red:#C62B1E;          /* THE accent: CTAs, tags, key moments only */
+  --red-hi:#DD3A2B;       /* red hover */
+  --red-ink:#A6241A;      /* red for text links on paper (6.5:1) */
+
+  --on-navy:#FFFFFF;
+  --on-navy-2:#C9BCA6;    /* secondary text on navy (4.7:1) */
+  --on-navy-label:#E7B4AC;/* warm label tint on navy */
+
+  --ok:#1F7A4D;           /* success */
+  --warn:#B4610C;         /* warning / storm-season amber */
+  --err:#B4231A;          /* error */
+
+  /* Layered elevation from one warm light source (never a single flat shadow) */
+  --sh-1:0 1px 1px rgba(30,26,21,.05), 0 2px 4px rgba(30,26,21,.06);
+  --sh-2:0 2px 3px rgba(30,26,21,.06), 0 8px 18px -6px rgba(30,26,21,.14);
+  --sh-3:0 3px 6px rgba(30,26,21,.08), 0 20px 40px -14px rgba(30,26,21,.22);
+
+  /* Sharp-ish radius scale — sturdy, practical, not pill-everything */
+  --r-1:3px;
+  --r-2:6px;
+  --r-3:10px;
+
+  --wrap:1180px;
+  --pad:clamp(20px,5vw,60px);
+  --gap:clamp(28px,6vw,72px);
+
+  --f-disp:"Barlow Condensed","Arial Narrow",sans-serif;
+  --f-body:"Barlow","Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  font-family:var(--f-body);
+  font-size:17px;
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+p{margin:0}
+h1,h2,h3,h4{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.04;letter-spacing:-.01em;color:var(--ink)}
+a{color:var(--red-ink);text-underline-offset:3px;text-decoration-thickness:1.5px}
+a:hover{color:var(--red)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:2px}
+::selection{background:var(--navy);color:#fff}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+/* ---- Skip link ---- */
+a.skip{
+  position:absolute;left:12px;top:-64px;z-index:200;
+  background:var(--red);color:#fff;font-family:var(--f-disp);font-weight:700;
+  font-size:15px;letter-spacing:.03em;text-transform:uppercase;
+  padding:12px 18px;border-radius:var(--r-2);text-decoration:none;
+  transition:top .15s ease;
+}
+a.skip:focus{top:12px}
+
+/* ============================================================
+   SIGNATURE: the merchandise hang-tag
+   ============================================================ */
+.tag{
+  position:relative;display:inline-flex;align-items:center;gap:8px;
+  background:var(--red);color:#fff;
+  font-family:var(--f-disp);font-weight:700;text-transform:uppercase;
+  letter-spacing:.05em;line-height:1;
+  padding:9px 16px 9px 26px;
+  clip-path:polygon(14px 0, 100% 0, 100% 100%, 14px 100%, 0 50%);
+  box-shadow:var(--sh-1);
+}
+.tag::before{ /* the punched hole near the tag point */
+  content:"";position:absolute;left:9px;top:50%;transform:translateY(-50%);
+  width:7px;height:7px;border-radius:50%;background:var(--paper);
+  box-shadow:inset 0 0 0 1.5px rgba(30,26,21,.18);
+}
+.tag--lg{font-size:clamp(18px,2.4vw,24px);padding:12px 20px 12px 34px}
+.tag--lg::before{left:13px;width:9px;height:9px}
+.tag--navy{background:var(--navy)}
+
+/* ---- Aisle / eyebrow labels (numbering is real here: a hardware store IS aisles) ---- */
+.aisle{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--f-disp);font-weight:600;text-transform:uppercase;
+  letter-spacing:.14em;font-size:14px;color:var(--red-ink);
+}
+.aisle::before{content:"";width:26px;height:2px;background:var(--red)}
+.aisle--onnavy{color:var(--on-navy-label)}
+.aisle--onnavy::before{background:var(--on-navy-label)}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--f-disp);font-weight:700;font-size:18px;
+  letter-spacing:.02em;text-transform:uppercase;
+  padding:14px 24px;min-height:48px;border-radius:var(--r-2);
+  border:2px solid transparent;cursor:pointer;text-decoration:none;
+  transition:background .18s ease, color .18s ease, transform .12s ease, box-shadow .18s ease;
+}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:active{transform:translateY(1px)}
+.btn--primary{background:var(--red);color:#fff;box-shadow:var(--sh-1)}
+.btn--primary:hover{background:var(--red-hi);color:#fff;box-shadow:var(--sh-2)}
+.btn--dark{background:var(--navy);color:#fff}
+.btn--dark:hover{background:var(--navy-2);color:#fff}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--sand-line)}
+.btn--ghost:hover{background:#fff;border-color:var(--navy);color:var(--ink)}
+.btn--onnavy{background:#fff;color:var(--navy)}
+.btn--onnavy:hover{background:var(--paper);color:var(--navy)}
+.btn--onnavy-ghost{background:transparent;color:#fff;border-color:var(--navy-line)}
+.btn--onnavy-ghost:hover{background:rgba(255,255,255,.08);color:#fff;border-color:#fff}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.site-head{position:sticky;top:0;z-index:100;background:var(--navy);color:#fff;border-bottom:1px solid var(--navy-line)}
+.head-row{display:flex;align-items:center;gap:18px;min-height:68px}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#fff;margin-right:auto}
+.brand:hover{color:#fff}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-name{font-family:var(--f-disp);font-weight:700;font-size:20px;line-height:.98;letter-spacing:.01em}
+.brand-name small{display:block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--on-navy-2)}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{
+  font-family:var(--f-disp);font-weight:600;font-size:17px;letter-spacing:.02em;
+  text-transform:uppercase;color:var(--on-navy-2);text-decoration:none;
+  padding:9px 13px;border-radius:var(--r-1);position:relative;
+}
+.nav a:hover{color:#fff}
+.nav a[aria-current="page"]{color:#fff}
+.nav a[aria-current="page"]::after{
+  content:"";position:absolute;left:13px;right:13px;bottom:2px;height:2px;background:var(--red)
+}
+.nav a.btn{display:none} /* in-nav call button appears only in the mobile menu */
+.head-call{margin-left:8px;white-space:nowrap}
+.nav-toggle{display:none;background:transparent;border:2px solid var(--navy-line);color:#fff;border-radius:var(--r-2);width:46px;height:46px;cursor:pointer;align-items:center;justify-content:center}
+.nav-toggle svg{width:24px;height:24px}
+
+@media (max-width:900px){
+  .nav-toggle{display:inline-flex}
+  .nav a.btn{display:inline-flex}
+  .nav{
+    position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;
+    gap:0;background:var(--navy);border-bottom:2px solid var(--red);
+    padding:8px var(--pad) 18px;box-shadow:var(--sh-3);
+    display:none;
+  }
+  .nav.open{display:flex}
+  .nav a{padding:14px 6px;font-size:20px;border-bottom:1px solid var(--navy-line)}
+  .nav a[aria-current="page"]::after{display:none}
+  .nav a[aria-current="page"]{color:var(--on-navy-label)}
+  .nav .btn{margin-top:14px}
+}
+
+/* ============================================================
+   UTILITY BAR (hours / location / phone — the customer BLUF)
+   ============================================================ */
+.util{background:var(--sand-2);border-bottom:1px solid var(--sand-line)}
+.util-row{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:center;padding:11px 0;font-size:15px}
+.util-item{display:inline-flex;align-items:center;gap:9px;color:var(--ink)}
+.util-item svg{width:18px;height:18px;color:var(--red-ink);flex:none}
+.util-item strong{font-weight:600}
+.util-open{margin-left:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(31,122,77,.16)}
+.dot--shut{background:var(--muted);box-shadow:0 0 0 4px rgba(92,84,74,.14)}
+@media (max-width:620px){.util-open{margin-left:0;width:100%}}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+main{display:block}
+.section{padding:var(--gap) 0}
+.section--sand{background:var(--sand-2)}
+.section--navy{background:var(--navy);color:#fff}
+.section--navy h1,.section--navy h2,.section--navy h3{color:#fff}
+.sec-head{max-width:62ch}
+.sec-head h1,.sec-head h2{font-size:clamp(30px,5vw,46px);margin:12px 0 0;color:var(--ink)}
+.section--navy .sec-head h1{color:#fff}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:clamp(17px,2.2vw,19px);max-width:60ch}
+.section--navy .sec-head p{color:var(--on-navy-2)}
+.lead{font-size:clamp(18px,2.4vw,21px);line-height:1.55;max-width:64ch}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{background:linear-gradient(180deg,var(--paper) 0%, var(--paper) 62%, var(--sand-2) 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,5vw,60px);align-items:center;padding:clamp(40px,6vw,76px) 0 clamp(32px,5vw,60px)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.hero h1{font-size:clamp(44px,8vw,86px);line-height:.92;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--red-ink)}
+.hero-sub{margin-top:22px;font-size:clamp(18px,2.5vw,22px);line-height:1.5;color:var(--muted);max-width:46ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-fine{margin-top:20px;font-size:15px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 20px}
+.hero-fine b{color:var(--ink);font-weight:600}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 24px 40px rgba(23,39,59,.18))}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;padding-top:clamp(28px,7vw,40px)}
+  .hero-art{order:-1;max-width:460px;margin:0 auto}
+}
+
+/* ============================================================
+   DEPARTMENT CARDS (asymmetric — varied, not 3 equal cards)
+   ============================================================ */
+.dept-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:36px}
+.dept{
+  grid-column:span 4;background:var(--paper-2);border:1px solid var(--sand-line);
+  border-radius:var(--r-3);padding:22px 22px 24px;box-shadow:var(--sh-1);
+  display:flex;flex-direction:column;gap:12px;
+  transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.dept:hover{transform:translateY(-3px);box-shadow:var(--sh-2);border-color:var(--navy)}
+.dept--wide{grid-column:span 6}
+.dept--feature{grid-column:span 6;background:var(--navy);border-color:var(--navy);color:#fff}
+.dept--feature h2,.dept--feature h3,.dept--feature p{color:#fff}
+.dept-ic{width:44px;height:44px;border-radius:var(--r-2);background:var(--sand-2);display:flex;align-items:center;justify-content:center;color:var(--navy)}
+.dept--feature .dept-ic{background:var(--red);color:#fff}
+.dept-ic svg{width:26px;height:26px}
+.dept-no{font-family:var(--f-disp);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink)}
+.dept--feature .dept-no{color:var(--on-navy-label)}
+.dept h2,.dept h3{font-size:24px}
+.dept p{color:var(--muted);font-size:15.5px;line-height:1.5}
+.dept--feature p{color:var(--on-navy-2)}
+.dept-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+@media (max-width:820px){
+  .dept,.dept--wide,.dept--feature{grid-column:span 6}
+}
+@media (max-width:560px){
+  .dept-grid{gap:12px}
+  .dept,.dept--wide,.dept--feature{grid-column:span 12}
+}
+
+/* ============================================================
+   FEATURE / SPLIT BANDS
+   ============================================================ */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,60px);align-items:center}
+.split--flip .split-media{order:2}
+@media (max-width:820px){.split{grid-template-columns:1fr}.split--flip .split-media{order:0}}
+.split h1,.split h2{font-size:clamp(28px,4.6vw,42px)}
+.split .lead{margin-top:16px;color:var(--muted)}
+.section--navy .split .lead{color:var(--on-navy-2)}
+.split-media svg{width:100%;height:auto}
+.svc-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.svc-list li{display:flex;gap:12px;align-items:flex-start;font-size:16.5px}
+.svc-list svg{width:22px;height:22px;flex:none;color:var(--red);margin-top:2px}
+.section--navy .svc-list svg{color:var(--on-navy-label)}
+
+/* Two tyre locations */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+@media (max-width:640px){.loc-grid{grid-template-columns:1fr}}
+.loc{background:rgba(255,255,255,.05);border:1px solid var(--navy-line);border-radius:var(--r-3);padding:20px}
+.loc h2{font-family:var(--f-disp);font-weight:700;font-size:20px;color:#fff}
+.loc p{color:var(--on-navy-2);font-size:15px;margin-top:6px}
+.loc a{color:#fff;font-weight:600}
+
+/* ============================================================
+   STORM PREP CALLOUT
+   ============================================================ */
+.storm{position:relative;background:var(--navy-2);color:#fff;border-radius:var(--r-3);overflow:hidden;padding:clamp(28px,5vw,48px)}
+.storm::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(115deg, transparent 0 22px, rgba(198,43,30,.10) 22px 24px);pointer-events:none}
+.storm-inner{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,48px);align-items:center}
+@media (max-width:760px){.storm-inner{grid-template-columns:1fr}}
+.storm h2{color:#fff;font-size:clamp(28px,4.6vw,42px)}
+.storm p{color:var(--on-navy-2);margin-top:14px;max-width:50ch}
+.season{display:inline-flex;align-items:center;gap:9px;background:rgba(180,97,12,.22);border:1px solid rgba(224,158,74,.5);color:#F2C795;font-family:var(--f-disp);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px;padding:7px 13px;border-radius:999px}
+.season svg{width:16px;height:16px}
+.season--light{background:rgba(180,97,12,.12);border-color:rgba(180,97,12,.45);color:#8A4A08} /* for light backgrounds */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.check li{display:flex;gap:11px;align-items:center;font-size:16px;color:#fff}
+.check svg{width:20px;height:20px;flex:none;color:#7FD3A2}
+
+/* ============================================================
+   TESTIMONIALS (offset masonry-ish, not a flat 3-grid)
+   ============================================================ */
+.quotes{columns:3 260px;column-gap:16px;margin-top:34px}
+.quote{
+  break-inside:avoid;margin:0 0 16px;background:var(--paper-2);border:1px solid var(--sand-line);
+  border-radius:var(--r-3);padding:22px 22px 20px;box-shadow:var(--sh-1);position:relative;
+}
+.quote .mark{font-family:var(--f-disp);font-weight:700;font-size:52px;line-height:.6;color:var(--sand-line);height:24px;display:block}
+.quote p{font-size:16.5px;line-height:1.5;margin-top:6px}
+.quote cite{display:flex;align-items:center;gap:10px;margin-top:14px;font-style:normal}
+.quote .who{font-family:var(--f-disp);font-weight:700;font-size:17px;letter-spacing:.02em}
+.stars{display:inline-flex;gap:2px;color:var(--warn)}
+.stars svg{width:15px;height:15px}
+@media (max-width:560px){.quotes{columns:1}}
+
+/* ============================================================
+   VALUE PROPS
+   ============================================================ */
+.vals{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+@media (max-width:820px){.vals{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.vals{grid-template-columns:1fr}}
+.val{padding:22px;border-radius:var(--r-3);background:var(--paper-2);border:1px solid var(--sand-line)}
+.val .vic{width:40px;height:40px;color:var(--red-ink)}
+.val .vic svg{width:40px;height:40px}
+.val h3{font-size:21px;margin-top:14px}
+.val p{color:var(--muted);font-size:15.5px;margin-top:6px;line-height:1.5}
+
+/* ============================================================
+   CTA STRIP
+   ============================================================ */
+.cta-strip{background:var(--red);color:#fff;border-radius:var(--r-3);padding:clamp(28px,5vw,44px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.cta-strip h2{color:#fff;font-size:clamp(26px,4.4vw,40px)}
+.cta-strip p{color:#ffe6e2;margin-top:8px;max-width:46ch}
+.cta-strip .btn--onnavy{background:#fff;color:var(--red)}
+.cta-strip .btn--onnavy:hover{background:var(--navy-2);color:#fff}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:720px){.cta-strip{grid-template-columns:1fr}}
+
+/* ============================================================
+   FACT / INFO ROWS (About)
+   ============================================================ */
+.facts{width:100%;border-collapse:collapse;margin-top:24px;font-size:16.5px}
+.facts th,.facts td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--sand-line);vertical-align:top}
+.facts th{font-family:var(--f-disp);font-weight:700;letter-spacing:.02em;width:210px;color:var(--ink)}
+.facts td{color:var(--muted)}
+.prose{max-width:66ch}
+.prose p{margin-top:16px;font-size:17.5px;line-height:1.65;color:var(--ink)}
+.prose p.first{margin-top:0}
+.note{background:var(--sand-2);border-left:3px solid var(--red);border-radius:0 var(--r-2) var(--r-2) 0;padding:16px 20px;margin-top:26px;font-size:15.5px;color:var(--muted)}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px);align-items:start}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.info-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:18px}
+.info-list li{display:flex;gap:14px;align-items:flex-start}
+.info-list .ii{width:42px;height:42px;flex:none;border-radius:var(--r-2);background:var(--sand-2);color:var(--navy);display:flex;align-items:center;justify-content:center}
+.info-list .ii svg{width:22px;height:22px}
+.info-list .k{font-family:var(--f-disp);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.info-list .v{font-size:17.5px;color:var(--ink)}
+.info-list a.v{color:var(--red-ink);font-weight:600;text-decoration:none}
+.info-list a.v:hover{color:var(--red);text-decoration:underline}
+.map{position:relative;margin-top:24px;border-radius:var(--r-3);overflow:hidden;border:1px solid var(--sand-line);box-shadow:var(--sh-1);background:var(--sand-2)}
+.map .mfb{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;color:var(--muted);font-family:var(--f-disp);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:15px}
+.map .mfb svg{width:34px;height:34px;color:var(--navy);opacity:.55}
+.map iframe{position:relative;z-index:1;width:100%;height:300px;border:0;display:block;background:transparent}
+.map-cap{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between;margin-top:12px;font-size:14.5px;color:var(--muted)}
+.map-cap a{font-weight:600}
+
+/* ---- Form ---- */
+.form-card{background:var(--paper-2);border:1px solid var(--sand-line);border-radius:var(--r-3);padding:clamp(22px,3vw,30px);box-shadow:var(--sh-2)}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:var(--f-disp);font-weight:600;font-size:16px;letter-spacing:.02em;color:var(--ink);margin-bottom:7px}
+.field .req{color:var(--red-ink)}
+.field input,.field select,.field textarea{
+  width:100%;font-family:var(--f-body);font-size:16.5px;color:var(--ink);
+  background:#fff;border:1.5px solid var(--sand-line);border-radius:var(--r-2);
+  padding:12px 14px;transition:border-color .15s ease, box-shadow .15s ease;
+}
+.field textarea{min-height:120px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#9a9182}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(23,39,59,.14)}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:var(--err);box-shadow:0 0 0 3px rgba(180,35,26,.14)}
+.field .hint{font-size:13.5px;color:var(--muted);margin-top:6px}
+.field .err{font-size:13.5px;color:var(--err);margin-top:6px;font-weight:500;display:none}
+.field .err.show{display:block}
+.form-status{margin-top:6px;padding:14px 16px;border-radius:var(--r-2);font-size:15.5px;display:none}
+.form-status.show{display:block}
+.form-status.ok{background:rgba(31,122,77,.12);border:1px solid rgba(31,122,77,.4);color:#1a5e3c}
+.form-status.bad{background:rgba(180,35,26,.1);border:1px solid rgba(180,35,26,.35);color:#8f1c15}
+.form-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:6px}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-foot{background:var(--navy-2);color:var(--on-navy-2);padding:clamp(40px,6vw,64px) 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(24px,4vw,48px)}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.foot-grid{grid-template-columns:1fr}}
+.foot-brand{display:flex;align-items:center;gap:12px;color:#fff}
+.foot-brand .brand-mark{width:42px;height:42px}
+.foot-brand .brand-name{font-family:var(--f-disp);font-weight:700;font-size:22px;color:#fff}
+.foot-brand small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--on-navy-2)}
+.foot-col h2{font-family:var(--f-disp);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.foot-col ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.foot-col a{color:var(--on-navy-2);text-decoration:none;font-size:15.5px}
+.foot-col a:hover{color:#fff}
+.foot-p{margin-top:16px;max-width:34ch;font-size:15px;line-height:1.55}
+.foot-hours{font-size:15px;line-height:1.7}
+.foot-hours b{color:#fff;font-weight:600}
+.foot-bottom{margin-top:40px;padding-top:22px;border-top:1px solid var(--navy-line);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between;font-size:13.5px;color:var(--on-navy-2)}
+.foot-bottom a{color:var(--on-navy-2)}
+.foot-doit{display:inline-flex;align-items:center;gap:8px}
+
+/* ============================================================
+   MOTION (reveal) — gentle, sub-300ms, reduced-motion safe
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(14px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .5s ease, transform .5s cubic-bezier(.2,.7,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+  .dept,.btn,.quote{transition:none !important}
+}
+
+/* Utility */
+.stack-lg{display:grid;gap:var(--gap)}
+.mt-s{margin-top:14px}
+.center-narrow{max-width:64ch}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="#/home" aria-label="Larry's Hardware and Home Centre, home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="7" fill="#C62B1E"/><path d="M17.5 8.5h13a1.5 1.5 0 0 1 1.5 1.5v13a1.5 1.5 0 0 1-.44 1.06L21.6 34.5a1.5 1.5 0 0 1-2.12 0l-11-11a1.5 1.5 0 0 1 0-2.12l8.94-8.94A1.5 1.5 0 0 1 17.5 8.5Z" fill="#17273B"/><circle cx="26" cy="14" r="2.2" fill="#F8F3E9"/></svg>
+      </span>
+      <span class="brand-name">Larry's Hardware<small>Home Centre · Since 1986</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#/home">Home</a>
+      <a href="#/departments">Departments</a>
+      <a href="#/tyre-shop">Tyre Shop</a>
+      <a href="#/storm-prep">Storm Prep</a>
+      <a href="#/about">About</a>
+      <a href="#/contact">Contact</a>
+      <a class="btn btn--onnavy" href="tel:+13459451500">Call (345) 945-1500</a>
+    </nav>
+    <a class="btn btn--primary head-call" href="tel:+13459451500" aria-label="Call Larry's Hardware">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.8 6.2 15 15 15a2 2 0 0 0 2-2v-2.3a1 1 0 0 0-.8-1l-3.4-.7a1 1 0 0 0-1 .4l-.9 1.2a12 12 0 0 1-5.2-5.2l1.2-.9a1 1 0 0 0 .4-1l-.7-3.4a1 1 0 0 0-1-.8H6a2 2 0 0 0-2 2Z"/></svg>
+      945-1500
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="util">
+  <div class="wrap util-row">
+    <span class="util-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <span><strong>Mon–Sat</strong> 8am–5pm · Closed Sunday</span>
+    </span>
+    <span class="util-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      <span>386 Eastern Avenue, George Town</span>
+    </span>
+    <span class="util-open" id="openState" aria-live="polite"><span class="dot" id="openDot"></span><span id="openText">Open today · 8am–5pm</span></span>
+  </div>
+</div>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="7" fill="#C62B1E"/><path d="M17.5 8.5h13a1.5 1.5 0 0 1 1.5 1.5v13a1.5 1.5 0 0 1-.44 1.06L21.6 34.5a1.5 1.5 0 0 1-2.12 0l-11-11a1.5 1.5 0 0 1 0-2.12l8.94-8.94A1.5 1.5 0 0 1 17.5 8.5Z" fill="#17273B"/><circle cx="26" cy="14" r="2.2" fill="#F8F3E9"/></svg>
+          </span>
+          <span class="brand-name">Larry's Hardware<small>&amp; Home Centre</small></span>
+        </div>
+        <p class="foot-p">A family-owned, one-stop hardware and home store serving Grand Cayman since 1986. Here, we do it best.</p>
+      </div>
+      <div class="foot-col">
+        <h2>Visit</h2>
+        <div class="foot-hours">
+          Prestige Building<br>
+          386 Eastern Avenue<br>
+          George Town, Grand Cayman<br>
+          KY1-1110<br><br>
+          <b>Mon–Sat</b> 8am–5pm<br>
+          <b>Sunday</b> Closed
+        </div>
+      </div>
+      <div class="foot-col">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="#/departments">Departments</a></li>
+          <li><a href="#/tyre-shop">Tyre &amp; Battery</a></li>
+          <li><a href="#/storm-prep">Hurricane Prep</a></li>
+          <li><a href="#/about">About us</a></li>
+          <li><a href="#/contact">Contact &amp; map</a></li>
+          <li><a href="tel:+13459451500">(345) 945-1500</a></li>
+          <li><a href="mailto:larryshardware@gmail.com">larryshardware@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Larry's Hardware &amp; Home Centre. All rights reserved.</span>
+      <span class="foot-doit">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+        Proud Do It Best member · Store #7005
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   Larry's Hardware & Home Centre — single-file site
+   Hash router · no build step · no external JS.
+   All business details are real/researched. Anything the audit
+   flagged as unconfirmed is marked CONFIRM in comments below and
+   is not presented as fact in copy.
+   ============================================================ */
+(function(){
+  "use strict";
+
+  /* ---- Real business constants ---- */
+  var BIZ = {
+    phone: "(345) 945-1500",
+    tel: "+13459451500",
+    /* CONFIRM: WhatsApp number not published in research — wired to the
+       main line as a sensible default. Verify the store's WhatsApp before launch. */
+    wa: "13459451500",
+    email: "larryshardware@gmail.com",
+    tyrePhone: "(345) 949-2685",
+    tyreTel: "+13459492685",
+    mapsQ: "Larry's+Hardware+386+Eastern+Avenue+George+Town+Grand+Cayman"
+  };
+  var telHref = "tel:" + BIZ.tel;
+  var mailHref = "mailto:" + BIZ.email;
+  var waHref = "https://wa.me/" + BIZ.wa + "?text=" + encodeURIComponent("Hi Larry's — I have a question about an item:");
+  var mapsHref = "https://www.google.com/maps/search/?api=1&query=" + BIZ.mapsQ;
+
+  /* ---- Small SVG icon set (one style: 24-grid, 1.8 stroke, round caps) ---- */
+  function ic(paths){
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+paths+'</svg>';
+  }
+  var I = {
+    tools: ic('<path d="M14.5 6.5a3.5 3.5 0 0 0 4.6 4.6l-8 8a2 2 0 0 1-2.8-2.8l6.2-9.8Z"/><path d="M6 14l-2 2a2 2 0 0 0 2.8 2.8l2-2"/><path d="M15 9l3 3"/>'),
+    build: ic('<path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/>'),
+    paint: ic('<rect x="4" y="4" width="13" height="6" rx="1"/><path d="M17 7h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-6"/><path d="M11 13v3a2 2 0 0 0 2 2h.5"/><rect x="10.5" y="18" width="5" height="4" rx="1"/>'),
+    kitchen: ic('<path d="M5 9h14l-1.2 9.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 9Z"/><path d="M4 9h16"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/>'),
+    home: ic('<path d="M4 11l8-6 8 6"/><path d="M6 10v9h12v-9"/><path d="M9 19v-4a3 3 0 0 1 6 0v4"/>'),
+    clean: ic('<path d="M10 3h3v4h-3z"/><path d="M8.5 7h6l1 3.5a2 2 0 0 1-.5 1.9L14 13v7a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-7l-1-.6a2 2 0 0 1-.5-1.9L8.5 7Z"/><path d="M17 5h4M19 3v4"/>'),
+    office: ic('<path d="M16 3l5 5"/><path d="M18.5 5.5 8 16l-4 1 1-4L15.5 2.5a2.1 2.1 0 0 1 3 3Z"/><path d="M4 21h16"/>'),
+    appliance: ic('<circle cx="12" cy="12" r="8"/><path d="M12 12c0-3 4-4 4-1s-3 3-4 1Zm0 0c0 3-4 4-4 1s3-3 4-1Zm0 0c-3 0-4-4-1-4s3 3 1 4Zm0 0c3 0 4 4 1 4s-3-3-1-4Z"/><circle cx="12" cy="12" r="1.3"/>'),
+    garden: ic('<path d="M12 21c5-1 8-5 8-10 0 0-4 .2-6 2.2S12 18 12 21Z"/><path d="M12 21c-4-1-7-4-7-8 0 0 3 .1 5 1.8"/><path d="M12 21V9"/>'),
+    auto: ic('<path d="M3 12l1.5-4.2A2 2 0 0 1 6.4 6.5h11.2a2 2 0 0 1 1.9 1.3L21 12v5a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1v-1H6.5v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><path d="M3 12h18"/><circle cx="7.5" cy="15" r="0"/>'),
+    gift: ic('<rect x="4" y="9" width="16" height="11" rx="1"/><path d="M4 13h16M12 9v11"/><path d="M12 9S10.5 4 8 5.5 12 9 12 9Zm0 0s1.5-5 4-3.5S12 9 12 9Z"/>'),
+    storm: ic('<path d="M7 15a4 4 0 1 1 .8-7.9A5 5 0 0 1 18 8a3.5 3.5 0 0 1-.5 7H7Z"/><path d="M12 13l-2 4h3l-2 4"/>'),
+    tyre: ic('<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3.8M12 17.2V21M3 12h3.8M17.2 12H21M5.6 5.6l2.7 2.7M15.7 15.7l2.7 2.7M18.4 5.6l-2.7 2.7M8.3 15.7l-2.7 2.7"/>'),
+    tag: ic('<path d="M12.6 4H19a1 1 0 0 1 1 1v6.4a1 1 0 0 1-.3.7l-7.9 7.9a1 1 0 0 1-1.4 0l-6.4-6.4a1 1 0 0 1 0-1.4l7.9-7.9a1 1 0 0 1 .7-.3Z"/><circle cx="16" cy="8" r="1.4"/>'),
+    heart: ic('<path d="M12 20S4 14.5 4 9.3A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.3C20 14.5 12 20 12 20Z"/>'),
+    box: ic('<path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5v-9Z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9"/>'),
+    check: ic('<path d="M4 12l5 5L20 6"/>'),
+    chevron: ic('<path d="M9 6l6 6-6 6"/>'),
+    phone: ic('<path d="M4 5c0 8.8 6.2 15 15 15a2 2 0 0 0 2-2v-2.3a1 1 0 0 0-.8-1l-3.4-.7a1 1 0 0 0-1 .4l-.9 1.2a12 12 0 0 1-5.2-5.2l1.2-.9a1 1 0 0 0 .4-1l-.7-3.4a1 1 0 0 0-1-.8H6a2 2 0 0 0-2 2Z"/>'),
+    pin: ic('<path d="M20 10c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/>'),
+    mail: ic('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/>'),
+    clock: ic('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
+    chat: ic('<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-5.2A8 8 0 1 1 21 12Z"/>'),
+    wallet: ic('<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 9h18"/><circle cx="16.5" cy="13" r="1.3"/>'),
+    map: ic('<path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/>'),
+    truck: ic('<path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/>')
+  };
+
+  /* ---- Department data (from audit §3) ---- */
+  var DEPTS = [
+    {no:"01", ic:"tools", name:"Hardware & Tools", desc:"Nails by weight, hand tools, power and air tools, drills, padlocks, machetes — the everyday fix-it aisle."},
+    {no:"02", ic:"build", name:"Building Supplies", desc:"Paint and sundries, plumbing fittings, electrical, fasteners and general building hardware for the job at hand."},
+    {no:"03", ic:"kitchen", name:"Housewares & Kitchen", desc:"Cookware, bakeware, glass containers, plates, peelers and the small kitchen bits you always need one more of."},
+    {no:"04", ic:"home", name:"Home, Bed & Bath", desc:"Towels, pillows, curtains, bathroom sets, over-the-toilet storage, mattress covers and bedding."},
+    {no:"05", ic:"clean", name:"Cleaning & Toiletries", desc:"Cleaning products, brooms and mops, bins, plus everyday toiletries and personal care."},
+    {no:"06", ic:"office", name:"School & Office", desc:"Stationery and supplies for the classroom, the home desk and the back office."},
+    {no:"07", ic:"appliance", name:"Small Appliances", desc:"Fans and small household appliances to keep the home running and cool."},
+    {no:"08", ic:"garden", name:"Garden & Lawn", desc:"Hoses, shears and loppers, wheelbarrows and outdoor odds and ends for the yard."},
+    {no:"09", ic:"auto", name:"Auto Care", desc:"Car cleaning and care products — and the tyre shop is right out back."},
+    {no:"10", ic:"gift", name:"Seasonal & Gifts", desc:"Christmas décor, seasonal items and gifts as the calendar turns."}
+  ];
+
+  /* ---- Testimonials (verbatim public Google reviews, audit §4) ---- */
+  var QUOTES = [
+    {t:"Every time I need something from basic school and office supplies to home appliances and housewares I am able to find what I need here! You are even able to get your tyres changed or any other car issues fixed while you shop inside. It truly is a gem of a store.", who:"Erika"},
+    {t:"Larry's has always offered some of the most affordable home and hardware items on island. Love the convenience of the tyre shop around the back so I can always kill two birds with one stone. Shop local — this small family owned business!", who:"Laila"},
+    {t:"One of my absolute favorite places to go when I need to stock up on household essentials — from cleaning supplies to everyday toiletries. It's just so convenient!", who:"Jason"},
+    {t:"Everyone who knows Thompson and Kirk's Home Centre needs to check out Larry's. Reasonable prices, and you can sometimes find things here that you can't find anywhere else.", who:"Carlie"},
+    {t:"Great place to find nearly everything you want, from your tyres for your car to all things home. Absolutely great prices.", who:"Chanel"},
+    {t:"Reminded that I should always check this store before the bigger hardware stores. It has less variety but is generally significantly cheaper.", who:"Shelly-ann"}
+  ];
+
+  /* ---- Storm-prep checklist (audit §7) ---- */
+  var STORM = [
+    "Tarps & rope","Plywood, screws & fasteners","Flashlights & batteries",
+    "Water storage containers","Duct & waterproof tape","First-aid & basics",
+    "Fuel cans & lanterns","Buckets, bins & clean-up gear"
+  ];
+
+  /* ============================================================
+     Reusable partials
+     ============================================================ */
+  function stars(n){
+    var s="";
+    for(var i=0;i<(n||5);i++){ s+='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.4 4 1.2 6L12 16.9 6.6 19.3l1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>'; }
+    return '<span class="stars" role="img" aria-label="'+(n||5)+' out of 5 stars">'+s+'</span>';
+  }
+
+  function ctaStrip(){
+    return ''+
+    '<section class="section"><div class="wrap"><div class="cta-strip reveal">'+
+      '<div>'+
+        '<h2>Come see us on Eastern Avenue</h2>'+
+        '<p>Not sure if we carry it? Call and ask, or drop us a message — a real person will check the shelf for you.</p>'+
+      '</div>'+
+      '<div class="cta-actions">'+
+        '<a class="btn btn--onnavy" href="'+telHref+'">'+I.phone+' Call now</a>'+
+        '<a class="btn btn--onnavy-ghost" href="'+mapsHref+'" target="_blank" rel="noopener">'+I.pin+' Directions</a>'+
+      '</div>'+
+    '</div></div></section>';
+  }
+
+  /* ============================================================
+     PAGES
+     ============================================================ */
+  function deptCard(d, lvl, cls){
+    var H = "h"+lvl;
+    return '<article class="'+(cls||"dept")+' reveal">'+
+      '<div class="dept-top"><span class="dept-ic">'+I[d.ic]+'</span><span class="dept-no">Aisle '+d.no+'</span></div>'+
+      '<'+H+'>'+d.name+'</'+H+'><p>'+d.desc+'</p></article>';
+  }
+
+  function pageHome(){
+    var deptCards = DEPTS.slice(0,5).map(function(d,i){
+      return deptCard(d, 3, i===0 ? "dept dept--wide" : "dept");
+    }).join("");
+
+    var tyreFeature = '<article class="dept dept--feature reveal">'+
+      '<div class="dept-top"><span class="dept-ic">'+I.tyre+'</span><span class="dept-no">Out back</span></div>'+
+      '<h3>Larry’s Tyre & Battery</h3>'+
+      '<p>Get your tyres changed, batteries tested and small car jobs sorted — right behind the store, while you shop.</p>'+
+      '<p style="margin-top:6px"><a href="#/tyre-shop" style="color:#fff;font-weight:600">See the tyre shop '+'&rarr;'+'</a></p></article>';
+
+    var quotes = QUOTES.slice(0,4).map(function(q){
+      return '<figure class="quote reveal"><span class="mark" aria-hidden="true">“</span>'+
+        '<p>'+q.t+'</p><cite>'+stars(5)+'<span class="who">'+q.who+'</span></cite></figure>';
+    }).join("");
+
+    return ''+
+    /* HERO */
+    '<section class="hero"><div class="wrap hero-grid">'+
+      '<div>'+
+        '<div class="hero-tags">'+
+          '<span class="tag tag--lg">Since 1986</span>'+
+          '<span class="tag tag--navy tag--lg">Family owned</span>'+
+        '</div>'+
+        '<h1>Everything for the home &amp; yard. <em>Priced for Cayman.</em></h1>'+
+        '<p class="hero-sub">A one-stop, family-owned hardware and home store on Eastern Avenue — where locals have found it cheaper, and found it here, since 1986.</p>'+
+        '<div class="hero-cta">'+
+          '<a class="btn btn--primary" href="'+telHref+'">'+I.phone+' Call (345) 945-1500</a>'+
+          '<a class="btn btn--dark" href="'+waHref+'" target="_blank" rel="noopener">'+I.chat+' WhatsApp us</a>'+
+          '<a class="btn btn--ghost" href="#/departments">Browse departments</a>'+
+        '</div>'+
+        '<div class="hero-fine">'+
+          '<span>'+I_line("clock")+' <b>Mon–Sat 8am–5pm</b></span>'+
+          '<span>'+I_line("pin")+' 386 Eastern Avenue, George Town</span>'+
+        '</div>'+
+      '</div>'+
+      '<div class="hero-art">'+heroArt()+'</div>'+
+    '</div></section>'+
+
+    /* DEPARTMENTS PREVIEW */
+    '<section class="section"><div class="wrap">'+
+      '<div class="sec-head reveal"><span class="aisle">What we carry</span>'+
+        '<h2>Ten departments. One quick trip.</h2>'+
+        '<p>From a single nail by weight to a whole storm kit, Larry’s packs a big-store range into a shop you can get in and out of. A taste of the aisles:</p></div>'+
+      '<div class="dept-grid">'+deptCards+tyreFeature+'</div>'+
+      '<div class="mt-s" style="margin-top:26px"><a class="btn btn--ghost" href="#/departments">See all departments '+'</a></div>'+
+    '</div></section>'+
+
+    /* TYRE BAND */
+    '<section class="section section--navy"><div class="wrap"><div class="split">'+
+      '<div class="reveal">'+
+        '<span class="aisle aisle--onnavy">Two birds, one stop</span>'+
+        '<h2 style="margin-top:12px">Get your tyres changed while you shop</h2>'+
+        '<p class="lead">Larry’s Tyre &amp; Battery sits right behind the store. Hand over the keys, do your shopping, and drive off sorted — new or used tyres, batteries, and the everyday car jobs.</p>'+
+        '<ul class="svc-list">'+
+          '<li>'+I.check+'<span>New &amp; used tyres, fitting and changes</span></li>'+
+          '<li>'+I.check+'<span>Battery sales and testing</span></li>'+
+          '<li>'+I.check+'<span>General car repairs while you shop</span></li>'+
+        '</ul>'+
+        '<div class="hero-cta" style="margin-top:24px">'+
+          '<a class="btn btn--onnavy" href="#/tyre-shop">Visit the tyre shop</a>'+
+          '<a class="btn btn--onnavy-ghost" href="tel:'+BIZ.tyreTel+'">Call '+BIZ.tyrePhone+'</a>'+
+        '</div>'+
+      '</div>'+
+      '<div class="split-media reveal" aria-hidden="true">'+tyreArt()+'</div>'+
+    '</div></div></section>'+
+
+    /* STORM PREP */
+    '<section class="section"><div class="wrap"><div class="storm reveal"><div class="storm-inner">'+
+      '<div>'+
+        '<span class="season">'+I.storm+' Hurricane season · Jun 1 – Nov 30</span>'+
+        '<h2 style="margin-top:16px">Beat the rush. Prep before the storm.</h2>'+
+        '<p>Peak season runs mid-August to mid-October, and supplies go fast when a system is named. Stock the essentials early — Larry’s keeps the practical storm list in stock at everyday prices.</p>'+
+        '<div class="hero-cta" style="margin-top:22px"><a class="btn btn--primary" href="#/storm-prep">See the storm-prep list</a></div>'+
+      '</div>'+
+      '<ul class="check">'+STORM.slice(0,6).map(function(s){return '<li>'+I.check+'<span>'+s+'</span></li>';}).join("")+'</ul>'+
+    '</div></div></div></section>'+
+
+    /* TESTIMONIALS */
+    '<section class="section section--sand"><div class="wrap">'+
+      '<div class="sec-head reveal"><span class="aisle">From our neighbours</span>'+
+        '<h2>Cayman keeps coming back</h2>'+
+        '<p>Real reviews from real customers — the words are theirs, not ours.</p></div>'+
+      '<div class="quotes">'+quotes+'</div>'+
+    '</div></section>'+
+
+    /* VALUE PROPS */
+    '<section class="section"><div class="wrap">'+
+      '<div class="sec-head reveal"><span class="aisle">Why Larry’s</span>'+
+        '<h2>The small store that punches up</h2></div>'+
+      '<div class="vals">'+
+        val("wallet","Genuinely affordable","On an import-priced island, Larry’s is the one locals check first — often significantly cheaper than the big-box stores.")+
+        val("box","One-stop breadth","Hardware, home, kitchen, garden, school, storm supplies and tyres, all under one roof and one quick trip.")+
+        val("heart","Family &amp; local","A small family-owned business that has served Grand Cayman since 1986 — and still greets you like a neighbour.")+
+        val("tyre","Tyres out back","The only hardware run where you can knock out the shopping and the car in the same stop.")+
+      '</div>'+
+    '</div></section>'+
+
+    ctaStrip();
+  }
+
+  function I_line(name){ return '<span style="display:inline-flex;width:18px;height:18px;color:var(--red-ink);vertical-align:-3px">'+I[name]+'</span>'; }
+
+  function val(icn,h,p){
+    return '<div class="val reveal"><span class="vic">'+I[icn]+'</span><h3>'+h+'</h3><p>'+p+'</p></div>';
+  }
+
+  function pageDepartments(){
+    var cards = DEPTS.map(function(d){ return deptCard(d, 2); }).join("");
+    // storm as feature card + tyre as feature card
+    var storm = '<article class="dept dept--feature reveal">'+
+      '<div class="dept-top"><span class="dept-ic">'+I.storm+'</span><span class="dept-no">Seasonal</span></div>'+
+      '<h2>Hurricane Prep</h2><p>Tarps, plywood, fasteners, flashlights, batteries, water storage and clean-up gear — the practical storm list, in stock. <a href="#/storm-prep" style="color:#fff;font-weight:600">See the list &rarr;</a></p></article>';
+    var tyre = '<article class="dept dept--feature reveal">'+
+      '<div class="dept-top"><span class="dept-ic">'+I.tyre+'</span><span class="dept-no">Out back</span></div>'+
+      '<h2>Tyre &amp; Battery</h2><p>New and used tyres, batteries and small car jobs — done while you shop. <a href="#/tyre-shop" style="color:#fff;font-weight:600">Visit the tyre shop &rarr;</a></p></article>';
+
+    return ''+
+    '<section class="section"><div class="wrap">'+
+      '<div class="sec-head reveal"><span class="aisle">The aisles</span>'+
+        '<h1>What you’ll find at Larry’s</h1>'+
+        '<p class="lead">A big-store range in a store you can actually get around. Here’s the department list — and if you don’t see it, just ask. We’re happy to check the shelf or point you to the neighbour who has it.</p></div>'+
+      '<div class="dept-grid" style="margin-top:34px">'+cards+storm+tyre+'</div>'+
+      '<div class="note reveal">Stock changes with the season and the shipment. The fastest way to know if we have something today is to call <a href="'+telHref+'">'+BIZ.phone+'</a> or <a href="'+waHref+'" target="_blank" rel="noopener">message us on WhatsApp</a> — a real person will look for you.</div>'+
+    '</div></section>'+
+    ctaStrip();
+  }
+
+  function pageTyre(){
+    return ''+
+    '<section class="section section--navy"><div class="wrap"><div class="split">'+
+      '<div class="reveal">'+
+        '<span class="aisle aisle--onnavy">Larry’s Tyre & Battery</span>'+
+        '<h1 style="margin-top:12px">Tyres changed while you shop</h1>'+
+        '<p class="lead">Larry’s runs an affiliated tyre and battery shop right beside the hardware store. Pull in, hand over the keys, do your shopping — and drive off sorted.</p>'+
+        '<ul class="svc-list">'+
+          '<li>'+I.check+'<span><b>Tyres</b> — new and used, fitting, changes and repairs</span></li>'+
+          '<li>'+I.check+'<span><b>Batteries</b> — sales and testing</span></li>'+
+          '<li>'+I.check+'<span><b>Car jobs</b> — general repairs and everyday fixes</span></li>'+
+        '</ul>'+
+        '<div class="loc-grid">'+
+          '<div class="loc"><h2>Eastern Avenue</h2><p>Right behind the Prestige Building, beside the hardware store.</p><p style="margin-top:8px"><a href="tel:'+BIZ.tel+'">'+BIZ.phone+'</a></p></div>'+
+          '<div class="loc"><h2>Shedden Road</h2><p>325 Shedden Road, George Town.</p><p style="margin-top:8px"><a href="tel:'+BIZ.tyreTel+'">'+BIZ.tyrePhone+'</a></p></div>'+
+        '</div>'+
+        '<div class="hero-cta" style="margin-top:26px">'+
+          '<a class="btn btn--onnavy" href="tel:'+BIZ.tyreTel+'">'+I.phone+' Call the tyre shop</a>'+
+          '<a class="btn btn--onnavy-ghost" href="'+mapsHref+'" target="_blank" rel="noopener">'+I.pin+' Get directions</a>'+
+        '</div>'+
+      '</div>'+
+      '<div class="split-media reveal" aria-hidden="true">'+tyreArt()+'</div>'+
+    '</div></div></section>'+
+
+    '<section class="section"><div class="wrap">'+
+      '<div class="sec-head reveal"><span class="aisle">How it works</span><h2>One stop, two jobs done</h2></div>'+
+      '<div class="vals" style="grid-template-columns:repeat(3,1fr)">'+
+        val("auto","1 · Pull in","Drop the car with the tyre crew behind the store on Eastern Avenue.")+
+        val("box","2 · Shop","Knock out your hardware and home list inside while the work gets done.")+
+        val("check","3 · Drive off","Pick up the car and your shopping in a single trip. Two birds, one stop.")+
+      '</div>'+
+    '</div></section>'+
+    ctaStrip();
+  }
+
+  function pageStorm(){
+    var half = Math.ceil(STORM.length/2);
+    var col1 = STORM.slice(0,half).map(function(s){return '<li>'+I.check+'<span>'+s+'</span></li>';}).join("");
+    var col2 = STORM.slice(half).map(function(s){return '<li>'+I.check+'<span>'+s+'</span></li>';}).join("");
+    return ''+
+    '<section class="section"><div class="wrap">'+
+      '<div class="sec-head reveal"><span class="season season--light" style="margin-bottom:14px">'+I.storm+' Atlantic hurricane season · Jun 1 – Nov 30</span>'+
+        '<h1>Storm prep, sorted early</h1>'+
+        '<p class="lead">The Atlantic season peaks between mid-August and mid-October, and shelves empty fast once a storm is named. Buy the essentials early — Larry’s stocks the practical list at everyday prices.</p></div>'+
+
+      '<div class="storm reveal" style="margin-top:32px"><div class="storm-inner">'+
+        '<div>'+
+          '<h2>Larry’s storm list</h2>'+
+          '<p>The basics that keep a Cayman home safe and comfortable through a blow. Grab what you’re missing on your next trip in.</p>'+
+        '</div>'+
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 22px">'+
+          '<ul class="check">'+col1+'</ul><ul class="check">'+col2+'</ul>'+
+        '</div>'+
+      '</div></div>'+
+
+      '<div class="vals" style="margin-top:34px">'+
+        val("clock","Get it early","“Buy before the rush” isn’t just advice — when demand spikes, supply runs short island-wide.")+
+        val("wallet","Everyday prices","No storm-panic mark-ups. The same affordable pricing Larry’s is known for, all season.")+
+        val("box","Under one roof","Tarps, fasteners, water storage, lights and clean-up gear in the same quick trip.")+
+        val("tyre","Ready to roll","While you’re here, let the tyre shop check the car before you need to move fast.")+
+      '</div>'+
+      '<div class="note reveal">Not sure what you still need? Call <a href="'+telHref+'">'+BIZ.phone+'</a> and we’ll help you build a kit for your home.</div>'+
+    '</div></section>'+
+    ctaStrip();
+  }
+
+  function pageAbout(){
+    return ''+
+    '<section class="section"><div class="wrap">'+
+      '<div class="sec-head reveal"><span class="aisle">Our story</span>'+
+        '<h1>Serving Grand Cayman since 1986</h1></div>'+
+      '<div class="split" style="margin-top:30px;align-items:start">'+
+        '<div class="prose reveal">'+
+          '<p class="first">Larry’s Hardware &amp; Home Centre has been a fixture on Eastern Avenue for more than thirty years. It started, and remains, a small family-owned business — the kind of neighbourhood store where the cashier knows the stock, points you down the right aisle, and tells you straight when the shop across the road has what we’ve run out of.</p>'+
+          '<p>The idea has always been simple: pack a big-store range into a store you can get around quickly, and keep the prices honest on an island where nearly everything is imported. That’s why generations of Caymanians check Larry’s first — from a single nail by weight to a full storm kit.</p>'+
+          '<p>As a proud member of the <b>Do It Best</b> cooperative, Larry’s buys alongside thousands of independent hardware stores worldwide — which is how a small local shop keeps big-store pricing. And with Larry’s Tyre &amp; Battery right out back, it’s the one hardware run where you can sort the house and the car in the same trip.</p>'+
+          '<div class="note">A note for our future website: the full family story — the people behind Larry’s and how it began in 1986 — belongs here in the owner’s own words. We’ve kept this page honest rather than filling it with invented history.</div>'+
+        '</div>'+
+        '<div class="reveal">'+
+          '<table class="facts"><tbody>'+
+            '<tr><th>Established</th><td>1986 · over 30 years serving Grand Cayman</td></tr>'+
+            '<tr><th>Ownership</th><td>Family owned and operated</td></tr>'+
+            '<tr><th>Buying group</th><td>Do It Best cooperative member (Store #7005)</td></tr>'+
+            '<tr><th>Location</th><td>Prestige Building, 386 Eastern Avenue, George Town, KY1-1110</td></tr>'+
+            '<tr><th>Affiliate</th><td>Larry’s Tyre &amp; Battery (Eastern Avenue &amp; Shedden Road)</td></tr>'+
+            '<tr><th>Hours</th><td>Mon–Sat 8am–5pm · Closed Sunday</td></tr>'+
+            '<tr><th>Phone</th><td><a href="'+telHref+'">'+BIZ.phone+'</a></td></tr>'+
+          '</tbody></table>'+
+        '</div>'+
+      '</div>'+
+    '</div></section>'+
+    ctaStrip();
+  }
+
+  function pageContact(){
+    var mapEmbed = "https://www.google.com/maps?q="+BIZ.mapsQ+"&output=embed";
+    return ''+
+    '<section class="section"><div class="wrap">'+
+      '<div class="sec-head reveal"><span class="aisle">Visit &amp; ask</span>'+
+        '<h1>Come by, call, or ask us to check</h1>'+
+        '<p class="lead">The fastest way to know if we’ve got something is to ask a real person. Call, WhatsApp, or send the note below and we’ll check the shelf and get back to you.</p></div>'+
+      '<div class="contact-grid" style="margin-top:30px">'+
+        '<div class="reveal">'+
+          '<ul class="info-list">'+
+            infoRow("pin","Address","Prestige Building, 386 Eastern Avenue<br>George Town, Grand Cayman KY1-1110", mapsHref, "Get directions")+
+            infoRow("clock","Hours","Monday–Saturday · 8am–5pm<br>Sunday · Closed")+
+            infoRow("phone","Phone", BIZ.phone, telHref, null, "tel")+
+            infoRow("chat","WhatsApp","Message us about an item", waHref, "Open WhatsApp", "ext")+
+            infoRow("mail","Email", BIZ.email, mailHref, null, "mail")+
+            infoRow("tyre","Tyre shop", "Larry’s Tyre &amp; Battery · "+BIZ.tyrePhone, "tel:"+BIZ.tyreTel, null, "tel")+
+          '</ul>'+
+          '<div class="map"><a class="mfb" href="'+mapsHref+'" target="_blank" rel="noopener">'+I.map+'<span>View on Google Maps &rarr;</span></a>'+
+            '<iframe title="Map to Larry’s Hardware, 386 Eastern Avenue, George Town" src="'+mapEmbed+'" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>'+
+          '<p class="map-cap"><span>Prestige Building, 386 Eastern Avenue, George Town</span><a href="'+mapsHref+'" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></p>'+
+        '</div>'+
+        '<div class="reveal">'+
+          '<form class="form-card" id="askForm" novalidate>'+
+            '<h2 style="font-size:26px;margin-bottom:6px">Ask if we carry it</h2>'+
+            '<p style="color:var(--muted);margin-bottom:20px;font-size:15.5px">Send us what you’re after and we’ll check. This opens your email app with the details filled in — nothing sends until you press send.</p>'+
+            field("name","Your name","text","e.g. Erika",true)+
+            field("email","Email","email","you@example.ky",true)+
+            field("phone","Phone or WhatsApp","tel","(345) 000-0000",false)+
+            selectField("topic","What’s it about",["An item — do you have it?","Tyres & battery","Hurricane / storm prep","Something else"],true)+
+            field("message","What are you looking for?","textarea","Tell us the item, brand, size or job — we’ll check the shelf.",true)+
+            '<div class="form-status" id="formStatus" role="status" aria-live="polite"></div>'+
+            '<div class="form-actions">'+
+              '<button type="submit" class="btn btn--primary">'+I.mail+' Send to Larry’s</button>'+
+              '<a class="btn btn--ghost" href="'+telHref+'">Or just call</a>'+
+            '</div>'+
+          '</form>'+
+        '</div>'+
+      '</div>'+
+    '</div></section>';
+  }
+
+  function infoRow(icn,k,v,href,linkLabel,type){
+    var val;
+    if(href && (type==="tel"||type==="mail"||type==="ext")){
+      val = '<a class="v" href="'+href+'"'+(type==="ext"?' target="_blank" rel="noopener"':'')+'>'+v+'</a>';
+    } else {
+      val = '<span class="v">'+v+'</span>';
+      if(href){ val += '<br><a class="v" href="'+href+'" target="_blank" rel="noopener" style="font-size:15px">'+linkLabel+' &rarr;</a>'; }
+    }
+    return '<li><span class="ii">'+I[icn]+'</span><span><span class="k">'+k+'</span><br>'+val+'</span></li>';
+  }
+
+  function field(id,label,type,ph,req){
+    var input = type==="textarea"
+      ? '<textarea id="f_'+id+'" name="'+id+'" placeholder="'+ph+'"'+(req?' required':'')+' aria-describedby="e_'+id+'"></textarea>'
+      : '<input id="f_'+id+'" name="'+id+'" type="'+type+'" placeholder="'+ph+'"'+(req?' required':'')+' aria-describedby="e_'+id+'"'+(type==="email"?' autocomplete="email"':'')+'>';
+    return '<div class="field"><label for="f_'+id+'">'+label+(req?' <span class="req" aria-hidden="true">*</span>':' <span class="hint" style="display:inline">(optional)</span>')+'</label>'+
+      input+'<span class="err" id="e_'+id+'"></span></div>';
+  }
+  function selectField(id,label,opts,req){
+    var o = '<option value="" disabled selected>Choose one…</option>'+opts.map(function(x){return '<option>'+x+'</option>';}).join("");
+    return '<div class="field"><label for="f_'+id+'">'+label+(req?' <span class="req" aria-hidden="true">*</span>':'')+'</label>'+
+      '<select id="f_'+id+'" name="'+id+'"'+(req?' required':'')+' aria-describedby="e_'+id+'">'+o+'</select><span class="err" id="e_'+id+'"></span></div>';
+  }
+
+  /* ============================================================
+     SVG art (custom, on-brand — no photos needed)
+     ============================================================ */
+  function heroArt(){
+    return '<svg viewBox="0 0 480 440" role="img" aria-label="A pegboard wall of hardware — tools and a home-goods box hanging beside a Larry’s price tag.">'+
+      '<defs><pattern id="peg" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="13" cy="13" r="1.6" fill="#D9CBAE"/></pattern></defs>'+
+      '<rect x="20" y="20" width="440" height="400" rx="14" fill="#FDFAF3" stroke="#E3D6BB" stroke-width="2"/>'+
+      '<rect x="20" y="20" width="440" height="400" rx="14" fill="url(#peg)"/>'+
+      /* hanging rail */
+      '<rect x="52" y="70" width="376" height="8" rx="4" fill="#17273B"/>'+
+      /* wrench */
+      '<g transform="translate(96 78)" stroke="#17273B" stroke-width="7" fill="#EEE3CD" stroke-linejoin="round"><path d="M20 8a14 14 0 0 0 3 22l0 74a8 8 0 0 0 16 0l0-74a14 14 0 0 0 3-22l-9 10-4-2-2-4z"/></g>'+
+      /* hammer */
+      '<g transform="translate(176 78)"><rect x="14" y="30" width="10" height="80" rx="4" fill="#17273B"/><path d="M2 22h40l-4 14H6z" fill="#C62B1E"/><rect x="0" y="16" width="44" height="8" rx="3" fill="#17273B"/></g>'+
+      /* paint roller */
+      '<g transform="translate(250 78)" fill="#17273B"><rect x="6" y="18" width="46" height="16" rx="6" fill="#EEE3CD" stroke="#17273B" stroke-width="4"/><rect x="26" y="30" width="6" height="30" rx="3"/><path d="M29 60c0 16-14 12-14 30" fill="none" stroke="#17273B" stroke-width="6" stroke-linecap="round"/></g>'+
+      /* home box */
+      '<g transform="translate(330 82)"><rect x="6" y="20" width="86" height="66" rx="8" fill="#C62B1E"/><path d="M6 44h86" stroke="#fff" stroke-width="4"/><path d="M49 20v66" stroke="#fff" stroke-width="4"/><rect x="30" y="6" width="38" height="20" rx="6" fill="#17273B"/></g>'+
+      /* big hang tag */
+      '<g transform="rotate(-8 250 320)">'+
+        '<path d="M150 250h150a14 14 0 0 1 14 14v70a14 14 0 0 1-14 14H150l-40-49a10 10 0 0 1 0-14z" fill="#C62B1E"/>'+
+        '<circle cx="132" cy="299" r="9" fill="#FDFAF3" stroke="#8f1c15" stroke-width="3"/>'+
+        '<text x="230" y="292" text-anchor="middle" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="30" fill="#fff" letter-spacing="1">WE DO IT</text>'+
+        '<text x="230" y="326" text-anchor="middle" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="44" fill="#fff" letter-spacing="2">BEST</text>'+
+      '</g>'+
+    '</svg>';
+  }
+
+  function tyreArt(){
+    return '<svg viewBox="0 0 460 340" role="img" aria-label="A tyre and a car battery — the tyre shop behind the store.">'+
+      '<rect x="10" y="10" width="440" height="320" rx="16" fill="rgba(255,255,255,.04)" stroke="#2C3E53" stroke-width="2"/>'+
+      /* ground line */
+      '<path d="M40 268h380" stroke="#2C3E53" stroke-width="3"/>'+
+      /* tyre */
+      '<g transform="translate(150 158)">'+
+        '<circle r="98" fill="#111E2E" stroke="#0b1520" stroke-width="4"/>'+
+        '<circle r="98" fill="none" stroke="#2C3E53" stroke-width="10" stroke-dasharray="6 10"/>'+
+        '<circle r="58" fill="#17273B"/><circle r="58" fill="none" stroke="#2C3E53" stroke-width="3"/>'+
+        '<circle r="30" fill="#C9BCA6"/>'+
+        '<g fill="#17273B"><circle cx="0" cy="-16" r="4"/><circle cx="15" cy="8" r="4"/><circle cx="-15" cy="8" r="4"/></g>'+
+        '<circle r="7" fill="#17273B"/>'+
+      '</g>'+
+      /* battery */
+      '<g transform="translate(300 168)">'+
+        '<rect x="0" y="20" width="120" height="80" rx="10" fill="#C62B1E"/>'+
+        '<rect x="0" y="20" width="120" height="26" rx="10" fill="#DD3A2B"/>'+
+        '<rect x="18" y="4" width="26" height="18" rx="4" fill="#17273B"/>'+
+        '<rect x="76" y="4" width="26" height="18" rx="4" fill="#17273B"/>'+
+        '<text x="30" y="86" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="34" fill="#fff">+</text>'+
+        '<text x="82" y="86" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="34" fill="#fff">−</text>'+
+      '</g>'+
+    '</svg>';
+  }
+
+  /* ============================================================
+     Router
+     ============================================================ */
+  var ROUTES = {
+    "/home":      {title:"Larry's Hardware & Home Centre — George Town, Grand Cayman", desc:"Family-owned discount hardware and home store on Eastern Avenue since 1986. Tools, building supplies, housewares, garden and storm prep — plus tyres changed while you shop.", render:pageHome},
+    "/departments":{title:"Departments — Larry's Hardware & Home Centre", desc:"Ten departments under one roof: hardware and tools, building supplies, housewares, home and bath, cleaning, school and office, appliances, garden, auto care and seasonal.", render:pageDepartments},
+    "/tyre-shop": {title:"Tyre & Battery — Larry's Hardware, Grand Cayman", desc:"Larry's Tyre & Battery: new and used tyres, batteries and car repairs while you shop. Eastern Avenue and 325 Shedden Road, George Town.", render:pageTyre},
+    "/storm-prep":{title:"Hurricane Prep — Larry's Hardware, Grand Cayman", desc:"Stock the practical storm list early at everyday prices: tarps, plywood, fasteners, flashlights, batteries, water storage and clean-up gear.", render:pageStorm},
+    "/about":     {title:"About — Larry's Hardware & Home Centre", desc:"A small family-owned hardware and home store serving Grand Cayman since 1986, and a proud Do It Best cooperative member.", render:pageAbout},
+    "/contact":   {title:"Contact & Map — Larry's Hardware, George Town", desc:"Visit Larry's Hardware at 386 Eastern Avenue, George Town. Call (345) 945-1500, WhatsApp us, or ask us to check the shelf. Mon–Sat 8am–5pm.", render:pageContact}
+  };
+
+  var main = document.getElementById("main");
+  var navEl = document.getElementById("nav");
+  var toggle = document.getElementById("navToggle");
+
+  function currentPath(){
+    var h = location.hash.replace(/^#/,"");
+    if(!h || h==="/" ) return "/home";
+    return ROUTES[h] ? h : "/home";
+  }
+
+  function setActiveNav(path){
+    var links = navEl.querySelectorAll('a[href^="#/"]');
+    links.forEach(function(a){
+      var p = a.getAttribute("href").replace(/^#/,"");
+      if(p===path) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+    });
+  }
+
+  function setMeta(route){
+    document.title = route.title;
+    var m = document.querySelector('meta[name="description"]');
+    if(m) m.setAttribute("content", route.desc);
+  }
+
+  function closeNav(){
+    navEl.classList.remove("open");
+    toggle.setAttribute("aria-expanded","false");
+    toggle.setAttribute("aria-label","Open menu");
+  }
+
+  function render(){
+    var path = currentPath();
+    var route = ROUTES[path];
+    setMeta(route);
+    main.innerHTML = route.render();
+    setActiveNav(path);
+    closeNav();
+    // move focus to main for a11y, then to top
+    window.scrollTo(0,0);
+    main.focus({preventScroll:true});
+    if(path==="/contact") mountForm();
+    observeReveals();
+  }
+
+  window.addEventListener("hashchange", render);
+
+  /* Mobile nav */
+  toggle.addEventListener("click", function(){
+    var open = navEl.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open?"true":"false");
+    toggle.setAttribute("aria-label", open?"Close menu":"Open menu");
+  });
+  navEl.addEventListener("click", function(e){ if(e.target.closest("a")) closeNav(); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape") closeNav(); });
+
+  /* Reveal on scroll (reduced-motion safe) */
+  var io = null;
+  function observeReveals(){
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var els = main.querySelectorAll(".reveal");
+    if(reduce || !("IntersectionObserver" in window)){
+      els.forEach(function(el){el.classList.add("in");});
+      return;
+    }
+    if(io) io.disconnect();
+    io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, {rootMargin:"0px 0px -8% 0px", threshold:0.05});
+    els.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ============================================================
+     Contact form: validate + compose mailto (nothing auto-sends)
+     ============================================================ */
+  function mountForm(){
+    var form = document.getElementById("askForm");
+    if(!form) return;
+    var status = document.getElementById("formStatus");
+
+    function setErr(id,msg){
+      var input = document.getElementById("f_"+id);
+      var err = document.getElementById("e_"+id);
+      if(msg){ input.setAttribute("aria-invalid","true"); err.textContent=msg; err.classList.add("show"); }
+      else { input.removeAttribute("aria-invalid"); err.textContent=""; err.classList.remove("show"); }
+    }
+    function emailOk(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+    ["name","email","topic","message"].forEach(function(id){
+      var el = document.getElementById("f_"+id);
+      el.addEventListener("blur", function(){ validateOne(id); });
+    });
+
+    function validateOne(id){
+      var v = (document.getElementById("f_"+id).value||"").trim();
+      if(id==="name"){ if(!v){setErr("name","Please tell us your name.");return false;} setErr("name",null); return true; }
+      if(id==="email"){ if(!v){setErr("email","We need an email to reply.");return false;} if(!emailOk(v)){setErr("email","That email doesn’t look right.");return false;} setErr("email",null); return true; }
+      if(id==="topic"){ if(!v){setErr("topic","Pick what it’s about.");return false;} setErr("topic",null); return true; }
+      if(id==="message"){ if(!v){setErr("message","Tell us what you’re looking for.");return false;} setErr("message",null); return true; }
+      return true;
+    }
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      status.className="form-status"; status.textContent="";
+      var ok = ["name","email","topic","message"].map(validateOne).every(Boolean);
+      if(!ok){
+        status.className="form-status bad show";
+        status.textContent="Please fix the highlighted fields and try again.";
+        var firstBad = form.querySelector('[aria-invalid="true"]');
+        if(firstBad) firstBad.focus();
+        return;
+      }
+      var name=document.getElementById("f_name").value.trim();
+      var email=document.getElementById("f_email").value.trim();
+      var phone=document.getElementById("f_phone").value.trim();
+      var topic=document.getElementById("f_topic").value;
+      var msg=document.getElementById("f_message").value.trim();
+
+      var body =
+        "Hi Larry's,\n\n"+msg+"\n\n"+
+        "— "+name+
+        (phone? "\nPhone/WhatsApp: "+phone : "")+
+        "\nEmail: "+email+
+        "\nAbout: "+topic+"\n";
+      var subject = "Website enquiry — "+topic;
+      var href = mailHref+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+
+      status.className="form-status ok show";
+      status.textContent="Thanks, "+name.split(" ")[0]+" — opening your email app with the details filled in. Press send there and we’ll get back to you.";
+      window.location.href = href;
+    });
+  }
+
+  /* ---- Open/closed indicator (Cayman = America/Cayman, UTC−5, no DST) ---- */
+  function updateOpenState(){
+    var dot=document.getElementById("openDot");
+    var txt=document.getElementById("openText");
+    if(!dot||!txt) return;
+    try{
+      var parts = new Intl.DateTimeFormat("en-US",{timeZone:"America/Cayman",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date());
+      var wd="", hr=0;
+      parts.forEach(function(p){ if(p.type==="weekday") wd=p.value; if(p.type==="hour") hr=parseInt(p.value,10); });
+      var isSun = wd==="Sun";
+      var open = !isSun && hr>=8 && hr<17;
+      if(open){ dot.className="dot"; txt.textContent="Open now · until 5pm"; }
+      else if(isSun){ dot.className="dot dot--shut"; txt.textContent="Closed Sundays · open Mon 8am"; }
+      else if(hr<8){ dot.className="dot dot--shut"; txt.textContent="Opens today at 8am"; }
+      else { dot.className="dot dot--shut"; txt.textContent="Closed now · opens 8am"; }
+    }catch(e){ /* leave default */ }
+  }
+
+  /* ---- Boot ---- */
+  document.getElementById("year").textContent = (new Date()).getFullYear();
+  updateOpenState();
+  render();
+})();
+</script>
+</body>
+</html>
