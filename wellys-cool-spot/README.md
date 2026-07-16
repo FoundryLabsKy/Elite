@@ -23,7 +23,7 @@ python3 -m http.server 8000
 
 ## Deploy
 
-Deployed by `.github/workflows/pages.yml` to GitHub Pages under `/wellys-cool-spot/`. Live URL: https://foundrylabsky.github.io/Elite/wellys-cool-spot/
+This folder is the working copy from the build session. The canonical repo is **https://github.com/FoundryLabsKy/wellys-cool-spot** (own Pages deploy). Live URL: https://foundrylabsky.github.io/wellys-cool-spot/
 
 ## Real vs. unconfirmed
 

@@ -29,4 +29,4 @@ Everything on the live site is sourced from public information. The items below 
 
 ## Live URL
 
-- GitHub Pages: `https://foundrylabsky.github.io/Elite/wellys-cool-spot/` (see repo README for status)
+- GitHub Pages: `https://foundrylabsky.github.io/wellys-cool-spot/` (see repo README for status)
