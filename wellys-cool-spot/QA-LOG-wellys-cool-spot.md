@@ -53,3 +53,14 @@ Checklist: **Blockers (0, 1, 2, 6, 7): 100%.** Overall: **100%** of applicable i
 **Blocker regression check after personality work:** Lighthouse re-run above (loop 2) — A11y 100, budgets hold, no motion over 350ms, reduced-motion respected. **No blocker regressed.**
 
 **Gate D+: PASS.**
+
+## Loop 3 — aesthetic polish pass (16 Jul 2026)
+
+Requested refinement, restrained scope, no structural changes:
+1. Dotted leaders on the menu board (dish → note) and echoed in the opening-hours table — classic cookshop menu-board vernacular, unifies the two "listing" moments.
+2. Domino tiles get a subtle alternating static tilt (±0.5–0.6°), straightening on hover — hand-laid-on-the-table feel.
+3. Hero pull-quote anchored with an oversized slab quote mark; same glyph treatment scales the testimonial section, whose first quote now leads larger.
+4. Faint domino-pip watermark in the hero's upper right, tying the motif to the top of the page.
+5. "Fried chicken" menu note filled ("crowd favourite" — supported by reviews) so no leader runs to an empty slot.
+
+Verification: Lighthouse re-run — **Perf 90 · A11y 100 (zero failures) · BP 96 · SEO 100 · LCP 1.5s · CLS 0 · TBT 0ms**. No blocker regressed; all additions decorative or static, reduced-motion unaffected.

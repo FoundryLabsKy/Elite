@@ -174,12 +174,21 @@ header.site{
 
 /* ============ HERO ============ */
 .hero{
+  position:relative;overflow:hidden;
   background:
     radial-gradient(90rem 40rem at 85% -20%, rgba(47,116,66,.25), transparent 60%),
     var(--green-900);
   padding-block:clamp(3.5rem,9vw,7rem) clamp(3rem,7vw,5.5rem);
   border-bottom:1px solid var(--green-700);
 }
+.hero::after{
+  content:"";position:absolute;right:-4rem;top:-5rem;width:26rem;height:26rem;
+  background-image:radial-gradient(circle 1.35rem at center, rgba(246,240,221,.05) 1.3rem, transparent 1.4rem);
+  background-size:6.5rem 6.5rem;
+  transform:rotate(-12deg);
+  pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:1}
 .hero-grid{
   display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);
   gap:clamp(2rem,5vw,4rem);align-items:end;
@@ -208,10 +217,16 @@ header.site{
 .status.open .dot{background:var(--green-300)}
 .status.open{color:var(--green-200);border-color:var(--green-400)}
 .hero-quote{
+  position:relative;
   border-left:3px solid var(--brown-300);
   padding:var(--s-2) var(--s-3);
   font-size:var(--t-1);font-style:italic;color:var(--on-dark-soft);
   max-width:30ch;
+}
+.hero-quote::before{
+  content:"“";position:absolute;left:.4rem;top:-2.4rem;
+  font-family:var(--f-disp);font-size:var(--t-5);line-height:1;
+  color:var(--brown-300);opacity:.85;
 }
 .hero-quote cite{
   display:block;font-style:normal;font-family:var(--f-ui);font-weight:500;
@@ -246,11 +261,15 @@ header.site{
   display:flex;align-items:baseline;gap:.75rem;
   padding-block:.55rem;
 }
-.menu-board li+li{border-top:1px solid rgba(47,116,66,.25)}
-.dish{font-size:var(--t-1);font-weight:600}
+.menu-board li::after{
+  content:"";flex:1;order:2;min-width:1.5rem;
+  border-bottom:2px dotted rgba(169,182,157,.45);
+  transform:translateY(-.3em);
+}
+.dish{font-size:var(--t-1);font-weight:600;order:1}
 .dish-note{
   font-family:var(--f-ui);font-weight:500;font-size:var(--t--1);
-  color:var(--on-dark-mute);margin-left:auto;text-align:right;flex:none;
+  color:var(--on-dark-mute);text-align:right;flex:none;order:3;
 }
 .menu-board .sides{
   margin-top:var(--s-3);padding-top:var(--s-2);
@@ -278,7 +297,9 @@ header.site{
   min-width:6.5rem;
   transition:transform .2s ease-out,box-shadow .2s ease-out;
 }
-.tile:hover{transform:translateY(-4px) rotate(-.5deg);box-shadow:var(--e-3)}
+.tile:nth-child(odd){transform:rotate(-.6deg)}
+.tile:nth-child(even){transform:rotate(.5deg)}
+.tile:hover{transform:translateY(-4px) rotate(0deg);box-shadow:var(--e-3)}
 .tile.today{border-color:var(--accent-lo);border-width:2.5px}
 .tile .day{font-family:var(--f-ui);font-weight:700;font-size:var(--t--1);letter-spacing:.1em;text-transform:uppercase}
 .tile svg{margin-inline:auto}
@@ -321,15 +342,20 @@ header.site{
 .quotes{background:var(--green-900);padding-block:clamp(3.5rem,9vw,6.5rem);border-top:1px solid var(--green-700)}
 .quotes .eyebrow{color:var(--green-300)}
 .quotes h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-top:var(--s-1)}
-.quote-flow{margin-top:var(--s-6);display:grid;gap:var(--s-4)}
-.quote-flow figure{max-width:44ch}
+.quote-flow{margin-top:var(--s-6);display:grid;gap:var(--s-6)}
+.quote-flow figure{max-width:44ch;position:relative;padding-top:var(--s-3)}
+.quote-flow figure::before{
+  content:"“";position:absolute;top:-1.25rem;left:-.25rem;
+  font-family:var(--f-disp);font-size:var(--t-4);line-height:1;
+  color:var(--brown-300);opacity:.9;
+}
+.quote-flow figure:nth-child(1) blockquote{font-size:var(--t-3)}
 .quote-flow figure:nth-child(2){justify-self:center}
 .quote-flow figure:nth-child(3){justify-self:end}
 .quote-flow blockquote{
   font-size:var(--t-2);font-style:italic;line-height:1.35;
   color:var(--on-dark);
 }
-.quote-flow blockquote::before{content:"“";color:var(--brown-300)}
 .quote-flow blockquote::after{content:"”";color:var(--brown-300)}
 .quote-flow figcaption{
   margin-top:var(--s-2);font-family:var(--f-ui);font-weight:500;
@@ -373,7 +399,12 @@ header.site{
 }
 .hours-table caption{text-align:left;font-family:var(--f-body);font-size:var(--t-1);font-weight:600;padding-bottom:var(--s-2);color:var(--on-dark)}
 .hours-table th{text-align:left;font-weight:500;color:var(--on-dark-soft);padding:.5rem 0}
-.hours-table td{text-align:right;font-weight:500;color:var(--on-dark);padding:.5rem 0}
+.hours-table td{text-align:right;font-weight:500;color:var(--on-dark);padding:.5rem 0 .5rem 1.5rem;position:relative}
+.hours-table td::before{
+  content:"";position:absolute;left:0;right:auto;top:50%;width:100%;
+  border-bottom:2px dotted rgba(169,182,157,.3);z-index:0;
+}
+.hours-table td span{position:relative;z-index:1;background:var(--green-950);padding-left:.6rem}
 .hours-table tr+tr{border-top:1px solid rgba(47,116,66,.3)}
 .hours-table .now th,.hours-table .now td{color:var(--green-200);font-weight:700}
 .find-ctas{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-4)}
@@ -466,7 +497,7 @@ footer.site{
         <li><span class="dish">Curry goat</span><span class="dish-note">slow &amp; proper</span></li>
         <li><span class="dish">Stew conch</span><span class="dish-note">old Cayman style</span></li>
         <li><span class="dish">Cowfoot &amp; beans</span><span class="dish-note">Thursdays</span></li>
-        <li><span class="dish">Fried chicken</span><span class="dish-note">&nbsp;</span></li>
+        <li><span class="dish">Fried chicken</span><span class="dish-note">crowd favourite</span></li>
         <li><span class="dish">Fried fish &amp; shrimp</span><span class="dish-note">catch depending</span></li>
         <li><span class="dish">Lobster tail</span><span class="dish-note">in season</span></li>
       </ul>
@@ -613,13 +644,13 @@ footer.site{
       <table class="hours-table" id="hours-table">
         <caption>Opening hours</caption>
         <tbody>
-          <tr data-day="1"><th scope="row">Monday</th><td>10:00am – 9:00pm</td></tr>
-          <tr data-day="2"><th scope="row">Tuesday</th><td>10:00am – 9:00pm</td></tr>
-          <tr data-day="3"><th scope="row">Wednesday</th><td>10:00am – 9:00pm</td></tr>
-          <tr data-day="4"><th scope="row">Thursday</th><td>10:00am – 9:00pm</td></tr>
-          <tr data-day="5"><th scope="row">Friday</th><td>10:00am – 11:00pm</td></tr>
-          <tr data-day="6"><th scope="row">Saturday</th><td>10:00am – 10:00pm</td></tr>
-          <tr data-day="0"><th scope="row">Sunday</th><td>7:00am – 7:00pm</td></tr>
+          <tr data-day="1"><th scope="row">Monday</th><td><span>10:00am – 9:00pm</span></td></tr>
+          <tr data-day="2"><th scope="row">Tuesday</th><td><span>10:00am – 9:00pm</span></td></tr>
+          <tr data-day="3"><th scope="row">Wednesday</th><td><span>10:00am – 9:00pm</span></td></tr>
+          <tr data-day="4"><th scope="row">Thursday</th><td><span>10:00am – 9:00pm</span></td></tr>
+          <tr data-day="5"><th scope="row">Friday</th><td><span>10:00am – 11:00pm</span></td></tr>
+          <tr data-day="6"><th scope="row">Saturday</th><td><span>10:00am – 10:00pm</span></td></tr>
+          <tr data-day="0"><th scope="row">Sunday</th><td><span>7:00am – 7:00pm</span></td></tr>
         </tbody>
       </table>
     </div>
