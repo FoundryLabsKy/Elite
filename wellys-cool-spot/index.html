@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welly's Cool Spot — Caymanian Cooking in George Town, Grand Cayman</title>
+<meta name="description" content="Welly's Cool Spot, 110 North Sound Road, George Town. Oxtail, curry goat, stew conch and cowfoot done the old way — a Grand Cayman local spot since Welly Wellington's day. Call (345) 949-2541 to order.">
+<link rel="canonical" href="https://foundrylabsky.github.io/Elite/wellys-cool-spot/">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Welly's Cool Spot — Caymanian Cooking in George Town">
+<meta property="og:description" content="Oxtail, curry goat, stew conch and Thursday cowfoot on North Sound Road. Already the spot to be in 1982. Call (345) 949-2541.">
+<meta property="og:url" content="https://foundrylabsky.github.io/Elite/wellys-cool-spot/">
+<meta property="og:locale" content="en_KY">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Welly's Cool Spot — Caymanian Cooking in George Town">
+<meta name="twitter:description" content="Oxtail, curry goat, stew conch and Thursday cowfoot on North Sound Road, George Town, Grand Cayman.">
+<meta name="theme-color" content="#122B1A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23122B1A'/%3E%3Crect x='7' y='4' width='18' height='24' rx='3' fill='%23F6F0DD'/%3E%3Cline x1='9' y1='16' x2='23' y2='16' stroke='%23122B1A' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='10' r='2' fill='%23122B1A'/%3E%3Ccircle cx='12.5' cy='21' r='2' fill='%23122B1A'/%3E%3Ccircle cx='19.5' cy='21' r='2' fill='%23122B1A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Archivo:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Welly's Cool Spot",
+  "alternateName": "Welly's Cool Spot Restaurant & Bar",
+  "servesCuisine": ["Caymanian", "Caribbean"],
+  "priceRange": "$",
+  "telephone": "+1-345-949-2541",
+  "email": "racquelann178@hotmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "110 North Sound Road",
+    "addressLocality": "George Town",
+    "addressRegion": "Grand Cayman",
+    "addressCountry": "KY"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "10:00", "closes": "21:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "23:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "07:00", "closes": "19:00"}
+  ],
+  "sameAs": [
+    "https://www.instagram.com/wellyscoolspot/",
+    "https://www.facebook.com/p/Wellys-Cool-Spot-100063709561986/",
+    "https://www.tripadvisor.com/Restaurant_Review-g147366-d1046178-Reviews-Welly_s_Cool_Spot-George_Town_Grand_Cayman_Cayman_Islands.html"
+  ]
+}
+</script>
+<style>
+/* ============ TOKENS ============ */
+:root{
+  /* color — bottle-green primary scale (the "greenies" heritage) */
+  --green-50:#EDF5EE; --green-100:#D8E9DB; --green-200:#B3D3BA;
+  --green-300:#84B591; --green-400:#54925F; --green-500:#2F7442;
+  --green-600:#1D5B33; --green-700:#1A4A2B; --green-800:#163B23;
+  --green-900:#122B1A; --green-950:#0C1F12;
+  /* secondary — oxtail brown */
+  --brown-300:#C98E5A; --brown-500:#8C4A1F; --brown-700:#5F3115;
+  /* the ONE saturated accent — scotch-bonnet orange, CTAs only */
+  --accent:#E8730C; --accent-hi:#F5851F; --accent-lo:#C25F06;
+  /* neutrals — rice-cream & domino ink, all hue-tinted */
+  --cream:#F8F4E7; --cream-2:#F1EBD8; --cream-3:#E6DEC5;
+  --ink:#1C1812; --ink-soft:#4E4839; --ink-mute:#6B6450;
+  /* on-dark text */
+  --on-dark:#F6F0DD; --on-dark-soft:#CDD5BE; --on-dark-mute:#A9B69D;
+  /* semantic */
+  --ok:#2E7D43; --warn:#9A6A00; --err:#B3402A; --info:#2F6B8A;
+  /* type */
+  --f-disp:'Alfa Slab One', 'Georgia', serif;
+  --f-body:'Source Serif 4', 'Georgia', serif;
+  --f-ui:'Archivo', 'Helvetica Neue', sans-serif;
+  /* modular scale 1.25 from 16px */
+  --t--1:.8rem; --t-0:1rem; --t-1:1.25rem; --t-2:1.563rem;
+  --t-3:1.953rem; --t-4:2.441rem; --t-5:3.052rem;
+  /* spacing — 8px base */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2rem;
+  --s-6:3rem; --s-8:4rem; --s-10:5rem; --s-12:6rem;
+  /* radius — near-sharp, domino-tile shapes */
+  --r-1:2px; --r-2:4px; --r-tile:10px;
+  /* elevation — one top light source, warm-tinted, layered */
+  --e-1:0 1px 2px rgba(18,24,14,.22), 0 2px 6px rgba(18,24,14,.06);
+  --e-2:0 1px 2px rgba(18,24,14,.24), 0 6px 18px rgba(18,24,14,.10);
+  --e-3:0 2px 4px rgba(18,24,14,.26), 0 14px 34px rgba(18,24,14,.14);
+  --e-tile:0 1px 1px rgba(12,31,18,.35), 0 5px 14px rgba(12,31,18,.22);
+}
+
+/* ============ BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+  font-family:var(--f-body);
+  font-size:var(--t-0);
+  line-height:1.65;
+  color:var(--on-dark);
+  background:var(--green-900);
+}
+h1,h2,h3{font-family:var(--f-disp);font-weight:400;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:var(--r-1)}
+.on-cream :focus-visible{outline-color:var(--accent-lo)}
+img,svg{max-width:100%;display:block}
+.wrap{max-width:72rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem)}
+.eyebrow{
+  font-family:var(--f-ui);font-weight:700;font-size:var(--t--1);
+  text-transform:uppercase;letter-spacing:.14em;
+}
+.skip{
+  position:absolute;left:-999px;top:0;z-index:99;background:var(--accent);
+  color:var(--ink);padding:.75rem 1.25rem;font-family:var(--f-ui);font-weight:700;
+}
+.skip:focus{left:0}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:3rem;padding:.75rem 1.5rem;border-radius:var(--r-2);
+  font-family:var(--f-ui);font-weight:700;font-size:var(--t-0);
+  text-decoration:none;border:2px solid transparent;cursor:pointer;
+  transition:background-color .18s ease-out,border-color .18s ease-out,transform .18s ease-out,box-shadow .18s ease-out;
+}
+.btn-primary{background:var(--accent);color:var(--ink);box-shadow:var(--e-1)}
+.btn-primary:hover{background:var(--accent-hi);box-shadow:var(--e-2)}
+.btn-primary:active{background:var(--accent-lo);transform:translateY(1px);box-shadow:none}
+.btn-secondary{border-color:var(--on-dark-soft);color:var(--on-dark)}
+.btn-secondary:hover{border-color:var(--on-dark);background:rgba(246,240,221,.07)}
+.btn-secondary:active{transform:translateY(1px)}
+.on-cream .btn-secondary{border-color:var(--green-600);color:var(--green-700)}
+.on-cream .btn-secondary:hover{background:var(--green-50);border-color:var(--green-700)}
+.link{
+  text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px;
+  transition:color .15s ease-out;
+}
+.link:hover{color:var(--accent-hi)}
+.on-cream .link:hover{color:var(--brown-500)}
+
+/* ============ HEADER ============ */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:var(--green-950);
+  border-bottom:1px solid var(--green-700);
+}
+.nav{
+  display:flex;align-items:center;gap:var(--s-3);
+  min-height:4rem;
+}
+.brand{
+  font-family:var(--f-disp);font-size:var(--t-1);color:var(--on-dark);
+  text-decoration:none;display:inline-flex;align-items:center;gap:.6rem;
+  padding-block:.5rem;
+}
+.brand svg{flex:none}
+.nav-links{
+  display:flex;gap:var(--s-2);list-style:none;margin-left:auto;
+  font-family:var(--f-ui);font-weight:500;font-size:var(--t--1);
+}
+.nav-links a{
+  text-decoration:none;color:var(--on-dark-soft);
+  padding:.85rem .5rem;display:inline-block;
+  transition:color .15s ease-out;
+}
+.nav-links a:hover{color:var(--on-dark)}
+.nav .btn{margin-left:var(--s-2)}
+@media (max-width:47.9rem){
+  .nav-links{display:none}
+  .nav .btn{margin-left:auto}
+}
+
+/* ============ HERO ============ */
+.hero{
+  background:
+    radial-gradient(90rem 40rem at 85% -20%, rgba(47,116,66,.25), transparent 60%),
+    var(--green-900);
+  padding-block:clamp(3.5rem,9vw,7rem) clamp(3rem,7vw,5.5rem);
+  border-bottom:1px solid var(--green-700);
+}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);
+  gap:clamp(2rem,5vw,4rem);align-items:end;
+}
+@media (max-width:59.9rem){.hero-grid{grid-template-columns:1fr}}
+.hero h1{
+  font-size:clamp(2.3rem,6.2vw,4.2rem);
+  color:var(--on-dark);
+  max-width:16ch;
+}
+.hero h1 em{font-style:normal;color:var(--green-300)}
+.hero .lede{
+  font-size:var(--t-1);color:var(--on-dark-soft);
+  max-width:52ch;margin-top:var(--s-3);
+}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-4)}
+.status{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--f-ui);font-weight:700;font-size:var(--t--1);
+  letter-spacing:.06em;text-transform:uppercase;
+  border:1.5px solid var(--green-500);border-radius:999px;
+  padding:.5rem 1rem;margin-bottom:var(--s-3);
+  color:var(--on-dark-soft);
+}
+.status .dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--on-dark-mute);flex:none}
+.status.open .dot{background:var(--green-300)}
+.status.open{color:var(--green-200);border-color:var(--green-400)}
+.hero-quote{
+  border-left:3px solid var(--brown-300);
+  padding:var(--s-2) var(--s-3);
+  font-size:var(--t-1);font-style:italic;color:var(--on-dark-soft);
+  max-width:30ch;
+}
+.hero-quote cite{
+  display:block;font-style:normal;font-family:var(--f-ui);font-weight:500;
+  font-size:var(--t--1);color:var(--on-dark-mute);margin-top:var(--s-1);
+}
+.hero-quote cite a{color:inherit}
+
+/* ============ TODAY'S POTS (menu board) ============ */
+.pots{background:var(--cream);color:var(--ink);padding-block:clamp(3rem,8vw,6rem)}
+.pots-grid{
+  display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);
+  gap:clamp(2rem,5vw,4.5rem);
+}
+@media (max-width:59.9rem){.pots-grid{grid-template-columns:1fr}}
+.pots .eyebrow{color:var(--brown-500)}
+.pots h2{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--green-800);margin-top:var(--s-1)}
+.pots-intro{color:var(--ink-soft);margin-top:var(--s-3);max-width:44ch}
+.pots-intro strong{font-weight:600;color:var(--ink)}
+.pots-actions{margin-top:var(--s-4);display:flex;flex-direction:column;gap:var(--s-2);align-items:flex-start}
+.menu-board{
+  background:var(--green-950);color:var(--on-dark);
+  border-radius:var(--r-tile);box-shadow:var(--e-3);
+  padding:clamp(1.5rem,3.5vw,2.5rem);
+  border:1px solid var(--green-700);
+}
+.menu-board h3{
+  font-size:var(--t-1);color:var(--green-200);
+  padding-bottom:var(--s-2);border-bottom:1px dashed var(--green-600);
+}
+.menu-board ul{list-style:none;margin-top:var(--s-2)}
+.menu-board li{
+  display:flex;align-items:baseline;gap:.75rem;
+  padding-block:.55rem;
+}
+.menu-board li+li{border-top:1px solid rgba(47,116,66,.25)}
+.dish{font-size:var(--t-1);font-weight:600}
+.dish-note{
+  font-family:var(--f-ui);font-weight:500;font-size:var(--t--1);
+  color:var(--on-dark-mute);margin-left:auto;text-align:right;flex:none;
+}
+.menu-board .sides{
+  margin-top:var(--s-3);padding-top:var(--s-2);
+  border-top:1px dashed var(--green-600);
+  font-style:italic;color:var(--on-dark-soft);font-size:var(--t-0);
+}
+
+/* ============ DOMINO WEEK ============ */
+.week{background:var(--cream-2);color:var(--ink);padding-block:clamp(3rem,8vw,5.5rem);border-top:1px solid var(--cream-3)}
+.week .eyebrow{color:var(--green-700)}
+.week h2{font-size:clamp(1.9rem,4vw,2.6rem);color:var(--green-800);margin-top:var(--s-1)}
+.week-sub{color:var(--ink-soft);margin-top:var(--s-2);max-width:60ch}
+.domino-row{
+  display:grid;grid-template-columns:repeat(7,minmax(6.5rem,1fr));
+  gap:var(--s-2);margin-top:var(--s-6);
+  overflow-x:auto;padding-bottom:var(--s-2);
+  scroll-snap-type:x proximity;
+}
+.tile{
+  scroll-snap-align:start;
+  background:#FDFBF2;border:1.5px solid var(--ink);
+  border-radius:var(--r-tile);box-shadow:var(--e-tile);
+  padding:var(--s-2);text-align:center;
+  display:flex;flex-direction:column;gap:var(--s-1);
+  min-width:6.5rem;
+  transition:transform .2s ease-out,box-shadow .2s ease-out;
+}
+.tile:hover{transform:translateY(-4px) rotate(-.5deg);box-shadow:var(--e-3)}
+.tile.today{border-color:var(--accent-lo);border-width:2.5px}
+.tile .day{font-family:var(--f-ui);font-weight:700;font-size:var(--t--1);letter-spacing:.1em;text-transform:uppercase}
+.tile svg{margin-inline:auto}
+.tile .hrs{font-family:var(--f-ui);font-weight:500;font-size:var(--t--1);color:var(--ink-mute)}
+.tile .special{
+  font-size:var(--t--1);font-weight:600;color:var(--brown-500);
+  font-style:italic;line-height:1.35;
+}
+.week-caption{
+  margin-top:var(--s-3);font-size:var(--t--1);font-family:var(--f-ui);font-weight:500;
+  color:var(--ink-mute);
+}
+
+/* ============ STORY ============ */
+.story{background:var(--cream);color:var(--ink);padding-block:clamp(3.5rem,9vw,7rem);border-top:1px solid var(--cream-3)}
+.story-grid{
+  display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr);
+  gap:clamp(2rem,6vw,5rem);
+}
+@media (max-width:59.9rem){.story-grid{grid-template-columns:1fr}}
+.story .eyebrow{color:var(--brown-500)}
+.story h2{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--green-800);margin-top:var(--s-1);max-width:14ch}
+.story-body{font-size:var(--t-1);max-width:62ch;color:var(--ink-soft)}
+.story-body p+p{margin-top:var(--s-3)}
+.story-body strong{font-weight:600;color:var(--ink)}
+.timeline{
+  list-style:none;margin-top:var(--s-6);
+  display:grid;gap:var(--s-3);
+}
+.timeline li{
+  display:grid;grid-template-columns:6.5rem 1fr;gap:var(--s-3);align-items:baseline;
+}
+.timeline .yr{
+  font-family:var(--f-disp);font-size:var(--t-2);color:var(--green-700);
+}
+.timeline p{color:var(--ink-soft);max-width:52ch}
+.story-aside{align-self:start;position:sticky;top:5.5rem}
+
+/* ============ QUOTES ============ */
+.quotes{background:var(--green-900);padding-block:clamp(3.5rem,9vw,6.5rem);border-top:1px solid var(--green-700)}
+.quotes .eyebrow{color:var(--green-300)}
+.quotes h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-top:var(--s-1)}
+.quote-flow{margin-top:var(--s-6);display:grid;gap:var(--s-4)}
+.quote-flow figure{max-width:44ch}
+.quote-flow figure:nth-child(2){justify-self:center}
+.quote-flow figure:nth-child(3){justify-self:end}
+.quote-flow blockquote{
+  font-size:var(--t-2);font-style:italic;line-height:1.35;
+  color:var(--on-dark);
+}
+.quote-flow blockquote::before{content:"“";color:var(--brown-300)}
+.quote-flow blockquote::after{content:"”";color:var(--brown-300)}
+.quote-flow figcaption{
+  margin-top:var(--s-2);font-family:var(--f-ui);font-weight:500;
+  font-size:var(--t--1);color:var(--on-dark-mute);
+}
+.quote-flow figcaption a{color:var(--on-dark-soft)}
+
+/* ============ SUNDAY ============ */
+.sunday{background:var(--cream);color:var(--ink);padding-block:clamp(3rem,8vw,5.5rem)}
+.sunday-band{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;
+  gap:var(--s-4);align-items:center;
+  background:var(--cream-2);border:1.5px solid var(--cream-3);
+  border-radius:var(--r-tile);padding:clamp(1.5rem,4vw,3rem);
+  box-shadow:var(--e-1);
+}
+@media (max-width:47.9rem){.sunday-band{grid-template-columns:1fr}}
+.sunday .eyebrow{color:var(--brown-500)}
+.sunday h2{font-size:clamp(1.7rem,3.5vw,2.4rem);color:var(--green-800);margin-top:var(--s-1)}
+.sunday p{color:var(--ink-soft);margin-top:var(--s-2);max-width:52ch}
+
+/* ============ FIND US ============ */
+.find{background:var(--green-950);padding-block:clamp(3.5rem,9vw,6.5rem);border-top:1px solid var(--green-700)}
+.find-grid{
+  display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);
+  gap:clamp(2rem,6vw,5rem);
+}
+@media (max-width:59.9rem){.find-grid{grid-template-columns:1fr}}
+.find .eyebrow{color:var(--green-300)}
+.find h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-top:var(--s-1)}
+.addr{font-style:normal;margin-top:var(--s-3);font-size:var(--t-1);color:var(--on-dark-soft)}
+.addr strong{color:var(--on-dark);font-weight:600}
+.addr a{display:inline-block;padding-block:.35rem}
+.find-list{list-style:none;margin-top:var(--s-3);display:grid;gap:var(--s-1)}
+.find-list li{display:flex;gap:.7rem;align-items:center;color:var(--on-dark-soft)}
+.find-list svg{flex:none;color:var(--green-300)}
+.find-list a{padding-block:.55rem;display:inline-flex;align-items:center;min-height:2.75rem}
+.hours-table{
+  width:100%;border-collapse:collapse;margin-top:var(--s-3);
+  font-family:var(--f-ui);font-size:var(--t-0);
+}
+.hours-table caption{text-align:left;font-family:var(--f-body);font-size:var(--t-1);font-weight:600;padding-bottom:var(--s-2);color:var(--on-dark)}
+.hours-table th{text-align:left;font-weight:500;color:var(--on-dark-soft);padding:.5rem 0}
+.hours-table td{text-align:right;font-weight:500;color:var(--on-dark);padding:.5rem 0}
+.hours-table tr+tr{border-top:1px solid rgba(47,116,66,.3)}
+.hours-table .now th,.hours-table .now td{color:var(--green-200);font-weight:700}
+.find-ctas{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-4)}
+
+/* ============ FOOTER ============ */
+footer.site{
+  background:var(--green-950);border-top:1px solid var(--green-800);
+  padding-block:var(--s-4);
+}
+.foot{
+  display:flex;flex-wrap:wrap;gap:var(--s-3);align-items:center;
+  font-family:var(--f-ui);font-size:var(--t--1);color:var(--on-dark-mute);
+}
+.foot-social{display:flex;gap:var(--s-1);margin-left:auto;list-style:none}
+.foot-social a{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:2.75rem;height:2.75rem;border-radius:var(--r-2);
+  color:var(--on-dark-soft);transition:color .15s ease-out,background-color .15s ease-out;
+}
+.foot-social a:hover{color:var(--on-dark);background:rgba(246,240,221,.08)}
+@media (max-width:47.9rem){.foot{flex-direction:column;align-items:flex-start}.foot-social{margin-left:0}}
+
+/* entrance motion — hero only, subtle, reduced-motion safe */
+@media (prefers-reduced-motion:no-preference){
+  .hero h1,.hero .lede,.hero-ctas,.hero .status{animation:rise .35s ease-out both}
+  .hero .lede{animation-delay:.06s}.hero-ctas{animation-delay:.12s}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Welly's Cool Spot — home">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="2" width="18" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><line x1="9" y1="16" x2="23" y2="16" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="9" r="2" fill="currentColor"/><circle cx="12.5" cy="23" r="2" fill="currentColor"/><circle cx="19.5" cy="23" r="2" fill="currentColor"/></svg>
+      Welly's Cool Spot
+    </a>
+    <ul class="nav-links">
+      <li><a href="#pots">The pots</a></li>
+      <li><a href="#week">Hours</a></li>
+      <li><a href="#story">The story</a></li>
+      <li><a href="#find">Find us</a></li>
+    </ul>
+    <a class="btn btn-secondary" href="tel:+13459492541">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+      Call to order
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="status" id="open-status"><span class="dot" aria-hidden="true"></span><span id="open-status-text">Hours below</span></p>
+      <h1>Cayman cooking, done the way <em>Welly</em> started it.</h1>
+      <p class="lede">Oxtail, curry goat and stew conch on North Sound Road, George Town — the local spot that was already packed in 1982, still cooking every day.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:+13459492541">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          (345) 949-2541
+        </a>
+        <a class="btn btn-secondary" href="#pots">See what's in the pots</a>
+      </div>
+    </div>
+    <figure class="hero-quote">
+      <blockquote>The best oxtail meals on island.</blockquote>
+      <cite>— diner review, <a class="link" href="https://www.tripadvisor.com/Restaurant_Review-g147366-d1046178-Reviews-Welly_s_Cool_Spot-George_Town_Grand_Cayman_Cayman_Islands.html" rel="noopener">TripAdvisor</a></cite>
+    </figure>
+  </div>
+</section>
+
+<section class="pots on-cream" id="pots" aria-labelledby="pots-h">
+  <div class="wrap pots-grid">
+    <div>
+      <p class="eyebrow">The kitchen</p>
+      <h2 id="pots-h">The pots decide the menu.</h2>
+      <p class="pots-intro">No laminated menu here. The kitchen cooks what's fresh and posts <strong>the day's pots every morning</strong> — the classics below come around all week, done home-style and served in portions that mean it.</p>
+      <div class="pots-actions">
+        <a class="btn btn-secondary" href="https://www.instagram.com/wellyscoolspot/" rel="noopener">Today's menu on Instagram</a>
+        <a class="link" href="tel:+13459492541">or call and ask what's on the stove</a>
+      </div>
+    </div>
+    <div class="menu-board" role="group" aria-labelledby="board-h">
+      <h3 id="board-h">In the rotation</h3>
+      <ul>
+        <li><span class="dish">Oxtail &amp; beans</span><span class="dish-note">the one people cross town for</span></li>
+        <li><span class="dish">Curry goat</span><span class="dish-note">slow &amp; proper</span></li>
+        <li><span class="dish">Stew conch</span><span class="dish-note">old Cayman style</span></li>
+        <li><span class="dish">Cowfoot &amp; beans</span><span class="dish-note">Thursdays</span></li>
+        <li><span class="dish">Fried chicken</span><span class="dish-note">&nbsp;</span></li>
+        <li><span class="dish">Fried fish &amp; shrimp</span><span class="dish-note">catch depending</span></li>
+        <li><span class="dish">Lobster tail</span><span class="dish-note">in season</span></li>
+      </ul>
+      <p class="sides">Everything comes with rice and peas, fried plantain and salad.</p>
+    </div>
+  </div>
+</section>
+
+<section class="week" id="week" aria-labelledby="week-h">
+  <div class="wrap">
+    <p class="eyebrow">The week at Welly's</p>
+    <h2 id="week-h">Seven days, laid out like the yard game.</h2>
+    <p class="week-sub">Dominoes run outside most afternoons — grab a seat, watch a round, or call a partner. The tiles below are the week's hours; count the pips and the halves add up to the day.</p>
+    <div class="domino-row" role="list" aria-label="Opening hours by day">
+      <div class="tile" role="listitem" data-day="1">
+        <span class="day">Mon</span>
+        <svg width="44" height="76" viewBox="0 0 44 76" aria-hidden="true"><rect x="1" y="1" width="42" height="74" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="57" r="3.4" fill="currentColor"/></svg>
+        <span class="hrs">10am – 9pm</span>
+      </div>
+      <div class="tile" role="listitem" data-day="2">
+        <span class="day">Tue</span>
+        <svg width="44" height="76" viewBox="0 0 44 76" aria-hidden="true"><rect x="1" y="1" width="42" height="74" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="19" r="3.4" fill="currentColor"/><circle cx="22" cy="57" r="3.4" fill="currentColor"/></svg>
+        <span class="hrs">10am – 9pm</span>
+      </div>
+      <div class="tile" role="listitem" data-day="3">
+        <span class="day">Wed</span>
+        <svg width="44" height="76" viewBox="0 0 44 76" aria-hidden="true"><rect x="1" y="1" width="42" height="74" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="19" r="3.4" fill="currentColor"/><circle cx="13" cy="50" r="3.4" fill="currentColor"/><circle cx="31" cy="64" r="3.4" fill="currentColor"/></svg>
+        <span class="hrs">10am – 9pm</span>
+      </div>
+      <div class="tile" role="listitem" data-day="4">
+        <span class="day">Thu</span>
+        <svg width="44" height="76" viewBox="0 0 44 76" aria-hidden="true"><rect x="1" y="1" width="42" height="74" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="1.5"/><circle cx="13" cy="12" r="3.4" fill="currentColor"/><circle cx="31" cy="26" r="3.4" fill="currentColor"/><circle cx="13" cy="50" r="3.4" fill="currentColor"/><circle cx="31" cy="64" r="3.4" fill="currentColor"/></svg>
+        <span class="hrs">10am – 9pm</span>
+        <span class="special">cowfoot &amp; beans day</span>
+      </div>
+      <div class="tile" role="listitem" data-day="5">
+        <span class="day">Fri</span>
+        <svg width="44" height="76" viewBox="0 0 44 76" aria-hidden="true"><rect x="1" y="1" width="42" height="74" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="1.5"/><circle cx="13" cy="12" r="3.4" fill="currentColor"/><circle cx="31" cy="26" r="3.4" fill="currentColor"/><circle cx="13" cy="45" r="3.4" fill="currentColor"/><circle cx="31" cy="45" r="3.4" fill="currentColor"/><circle cx="13" cy="69" r="3.4" fill="currentColor"/><circle cx="31" cy="69" r="3.4" fill="currentColor"/></svg>
+        <span class="hrs">10am – 11pm</span>
+        <span class="special">late bar night</span>
+      </div>
+      <div class="tile" role="listitem" data-day="6">
+        <span class="day">Sat</span>
+        <svg width="44" height="76" viewBox="0 0 44 76" aria-hidden="true"><rect x="1" y="1" width="42" height="74" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="1.5"/><circle cx="13" cy="12" r="3.4" fill="currentColor"/><circle cx="22" cy="19" r="3.4" fill="currentColor"/><circle cx="31" cy="26" r="3.4" fill="currentColor"/><circle cx="13" cy="50" r="3.4" fill="currentColor"/><circle cx="22" cy="57" r="3.4" fill="currentColor"/><circle cx="31" cy="64" r="3.4" fill="currentColor"/></svg>
+        <span class="hrs">10am – 10pm</span>
+      </div>
+      <div class="tile" role="listitem" data-day="0">
+        <span class="day">Sun</span>
+        <svg width="44" height="76" viewBox="0 0 44 76" aria-hidden="true"><rect x="1" y="1" width="42" height="74" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="1.5"/><circle cx="13" cy="12" r="3.4" fill="currentColor"/><circle cx="31" cy="12" r="3.4" fill="currentColor"/><circle cx="22" cy="19" r="3.4" fill="currentColor"/><circle cx="13" cy="45" r="3.4" fill="currentColor"/><circle cx="31" cy="45" r="3.4" fill="currentColor"/><circle cx="13" cy="69" r="3.4" fill="currentColor"/><circle cx="31" cy="69" r="3.4" fill="currentColor"/></svg>
+        <span class="hrs">7am – 7pm</span>
+        <span class="special">breakfast till 11am</span>
+      </div>
+    </div>
+    <p class="week-caption">Mon = 1 pip, Tue = 2 … Sun = 7. Doubles land Tuesday, Thursday and Saturday — same as a lucky hand.</p>
+  </div>
+</section>
+
+<section class="story on-cream" id="story" aria-labelledby="story-h">
+  <div class="wrap story-grid">
+    <div class="story-aside">
+      <p class="eyebrow">Since Welly's day</p>
+      <h2 id="story-h">The man who ran a tight ship.</h2>
+    </div>
+    <div>
+      <div class="story-body">
+        <p><strong>Welly E.K. Wellington</strong> opened his cool spot on North Sound Road, and by 1982 it was already the place — locals and visitors shoulder to shoulder, drinking <strong>“greenies”</strong> (that's Heinekens, if you're new here) while the dominoes clacked outside.</p>
+        <p>The Cayman Compass remembered him as “an entrepreneur and nice guy” who ran a tight ship: anyone who was a nuisance toward his customers ended up in the parking lot. That was the whole house policy, and it worked.</p>
+        <p>Welly passed in 2009, but the spot never stopped. The pots still go on every morning, the yard game still runs, and the name over the door still means what it meant.</p>
+      </div>
+      <ol class="timeline">
+        <li><span class="yr">1982</span><p>Already packed. Greenies flowing, dominoes outside — the cool spot earns its name.</p></li>
+        <li><span class="yr">2009</span><p>Welly passes on. His photo lives in <em>The People Time Forgot</em> at the National Museum; his rules live on here.</p></li>
+        <li><span class="yr">Today</span><p>Same road, same pots, daily menu posted every morning. Come see why nothing needed changing.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="quotes" aria-labelledby="quotes-h">
+  <div class="wrap">
+    <p class="eyebrow">Word around town</p>
+    <h2 id="quotes-h">People say it plainer than we could.</h2>
+    <div class="quote-flow">
+      <figure>
+        <blockquote>The oxtail was off the chain.</blockquote>
+        <figcaption>— diner review, <a class="link" href="https://www.tripadvisor.com/Restaurant_Review-g147366-d1046178-Reviews-Welly_s_Cool_Spot-George_Town_Grand_Cayman_Cayman_Islands.html" rel="noopener">TripAdvisor</a></figcaption>
+      </figure>
+      <figure>
+        <blockquote>Super clean, AC, and most importantly, delicious food!</blockquote>
+        <figcaption>— diner review, <a class="link" href="https://www.tripadvisor.com/Restaurant_Review-g147366-d1046178-Reviews-Welly_s_Cool_Spot-George_Town_Grand_Cayman_Cayman_Islands.html" rel="noopener">TripAdvisor</a></figcaption>
+      </figure>
+      <figure>
+        <blockquote>The prices are unbeatable!</blockquote>
+        <figcaption>— diner review, <a class="link" href="https://www.tripadvisor.com/Restaurant_Review-g147366-d1046178-Reviews-Welly_s_Cool_Spot-George_Town_Grand_Cayman_Cayman_Islands.html" rel="noopener">TripAdvisor</a></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sunday on-cream" aria-labelledby="sunday-h">
+  <div class="wrap">
+    <div class="sunday-band">
+      <div>
+        <p class="eyebrow">Sundays</p>
+        <h2 id="sunday-h">Sunday starts at seven.</h2>
+        <p>Doors open at 7am for breakfast — ackee &amp; saltfish and the morning classics, served till 11. Come before church or straight from the boat.</p>
+      </div>
+      <a class="btn btn-primary" href="tel:+13459492541">Call ahead Sunday</a>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find" aria-labelledby="find-h">
+  <div class="wrap find-grid">
+    <div>
+      <p class="eyebrow">Find us</p>
+      <h2 id="find-h">In town, on North Sound Road.</h2>
+      <address class="addr">
+        <strong>Welly's Cool Spot</strong><br>
+        110 North Sound Road<br>
+        George Town, Grand Cayman<br>
+        Cayman Islands
+      </address>
+      <ul class="find-list">
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <a class="link" href="tel:+13459492541">(345) 949-2541</a>
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <a class="link" href="mailto:racquelann178@hotmail.com">Catering enquiries</a>
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Welly%27s+Cool+Spot+110+North+Sound+Road+George+Town+Grand+Cayman" rel="noopener">Open in Google Maps</a>
+        </li>
+      </ul>
+      <div class="find-ctas">
+        <a class="btn btn-primary" href="tel:+13459492541">Call to order</a>
+        <a class="btn btn-secondary" href="https://www.instagram.com/wellyscoolspot/" rel="noopener">Today's menu</a>
+      </div>
+    </div>
+    <div>
+      <table class="hours-table" id="hours-table">
+        <caption>Opening hours</caption>
+        <tbody>
+          <tr data-day="1"><th scope="row">Monday</th><td>10:00am – 9:00pm</td></tr>
+          <tr data-day="2"><th scope="row">Tuesday</th><td>10:00am – 9:00pm</td></tr>
+          <tr data-day="3"><th scope="row">Wednesday</th><td>10:00am – 9:00pm</td></tr>
+          <tr data-day="4"><th scope="row">Thursday</th><td>10:00am – 9:00pm</td></tr>
+          <tr data-day="5"><th scope="row">Friday</th><td>10:00am – 11:00pm</td></tr>
+          <tr data-day="6"><th scope="row">Saturday</th><td>10:00am – 10:00pm</td></tr>
+          <tr data-day="0"><th scope="row">Sunday</th><td>7:00am – 7:00pm</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot">
+    <p>© 2026 Welly's Cool Spot · 110 North Sound Road, George Town, Grand Cayman · <a class="link" href="tel:+13459492541">(345) 949-2541</a></p>
+    <ul class="foot-social">
+      <li><a href="https://www.instagram.com/wellyscoolspot/" rel="noopener" aria-label="Welly's Cool Spot on Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg>
+      </a></li>
+      <li><a href="https://www.facebook.com/p/Wellys-Cool-Spot-100063709561986/" rel="noopener" aria-label="Welly's Cool Spot on Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h-2.5A3.5 3.5 0 0 0 9 7.5V10H6.5v3.5H9V21h3.7v-7.5h2.8l.5-3.5h-3.3V8c0-.6.4-1 1-1H15z"/></svg>
+      </a></li>
+      <li><a href="https://www.tripadvisor.com/Restaurant_Review-g147366-d1046178-Reviews-Welly_s_Cool_Spot-George_Town_Grand_Cayman_Cayman_Islands.html" rel="noopener" aria-label="Welly's Cool Spot on TripAdvisor">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="13" r="3"/><circle cx="16.5" cy="13" r="3"/><path d="M2.5 10.5C4 8.5 7.5 7 12 7s8 1.5 9.5 3.5M12 7l-1.5-2h3z"/></svg>
+      </a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Hours in Cayman time (America/Cayman, no DST). [open, close] in minutes from midnight.
+  var HOURS = {1:[600,1260],2:[600,1260],3:[600,1260],4:[600,1260],5:[600,1380],6:[600,1320],0:[420,1140]};
+  var DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function caymanNow(){
+    try{
+      var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Cayman',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+      var map = {}; parts.forEach(function(p){ map[p.type]=p.value; });
+      var days = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+      var hour = parseInt(map.hour,10); if(hour===24) hour = 0;
+      return { day: days[map.weekday], mins: hour*60 + parseInt(map.minute,10) };
+    }catch(e){ return null; }
+  }
+  function fmt(mins){
+    var h = Math.floor(mins/60), m = mins%60, ap = h>=12 ? 'pm':'am';
+    var hh = h%12; if(hh===0) hh = 12;
+    return hh + (m ? ':' + (m<10?'0':'')+m : '') + ap;
+  }
+  var now = caymanNow();
+  if(now){
+    var chip = document.getElementById('open-status');
+    var text = document.getElementById('open-status-text');
+    var todays = HOURS[now.day];
+    if(now.mins >= todays[0] && now.mins < todays[1]){
+      chip.classList.add('open');
+      text.textContent = 'Open now · till ' + fmt(todays[1]) + ' Cayman time';
+    }else{
+      var nextDay = now.day, checks = 0;
+      if(now.mins >= todays[1]){ nextDay = (now.day+1)%7; checks = 1; }
+      var opens = HOURS[nextDay][0];
+      text.textContent = 'Closed · opens ' + (checks ? DAY_NAMES[nextDay] + ' ' : '') + fmt(opens);
+    }
+    // highlight today in the hours table and domino strip
+    var row = document.querySelector('.hours-table tr[data-day="'+now.day+'"]');
+    if(row) row.classList.add('now');
+    var tile = document.querySelector('.tile[data-day="'+now.day+'"]');
+    if(tile){
+      tile.classList.add('today');
+      tile.setAttribute('aria-label', DAY_NAMES[now.day] + ' — today');
+      var d = tile.querySelector('.day');
+      if(d) d.textContent += ' · today';
+    }
+  }
+})();
+</script>
+</body>
+</html>
