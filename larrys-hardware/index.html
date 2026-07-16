@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Larry's Hardware &amp; Home Centre — George Town, Grand Cayman</title>
-<meta name="description" content="Family-owned discount hardware and home store on Eastern Avenue, George Town, Grand Cayman, since 1986. Tools, building supplies, housewares, garden, storm prep — plus tyres changed while you shop. Mon–Sat 8am–5pm. Call (345) 945-1500.">
+<title>Larry's Hardware &amp; Home Centre - George Town, Grand Cayman</title>
+<meta name="description" content="Family-owned discount hardware and home store on Eastern Avenue, George Town, Grand Cayman, since 1986. Tools, building supplies, housewares, garden, storm prep - plus tyres changed while you shop. Mon-Sat 8am-5pm. Call (345) 945-1500.">
 <meta name="theme-color" content="#17273B">
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Larry's Hardware &amp; Home Centre">
-<meta property="og:title" content="Everything for the home &amp; yard — priced for Cayman.">
-<meta property="og:description" content="One-stop family-owned hardware and home store in George Town since 1986. Get your tyres changed while you shop. Mon–Sat 8am–5pm.">
+<meta property="og:title" content="Everything for the home &amp; yard - priced for Cayman.">
+<meta property="og:description" content="One-stop family-owned hardware and home store in George Town since 1986. Get your tyres changed while you shop. Mon-Sat 8am-5pm.">
 <meta property="og:locale" content="en_KY">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Larry's Hardware &amp; Home Centre, Grand Cayman">
@@ -68,7 +68,7 @@
 /* ============================================================
    DESIGN TOKENS
    Palette: warm sand paper + workshop navy + one hardware red.
-   Provisional per brief — validate the red against real storefront
+   Provisional per brief - validate the red against real storefront
    signage before launch (Caveat: brand colours not directly viewable).
    ============================================================ */
 :root{
@@ -101,7 +101,7 @@
   --sh-2:0 2px 3px rgba(30,26,21,.06), 0 8px 18px -6px rgba(30,26,21,.14);
   --sh-3:0 3px 6px rgba(30,26,21,.08), 0 20px 40px -14px rgba(30,26,21,.22);
 
-  /* Sharp-ish radius scale — sturdy, practical, not pill-everything */
+  /* Sharp-ish radius scale - sturdy, practical, not pill-everything */
   --r-1:3px;
   --r-2:6px;
   --r-3:10px;
@@ -245,7 +245,7 @@ a.skip:focus{top:12px}
 }
 
 /* ============================================================
-   UTILITY BAR (hours / location / phone — the customer BLUF)
+   UTILITY BAR (hours / location / phone - the customer BLUF)
    ============================================================ */
 .util{background:var(--sand-2);border-bottom:1px solid var(--sand-line)}
 .util-row{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:center;padding:11px 0;font-size:15px}
@@ -292,7 +292,7 @@ main{display:block}
 }
 
 /* ============================================================
-   DEPARTMENT CARDS (asymmetric — varied, not 3 equal cards)
+   DEPARTMENT CARDS (asymmetric - varied, not 3 equal cards)
    ============================================================ */
 .dept-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:36px}
 .dept{
@@ -479,7 +479,7 @@ main{display:block}
 .foot-doit{display:inline-flex;align-items:center;gap:8px}
 
 /* ============================================================
-   MOTION (reveal) — gentle, sub-300ms, reduced-motion safe
+   MOTION (reveal) - gentle, sub-300ms, reduced-motion safe
    ============================================================ */
 .reveal{opacity:0;transform:translateY(14px)}
 .reveal.in{opacity:1;transform:none;transition:opacity .5s ease, transform .5s cubic-bezier(.2,.7,.3,1)}
@@ -528,13 +528,13 @@ main{display:block}
   <div class="wrap util-row">
     <span class="util-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-      <span><strong>Mon–Sat</strong> 8am–5pm · Closed Sunday</span>
+      <span><strong>Mon-Sat</strong> 8am-5pm · Closed Sunday</span>
     </span>
     <span class="util-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg>
       <span>386 Eastern Avenue, George Town</span>
     </span>
-    <span class="util-open" id="openState" aria-live="polite"><span class="dot" id="openDot"></span><span id="openText">Open today · 8am–5pm</span></span>
+    <span class="util-open" id="openState" aria-live="polite"><span class="dot" id="openDot"></span><span id="openText">Open today · 8am-5pm</span></span>
   </div>
 </div>
 
@@ -559,7 +559,7 @@ main{display:block}
           386 Eastern Avenue<br>
           George Town, Grand Cayman<br>
           KY1-1110<br><br>
-          <b>Mon–Sat</b> 8am–5pm<br>
+          <b>Mon-Sat</b> 8am-5pm<br>
           <b>Sunday</b> Closed
         </div>
       </div>
@@ -588,7 +588,7 @@ main{display:block}
 
 <script>
 /* ============================================================
-   Larry's Hardware & Home Centre — single-file site
+   Larry's Hardware & Home Centre - single-file site
    Hash router · no build step · no external JS.
    All business details are real/researched. Anything the audit
    flagged as unconfirmed is marked CONFIRM in comments below and
@@ -601,7 +601,7 @@ main{display:block}
   var BIZ = {
     phone: "(345) 945-1500",
     tel: "+13459451500",
-    /* CONFIRM: WhatsApp number not published in research — wired to the
+    /* CONFIRM: WhatsApp number not published in research - wired to the
        main line as a sensible default. Verify the store's WhatsApp before launch. */
     wa: "13459451500",
     email: "larryshardware@gmail.com",
@@ -611,7 +611,7 @@ main{display:block}
   };
   var telHref = "tel:" + BIZ.tel;
   var mailHref = "mailto:" + BIZ.email;
-  var waHref = "https://wa.me/" + BIZ.wa + "?text=" + encodeURIComponent("Hi Larry's — I have a question about an item:");
+  var waHref = "https://wa.me/" + BIZ.wa + "?text=" + encodeURIComponent("Hi Larry's - I have a question about an item:");
   var mapsHref = "https://www.google.com/maps/search/?api=1&query=" + BIZ.mapsQ;
 
   /* ---- Small SVG icon set (one style: 24-grid, 1.8 stroke, round caps) ---- */
@@ -649,7 +649,7 @@ main{display:block}
 
   /* ---- Department data (from audit §3) ---- */
   var DEPTS = [
-    {no:"01", ic:"tools", name:"Hardware & Tools", desc:"Nails by weight, hand tools, power and air tools, drills, padlocks, machetes — the everyday fix-it aisle."},
+    {no:"01", ic:"tools", name:"Hardware & Tools", desc:"Nails by weight, hand tools, power and air tools, drills, padlocks, machetes - the everyday fix-it aisle."},
     {no:"02", ic:"build", name:"Building Supplies", desc:"Paint and sundries, plumbing fittings, electrical, fasteners and general building hardware for the job at hand."},
     {no:"03", ic:"kitchen", name:"Housewares & Kitchen", desc:"Cookware, bakeware, glass containers, plates, peelers and the small kitchen bits you always need one more of."},
     {no:"04", ic:"home", name:"Home, Bed & Bath", desc:"Towels, pillows, curtains, bathroom sets, over-the-toilet storage, mattress covers and bedding."},
@@ -657,15 +657,15 @@ main{display:block}
     {no:"06", ic:"office", name:"School & Office", desc:"Stationery and supplies for the classroom, the home desk and the back office."},
     {no:"07", ic:"appliance", name:"Small Appliances", desc:"Fans and small household appliances to keep the home running and cool."},
     {no:"08", ic:"garden", name:"Garden & Lawn", desc:"Hoses, shears and loppers, wheelbarrows and outdoor odds and ends for the yard."},
-    {no:"09", ic:"auto", name:"Auto Care", desc:"Car cleaning and care products — and the tyre shop is right out back."},
+    {no:"09", ic:"auto", name:"Auto Care", desc:"Car cleaning and care products - and the tyre shop is right out back."},
     {no:"10", ic:"gift", name:"Seasonal & Gifts", desc:"Christmas décor, seasonal items and gifts as the calendar turns."}
   ];
 
   /* ---- Testimonials (verbatim public Google reviews, audit §4) ---- */
   var QUOTES = [
     {t:"Every time I need something from basic school and office supplies to home appliances and housewares I am able to find what I need here! You are even able to get your tyres changed or any other car issues fixed while you shop inside. It truly is a gem of a store.", who:"Erika"},
-    {t:"Larry's has always offered some of the most affordable home and hardware items on island. Love the convenience of the tyre shop around the back so I can always kill two birds with one stone. Shop local — this small family owned business!", who:"Laila"},
-    {t:"One of my absolute favorite places to go when I need to stock up on household essentials — from cleaning supplies to everyday toiletries. It's just so convenient!", who:"Jason"},
+    {t:"Larry's has always offered some of the most affordable home and hardware items on island. Love the convenience of the tyre shop around the back so I can always kill two birds with one stone. Shop local - this small family owned business!", who:"Laila"},
+    {t:"One of my absolute favorite places to go when I need to stock up on household essentials - from cleaning supplies to everyday toiletries. It's just so convenient!", who:"Jason"},
     {t:"Everyone who knows Thompson and Kirk's Home Centre needs to check out Larry's. Reasonable prices, and you can sometimes find things here that you can't find anywhere else.", who:"Carlie"},
     {t:"Great place to find nearly everything you want, from your tyres for your car to all things home. Absolutely great prices.", who:"Chanel"},
     {t:"Reminded that I should always check this store before the bigger hardware stores. It has less variety but is generally significantly cheaper.", who:"Shelly-ann"}
@@ -692,7 +692,7 @@ main{display:block}
     '<section class="section"><div class="wrap"><div class="cta-strip reveal">'+
       '<div>'+
         '<h2>Come see us on Eastern Avenue</h2>'+
-        '<p>Not sure if we carry it? Call and ask, or drop us a message — a real person will check the shelf for you.</p>'+
+        '<p>Not sure if we carry it? Call and ask, or drop us a message - a real person will check the shelf for you.</p>'+
       '</div>'+
       '<div class="cta-actions">'+
         '<a class="btn btn--onnavy" href="'+telHref+'">'+I.phone+' Call now</a>'+
@@ -719,7 +719,7 @@ main{display:block}
     var tyreFeature = '<article class="dept dept--feature reveal">'+
       '<div class="dept-top"><span class="dept-ic">'+I.tyre+'</span><span class="dept-no">Out back</span></div>'+
       '<h3>Larry’s Tyre & Battery</h3>'+
-      '<p>Get your tyres changed, batteries tested and small car jobs sorted — right behind the store, while you shop.</p>'+
+      '<p>Get your tyres changed, batteries tested and small car jobs sorted - right behind the store, while you shop.</p>'+
       '<p style="margin-top:6px"><a href="#/tyre-shop" style="color:#fff;font-weight:600">See the tyre shop '+'&rarr;'+'</a></p></article>';
 
     var quotes = QUOTES.slice(0,4).map(function(q){
@@ -736,14 +736,14 @@ main{display:block}
           '<span class="tag tag--navy tag--lg">Family owned</span>'+
         '</div>'+
         '<h1>Everything for the home &amp; yard. <em>Priced for Cayman.</em></h1>'+
-        '<p class="hero-sub">A one-stop, family-owned hardware and home store on Eastern Avenue — where locals have found it cheaper, and found it here, since 1986.</p>'+
+        '<p class="hero-sub">A one-stop, family-owned hardware and home store on Eastern Avenue - where locals have found it cheaper, and found it here, since 1986.</p>'+
         '<div class="hero-cta">'+
           '<a class="btn btn--primary" href="'+telHref+'">'+I.phone+' Call (345) 945-1500</a>'+
           '<a class="btn btn--dark" href="'+waHref+'" target="_blank" rel="noopener">'+I.chat+' WhatsApp us</a>'+
           '<a class="btn btn--ghost" href="#/departments">Browse departments</a>'+
         '</div>'+
         '<div class="hero-fine">'+
-          '<span>'+I_line("clock")+' <b>Mon–Sat 8am–5pm</b></span>'+
+          '<span>'+I_line("clock")+' <b>Mon-Sat 8am-5pm</b></span>'+
           '<span>'+I_line("pin")+' 386 Eastern Avenue, George Town</span>'+
         '</div>'+
       '</div>'+
@@ -764,7 +764,7 @@ main{display:block}
       '<div class="reveal">'+
         '<span class="aisle aisle--onnavy">Two birds, one stop</span>'+
         '<h2 style="margin-top:12px">Get your tyres changed while you shop</h2>'+
-        '<p class="lead">Larry’s Tyre &amp; Battery sits right behind the store. Hand over the keys, do your shopping, and drive off sorted — new or used tyres, batteries, and the everyday car jobs.</p>'+
+        '<p class="lead">Larry’s Tyre &amp; Battery sits right behind the store. Hand over the keys, do your shopping, and drive off sorted - new or used tyres, batteries, and the everyday car jobs.</p>'+
         '<ul class="svc-list">'+
           '<li>'+I.check+'<span>New &amp; used tyres, fitting and changes</span></li>'+
           '<li>'+I.check+'<span>Battery sales and testing</span></li>'+
@@ -781,9 +781,9 @@ main{display:block}
     /* STORM PREP */
     '<section class="section"><div class="wrap"><div class="storm reveal"><div class="storm-inner">'+
       '<div>'+
-        '<span class="season">'+I.storm+' Hurricane season · Jun 1 – Nov 30</span>'+
+        '<span class="season">'+I.storm+' Hurricane season · Jun 1 - Nov 30</span>'+
         '<h2 style="margin-top:16px">Beat the rush. Prep before the storm.</h2>'+
-        '<p>Peak season runs mid-August to mid-October, and supplies go fast when a system is named. Stock the essentials early — Larry’s keeps the practical storm list in stock at everyday prices.</p>'+
+        '<p>Peak season runs mid-August to mid-October, and supplies go fast when a system is named. Stock the essentials early - Larry’s keeps the practical storm list in stock at everyday prices.</p>'+
         '<div class="hero-cta" style="margin-top:22px"><a class="btn btn--primary" href="#/storm-prep">See the storm-prep list</a></div>'+
       '</div>'+
       '<ul class="check">'+STORM.slice(0,6).map(function(s){return '<li>'+I.check+'<span>'+s+'</span></li>';}).join("")+'</ul>'+
@@ -793,7 +793,7 @@ main{display:block}
     '<section class="section section--sand"><div class="wrap">'+
       '<div class="sec-head reveal"><span class="aisle">From our neighbours</span>'+
         '<h2>Cayman keeps coming back</h2>'+
-        '<p>Real reviews from real customers — the words are theirs, not ours.</p></div>'+
+        '<p>Real reviews from real customers - the words are theirs, not ours.</p></div>'+
       '<div class="quotes">'+quotes+'</div>'+
     '</div></section>'+
 
@@ -802,9 +802,9 @@ main{display:block}
       '<div class="sec-head reveal"><span class="aisle">Why Larry’s</span>'+
         '<h2>The small store that punches up</h2></div>'+
       '<div class="vals">'+
-        val("wallet","Genuinely affordable","On an import-priced island, Larry’s is the one locals check first — often significantly cheaper than the big-box stores.")+
+        val("wallet","Genuinely affordable","On an import-priced island, Larry’s is the one locals check first - often significantly cheaper than the big-box stores.")+
         val("box","One-stop breadth","Hardware, home, kitchen, garden, school, storm supplies and tyres, all under one roof and one quick trip.")+
-        val("heart","Family &amp; local","A small family-owned business that has served Grand Cayman since 1986 — and still greets you like a neighbour.")+
+        val("heart","Family &amp; local","A small family-owned business that has served Grand Cayman since 1986 - and still greets you like a neighbour.")+
         val("tyre","Tyres out back","The only hardware run where you can knock out the shopping and the car in the same stop.")+
       '</div>'+
     '</div></section>'+
@@ -823,18 +823,18 @@ main{display:block}
     // storm as feature card + tyre as feature card
     var storm = '<article class="dept dept--feature reveal">'+
       '<div class="dept-top"><span class="dept-ic">'+I.storm+'</span><span class="dept-no">Seasonal</span></div>'+
-      '<h2>Hurricane Prep</h2><p>Tarps, plywood, fasteners, flashlights, batteries, water storage and clean-up gear — the practical storm list, in stock. <a href="#/storm-prep" style="color:#fff;font-weight:600">See the list &rarr;</a></p></article>';
+      '<h2>Hurricane Prep</h2><p>Tarps, plywood, fasteners, flashlights, batteries, water storage and clean-up gear - the practical storm list, in stock. <a href="#/storm-prep" style="color:#fff;font-weight:600">See the list &rarr;</a></p></article>';
     var tyre = '<article class="dept dept--feature reveal">'+
       '<div class="dept-top"><span class="dept-ic">'+I.tyre+'</span><span class="dept-no">Out back</span></div>'+
-      '<h2>Tyre &amp; Battery</h2><p>New and used tyres, batteries and small car jobs — done while you shop. <a href="#/tyre-shop" style="color:#fff;font-weight:600">Visit the tyre shop &rarr;</a></p></article>';
+      '<h2>Tyre &amp; Battery</h2><p>New and used tyres, batteries and small car jobs - done while you shop. <a href="#/tyre-shop" style="color:#fff;font-weight:600">Visit the tyre shop &rarr;</a></p></article>';
 
     return ''+
     '<section class="section"><div class="wrap">'+
       '<div class="sec-head reveal"><span class="aisle">The aisles</span>'+
         '<h1>What you’ll find at Larry’s</h1>'+
-        '<p class="lead">A big-store range in a store you can actually get around. Here’s the department list — and if you don’t see it, just ask. We’re happy to check the shelf or point you to the neighbour who has it.</p></div>'+
+        '<p class="lead">A big-store range in a store you can actually get around. Here’s the department list - and if you don’t see it, just ask. We’re happy to check the shelf or point you to the neighbour who has it.</p></div>'+
       '<div class="dept-grid" style="margin-top:34px">'+cards+storm+tyre+'</div>'+
-      '<div class="note reveal">Stock changes with the season and the shipment. The fastest way to know if we have something today is to call <a href="'+telHref+'">'+BIZ.phone+'</a> or <a href="'+waHref+'" target="_blank" rel="noopener">message us on WhatsApp</a> — a real person will look for you.</div>'+
+      '<div class="note reveal">Stock changes with the season and the shipment. The fastest way to know if we have something today is to call <a href="'+telHref+'">'+BIZ.phone+'</a> or <a href="'+waHref+'" target="_blank" rel="noopener">message us on WhatsApp</a> - a real person will look for you.</div>'+
     '</div></section>'+
     ctaStrip();
   }
@@ -845,11 +845,11 @@ main{display:block}
       '<div class="reveal">'+
         '<span class="aisle aisle--onnavy">Larry’s Tyre & Battery</span>'+
         '<h1 style="margin-top:12px">Tyres changed while you shop</h1>'+
-        '<p class="lead">Larry’s runs an affiliated tyre and battery shop right beside the hardware store. Pull in, hand over the keys, do your shopping — and drive off sorted.</p>'+
+        '<p class="lead">Larry’s runs an affiliated tyre and battery shop right beside the hardware store. Pull in, hand over the keys, do your shopping - and drive off sorted.</p>'+
         '<ul class="svc-list">'+
-          '<li>'+I.check+'<span><b>Tyres</b> — new and used, fitting, changes and repairs</span></li>'+
-          '<li>'+I.check+'<span><b>Batteries</b> — sales and testing</span></li>'+
-          '<li>'+I.check+'<span><b>Car jobs</b> — general repairs and everyday fixes</span></li>'+
+          '<li>'+I.check+'<span><b>Tyres</b> - new and used, fitting, changes and repairs</span></li>'+
+          '<li>'+I.check+'<span><b>Batteries</b> - sales and testing</span></li>'+
+          '<li>'+I.check+'<span><b>Car jobs</b> - general repairs and everyday fixes</span></li>'+
         '</ul>'+
         '<div class="loc-grid">'+
           '<div class="loc"><h2>Eastern Avenue</h2><p>Right behind the Prestige Building, beside the hardware store.</p><p style="margin-top:8px"><a href="tel:'+BIZ.tel+'">'+BIZ.phone+'</a></p></div>'+
@@ -880,9 +880,9 @@ main{display:block}
     var col2 = STORM.slice(half).map(function(s){return '<li>'+I.check+'<span>'+s+'</span></li>';}).join("");
     return ''+
     '<section class="section"><div class="wrap">'+
-      '<div class="sec-head reveal"><span class="season season--light" style="margin-bottom:14px">'+I.storm+' Atlantic hurricane season · Jun 1 – Nov 30</span>'+
+      '<div class="sec-head reveal"><span class="season season--light" style="margin-bottom:14px">'+I.storm+' Atlantic hurricane season · Jun 1 - Nov 30</span>'+
         '<h1>Storm prep, sorted early</h1>'+
-        '<p class="lead">The Atlantic season peaks between mid-August and mid-October, and shelves empty fast once a storm is named. Buy the essentials early — Larry’s stocks the practical list at everyday prices.</p></div>'+
+        '<p class="lead">The Atlantic season peaks between mid-August and mid-October, and shelves empty fast once a storm is named. Buy the essentials early - Larry’s stocks the practical list at everyday prices.</p></div>'+
 
       '<div class="storm reveal" style="margin-top:32px"><div class="storm-inner">'+
         '<div>'+
@@ -895,7 +895,7 @@ main{display:block}
       '</div></div>'+
 
       '<div class="vals" style="margin-top:34px">'+
-        val("clock","Get it early","“Buy before the rush” isn’t just advice — when demand spikes, supply runs short island-wide.")+
+        val("clock","Get it early","“Buy before the rush” isn’t just advice - when demand spikes, supply runs short island-wide.")+
         val("wallet","Everyday prices","No storm-panic mark-ups. The same affordable pricing Larry’s is known for, all season.")+
         val("box","Under one roof","Tarps, fasteners, water storage, lights and clean-up gear in the same quick trip.")+
         val("tyre","Ready to roll","While you’re here, let the tyre shop check the car before you need to move fast.")+
@@ -912,10 +912,10 @@ main{display:block}
         '<h1>Serving Grand Cayman since 1986</h1></div>'+
       '<div class="split" style="margin-top:30px;align-items:start">'+
         '<div class="prose reveal">'+
-          '<p class="first">Larry’s Hardware &amp; Home Centre has been a fixture on Eastern Avenue for more than thirty years. It started, and remains, a small family-owned business — the kind of neighbourhood store where the cashier knows the stock, points you down the right aisle, and tells you straight when the shop across the road has what we’ve run out of.</p>'+
-          '<p>The idea has always been simple: pack a big-store range into a store you can get around quickly, and keep the prices honest on an island where nearly everything is imported. That’s why generations of Caymanians check Larry’s first — from a single nail by weight to a full storm kit.</p>'+
-          '<p>As a proud member of the <b>Do It Best</b> cooperative, Larry’s buys alongside thousands of independent hardware stores worldwide — which is how a small local shop keeps big-store pricing. And with Larry’s Tyre &amp; Battery right out back, it’s the one hardware run where you can sort the house and the car in the same trip.</p>'+
-          '<div class="note">A note for our future website: the full family story — the people behind Larry’s and how it began in 1986 — belongs here in the owner’s own words. We’ve kept this page honest rather than filling it with invented history.</div>'+
+          '<p class="first">Larry’s Hardware &amp; Home Centre has been a fixture on Eastern Avenue for more than thirty years. It started, and remains, a small family-owned business - the kind of neighbourhood store where the cashier knows the stock, points you down the right aisle, and tells you straight when the shop across the road has what we’ve run out of.</p>'+
+          '<p>The idea has always been simple: pack a big-store range into a store you can get around quickly, and keep the prices honest on an island where nearly everything is imported. That’s why generations of Caymanians check Larry’s first - from a single nail by weight to a full storm kit.</p>'+
+          '<p>As a proud member of the <b>Do It Best</b> cooperative, Larry’s buys alongside thousands of independent hardware stores worldwide - which is how a small local shop keeps big-store pricing. And with Larry’s Tyre &amp; Battery right out back, it’s the one hardware run where you can sort the house and the car in the same trip.</p>'+
+          '<div class="note">A note for our future website: the full family story - the people behind Larry’s and how it began in 1986 - belongs here in the owner’s own words. We’ve kept this page honest rather than filling it with invented history.</div>'+
         '</div>'+
         '<div class="reveal">'+
           '<table class="facts"><tbody>'+
@@ -924,7 +924,7 @@ main{display:block}
             '<tr><th>Buying group</th><td>Do It Best cooperative member (Store #7005)</td></tr>'+
             '<tr><th>Location</th><td>Prestige Building, 386 Eastern Avenue, George Town, KY1-1110</td></tr>'+
             '<tr><th>Affiliate</th><td>Larry’s Tyre &amp; Battery (Eastern Avenue &amp; Shedden Road)</td></tr>'+
-            '<tr><th>Hours</th><td>Mon–Sat 8am–5pm · Closed Sunday</td></tr>'+
+            '<tr><th>Hours</th><td>Mon-Sat 8am-5pm · Closed Sunday</td></tr>'+
             '<tr><th>Phone</th><td><a href="'+telHref+'">'+BIZ.phone+'</a></td></tr>'+
           '</tbody></table>'+
         '</div>'+
@@ -944,7 +944,7 @@ main{display:block}
         '<div class="reveal">'+
           '<ul class="info-list">'+
             infoRow("pin","Address","Prestige Building, 386 Eastern Avenue<br>George Town, Grand Cayman KY1-1110", mapsHref, "Get directions")+
-            infoRow("clock","Hours","Monday–Saturday · 8am–5pm<br>Sunday · Closed")+
+            infoRow("clock","Hours","Monday-Saturday · 8am-5pm<br>Sunday · Closed")+
             infoRow("phone","Phone", BIZ.phone, telHref, null, "tel")+
             infoRow("chat","WhatsApp","Message us about an item", waHref, "Open WhatsApp", "ext")+
             infoRow("mail","Email", BIZ.email, mailHref, null, "mail")+
@@ -957,12 +957,12 @@ main{display:block}
         '<div class="reveal">'+
           '<form class="form-card" id="askForm" novalidate>'+
             '<h2 style="font-size:26px;margin-bottom:6px">Ask if we carry it</h2>'+
-            '<p style="color:var(--muted);margin-bottom:20px;font-size:15.5px">Send us what you’re after and we’ll check. This opens your email app with the details filled in — nothing sends until you press send.</p>'+
+            '<p style="color:var(--muted);margin-bottom:20px;font-size:15.5px">Send us what you’re after and we’ll check. This opens your email app with the details filled in - nothing sends until you press send.</p>'+
             field("name","Your name","text","e.g. Erika",true)+
             field("email","Email","email","you@example.ky",true)+
             field("phone","Phone or WhatsApp","tel","(345) 000-0000",false)+
-            selectField("topic","What’s it about",["An item — do you have it?","Tyres & battery","Hurricane / storm prep","Something else"],true)+
-            field("message","What are you looking for?","textarea","Tell us the item, brand, size or job — we’ll check the shelf.",true)+
+            selectField("topic","What’s it about",["An item - do you have it?","Tyres & battery","Hurricane / storm prep","Something else"],true)+
+            field("message","What are you looking for?","textarea","Tell us the item, brand, size or job - we’ll check the shelf.",true)+
             '<div class="form-status" id="formStatus" role="status" aria-live="polite"></div>'+
             '<div class="form-actions">'+
               '<button type="submit" class="btn btn--primary">'+I.mail+' Send to Larry’s</button>'+
@@ -999,10 +999,10 @@ main{display:block}
   }
 
   /* ============================================================
-     SVG art (custom, on-brand — no photos needed)
+     SVG art (custom, on-brand - no photos needed)
      ============================================================ */
   function heroArt(){
-    return '<svg viewBox="0 0 480 440" role="img" aria-label="A pegboard wall of hardware — tools and a home-goods box hanging beside a Larry’s price tag.">'+
+    return '<svg viewBox="0 0 480 440" role="img" aria-label="A pegboard wall of hardware - tools and a home-goods box hanging beside a Larry’s price tag.">'+
       '<defs><pattern id="peg" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="13" cy="13" r="1.6" fill="#D9CBAE"/></pattern></defs>'+
       '<rect x="20" y="20" width="440" height="400" rx="14" fill="#FDFAF3" stroke="#E3D6BB" stroke-width="2"/>'+
       '<rect x="20" y="20" width="440" height="400" rx="14" fill="url(#peg)"/>'+
@@ -1027,7 +1027,7 @@ main{display:block}
   }
 
   function tyreArt(){
-    return '<svg viewBox="0 0 460 340" role="img" aria-label="A tyre and a car battery — the tyre shop behind the store.">'+
+    return '<svg viewBox="0 0 460 340" role="img" aria-label="A tyre and a car battery - the tyre shop behind the store.">'+
       '<rect x="10" y="10" width="440" height="320" rx="16" fill="rgba(255,255,255,.04)" stroke="#2C3E53" stroke-width="2"/>'+
       /* ground line */
       '<path d="M40 268h380" stroke="#2C3E53" stroke-width="3"/>'+
@@ -1056,12 +1056,12 @@ main{display:block}
      Router
      ============================================================ */
   var ROUTES = {
-    "/home":      {title:"Larry's Hardware & Home Centre — George Town, Grand Cayman", desc:"Family-owned discount hardware and home store on Eastern Avenue since 1986. Tools, building supplies, housewares, garden and storm prep — plus tyres changed while you shop.", render:pageHome},
-    "/departments":{title:"Departments — Larry's Hardware & Home Centre", desc:"Ten departments under one roof: hardware and tools, building supplies, housewares, home and bath, cleaning, school and office, appliances, garden, auto care and seasonal.", render:pageDepartments},
-    "/tyre-shop": {title:"Tyre & Battery — Larry's Hardware, Grand Cayman", desc:"Larry's Tyre & Battery: new and used tyres, batteries and car repairs while you shop. Eastern Avenue and 325 Shedden Road, George Town.", render:pageTyre},
-    "/storm-prep":{title:"Hurricane Prep — Larry's Hardware, Grand Cayman", desc:"Stock the practical storm list early at everyday prices: tarps, plywood, fasteners, flashlights, batteries, water storage and clean-up gear.", render:pageStorm},
-    "/about":     {title:"About — Larry's Hardware & Home Centre", desc:"A small family-owned hardware and home store serving Grand Cayman since 1986, and a proud Do It Best cooperative member.", render:pageAbout},
-    "/contact":   {title:"Contact & Map — Larry's Hardware, George Town", desc:"Visit Larry's Hardware at 386 Eastern Avenue, George Town. Call (345) 945-1500, WhatsApp us, or ask us to check the shelf. Mon–Sat 8am–5pm.", render:pageContact}
+    "/home":      {title:"Larry's Hardware & Home Centre - George Town, Grand Cayman", desc:"Family-owned discount hardware and home store on Eastern Avenue since 1986. Tools, building supplies, housewares, garden and storm prep - plus tyres changed while you shop.", render:pageHome},
+    "/departments":{title:"Departments - Larry's Hardware & Home Centre", desc:"Ten departments under one roof: hardware and tools, building supplies, housewares, home and bath, cleaning, school and office, appliances, garden, auto care and seasonal.", render:pageDepartments},
+    "/tyre-shop": {title:"Tyre & Battery - Larry's Hardware, Grand Cayman", desc:"Larry's Tyre & Battery: new and used tyres, batteries and car repairs while you shop. Eastern Avenue and 325 Shedden Road, George Town.", render:pageTyre},
+    "/storm-prep":{title:"Hurricane Prep - Larry's Hardware, Grand Cayman", desc:"Stock the practical storm list early at everyday prices: tarps, plywood, fasteners, flashlights, batteries, water storage and clean-up gear.", render:pageStorm},
+    "/about":     {title:"About - Larry's Hardware & Home Centre", desc:"A small family-owned hardware and home store serving Grand Cayman since 1986, and a proud Do It Best cooperative member.", render:pageAbout},
+    "/contact":   {title:"Contact & Map - Larry's Hardware, George Town", desc:"Visit Larry's Hardware at 386 Eastern Avenue, George Town. Call (345) 945-1500, WhatsApp us, or ask us to check the shelf. Mon-Sat 8am-5pm.", render:pageContact}
   };
 
   var main = document.getElementById("main");
@@ -1184,15 +1184,15 @@ main{display:block}
 
       var body =
         "Hi Larry's,\n\n"+msg+"\n\n"+
-        "— "+name+
+        " - "+name+
         (phone? "\nPhone/WhatsApp: "+phone : "")+
         "\nEmail: "+email+
         "\nAbout: "+topic+"\n";
-      var subject = "Website enquiry — "+topic;
+      var subject = "Website enquiry - "+topic;
       var href = mailHref+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
 
       status.className="form-status ok show";
-      status.textContent="Thanks, "+name.split(" ")[0]+" — opening your email app with the details filled in. Press send there and we’ll get back to you.";
+      status.textContent="Thanks, "+name.split(" ")[0]+" - opening your email app with the details filled in. Press send there and we’ll get back to you.";
       window.location.href = href;
     });
   }

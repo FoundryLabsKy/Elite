@@ -1,4 +1,4 @@
-# Larry's Hardware & Home Centre — website
+# Larry's Hardware & Home Centre - website
 
 A mobile-first, brochure-style marketing website for Larry's Hardware & Home
 Centre of George Town, Grand Cayman, delivered as a single self-contained
@@ -20,14 +20,14 @@ Per the planning brief, the store's value is in-person price and convenience,
 and the abandoned 3dcart catalog (full of out-of-stock generic imports) hurt
 the brand more than no store would. So this site sells the visit: hours,
 location, departments, the tyre combo, seasonal storm prep, and a low-effort
-"ask if we carry it" enquiry — not a live catalog with dead SKUs.
+"ask if we carry it" enquiry - not a live catalog with dead SKUs.
 
 ## What is real vs. what to confirm
 
 Everything on the site uses Larry's real, researched details: the 1986 heritage,
 address (Prestige Building, 386 Eastern Avenue, George Town, KY1-1110), phone
-`(345) 945-1500`, email `larryshardware@gmail.com`, canonical hours (Mon–Sat
-8am–5pm, closed Sunday), the "We do it best" tagline, Do It Best membership
+`(345) 945-1500`, email `larryshardware@gmail.com`, canonical hours (Mon-Sat
+8am-5pm, closed Sunday), the "We do it best" tagline, Do It Best membership
 (store #7005), the department list, and the verbatim customer reviews.
 
 Flagged in code comments for the owner to confirm before launch:
@@ -37,14 +37,14 @@ Flagged in code comments for the owner to confirm before launch:
    WhatsApp number and update `BIZ.wa`.
 2. **The founder / family story.** No public source names "Larry," a family
    surname, or the ownership history. The About page deliberately does **not**
-   invent any of this — it tells the honest story and leaves a note asking the
+   invent any of this - it tells the honest story and leaves a note asking the
    owner to supply the real history in their own words. Do not fabricate it.
 3. **Larry's Tyre & Battery link.** The corporate tie between the hardware store
    and the tyre shop is a high-confidence inference (shared PO Box, address
    adjacency, shared name), presented on the site as "affiliated." Confirm with
    the owner. Tyre-shop phone `(345) 949-2685` and the 325 Shedden Road branch
    are from directory listings.
-4. **Domain status.** `www.larryshardware.ky` could not be confirmed live —
+4. **Domain status.** `www.larryshardware.ky` could not be confirmed live - 
    verify domain ownership/registration before building on it.
 5. **Brand colours.** The palette (workshop navy, hardware red derived from the
    Do It Best red, warm sand) is provisional. Photograph the storefront signage
