@@ -5,6 +5,7 @@ on:
     branches:
       - claude/code-skills-ux-frontend-i6654s
       - claude/cayman-craft-market-site-c0opgt
+      - claude/skills-setup-lfydlo
   workflow_dispatch:
 
 permissions:
@@ -33,9 +34,11 @@ jobs:
 
       - name: Stage site files
         run: |
-          mkdir -p _site/craftmarket
+          mkdir -p _site/craftmarket _site/wellys-cool-spot
           cp index.html _site/index.html
+          cp robots.txt sitemap.xml _site/
           cp craftmarket/index.html _site/craftmarket/index.html
+          cp wellys-cool-spot/index.html _site/wellys-cool-spot/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
