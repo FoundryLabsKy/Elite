@@ -10,13 +10,12 @@ interface CountUpProps {
 
 export function CountUp({ value, format = (n) => Math.round(n).toLocaleString() }: CountUpProps) {
   const reduced = useReducedMotion() ?? false;
-  const [display, setDisplay] = useState(() => (reduced ? value : 0));
-  const previous = useRef(reduced ? value : 0);
+  const [display, setDisplay] = useState(0);
+  const previous = useRef(0);
 
   useEffect(() => {
     if (reduced) {
       previous.current = value;
-      setDisplay(value);
       return;
     }
     const controls = animate(previous.current, value, {
@@ -28,7 +27,8 @@ export function CountUp({ value, format = (n) => Math.round(n).toLocaleString() 
     return () => controls.stop();
   }, [value, reduced]);
 
-  return <span className="tabular-nums">{format(display)}</span>;
+  // With reduced motion the value renders directly — no animation state.
+  return <span className="tabular-nums">{format(reduced ? value : display)}</span>;
 }
 
 interface StatCardProps {

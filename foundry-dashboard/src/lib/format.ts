@@ -29,6 +29,10 @@ export function formatBytes(bytes: number | null): string {
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
+export function isHtmlFile(filename: string, mime: string | null): boolean {
+  return /\.html?$/i.test(filename) || mime === "text/html";
+}
+
 export function normalizeUrl(value: string): string {
   const trimmed = value.trim();
   if (!trimmed) return "";

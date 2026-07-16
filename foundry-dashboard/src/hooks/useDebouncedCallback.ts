@@ -13,7 +13,9 @@ export function useDebouncedCallback<Args extends unknown[]>(
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pendingArgsRef = useRef<Args | null>(null);
   const callbackRef = useRef(callback);
-  callbackRef.current = callback;
+  useEffect(() => {
+    callbackRef.current = callback;
+  });
 
   const flush = useCallback(() => {
     if (timeoutRef.current) {

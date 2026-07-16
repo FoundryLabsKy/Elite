@@ -9,6 +9,7 @@ import { listItemVariants } from "@/lib/motion";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { Button } from "@/components/ui/Button";
 import { IconArchive, IconGlobe, IconPencil } from "@/components/ui/Icons";
+import { useBuildPreview } from "@/hooks/useBuildPreview";
 
 interface BuiltCardProps {
   company: Company;
@@ -21,6 +22,7 @@ export function BuiltCard({ company, onEdit, onMarkSold, onArchive }: BuiltCardP
   const router = useRouter();
   const reduced = useReducedMotion() ?? false;
   const stage = deriveStage(company);
+  const previewSrc = useBuildPreview(company);
 
   const open = () => router.push(`/company/${company.id}`);
 
@@ -43,10 +45,10 @@ export function BuiltCard({ company, onEdit, onMarkSold, onArchive }: BuiltCardP
         aria-label={`View ${company.name}`}
         className="relative block h-36 w-full cursor-pointer overflow-hidden border-b border-white/8 text-left"
       >
-        {company.preview_url ? (
+        {previewSrc ? (
           <>
             <iframe
-              src={company.preview_url}
+              src={previewSrc}
               title={`${company.name} preview`}
               tabIndex={-1}
               loading="lazy"
@@ -57,8 +59,13 @@ export function BuiltCard({ company, onEdit, onMarkSold, onArchive }: BuiltCardP
             <span className="absolute inset-0" aria-hidden />
           </>
         ) : (
-          <span className="flex h-full items-center justify-center bg-white/[0.02] font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
-            Preview on company page
+          <span className="flex h-full items-center justify-center bg-white/[0.02]">
+            <span
+              aria-hidden
+              className="font-display text-5xl font-bold text-white/[0.06] select-none"
+            >
+              {company.name.charAt(0)}
+            </span>
           </span>
         )}
       </button>

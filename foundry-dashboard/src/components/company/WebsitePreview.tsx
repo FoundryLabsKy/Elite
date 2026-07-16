@@ -5,15 +5,11 @@ import type { Company } from "@/lib/types";
 import type { useCompanyFiles } from "@/hooks/useCompanyFiles";
 import { useCompanies } from "@/hooks/useCompanies";
 import { useToast } from "@/components/ui/Toast";
-import { normalizeUrl } from "@/lib/format";
+import { isHtmlFile, normalizeUrl } from "@/lib/format";
 import { Button } from "@/components/ui/Button";
 import { IconExternal, IconUpload } from "@/components/ui/Icons";
 
 type Tab = "current" | "previous";
-
-function isHtmlFile(filename: string, mime: string | null): boolean {
-  return /\.html?$/i.test(filename) || mime === "text/html";
-}
 
 function Frame({ src, title }: { src: string; title: string }) {
   return (
@@ -56,7 +52,7 @@ export function WebsitePreview({ company, files }: WebsitePreviewProps) {
   const { toast } = useToast();
   const [tab, setTab] = useState<Tab>("current");
   const [urlDraft, setUrlDraft] = useState(company.preview_url ?? "");
-  const [uploadedUrl, setUploadedUrl] = useState<string | null>(null);
+  const [resolved, setResolved] = useState<{ fileId: string; url: string } | null>(null);
   const htmlInputRef = useRef<HTMLInputElement>(null);
 
   // The newest uploaded HTML build doubles as the preview when no hosted URL
@@ -67,22 +63,21 @@ export function WebsitePreview({ company, files }: WebsitePreviewProps) {
   );
 
   useEffect(() => {
+    if (!latestHtmlFile || resolved?.fileId === latestHtmlFile.id) return;
     let cancelled = false;
-    if (!company.preview_url && latestHtmlFile) {
-      files
-        .getUrl(latestHtmlFile)
-        .then((url) => {
-          if (!cancelled) setUploadedUrl(url);
-        })
-        .catch(() => undefined);
-    } else {
-      setUploadedUrl(null);
-    }
+    files
+      .getUrl(latestHtmlFile)
+      .then((url) => {
+        if (!cancelled) setResolved({ fileId: latestHtmlFile.id, url });
+      })
+      .catch(() => undefined);
     return () => {
       cancelled = true;
     };
-  }, [company.preview_url, latestHtmlFile, files]);
+  }, [latestHtmlFile, resolved, files]);
 
+  const uploadedUrl =
+    latestHtmlFile && resolved?.fileId === latestHtmlFile.id ? resolved.url : null;
   const currentSrc = company.preview_url || uploadedUrl;
 
   const savePreviewUrl = (e: React.FormEvent) => {

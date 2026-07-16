@@ -33,7 +33,9 @@ export const supabaseRepo: CompanyRepo = {
   },
 
   async updateCompany(id: string, patch: Partial<Company>) {
-    const { id: _ignored, created_at: _also, ...safePatch } = patch;
+    const safePatch = { ...patch };
+    delete safePatch.id;
+    delete safePatch.created_at;
     const { data, error } = await getSupabase()
       .from("companies")
       .update(safePatch)

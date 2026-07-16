@@ -8,23 +8,34 @@ import { useToast } from "@/components/ui/Toast";
 export function useCompanyFiles(companyId: string) {
   const { repo } = useCompanies();
   const { toast } = useToast();
-  const [files, setFiles] = useState<CompanyFile[]>([]);
-  const [loading, setLoading] = useState(true);
+  // Loading is derived: state is "loaded for company X", so switching
+  // companies resets to loading without a synchronous setState in the effect.
+  const [loaded, setLoaded] = useState<{ companyId: string; files: CompanyFile[] } | null>(null);
   const [uploading, setUploading] = useState(false);
+  const loading = loaded?.companyId !== companyId;
+  const files = loading ? [] : (loaded?.files ?? []);
+
+  const setFiles = useCallback(
+    (updater: (prev: CompanyFile[]) => CompanyFile[]) => {
+      setLoaded((prev) =>
+        prev && prev.companyId === companyId ? { companyId, files: updater(prev.files) } : prev
+      );
+    },
+    [companyId]
+  );
 
   useEffect(() => {
     let cancelled = false;
-    setLoading(true);
     repo
       .listFiles(companyId)
       .then((data) => {
-        if (!cancelled) setFiles(data);
+        if (!cancelled) setLoaded({ companyId, files: data });
       })
       .catch(() => {
-        if (!cancelled) toast("Could not load files.", "error");
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
+        if (!cancelled) {
+          toast("Could not load files.", "error");
+          setLoaded({ companyId, files: [] });
+        }
       });
     return () => {
       cancelled = true;
@@ -54,7 +65,7 @@ export function useCompanyFiles(companyId: string) {
       }
       return uploaded;
     },
-    [repo, companyId, toast]
+    [repo, companyId, toast, setFiles]
   );
 
   const remove = useCallback(
@@ -67,7 +78,7 @@ export function useCompanyFiles(companyId: string) {
         toast("Could not delete the file.", "error");
       }
     },
-    [repo, toast]
+    [repo, toast, setFiles]
   );
 
   const getUrl = useCallback((file: CompanyFile) => repo.getFileUrl(file), [repo]);

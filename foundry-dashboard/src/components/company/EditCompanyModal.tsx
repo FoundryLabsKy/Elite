@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { Company } from "@/lib/types";
 import { Modal } from "@/components/ui/Modal";
 import { Button } from "@/components/ui/Button";
@@ -14,26 +14,17 @@ interface EditCompanyModalProps {
   onClose: () => void;
 }
 
-export function EditCompanyModal({ company, onClose }: EditCompanyModalProps) {
+function EditForm({ company, onClose }: { company: Company; onClose: () => void }) {
   const { updateCompany } = useCompanies();
   const { toast } = useToast();
-  const [name, setName] = useState("");
-  const [industry, setIndustry] = useState("");
-  const [contact, setContact] = useState("");
-  const [website, setWebsite] = useState("");
-
-  useEffect(() => {
-    if (company) {
-      setName(company.name);
-      setIndustry(company.industry ?? "");
-      setContact(company.contact ?? "");
-      setWebsite(company.website ?? "");
-    }
-  }, [company]);
+  const [name, setName] = useState(company.name);
+  const [industry, setIndustry] = useState(company.industry ?? "");
+  const [contact, setContact] = useState(company.contact ?? "");
+  const [website, setWebsite] = useState(company.website ?? "");
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!company || !name.trim()) return;
+    if (!name.trim()) return;
     await updateCompany(company.id, {
       name: name.trim(),
       industry: industry.trim() || null,
@@ -45,26 +36,32 @@ export function EditCompanyModal({ company, onClose }: EditCompanyModalProps) {
   };
 
   return (
+    <form onSubmit={submit} className="flex flex-col gap-4">
+      <Input label="Company name" value={name} onChange={(e) => setName(e.target.value)} required />
+      <Input label="Industry" value={industry} onChange={(e) => setIndustry(e.target.value)} />
+      <Input
+        label="Contact"
+        value={contact}
+        onChange={(e) => setContact(e.target.value)}
+        placeholder="Name, phone, or email"
+      />
+      <Input label="Existing website" value={website} onChange={(e) => setWebsite(e.target.value)} />
+      <div className="mt-1 flex justify-end gap-3">
+        <Button type="button" variant="ghost" onClick={onClose}>
+          Cancel
+        </Button>
+        <Button type="submit" variant="primary" disabled={!name.trim()}>
+          Save changes
+        </Button>
+      </div>
+    </form>
+  );
+}
+
+export function EditCompanyModal({ company, onClose }: EditCompanyModalProps) {
+  return (
     <Modal open={company !== null} onClose={onClose} title="Edit company">
-      <form onSubmit={submit} className="flex flex-col gap-4">
-        <Input label="Company name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <Input label="Industry" value={industry} onChange={(e) => setIndustry(e.target.value)} />
-        <Input
-          label="Contact"
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-          placeholder="Name, phone, or email"
-        />
-        <Input label="Existing website" value={website} onChange={(e) => setWebsite(e.target.value)} />
-        <div className="mt-1 flex justify-end gap-3">
-          <Button type="button" variant="ghost" onClick={onClose}>
-            Cancel
-          </Button>
-          <Button type="submit" variant="primary" disabled={!name.trim()}>
-            Save changes
-          </Button>
-        </div>
-      </form>
+      {company && <EditForm key={company.id} company={company} onClose={onClose} />}
     </Modal>
   );
 }

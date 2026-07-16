@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Foundry Dashboard
 
-## Getting Started
+The internal operating system for Foundry Labs: track every company through the
+build pipeline (Idea → To-Do → Built → Pitched → Sold → Hosting), preview
+websites, store files, and watch recurring revenue grow.
 
-First, run the development server:
+Built with Next.js (App Router), TypeScript, Tailwind CSS, Framer Motion, and
+Supabase. This is an internal tool with **no authentication** by design —
+anyone with the URL has access.
+
+## Pages
+
+- **Dashboard** — KPIs (ideas, built, ready to pitch, sold, MRR, revenue closed) and every active company with its pipeline stage. Search, sort, floating Add Company.
+- **To-Do** — rapid idea capture. Checking an item marks it Built and moves it on.
+- **Built** — finished sites ready to pitch, with previews, domains, and a Mark Sold flow.
+- **Company page** — website preview (paste a hosted URL or upload single-file HTML), autosaving notes, potential domains, file storage, and the big Sold toggle.
+- **Income** — revenue KPIs and the active client table (sale price, monthly fee, final domain).
+- **Archived** — restore or permanently delete parked companies.
+
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+With no environment variables set, the app runs in **demo mode**: data lives in
+the browser (localStorage + IndexedDB), seeded with example companies. Perfect
+for trying the workflow — but data never leaves that browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Connecting Supabase
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a project at [supabase.com](https://supabase.com).
+2. Open the SQL editor and run the contents of [`supabase/schema.sql`](supabase/schema.sql). This creates the `companies` and `files` tables, a public `company-files` storage bucket, and permissive anon policies (internal tool — lock down before exposing publicly).
+3. Copy `.env.example` to `.env.local` and fill in the project URL and anon key:
 
-## Learn More
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Restart the dev server. The demo-mode badge disappears and all data reads/writes go to Supabase. (Demo-mode data is not migrated.)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploying to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Import this repository in Vercel.
+2. Set **Root Directory** to `foundry-dashboard` (the repo also contains static sites).
+3. Add the two `NEXT_PUBLIC_SUPABASE_*` environment variables.
+4. Deploy.
 
-## Deploy on Vercel
+## Development notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run typecheck` / `npm run lint` / `npm run build`
+- Pipeline stage is derived (`deriveStage` in `src/lib/types.ts`) from the `built`, `sold`, and `archived` flags — never stored — so KPIs can't drift.
+- The data layer is a single `CompanyRepo` interface (`src/lib/repo/`) with two implementations: `supabaseRepo` and `localRepo` (demo). Everything above it is mode-agnostic.
+- Website previews are iframes. External sites often block embedding (X-Frame-Options); the UI always offers "Open in new tab". Uploaded single-file HTML always previews.
+- Single-user assumption: last write wins; there is no live sync between browsers.
