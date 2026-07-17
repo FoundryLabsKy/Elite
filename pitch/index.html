@@ -113,6 +113,11 @@ p.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--muted);max-
 .side-photo .ph{aspect-ratio:4/5}
 .divider-photo .ph{aspect-ratio:3/1}
 
+/* Materials showcase grid */
+.material-card .ph{aspect-ratio:3/4;margin-bottom:12px}
+.material-card h3{font-family:var(--f-display);font-weight:700;font-size:18px;margin:0 0 2px;color:var(--text)}
+.material-card p{margin:0;color:var(--muted);font-size:14.5px}
+
 /* Nav controls */
 .nav-ui{position:fixed;bottom:22px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:18px;z-index:50;pointer-events:none}
 .nav-btn{pointer-events:all;background:rgba(7,51,62,.85);color:#fff;border:none;border-radius:999px;width:44px;height:44px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s ease}
@@ -270,6 +275,21 @@ p.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--muted);max-
     </div>
   </section>
 
+  <!-- 6b: MATERIALS SHOWCASE -->
+  <section class="slide sand">
+    <div class="content-wrap">
+      <p class="eyebrow">The four stone families</p>
+      <h2 class="slide-title">Real materials, not stock icons.</h2>
+      <p class="lede">Every family in the slab library, shown the way a customer sees it: full slab, real texture, real color.</p>
+      <div class="grid-4" style="margin-top:26px">
+        <div class="material-card"><div class="ph"><div class="ph__fallback" aria-hidden="true">Granite</div><img class="ph__img" src="https://commons.wikimedia.org/wiki/Special:FilePath/%22Tan%20Brown%20Granite%22%20(porphyritic%20granite,%20Archean;%20Andhra%20Pradesh%20State,%20southern%20India)%20(14618910269).jpg?width=600" alt="Tan Brown granite slab" loading="lazy" onerror="this.remove()"></div><h3>Granite</h3><p>Hard, forgiving, endlessly varied</p></div>
+        <div class="material-card"><div class="ph"><div class="ph__fallback" aria-hidden="true">Marble</div><img class="ph__img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carrara%20marble.jpg?width=600" alt="Carrara marble slab" loading="lazy" onerror="this.remove()"></div><h3>Marble</h3><p>Bright, classic, full of movement</p></div>
+        <div class="material-card"><div class="ph"><div class="ph__fallback" aria-hidden="true">Quartzite</div><img class="ph__img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Quartzite%20(Natural%20Stone)%20for%20Countertops%2004.jpg?width=600" alt="Quartzite countertop shown installed" loading="lazy" onerror="this.remove()"></div><h3>Quartzite</h3><p>Marble looks, granite hardness</p></div>
+        <div class="material-card"><div class="ph"><div class="ph__fallback" aria-hidden="true">Travertine</div><img class="ph__img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cream%20tan%20rippled%20speckled%20travertine%20square%20cobblestone%20ground%20floor%20pattern%20tile%20texture.jpg?width=600" alt="Travertine floor tile" loading="lazy" onerror="this.remove()"></div><h3>Travertine</h3><p>Warm, natural, sun friendly</p></div>
+      </div>
+    </div>
+  </section>
+
   <!-- 7: AFTER - MOBILE -->
   <section class="slide dark">
     <div class="content-wrap grid-2">
@@ -356,7 +376,7 @@ p.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--muted);max-
 
 <div class="nav-ui">
   <button class="nav-btn" id="prevBtn" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter">1 / 11</div>
+  <div class="counter" id="counter">1 / 12</div>
   <button class="nav-btn" id="nextBtn" aria-label="Next slide">&#8594;</button>
 </div>
 
