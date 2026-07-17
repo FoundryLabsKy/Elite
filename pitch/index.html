@@ -92,6 +92,27 @@ p.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--muted);max-
 .phone-frame{width:280px;margin:0 auto;border:8px solid var(--sea-ink);border-radius:36px;overflow:hidden;box-shadow:0 24px 60px -20px rgba(7,51,62,.4)}
 .phone-frame img{display:block}
 
+/* Real photography: photo frame + fallback (same resilient pattern as the live site) */
+.ph{position:relative;overflow:hidden;background:#cabfa9;border-radius:14px}
+.ph__fallback{
+  position:absolute;inset:0;display:flex;align-items:flex-end;
+  background:#cabfa9;color:#6c5f47;
+  font-family:var(--f-display);font-weight:700;font-size:12px;letter-spacing:.1em;
+  text-transform:uppercase;padding:14px;
+}
+.ph__img{position:relative;width:100%;height:100%;object-fit:cover;z-index:1;display:block}
+
+/* Full-bleed background photo behind a slide's content (title / closing bookends) */
+.slide.has-bg{background:#0f333c}
+.slide-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.slide-bg .ph{position:absolute;inset:0;border-radius:0}
+.slide-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(120deg, rgba(5,39,48,.92) 0%, rgba(5,39,48,.68) 55%, rgba(5,39,48,.42) 100%)}
+.slide.has-bg .content-wrap{position:relative;z-index:2}
+
+/* Side photo next to text (overview slide) */
+.side-photo .ph{aspect-ratio:4/5}
+.divider-photo .ph{aspect-ratio:3/1}
+
 /* Nav controls */
 .nav-ui{position:fixed;bottom:22px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:18px;z-index:50;pointer-events:none}
 .nav-btn{pointer-events:all;background:rgba(7,51,62,.85);color:#fff;border:none;border-radius:999px;width:44px;height:44px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s ease}
@@ -125,7 +146,9 @@ p.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--muted);max-
 <div class="deck" id="deck">
 
   <!-- 1: TITLE -->
-  <section class="slide dark">
+  <section class="slide dark has-bg">
+    <div class="slide-bg"><div class="ph"><div class="ph__fallback" aria-hidden="true">Quarry, sourced worldwide</div><img class="ph__img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Marble%20quarry%20Thasos%20island.jpg?width=1600" alt="A marble quarry where slabs are sourced" loading="lazy" onerror="this.remove()"></div></div>
+    <div class="slide-scrim"></div>
     <div class="content-wrap title-hero">
       <p class="eyebrow">A proposal for Elite Marble &amp; Granite Ltd.</p>
       <h1 class="big">The new face of<br>Elite Marble &amp; Granite.</h1>
@@ -136,13 +159,24 @@ p.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--muted);max-
 
   <!-- 2: OVERVIEW -->
   <section class="slide">
+    <div class="content-wrap grid-2">
+      <div>
+        <p class="eyebrow">Overview</p>
+        <h2 class="slide-title">One website. One job: turn visitors into quote requests.</h2>
+        <p class="lede">Elite already has the reputation, the craftsmanship, and 7,000+ installed countertops behind it. What's been missing is a website that reflects that: one a customer trusts enough to reach out to before they've even stepped into the showroom.</p>
+        <div class="card" style="margin-top:32px"><div class="num">01</div><h3>Look as good as the work</h3><p>Premium ocean-and-white design system that reads as confident and established, not homemade.</p></div>
+      </div>
+      <div class="side-photo"><div class="ph"><div class="ph__fallback" aria-hidden="true">Kitchen, shown installed</div><img class="ph__img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kitchen%20with%20island,%20New%20Orleans%202007.jpg?width=900" alt="A fabricated and installed stone kitchen with a central island" loading="lazy" onerror="this.remove()"></div></div>
+    </div>
+  </section>
+
+  <!-- 2b: OVERVIEW cont'd -->
+  <section class="slide sand">
     <div class="content-wrap">
-      <p class="eyebrow">Overview</p>
-      <h2 class="slide-title">One website. One job: turn visitors into quote requests.</h2>
-      <p class="lede">Elite already has the reputation, the craftsmanship, and 7,000+ installed countertops behind it. What's been missing is a website that reflects that: one a customer trusts enough to reach out to before they've even stepped into the showroom.</p>
-      <div class="grid-3" style="margin-top:40px">
-        <div class="card"><div class="num">01</div><h3>Look as good as the work</h3><p>Premium ocean-and-white design system that reads as confident and established, not homemade.</p></div>
-        <div class="card"><div class="num">02</div><h3>Work on every device</h3><p>Fully responsive from a 27" showroom monitor down to a customer's phone in the car.</p></div>
+      <p class="eyebrow">What that means in practice</p>
+      <h2 class="slide-title">Two more things the new site does.</h2>
+      <div class="grid-2" style="margin-top:20px">
+        <div class="card"><div class="num">02</div><h3>Work on every device</h3><p>Fully responsive from a 27 inch showroom monitor down to a customer's phone in the car.</p></div>
         <div class="card"><div class="num">03</div><h3>Make quoting effortless</h3><p>One clear path, through Materials, Services, or Projects, to a single, frictionless quote request.</p></div>
       </div>
     </div>
@@ -266,6 +300,7 @@ p.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--muted);max-
         <div class="card"><h3>Built-in credibility</h3><p>The published five-star review, 7,000+ installs, and "since 2000" are visible on nearly every page.</p></div>
         <div class="card"><h3>Search-ready from day one</h3><p>Structured business data (address, hours, services) so Google and Maps can surface Elite correctly.</p></div>
       </div>
+      <div class="divider-photo" style="margin-top:32px"><div class="ph"><div class="ph__fallback" aria-hidden="true">Marble</div><img class="ph__img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carrara%20marble.jpg?width=1600" alt="Carrara marble slab texture" loading="lazy" onerror="this.remove()"></div></div>
     </div>
   </section>
 
@@ -298,7 +333,9 @@ p.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--muted);max-
   </section>
 
   <!-- 10: CLOSING -->
-  <section class="slide dark">
+  <section class="slide dark has-bg">
+    <div class="slide-bg"><div class="ph"><div class="ph__fallback" aria-hidden="true">Kitchen, shown installed</div><img class="ph__img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Quartzite%20(Natural%20Stone)%20for%20Countertops%2006.jpg?width=1600" alt="A completed quartzite kitchen with waterfall island" loading="lazy" onerror="this.remove()"></div></div>
+    <div class="slide-scrim"></div>
     <div class="content-wrap">
       <p class="eyebrow" style="color:var(--aqua)">Next steps</p>
       <h2 class="slide-title" style="color:#fff">Ready when you are.</h2>
@@ -319,7 +356,7 @@ p.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--muted);max-
 
 <div class="nav-ui">
   <button class="nav-btn" id="prevBtn" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter">1 / 10</div>
+  <div class="counter" id="counter">1 / 11</div>
   <button class="nav-btn" id="nextBtn" aria-label="Next slide">&#8594;</button>
 </div>
 
