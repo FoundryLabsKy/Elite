@@ -34,8 +34,10 @@ jobs:
       - name: Stage site files
         run: |
           mkdir -p _site/craftmarket
+          mkdir -p _site/pitch
           cp index.html _site/index.html
           cp craftmarket/index.html _site/craftmarket/index.html
+          cp pitch/index.html _site/pitch/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
