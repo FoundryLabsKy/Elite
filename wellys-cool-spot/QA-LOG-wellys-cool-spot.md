@@ -64,3 +64,13 @@ Requested refinement, restrained scope, no structural changes:
 5. "Fried chicken" menu note filled ("crowd favourite" — supported by reviews) so no leader runs to an empty slot.
 
 Verification: Lighthouse re-run — **Perf 90 · A11y 100 (zero failures) · BP 96 · SEO 100 · LCP 1.5s · CLS 0 · TBT 0ms**. No blocker regressed; all additions decorative or static, reduced-motion unaffected.
+
+## Loop 4 — illustrated "Scenes from the spot" slideshow (17 Jul 2026)
+
+Added a hand-drawn SVG slideshow between the story and quotes sections — five original vignettes (the morning pots, the yard dominoes, a greenie, the oxtail plate, Sunday sunrise at 7:00), each captioned with a sourced fact. Explicitly labeled as drawings ("real photographs … are on the way") — the no-fake-photos guardrail holds; owner photos remain a client to-do.
+
+Carousel a11y: prev/next buttons and dot buttons all ≥44px targets, keyboard arrows, `aria-roledescription="carousel"`, per-slide labels; auto-advance (5s) pauses on hover/focus and is disabled entirely under reduced motion; slide transition 350ms.
+
+Iterations: (1) pot illustration too dark on the dark panel → cream outline + lighter fill; ambiguous plate garnish → drawn salad leaf; Sunday clock ring invisible + wrong time → cream-stroked face reading 7:00. (2) `role="tablist"` on the dot list broke `aria-required-children`/`listitem` audits (A11y 92) → removed the role; back to green.
+
+Verification: Lighthouse — **Perf 89 · A11y 100 (zero failures) · BP 96 · SEO 100 · LCP 1.7s · CLS 0 · TBT 0ms**. All blocker budgets hold.

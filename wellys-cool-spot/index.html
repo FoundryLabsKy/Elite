@@ -338,6 +338,39 @@ header.site{
 .timeline p{color:var(--ink-soft);max-width:52ch}
 .story-aside{align-self:start;position:sticky;top:5.5rem}
 
+/* ============ SCENES (illustrated slideshow) ============ */
+.scenes{background:var(--cream-2);color:var(--ink);padding-block:clamp(3rem,8vw,5.5rem);border-top:1px solid var(--cream-3)}
+.scenes .eyebrow{color:var(--green-700)}
+.scenes h2{font-size:clamp(1.9rem,4vw,2.6rem);color:var(--green-800);margin-top:var(--s-1)}
+.scenes-sub{color:var(--ink-soft);margin-top:var(--s-2);max-width:58ch}
+.carousel{position:relative;margin-top:var(--s-4)}
+.car-viewport{overflow:hidden;border-radius:var(--r-tile);border:1.5px solid var(--ink);box-shadow:var(--e-3);background:var(--green-950)}
+.car-track{display:flex;transition:transform .35s ease-out}
+@media (prefers-reduced-motion:reduce){.car-track{transition:none}}
+.car-slide{flex:0 0 100%;display:grid;grid-template-rows:auto auto;justify-items:center;padding:clamp(1.5rem,4vw,2.5rem) clamp(1rem,4vw,2rem) clamp(1.25rem,3vw,2rem);text-align:center}
+.car-slide svg{width:min(100%,26rem);height:auto}
+.car-cap{margin-top:var(--s-3);max-width:44ch}
+.car-cap .line{font-family:var(--f-disp);font-size:var(--t-1);color:var(--on-dark)}
+.car-cap .fact{font-family:var(--f-ui);font-weight:500;font-size:var(--t--1);color:var(--on-dark-mute);margin-top:.5rem}
+.car-controls{display:flex;align-items:center;justify-content:space-between;gap:var(--s-2);margin-top:var(--s-2)}
+.car-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:2.75rem;height:2.75rem;border-radius:var(--r-2);
+  background:none;border:2px solid var(--green-600);color:var(--green-700);cursor:pointer;
+  transition:background-color .18s ease-out,border-color .18s ease-out;
+}
+.car-btn:hover{background:var(--green-50);border-color:var(--green-700)}
+.car-btn:active{transform:translateY(1px)}
+.car-dots{display:flex;gap:.25rem;list-style:none}
+.car-dot{
+  width:2.75rem;height:2.75rem;display:inline-flex;align-items:center;justify-content:center;
+  background:none;border:none;cursor:pointer;padding:0;
+}
+.car-dot::after{content:"";width:.65rem;height:.65rem;border-radius:50%;border:1.5px solid var(--green-600);transition:background-color .2s ease-out}
+.car-dot[aria-current="true"]::after{background:var(--green-600)}
+.car-dot:hover::after{background:var(--green-200)}
+.scenes-note{font-family:var(--f-ui);font-size:var(--t--1);color:var(--ink-mute);margin-top:var(--s-2)}
+
 /* ============ QUOTES ============ */
 .quotes{background:var(--green-900);padding-block:clamp(3.5rem,9vw,6.5rem);border-top:1px solid var(--green-700)}
 .quotes .eyebrow{color:var(--green-300)}
@@ -576,6 +609,129 @@ footer.site{
   </div>
 </section>
 
+<section class="scenes on-cream" aria-labelledby="scenes-h">
+  <div class="wrap">
+    <p class="eyebrow">Scenes from the spot</p>
+    <h2 id="scenes-h">Drawn from life on North Sound Road.</h2>
+    <p class="scenes-sub">Until the kitchen's own photos go up, here's the spot as we'd sketch it — every scene a true one.</p>
+    <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="Illustrated scenes from Welly's Cool Spot">
+      <div class="car-viewport">
+        <div class="car-track" id="car-track">
+
+          <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+            <svg viewBox="0 0 320 200" aria-hidden="true">
+              <path d="M118 38q6-14 0-26M146 44q7-16 0-30M174 38q6-14 0-26" fill="none" stroke="#CDD5BE" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+              <ellipse cx="146" cy="66" rx="88" ry="12" fill="#3A3226" stroke="#CDD5BE" stroke-width="2.5"/>
+              <path d="M58 66h176l-10 62q-3 26-78 26t-78-26z" fill="#3A3226" stroke="#CDD5BE" stroke-width="2.5"/>
+              <path d="M70 74q76 14 152 0" fill="none" stroke="#A9B69D" stroke-width="4" stroke-linecap="round"/>
+              <path d="M50 78q-16 4-12 16t20 6M242 78q16 4 12 16t-20 6" fill="none" stroke="#CDD5BE" stroke-width="8" stroke-linecap="round"/>
+              <path d="M108 168q10 14 20 0t20 0 20 0 20 0" fill="none" stroke="#E8730C" stroke-width="7" stroke-linecap="round"/>
+              <path d="M126 186q8 10 16 0t16 0 16 0" fill="none" stroke="#F5851F" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+            <figcaption class="car-cap">
+              <p class="line">The pots go on every morning.</p>
+              <p class="fact">Whatever's simmering becomes the day's menu — posted each morning, gone when it's gone.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+            <svg viewBox="0 0 320 200" aria-hidden="true">
+              <rect x="20" y="30" width="280" height="140" rx="14" fill="#1D5B33"/>
+              <rect x="20" y="30" width="280" height="140" rx="14" fill="none" stroke="#0C1F12" stroke-width="3"/>
+              <g transform="translate(78 82) rotate(-8)">
+                <rect width="88" height="44" rx="7" fill="#F6F0DD" stroke="#1C1812" stroke-width="3"/>
+                <line x1="44" y1="4" x2="44" y2="40" stroke="#1C1812" stroke-width="2"/>
+                <circle cx="22" cy="22" r="4.5" fill="#1C1812"/><circle cx="61" cy="14" r="4.5" fill="#1C1812"/><circle cx="72" cy="30" r="4.5" fill="#1C1812"/>
+              </g>
+              <g transform="translate(158 62) rotate(83)">
+                <rect width="88" height="44" rx="7" fill="#F6F0DD" stroke="#1C1812" stroke-width="3"/>
+                <line x1="44" y1="4" x2="44" y2="40" stroke="#1C1812" stroke-width="2"/>
+                <circle cx="14" cy="14" r="4.5" fill="#1C1812"/><circle cx="30" cy="30" r="4.5" fill="#1C1812"/><circle cx="55" cy="22" r="4.5" fill="#1C1812"/><circle cx="74" cy="22" r="4.5" fill="#1C1812"/>
+              </g>
+              <g transform="translate(196 108) rotate(4)">
+                <rect width="88" height="44" rx="7" fill="#F6F0DD" stroke="#1C1812" stroke-width="3"/>
+                <line x1="44" y1="4" x2="44" y2="40" stroke="#1C1812" stroke-width="2"/>
+                <circle cx="15" cy="15" r="4.5" fill="#1C1812"/><circle cx="29" cy="29" r="4.5" fill="#1C1812"/><circle cx="58" cy="15" r="4.5" fill="#1C1812"/><circle cx="58" cy="29" r="4.5" fill="#1C1812"/><circle cx="72" cy="15" r="4.5" fill="#1C1812"/><circle cx="72" cy="29" r="4.5" fill="#1C1812"/>
+              </g>
+              <circle cx="52" cy="150" r="9" fill="#F6F0DD" opacity=".25"/>
+              <circle cx="272" cy="52" r="9" fill="#F6F0DD" opacity=".25"/>
+            </svg>
+            <figcaption class="car-cap">
+              <p class="line">The yard game runs most afternoons.</p>
+              <p class="fact">Grab a seat, watch a round, or call a partner — visitors are welcome at the table.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+            <svg viewBox="0 0 320 200" aria-hidden="true">
+              <path d="M146 22h28v26q0 8 7 14 15 12 15 34v62q0 20-36 20t-36-20v-62q0-22 15-34 7-6 7-14z" fill="#1D5B33" stroke="#0C1F12" stroke-width="3"/>
+              <rect x="142" y="14" width="36" height="14" rx="4" fill="#E8730C" stroke="#1C1812" stroke-width="2.5"/>
+              <path d="M132 96q0-14 10-22" fill="none" stroke="#84B591" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+              <rect x="128" y="112" width="64" height="34" rx="5" fill="#F6F0DD" stroke="#1C1812" stroke-width="2.5"/>
+              <circle cx="160" cy="129" r="9" fill="none" stroke="#1D5B33" stroke-width="3"/>
+              <circle cx="222" cy="72" r="5" fill="#84B591" opacity=".7"/>
+              <circle cx="236" cy="98" r="4" fill="#84B591" opacity=".5"/>
+              <circle cx="94" cy="84" r="4" fill="#84B591" opacity=".5"/>
+              <circle cx="86" cy="112" r="5" fill="#84B591" opacity=".7"/>
+            </svg>
+            <figcaption class="car-cap">
+              <p class="line">Greenies, since before it was cool.</p>
+              <p class="fact">In the early days locals and visitors packed the spot to drink "greenies" — the Compass wrote it down, so it's history.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+            <svg viewBox="0 0 320 200" aria-hidden="true">
+              <ellipse cx="160" cy="104" rx="120" ry="72" fill="#F6F0DD" stroke="#1C1812" stroke-width="3"/>
+              <ellipse cx="160" cy="104" rx="96" ry="56" fill="none" stroke="#E6DEC5" stroke-width="3"/>
+              <path d="M100 96q14-26 40-18t18 34q-8 18-32 12t-26-28z" fill="#8C4A1F" stroke="#5F3115" stroke-width="3"/>
+              <path d="M120 92q10-10 22-6M138 112q10 6 18 0" fill="none" stroke="#5F3115" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="212" cy="92" rx="34" ry="22" fill="#F1EBD8" stroke="#1C1812" stroke-width="2.5"/>
+              <circle cx="200" cy="86" r="3" fill="#8C4A1F"/><circle cx="216" cy="94" r="3" fill="#8C4A1F"/><circle cx="226" cy="84" r="3" fill="#8C4A1F"/><circle cx="208" cy="100" r="3" fill="#8C4A1F"/>
+              <path d="M172 134q14-8 30-2M186 144q12-5 22-1" fill="none" stroke="#E8730C" stroke-width="8" stroke-linecap="round"/>
+              <path d="M104 130q8-10 20-6t8 14q-10 8-20 2t-8-10z" fill="#2F7442" stroke="#1A4A2B" stroke-width="2.5"/>
+              <path d="M132 140q10-8 22-4" fill="none" stroke="#2F7442" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <figcaption class="car-cap">
+              <p class="line">Oxtail worth crossing town for.</p>
+              <p class="fact">"The best oxtail meals on island" — a diner said it, we just drew it. Rice and peas and plantain come standard.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+            <svg viewBox="0 0 320 200" aria-hidden="true">
+              <line x1="24" y1="140" x2="296" y2="140" stroke="#CDD5BE" stroke-width="3" stroke-linecap="round"/>
+              <path d="M104 140a56 56 0 0 1 112 0z" fill="#E8730C" stroke="#1C1812" stroke-width="3"/>
+              <path d="M160 62v-20M112 78 98 64M208 78l14-14M88 118H68M232 118h20" stroke="#F5851F" stroke-width="6" stroke-linecap="round"/>
+              <g transform="translate(230 96)">
+                <circle cx="30" cy="30" r="26" fill="#F6F0DD" stroke="#1C1812" stroke-width="3"/>
+                <circle cx="30" cy="30" r="2.5" fill="#1C1812"/>
+                <path d="M30 30 20 44M30 30V14" fill="none" stroke="#1C1812" stroke-width="3.5" stroke-linecap="round"/>
+              </g>
+              <path d="M40 160q30-12 60 0t60 0 60 0" fill="none" stroke="#84B591" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+            </svg>
+            <figcaption class="car-cap">
+              <p class="line">Sunday starts at seven.</p>
+              <p class="fact">Doors at 7am, ackee &amp; saltfish till 11 — before church or straight from the boat.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+      <div class="car-controls">
+        <button class="car-btn" id="car-prev" type="button" aria-label="Previous scene">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+        </button>
+        <ul class="car-dots" id="car-dots" aria-label="Choose scene"></ul>
+        <button class="car-btn" id="car-next" type="button" aria-label="Next scene">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <p class="scenes-note">Hand-drawn for Welly's — real photographs of the food and the yard are on the way.</p>
+  </div>
+</section>
+
 <section class="quotes" aria-labelledby="quotes-h">
   <div class="wrap">
     <p class="eyebrow">Word around town</p>
@@ -718,6 +874,46 @@ footer.site{
       var d = tile.querySelector('.day');
       if(d) d.textContent += ' · today';
     }
+  }
+
+  // Scenes carousel
+  var track = document.getElementById('car-track');
+  if(track){
+    var slides = track.children.length;
+    var dots = document.getElementById('car-dots');
+    var idx = 0, timer = null;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    for(var i = 0; i < slides; i++){
+      var li = document.createElement('li');
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'car-dot';
+      b.setAttribute('aria-label', 'Scene ' + (i+1) + ' of ' + slides);
+      (function(n){ b.addEventListener('click', function(){ go(n, true); }); })(i);
+      li.appendChild(b); dots.appendChild(li);
+    }
+    function go(n, user){
+      idx = (n + slides) % slides;
+      track.style.transform = 'translateX(-' + idx * 100 + '%)';
+      dots.querySelectorAll('.car-dot').forEach(function(d, i){
+        d.setAttribute('aria-current', i === idx ? 'true' : 'false');
+      });
+      if(user) stop();
+    }
+    function step(){ go(idx + 1); }
+    function start(){ if(!reduce && !timer) timer = setInterval(step, 5000); }
+    function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+    document.getElementById('car-prev').addEventListener('click', function(){ go(idx - 1, true); });
+    document.getElementById('car-next').addEventListener('click', function(){ go(idx + 1, true); });
+    var car = document.getElementById('carousel');
+    car.addEventListener('mouseenter', stop);
+    car.addEventListener('mouseleave', start);
+    car.addEventListener('focusin', stop);
+    car.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowLeft'){ go(idx - 1, true); }
+      if(e.key === 'ArrowRight'){ go(idx + 1, true); }
+    });
+    go(0);
+    start();
   }
 })();
 </script>
